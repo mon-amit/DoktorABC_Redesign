@@ -1,0 +1,21 @@
+{
+  "name": "doktorabc-redesign",
+  "version": "1.0.0",
+  "description": "Redesign project for DoktorABC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'Development server not configured yet'",
+    "build": "echo 'Build process not configured yet'",
+    "test": "echo 'Tests not configured yet'",
+    "lint": "echo 'Linting not configured yet'"
+  },
+  "keywords": [
+    "redesign",
+    "doktorabc"
+  ],
+  "author": "Amit Yogev",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {}
+}
