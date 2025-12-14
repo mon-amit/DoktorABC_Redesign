@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "project": "DoktorABC_Redesign",
+  "mixpanel": {
+    "token": "vkFfPe1vI5wMr9KIOtjSvalW8rAmUCNz",
+    "project_id": "2280288"
+  },
+  "events": {
+    "user_events": {
+      "user_login": {
+        "description": "User successfully logs into the application",
+        "properties": ["user_id", "login_method", "device_type", "timestamp"],
+        "required": ["user_id", "timestamp"]
+      },
+      "user_signup": {
+        "description": "New user registration completed",
+        "properties": ["user_id", "signup_method", "referral_source", "timestamp"],
+        "required": ["user_id", "signup_method", "timestamp"]
+      },
+      "user_logout": {
+        "description": "User logs out of the application",
+        "properties": ["user_id", "session_duration", "timestamp"],
+        "required": ["user_id", "timestamp"]
+      }
+    },
+    "feature_events": {
+      "feature_viewed": {
+        "description": "User views a specific feature or page",
+        "properties": ["user_id", "feature_name", "feature_category", "timestamp"],
+        "required": ["user_id", "feature_name", "timestamp"]
+      },
+      "feature_interacted": {
+        "description": "User interacts with a feature (click, hover, etc.)",
+        "properties": ["user_id", "feature_name", "interaction_type", "element_id", "timestamp"],
+        "required": ["user_id", "feature_name", "interaction_type", "timestamp"]
+      },
+      "tutorial_started": {
+        "description": "User begins a tutorial or onboarding flow",
+        "properties": ["user_id", "tutorial_name", "tutorial_step", "timestamp"],
+        "required": ["user_id", "tutorial_name", "timestamp"]
+      },
+      "tutorial_completed": {
+        "description": "User completes a tutorial or onboarding flow",
+        "properties": ["user_id", "tutorial_name", "completion_time", "timestamp"],
+        "required": ["user_id", "tutorial_name", "timestamp"]
+      }
+    },
+    "business_events": {
+      "page_view": {
+        "description": "User views any page in the application",
+        "properties": ["user_id", "page_url", "page_title", "referrer", "timestamp"],
+        "required": ["page_url", "timestamp"]
+      },
+      "search_performed": {
+        "description": "User performs a search in the application",
+        "properties": ["user_id", "search_query", "search_results_count", "search_category", "timestamp"],
+        "required": ["search_query", "timestamp"]
+      },
+      "error_occurred": {
+        "description": "Application error or exception occurs",
+        "properties": ["user_id", "error_type", "error_message", "page_url", "timestamp"],
+        "required": ["error_type", "timestamp"]
+      },
+      "performance_metric": {
+        "description": "Performance metric recorded (load time, etc.)",
+        "properties": ["user_id", "metric_name", "metric_value", "page_url", "device_type", "timestamp"],
+        "required": ["metric_name", "metric_value", "timestamp"]
+      }
+    },
+    "conversion_events": {
+      "lead_generated": {
+        "description": "Potential customer lead is generated",
+        "properties": ["lead_id", "lead_source", "lead_type", "user_id", "timestamp"],
+        "required": ["lead_id", "lead_source", "timestamp"]
+      },
+      "demo_requested": {
+        "description": "User requests a product demo",
+        "properties": ["user_id", "demo_type", "company_size", "industry", "timestamp"],
+        "required": ["user_id", "demo_type", "timestamp"]
+      },
+      "trial_started": {
+        "description": "User begins a free trial",
+        "properties": ["user_id", "trial_plan", "trial_duration", "timestamp"],
+        "required": ["user_id", "trial_plan", "timestamp"]
+      },
+      "purchase_completed": {
+        "description": "Successful purchase or subscription",
+        "properties": ["user_id", "purchase_amount", "purchase_type", "timestamp"],
+        "required": ["user_id", "purchase_amount", "timestamp"]
+      }
+    }
+  },
+  "user_properties": {
+    "demographic": ["age", "gender", "location", "language"],
+    "behavioral": ["user_type", "subscription_status", "feature_usage_score"],
+    "technical": ["device_type", "browser", "operating_system", "screen_resolution"]
+  },
+  "tracking_settings": {
+    "sample_rate": 1.0,
+    "anonymize_ip": true,
+    "respect_dnt": true,
+    "cookie_expiration": 365,
+    "cross_domain_tracking": true
+  },
+  "integrations": {
+    "hubspot": {
+      "enabled": true,
+      "contact_sync": true,
+      "deal_tracking": true
+    },
+    "notion": {
+      "enabled": true,
+      "documentation_tracking": true
+    },
+    "figma": {
+      "enabled": true,
+      "design_analytics": true
+    }
+  }
+}
