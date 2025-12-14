@@ -19,6 +19,7 @@ This project contains the redesigned implementation of DoktorABC with MCP (Model
 - **Analytics**: Mixpanel (via MCP)
 - **CRM**: HubSpot (via MCP)
 - **Documentation**: Notion (via MCP)
+- **Design**: Figma (via MCP)
 - **Runtime**: Node.js 25.2.1
 
 ## Getting Started
