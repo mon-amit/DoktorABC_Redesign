@@ -115,9 +115,10 @@ npm test
 All project documentation, learning resources, and related materials are organized in the `docs/` folder. Visit [docs/README.md](docs/README.md) for the complete knowledge base overview.
 
 **Quick Access:**
-- [Project Setup Guide](docs/setup/project-setup.md)
-- [MCP Integration Overview](docs/mcp-integration/mcp-overview.md)
-- [Troubleshooting Guide](docs/troubleshooting/common-issues.md)
+- [📊 Mixpanel Analytics](docs/mixpanel/README.md) - Analytics documentation and MCP integration
+- [📋 Product Requirements](docs/prds/README.md) - PRDs, templates, and requirements docs
+- [🎨 Design System](docs/design/README.md) - UI/UX, components, and design guidelines
+- [⚙️ Project Setup](docs/setup/project-setup.md) - Installation and configuration guides
 
 ## Recent Updates
 
