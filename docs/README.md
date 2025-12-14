@@ -7,9 +7,17 @@ This knowledge base contains all documentation, learning resources, and project-
 ```
 docs/
 ├── README.md                    # This file - Knowledge base overview
+├── mixpanel/                    # Mixpanel analytics documentation
+│   ├── README.md               # Analytics overview
+│   └── mcp-overview.md         # MCP integration guide
+├── prds/                        # Product Requirements Documents
+│   ├── README.md               # PRD overview
+│   └── templates/              # PRD templates and guides
+├── design/                      # Design system and documentation
+│   ├── README.md               # Design overview
+│   └── design-system/          # Colors, typography, components
 ├── setup/                       # Project setup and configuration guides
 ├── architecture/                # System architecture and design decisions
-├── mcp-integration/             # MCP server integrations and configurations
 ├── troubleshooting/             # Common issues and their solutions
 ├── learning-resources/          # Tutorials, references, and learning materials
 └── project-updates/             # Meeting notes, progress updates, and milestones
@@ -17,20 +25,24 @@ docs/
 
 ## 🚀 Quick Access
 
+### Analytics & Data
+- [Mixpanel Analytics Overview](mixpanel/README.md)
+- [MCP Integration Guide](mixpanel/mcp-overview.md)
+- [Event Tracking Guide](mixpanel/event-tracking.md)
+
+### Product Requirements
+- [PRD Overview](prds/README.md)
+- [PRD Template](prds/templates/prd-template.md)
+- [Main Redesign PRD](prds/doktorabc-redesign/prd-main-redesign.md)
+
+### Design System
+- [Design Overview](design/README.md)
+- [Color System](design/design-system/colors.md)
+- [Component Library](design/design-system/components.md)
+
 ### Setup & Configuration
 - [Project Setup Guide](setup/project-setup.md)
-- [MCP Server Configuration](setup/mcp-configuration.md)
 - [Development Environment](setup/development-environment.md)
-
-### Architecture & Design
-- [System Architecture](architecture/system-overview.md)
-- [MCP Integration Design](architecture/mcp-integration-design.md)
-- [Data Flow Diagrams](architecture/data-flow.md)
-
-### MCP Integrations
-- [Mixpanel Analytics](mcp-integration/mixpanel-integration.md)
-- [HubSpot CRM](mcp-integration/hubspot-integration.md)
-- [Notion Documentation](mcp-integration/notion-integration.md)
 
 ### Troubleshooting
 - [Common Issues](troubleshooting/common-issues.md)
