@@ -1,0 +1,30 @@
+# Category Page - Web Events Review Table
+
+| Event Name | Properties | Short Description of TRIGGER |
+|------------|------------|------------------------------|
+| `web_category_button_apply_filters_click` | `filter_criteria, category_id` | RCA: Filter usage and product discovery efficiency. Pre-events: Category view |
+| `web_category_button_clear_filters_click` | `category_id` | RCA: Filter reset patterns and user frustration. Pre-events: Filter application |
+| `web_category_button_sort_price_low_click` | `sort_type, category_id` | RCA: Price sensitivity and shopping intent. Pre-events: Category view |
+| `web_category_button_sort_price_high_click` | `sort_type, category_id` | RCA: Premium product interest. Pre-events: Category view |
+| `web_category_button_sort_newest_click` | `sort_type, category_id` | RCA: Trend-following and novelty-seeking behavior. Pre-events: Category view |
+| `web_category_button_sort_rating_click` | `sort_type, category_id` | RCA: Quality-focused shopping behavior. Pre-events: Category view |
+| `web_category_button_load_more_click` | `current_page, category_id` | RCA: Content consumption depth and pagination UX. Pre-events: View current page |
+| `web_category_button_prev_page_click` | `current_page, category_id` | RCA: Navigation patterns and content exploration. Pre-events: View current page |
+| `web_category_button_next_page_click` | `current_page, category_id` | RCA: Content consumption progression. Pre-events: View current page |
+| `web_category_button_price_filter_click` | `price_min, price_max, category_id` | RCA: Budget-based product filtering. Pre-events: Category view |
+| `web_category_button_brand_filter_click` | `brand_ids, category_id` | RCA: Brand loyalty and preference tracking. Pre-events: Category view |
+| `web_category_card_product_1_click` | `product_id, position, category_id` | RCA: Product visibility and position effectiveness. Pre-events: Category view |
+| `web_category_card_product_2_click` | `product_id, position, category_id` | RCA: Product visibility and position effectiveness. Pre-events: Category view |
+| `web_category_card_product_3_click` | `product_id, position, category_id` | RCA: Product visibility and position effectiveness. Pre-events: Category view |
+| `web_category_card_product_4_click` | `product_id, position, category_id` | RCA: Product visibility and position effectiveness. Pre-events: Category view |
+| `web_category_breadcrumb_home_click` | `breadcrumb_level, category_id` | RCA: Navigation hierarchy usage. Pre-events: Category view |
+| `web_category_breadcrumb_category_click` | `breadcrumb_level, category_id` | RCA: Category navigation patterns. Pre-events: Category view |
+| `web_category_card_quick_view_click` | `product_id, category_id` | RCA: Product preview engagement without full navigation. Pre-events: Category view |
+| `web_category_card_wishlist_click` | `product_id, category_id` | RCA: Purchase intent and product interest. Pre-events: Category view |
+| `web_category_image_product_click` | `product_id, image_index, category_id` | RCA: Visual product engagement. Pre-events: Category view |
+
+---
+**Total Events**: 20
+**Platform**: Web
+**Page**: Category Page
+**Status**: Ready for PM review

@@ -1,0 +1,26 @@
+# Product Page - Web Events Review Table
+
+| Event Name | Properties | Short Description of TRIGGER |
+|------------|------------|------------------------------|
+| `web_product_button_add_to_cart_click` | `product_id, quantity, variant_id` | RCA: Primary conversion action tracking. Pre-events: Product view, variant selection |
+| `web_product_button_buy_now_click` | `product_id, variant_id` | RCA: Direct purchase intent measurement. Pre-events: Product view |
+| `web_product_button_read_reviews_click` | `product_id, review_count` | RCA: Social proof engagement before purchase. Pre-events: Product view |
+| `web_product_button_back_to_category_click` | `category_id, product_id` | RCA: Navigation pattern and product abandonment. Pre-events: Product view |
+| `web_product_button_quantity_increase_click` | `product_id, current_quantity` | RCA: Purchase intent strength (quantity increases). Pre-events: Product view |
+| `web_product_button_quantity_decrease_click` | `product_id, current_quantity` | RCA: Cart optimization and price sensitivity. Pre-events: Product view, quantity increase |
+| `web_product_button_variant_50ml_click` | `product_id, variant_id, variant_size` | RCA: Product variant preference tracking. Pre-events: Product view |
+| `web_product_button_write_review_click` | `product_id, user_id` | RCA: Customer engagement and review funnel entry. Pre-events: Product purchase or view |
+| `web_product_image_main_click` | `product_id, image_index` | RCA: Product image engagement and detail interest. Pre-events: Product view |
+| `web_product_image_thumbnail_click` | `product_id, image_index, thumbnail_position` | RCA: Product exploration depth. Pre-events: Product view |
+| `web_product_card_related_click` | `product_id, related_product_id` | RCA: Cross-selling and product discovery. Pre-events: Product view |
+| `web_product_link_customer_reviews_click` | `product_id, review_sort` | RCA: Trust signal access patterns. Pre-events: Product view |
+| `web_product_tab_ingredients_click` | `product_id, tab_name` | RCA: Product information engagement. Pre-events: Product view |
+| `web_product_tab_usage_click` | `product_id, tab_name` | RCA: Usage instruction access. Pre-events: Product view |
+| `web_product_tab_reviews_click` | `product_id, tab_name` | RCA: Social proof section access. Pre-events: Product view |
+| `web_product_link_share_click` | `product_id, share_platform` | RCA: Viral coefficient and social sharing. Pre-events: Product view |
+
+---
+**Total Events**: 16
+**Platform**: Web
+**Page**: Product Page
+**Status**: Ready for PM review

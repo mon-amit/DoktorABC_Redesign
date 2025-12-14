@@ -7,7 +7,9 @@
     "dev": "echo 'Development server not configured yet'",
     "build": "echo 'Build process not configured yet'",
     "test": "echo 'Tests not configured yet'",
-    "lint": "echo 'Linting not configured yet'"
+    "lint": "echo 'Linting not configured yet'",
+    "notion-import": "node src/notion-import-executable.js",
+    "notion-import-dry-run": "node src/notion-import.js"
   },
   "keywords": [
     "redesign",

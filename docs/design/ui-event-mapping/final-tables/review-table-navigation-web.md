@@ -1,0 +1,18 @@
+# Navigation - Web Events Review Table
+
+| Event Name | Properties | Short Description of TRIGGER |
+|------------|------------|------------------------------|
+| `web_nav_button_products_click` | `menu_level` | RCA: Product interest and navigation patterns. Pre-events: Page view |
+| `web_nav_button_categories_click` | `menu_level` | RCA: Category browsing intent and information architecture effectiveness. Pre-events: Page view |
+| `web_nav_button_account_click` | `menu_level` | RCA: Account access and return user identification. Pre-events: Page view |
+| `web_nav_button_footer_contact_click` | `footer_section` | RCA: Support need identification and contact funnel entry. Pre-events: Scroll to footer |
+| `web_nav_button_footer_privacy_click` | `footer_section` | RCA: Privacy compliance and trust behavior. Pre-events: Scroll to footer |
+| `web_nav_button_footer_terms_click` | `footer_section` | RCA: Legal content access and compliance awareness. Pre-events: Scroll to footer |
+| `web_nav_button_search_click` | `search_type` | RCA: Search functionality discovery and usage intent. Pre-events: Page view |
+| `web_nav_button_cart_click` | `cart_item_count` | RCA: Purchase intent and cart status checking. Pre-events: Page view |
+
+---
+**Total Events**: 8
+**Platform**: Web
+**Page**: Navigation
+**Status**: Ready for PM review

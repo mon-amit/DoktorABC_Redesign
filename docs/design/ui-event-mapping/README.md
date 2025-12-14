@@ -109,6 +109,92 @@ This directory contains the complete event mapping documentation for the DoktorA
 
 ---
 
+## 📋 Phase 4: PM Review Table (Final Deliverable)
+
+### Objective
+Generate a consolidated review table per page/platform for PM sign-off, performance tracking, and stakeholder reporting. This enables tracking redesign impact and demonstrating growth metrics to leadership.
+
+### Review Table Schema
+
+| Column | Description | Example |
+|--------|-------------|---------|
+| **Event Name** | Unique event identifier following naming convention | `web_homepage_cta_start_journey_click` |
+| **Properties** | All event properties (key-value pairs) | `treatment_category: null, button_location: "hero"` |
+| **Trigger Description** | RCA (root cause) + pre-events leading to trigger | "User clicks primary CTA. Pre-event: Page view, scroll to hero. RCA: Main conversion funnel entry point" |
+
+### Deliverables Checklist
+
+| Deliverable | Status | Description |
+|-------------|--------|-------------|
+| `review-table-homepage-web.md` | PENDING | Homepage (Web) review table |
+| `review-table-homepage-mobile.md` | PENDING | Homepage (Mobile) review table |
+| `review-table-product-web.md` | PENDING | Product Page (Web) review table |
+| `review-table-product-mobile.md` | PENDING | Product Page (Mobile) review table |
+| `review-table-category-web.md` | PENDING | Category Page (Web) review table |
+| `review-table-category-mobile.md` | PENDING | Category Page (Mobile) review table |
+| `review-table-checkout-web.md` | PENDING | Checkout/Cart (Web) review table |
+| `review-table-checkout-mobile.md` | PENDING | Checkout/Cart (Mobile) review table |
+| `review-table-account-web.md` | PENDING | Account/Profile (Web) review table |
+| `review-table-account-mobile.md` | PENDING | Account/Profile (Mobile) review table |
+| `review-table-search-otc-web.md` | PENDING | Search OTC (Web) review table |
+| `review-table-search-otc-mobile.md` | PENDING | Search OTC (Mobile) review table |
+| `review-table-treatment-web.md` | PENDING | Treatment Flow (Web) review table |
+| `review-table-treatment-mobile.md` | PENDING | Treatment Flow (Mobile) review table |
+| `review-table-navigation-web.md` | PENDING | Navigation (Web) review table |
+| `review-table-navigation-mobile.md` | PENDING | Navigation (Mobile) review table |
+
+### Goals
+
+| Goal | Target | Validation Method |
+|------|--------|-------------------|
+| **Test the table** | All review tables pass schema validation | Automated test suite |
+| **100% coverage** | Every mapped event appears in exactly one review table | Cross-reference against `master-event-map.md` |
+
+### Side Goal: Event Name Merging Analysis
+
+Evaluate whether similar events with different property values should share a single event name with differentiating properties.
+
+**Example Pattern:**
+```
+button_click -> Popup -> {ED | WL} -> location -> time
+```
+
+| Merged Event Name | Differentiating Property | Values |
+|-------------------|-------------------------|--------|
+| `web_homepage_category_click` | `category_id` | `erectile-dysfunction`, `weight-loss`, `hair-loss`, etc. |
+| `web_homepage_cta_click` | `button_text`, `button_location` | `"Start My Journey"`, `"Get My Prescription"` |
+| `web_homepage_learn_click` | `treatment_category` | `erectile-dysfunction`, `hair-loss`, `weight-loss`, `medical-cannabis`, `asthma` |
+
+**Analysis Output:**
+- `event-merge-candidates.md` - List of events that could be consolidated
+- `event-merge-decision-log.md` - PM decisions with rationale
+
+### PM Tracking Dashboard Requirements
+
+| Metric | Source | Purpose |
+|--------|--------|---------|
+| Event coverage % | Review tables vs Figma elements | Ensure no UI interactions are missed |
+| Property consistency | Cross-table analysis | Validate naming conventions |
+| Trigger documentation quality | RCA completeness check | Enable debugging and optimization |
+| Platform parity | Web vs Mobile comparison | Ensure feature parity |
+
+### Success Criteria
+
+1. **Completeness**: One review table per page per platform
+2. **Accuracy**: Every event in `master-event-map.md` appears in exactly one review table
+3. **Testability**: Tables can be programmatically validated
+4. **Traceability**: Every trigger description includes RCA and pre-events
+5. **Merge Analysis**: Decision log for event consolidation opportunities
+
+### Stakeholder Value
+
+- **For PM**: Track redesign progress, demonstrate coverage, justify resource allocation
+- **For Engineering**: Clear implementation reference with all context
+- **For Leadership**: Evidence of systematic approach driving growth metrics
+- **For QA**: Testable event specifications with expected properties
+
+---
+
 **Generated**: $(date)
 **Status**: READY FOR IMPLEMENTATION (with conflict resolution)
 **Coverage**: Complete UI event mapping for DoktorABC redesign

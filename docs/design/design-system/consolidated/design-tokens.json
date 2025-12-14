@@ -1,0 +1,322 @@
+{
+  "version": "1.0.0",
+  "description": "Consolidated design tokens extracted from Figma UI/UX Redesign",
+  "last_updated": "2025-12-14",
+  "source_nodes": [
+    "10810:10533", "10397:5276", "11572:36292", "11487:30811", "11487:30276",
+    "11653:24356", "9027:38912", "9027:39002", "8265:61945", "10223:9850",
+    "9027:38818", "9653:48186", "9027:39384", "11653:24352", "10223:9853",
+    "8477:21340", "9723:26509", "9792:6369", "11653:24351", "11653:24349",
+    "11132:39882", "11200:47693", "11200:47780", "9970:26850", "8787:25961",
+    "10810:12328", "8643:40354", "9763:13113", "9775:5523", "11653:24353",
+    "11200:48054", "11200:47758", "10865:12370", "11200:47782", "8787:28379",
+    "8232:23016", "9970:26482", "8232:22817", "9027:38912", "9027:39002",
+    "10223:9856", "8265:61945", "10223:9850", "9027:38818", "10490:5473",
+    "11146:5830", "11257:17568", "11093:39436", "11200:47781", "11093:39424",
+    "11653:24351", "11200:48086", "11200:48060", "11653:24349", "8787:38371",
+    "11653:24348", "9046:40807", "8232:22530", "9653:48090", "11132:39888",
+    "11200:48055", "8228:27722", "8628:83313", "8628:83959", "8265:62002",
+    "8240:63722", "8228:26848", "8890:43310", "8228:28574", "8228:26847",
+    "11653:24355", "8228:28571", "11200:47694", "8787:29553", "11132:39900",
+    "11200:47765", "9653:48042"
+  ],
+  "tokens": {
+    "colors": {
+      "primary": {
+        "600": "#0A9281",
+        "400": "#269c6e",
+        "400_alt": "#11DDAC"
+      },
+      "secondary": {
+        "400": "#7aba47",
+        "500": "#2E3E67",
+        "700": "#0D2C54",
+        "dark": "#0D2C54",
+        "50": "#eff7d5",
+        "o500_50": "#7aba4780"
+      },
+      "neutrals": {
+        "white": "#FFFFFF",
+        "black": "#101010",
+        "500": "#747474"
+      },
+      "text": {
+        "primary": "#08080a",
+        "secondary": "#616975",
+        "tertiary": "#99a3b2",
+        "on_primary": "#ffffff",
+        "link": "#00734a",
+        "info": "#1f638c"
+      },
+      "body": {
+        "400": "#656D79",
+        "300": "#98A0AF",
+        "gray_light": "#EEF1F6",
+        "gray_middark": "#98A0AF"
+      },
+      "surface": {
+        "background": "#ffffff",
+        "background_dark": "#08080a",
+        "card": "#f5f6f7",
+        "focus": "#61a333",
+        "overlay": "#dee3ed",
+        "primary": "#269c6e",
+        "green": "#f7faef",
+        "success": "#61a333"
+      },
+      "border": {
+        "white": "#ffffff",
+        "default": "#b5bdcc",
+        "subtle": "#dee3ed",
+        "info": "#257db0",
+        "success": "#61a333"
+      },
+      "icons": {
+        "primary": "#1f2129",
+        "brand": "#269c6e",
+        "on_primary": "#ffffff"
+      },
+      "night": {
+        "text": {
+          "text01": "#FFFFFF"
+        }
+      },
+      "system": {
+        "red": "#EF4747"
+      },
+      "info": {
+        "500": "#257db0"
+      },
+      "neutral": {
+        "100": "#1C1C1C",
+        "600": "#616161"
+      },
+      "body": {
+        "200": "#DBE1EB"
+      }
+    },
+    "typography": {
+      "families": {
+        "header": "Poppins",
+        "body": "Roboto",
+        "title": "Poppins"
+      },
+      "weights": {
+        "regular": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700"
+      },
+      "sizes": {
+        "display": {
+          "xl": "90",
+          "md": "80"
+        },
+        "header": {
+          "h2": "52",
+          "h3": "40",
+          "h4": "32",
+          "h5": "26"
+        },
+        "subtitle": {
+          "xl_regular": "28",
+          "xl_medium": "28",
+          "lg": "26",
+          "lg_medium": "26",
+          "md_regular": "22"
+        },
+        "title": {
+          "lg_regular": "26",
+          "lg_medium": "26",
+          "md_regular": "22",
+          "md_semibold": "22"
+        },
+        "label": {
+          "l": "20",
+          "m": "16"
+        },
+        "text": {
+          "l_regular": "18",
+          "m_regular": "16"
+        }
+      },
+      "line_heights": {
+        "display": {
+          "xl": "90",
+          "md": "80"
+        },
+        "header": {
+          "h2": "57",
+          "h3": "48",
+          "h4": "38",
+          "h5": "34"
+        },
+        "subtitle": {
+          "xl": "39",
+          "lg": "34"
+        },
+        "label": {
+          "m": "21"
+        },
+        "text": {
+          "l_regular": "23",
+          "m_regular": "21"
+        }
+      },
+      "letter_spacing": {
+        "header": {
+          "h2": "0",
+          "h3": "0",
+          "h4": "0",
+          "h5": "0"
+        },
+        "display": {
+          "xl": "0",
+          "md": "0"
+        },
+        "subtitle": {
+          "xl_regular": "0",
+          "xl_medium": "0",
+          "lg": "0"
+        },
+        "text": {
+          "l_regular": "0",
+          "m_regular": "0"
+        },
+        "label": {
+          "m": "0"
+        }
+      },
+      "paragraph_spacing": {
+        "subtitle": {
+          "xl": "20",
+          "lg": "18",
+          "md": "16"
+        },
+        "text": {
+          "m": "14",
+          "xl": "18",
+          "l": "18"
+        }
+      },
+      "presets": {
+        "Display/xl": "Font(family: \"Poppins\", style: SemiBold, size: 90, weight: 600, lineHeight: 90, letterSpacing: 0)",
+        "Display/md": "Font(family: \"Poppins\", style: Medium, size: 80, weight: 500, lineHeight: 80, letterSpacing: 0)",
+        "header/H2": "Font(family: \"Poppins\", style: SemiBold, size: 52, weight: 600, lineHeight: 57, letterSpacing: 0)",
+        "header/H3": "Font(family: \"Poppins\", style: SemiBold, size: 40, weight: 600, lineHeight: 48, letterSpacing: 0)",
+        "header/H4": "Font(family: \"Poppins\", style: SemiBold, size: 32, weight: 600, lineHeight: 38, letterSpacing: 0)",
+        "header/H5": "Font(family: \"Poppins\", style: Medium, size: 26, weight: 500, lineHeight: 34, letterSpacing: 0)",
+        "title/xl-medium": "Font(family: \"Poppins\", style: Medium, size: 28, weight: 500, lineHeight: 39, letterSpacing: 0)",
+        "title/xl-regular": "Font(family: \"Poppins\", style: Regular, size: 28, weight: 400, lineHeight: 39, letterSpacing: 0)",
+        "title/lg-medium": "Font(family: \"Poppins\", style: Medium, size: 26, weight: 500, lineHeight: 34, letterSpacing: 0)",
+        "title/lg-regular": "Font(family: \"Poppins\", style: Regular, size: 26, weight: 400, lineHeight: 34, letterSpacing: 0)",
+        "title/md-regular": "Font(family: \"Poppins\", style: Regular, size: 22, weight: 400, lineHeight: 29, letterSpacing: 0)",
+        "title/md-semibold": "Font(family: \"Poppins\", style: SemiBold, size: 22, weight: 600, lineHeight: 29, letterSpacing: 0)",
+        "text/m-regular": "Font(family: \"Roboto\", style: Regular, size: 16, weight: 400, lineHeight: 21, letterSpacing: 0)",
+        "text/l-regular": "Font(family: \"Roboto\", style: Regular, size: 18, weight: 400, lineHeight: 23, letterSpacing: 0)",
+        "label/L": "Font(family: \"Poppins\", style: SemiBold, size: 20, weight: 600, lineHeight: 21, letterSpacing: 0)",
+        "label/M": "Font(family: \"Poppins\", style: Medium, size: 16, weight: 500, lineHeight: 21, letterSpacing: 0)",
+        "Body/XS--Regular": "Font(family: \"Roboto\", style: Regular, size: 12, weight: 400, lineHeight: 1.5, letterSpacing: 0)",
+        "Body/SM--Regular": "Font(family: \"Roboto\", style: Regular, size: 14, weight: 400, lineHeight: 1.5, letterSpacing: 0)",
+        "Mobile/Title - M": "Font(family: \"Poppins\", style: Bold, size: 18, weight: 700, lineHeight: 30, letterSpacing: 0)",
+        "Cross / Body - S": "Font(family: \"Roboto\", style: Regular, size: 14, weight: 400, lineHeight: 24, letterSpacing: 0)",
+        "Headlines/Mobile/Web-LG": "Font(family: \"Poppins\", style: Bold, size: 24, weight: 700, lineHeight: 1.5, letterSpacing: 0)",
+        "Subtitles/12/Regular": "Font(family: \"Poppins\", style: Regular, size: 12, weight: 400, lineHeight: 1.5, letterSpacing: 0.10000000149011612)",
+        "Body/XS--Regular": "Font(family: \"Roboto\", style: Regular, size: 12, weight: 400, lineHeight: 1.5, letterSpacing: 0)",
+        "Body/SM--Regular": "Font(family: \"Roboto\", style: Regular, size: 14, weight: 400, lineHeight: 1.5, letterSpacing: 0)",
+        "Cross / Disclaimer": "Font(family: \"Roboto\", style: Regular, size: 13, weight: 400, lineHeight: 19, letterSpacing: 0)",
+        "Cross/Title (Medium)": "Font(family: \"Poppins\", style: Medium, size: 16, weight: 500, lineHeight: 26, letterSpacing: 0)",
+        "Display/xl": "Font(family: \"Poppins\", style: SemiBold, size: 90, weight: 600, lineHeight: 90, letterSpacing: 0)"
+      }
+    },
+    "spacing": {
+      "gaps": {
+        "0": "0",
+        "8": "8",
+        "12": "12",
+        "16": "16",
+        "24": "24",
+        "32": "32",
+        "60": "60"
+      },
+      "vertical_gaps": {
+        "xxl": "110"
+      },
+      "button": {
+        "gap": "8",
+        "padding_h": "32",
+        "padding_h_icon": "16",
+        "padding_v": "20",
+        "padding_v_icon": "16"
+      },
+      "input": {
+        "left_icon": "8",
+        "padding_h": "16",
+        "padding_v": "18",
+        "weight_border": "1",
+        "radius": "8",
+        "left_icon_alt": "6",
+        "padding_h_alt": "14",
+        "padding_v_alt": "16"
+      }
+    },
+    "components": {
+      "button": {
+        "font_size": "22",
+        "gap": "8",
+        "padding_h": "32",
+        "padding_v": "20",
+        "round": "16",
+        "fill": "#ffffff",
+        "border": "#ffffff00",
+        "text": "#1f2129",
+        "icon_size": "24",
+        "inner_shadow": "#cdeb9c"
+      },
+      "input": {
+        "icon_size": "24",
+        "font_size": "16",
+        "left_icon": "8",
+        "padding_h": "16",
+        "padding_v": "18",
+        "weight_border": "1",
+        "bg": "#ffffff",
+        "border": "#c2c9d6",
+        "placeholder": "#99a3b2"
+      }
+    },
+    "effects": {
+      "search": "Effect(type: DROP_SHADOW, color: #CED0D8B2, offset: (0, 11), radius: 20.799999237060547, spread: 0); Effect(type: DROP_SHADOW, color: #FFFFFFD1, offset: (0, -12), radius: 15.100000381469727, spread: 0)",
+      "black_button_shadow": "Effect(type: DROP_SHADOW, color: #3E445A08, offset: (0, 0.9814814925193787), radius: 1.7708333730697632, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A0D, offset: (0, 4.31851863861084), radius: 3.6666667461395264, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A11, offset: (0, 10.600000381469727), radius: 7.3125, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A14, offset: (0, 20.414813995361328), radius: 14.333333015441895, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A19, offset: (0, 34.35185241699219), radius: 26.35416603088379, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A21, offset: (0, 53), radius: 45, spread: 0)",
+      "background_blur_32": "Effect(type: BACKGROUND_BLUR, radius: 32)",
+      "black_button_shadow": "Effect(type: DROP_SHADOW, color: #3E445A08, offset: (0, 0.9814814925193787), radius: 1.7708333730697632, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A0D, offset: (0, 4.31851863861084), radius: 3.6666667461395264, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A11, offset: (0, 10.600000381469727), radius: 7.3125, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A14, offset: (0, 20.414813995361328), radius: 14.333333015441895, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A19, offset: (0, 34.35185241699219), radius: 26.35416603088379, spread: 0); Effect(type: DROP_SHADOW, color: #3E445A21, offset: (0, 53), radius: 45, spread: 0)",
+      "testimon": "Effect(type: DROP_SHADOW, color: #CED0D870, offset: (0, 21), radius: 43.099998474121094, spread: 0); Effect(type: DROP_SHADOW, color: #FFFFFFD1, offset: (0, -12), radius: 23.299999237060547, spread: 0)",
+      "categor stories": "Effect(type: DROP_SHADOW, color: #CED0D875, offset: (0, 11), radius: 20.100000381469727, spread: 0); Effect(type: DROP_SHADOW, color: #FFFFFF, offset: (0, -12), radius: 15.100000381469727, spread: 0); Effect(type: INNER_SHADOW, color: #E5E9F0, offset: (0, 4), radius: 9.100000381469727, spread: 0); Effect(type: INNER_SHADOW, color: #FFFFFF, offset: (0, -6), radius: 12.5, spread: 0)",
+      "shadows/200": "Effect(type: DROP_SHADOW, color: surface/shadow, offset: (0, 3), radius: 8, spread: 0)",
+      "green_button_shadow": "Effect(type: DROP_SHADOW, color: #10893D08, offset: (0, 1.1481481790542603), radius: 2.0856480598449707, spread: -452); Effect(type: DROP_SHADOW, color: #10893D0D, offset: (0, 5.051851749420166), radius: 4.31851863861084, spread: -452); Effect(type: DROP_SHADOW, color: #10893D10, offset: (0, 12.399999618530273), radius: 8.612500190734863, spread: -452); Effect(type: DROP_SHADOW, color: #10893D14, offset: (0, 23.881481170654297), radius: 16.881481170654297, spread: -452); Effect(type: DROP_SHADOW, color: #2689101A, offset: (0, 40.185184478759766), radius: 31.039352416992188, spread: -452); Effect(type: DROP_SHADOW, color: #1E891024, offset: (0, 62), radius: 53, spread: -452); Effect(type: INNER_SHADOW, color: #86CC38, offset: (0, 0), radius: 34.79999923706055, spread: 0)",
+      "background_blur_32": "Effect(type: BACKGROUND_BLUR, radius: 32)"
+    },
+    "radii": {
+      "24": "24",
+      "20": "20",
+      "16": "12",
+      "12": "12",
+      "8": "8",
+      "0": "0"
+    },
+    "gradients": {
+      "primary": "",
+      "linear": ","
+    }
+  },
+  "metadata": {
+    "total_variables_extracted": 410,
+    "unique_variables": 270,
+    "extraction_method": "Figma MCP get_variable_defs tool",
+    "extraction_date": "2025-12-14",
+    "client_languages": ["typescript", "javascript"],
+    "client_frameworks": ["react", "nextjs"],
+    "nodes_processed": 78,
+    "additional_nodes_with_variables": ["11653:24351", "11653:24349", "11132:39882", "11200:47693", "11200:47780", "9970:26850", "8787:25961", "10810:12328", "8643:40354", "9763:13113", "9775:5523", "11653:24353", "11200:48054", "11200:47758", "10865:12370", "11200:47782", "8787:28379", "8232:23016", "9970:26482", "8232:22817", "9027:38912", "9027:39002", "10223:9856", "8265:61945", "10223:9850", "9027:38818", "10490:5473", "11146:5830", "11257:17568", "11093:39436", "11200:47781", "11093:39424", "11653:24351", "11200:48086", "11200:48060", "11653:24349", "8787:38371", "11653:24348", "9046:40807", "8232:22530", "9653:48090", "11132:39888", "11200:48055", "8228:27722", "8628:83313", "8628:83959", "8265:62002", "8240:63722", "8228:26848", "8890:43310", "8228:28574", "8228:26847", "11653:24355", "8228:28571", "11200:47694", "8787:29553", "11132:39900", "11200:47765", "9653:48042"]
+  }
+}
