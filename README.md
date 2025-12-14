@@ -22,6 +22,7 @@ This project contains the redesigned implementation of DoktorABC with MCP (Model
 - **CRM**: HubSpot (via MCP)
 - **Documentation**: Notion (via MCP)
 - **Design**: Figma (via MCP)
+- **Knowledge Base**: Confluence (via MCP)
 - **Runtime**: Node.js 25.2.1
 
 ## Getting Started

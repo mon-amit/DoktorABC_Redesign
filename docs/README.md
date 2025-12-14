@@ -39,6 +39,7 @@ docs/
 - [Design Overview](design/README.md)
 - [Color System](design/design-system/colors.md)
 - [Figma Integration](design/figma-integration.md)
+- [Confluence Integration](confluence-integration.md)
 - [Component Library](design/design-system/components.md)
 
 ### Setup & Configuration
