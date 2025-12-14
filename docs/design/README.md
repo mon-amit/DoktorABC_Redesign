@@ -51,6 +51,14 @@ design/
 - **Navigation**: Menus, breadcrumbs, tabs
 - **Feedback**: Alerts, notifications, loading states
 
+## 🔗 Tool Integrations
+
+### Figma MCP Integration
+- **Purpose**: AI-powered design collaboration and asset management
+- **Tools Available**: File access, component management, prototyping
+- **Configuration**: Local MCP server on port 3845
+- **Documentation**: [Figma Integration Guide](figma-integration.md)
+
 ## 📱 UI/UX Guidelines
 
 ### Layout Principles
