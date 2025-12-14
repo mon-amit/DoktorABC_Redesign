@@ -96,12 +96,28 @@ npm test
 ```
 ├── src/                 # Source code
 ├── tests/              # Test files
-├── docs/               # Documentation
+├── docs/               # Knowledge base and documentation
+│   ├── README.md       # Knowledge base overview
+│   ├── setup/          # Project setup guides
+│   ├── architecture/   # System design and architecture
+│   ├── mcp-integration/# MCP server documentation
+│   ├── troubleshooting/# Issue resolution guides
+│   ├── learning-resources/ # Tutorials and references
+│   └── project-updates/# Meeting notes and progress
 ├── RCA_MCP_Configuration.md  # Root cause analysis of setup issues
 ├── .gitignore         # Git ignore rules
 ├── package.json       # Dependencies and scripts
 └── README.md          # This file (project documentation)
 ```
+
+## 📚 Knowledge Base
+
+All project documentation, learning resources, and related materials are organized in the `docs/` folder. Visit [docs/README.md](docs/README.md) for the complete knowledge base overview.
+
+**Quick Access:**
+- [Project Setup Guide](docs/setup/project-setup.md)
+- [MCP Integration Overview](docs/mcp-integration/mcp-overview.md)
+- [Troubleshooting Guide](docs/troubleshooting/common-issues.md)
 
 ## Recent Updates
 
