@@ -1,0 +1,300 @@
+<html>
+<head>
+    <title>PRD ReDesign: Main Homepage</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1, h2 { color: #333; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        ul { margin: 10px 0; }
+        li { margin: 5px 0; }
+        .strong { font-weight: bold; }
+        .highlight { background-color: #ffff99; padding: 2px 4px; }
+    </style>
+</head>
+<body>
+<h1>PRD ReDesign: Main Homepage</h1>
+
+<h2>1. Background & Context</h2>
+<p>The homepage is the primary entry point for both new and returning users. With ~590K monthly landings (497K new, 110K returning), we must ensure a seamless and trustworthy user journey. Current analytics highlight strong engagement at the navigation tabs (69% reach), but weak depth of scroll (only 10% past "How it works") and a bounce rate of 16%. Conversion to paid orders within 24h is 7.31%.</p>
+<p>The redesign must:</p>
+<ul>
+    <li>Improve clarity and usability for new visitors.</li>
+    <li>Reinforce trust and credibility for returning visitors.</li>
+    <li>Optimize conversion by improving navigation, product discoverability, and trust signals.</li>
+</ul>
+
+<h2>2. Personas</h2>
+<ul>
+    <li><strong>New Visitors (497K / month):</strong>
+        <ul>
+            <li>Likely arrive from marketing campaigns or organic search.</li>
+            <li>Priorities: trust, anonymity, security, fast delivery, easy navigation to relevant treatment.</li>
+        </ul>
+    </li>
+    <li><strong>Returning Visitors (110K / month):</strong>
+        <ul>
+            <li>Previously purchased or explored our services.</li>
+            <li>Need reassurance of consistent service and motivation to repurchase.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>3. Success Metrics</h2>
+<ul>
+    <li>Maintain or improve bounce rate (currently 16%, target ≤ 12%).</li>
+    <li>Fast page loading: Google considers &lt;2.5s LCP as "Good" speed. Target Google PageSpeed score: ≥90.</li>
+    <li>Conversion: Improve from 7.31% to ≥8.04% (+10%) from homepage view → paid order within 24h.</li>
+</ul>
+
+<h2>4. Analytics Data (Last 30 Days)</h2>
+<ul>
+    <li>Unique Users Landing: <strong>590K</strong>
+        <ul>
+            <li>New site: <strong>497K</strong></li>
+            <li>Old site: <strong>110K</strong></li>
+        </ul>
+    </li>
+    <li>Scroll depth:
+        <ul>
+            <li>69% reach navigation tabs (categories).</li>
+            <li>10% scroll past "How it works".</li>
+        </ul>
+    </li>
+    <li>Bounce Rate: <strong>16%</strong></li>
+    <li>Conversion from view → paid order (24h windows): <strong>7.31%</strong></li>
+</ul>
+
+<h2>Competitors for Homepage Inspiration</h2>
+<ul>
+    <li><strong>Ro</strong> – https://ro.co/<br>Operates mainly in the United States. Focused on digital health services including sexual health, hair loss, weight loss, and general wellness.</li>
+    <li><strong>Hims</strong> – https://www.hims.com/<br>Operates in the United States, Canada, UK, and parts of Europe. Focused on digital health services including sexual health, hair, skin, and mental health.</li>
+</ul>
+
+<h1>Wireframe Structure:</h1>
+<p>[Wireframe image would be displayed here]</p>
+
+<h2>5. Design Requirements - https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=a4oYARjYajOu1vkg-1</h2>
+
+<table>
+    <tr>
+        <th>Section</th>
+        <th>Requirements</th>
+        <th>Notes</th>
+    </tr>
+    <tr>
+        <td><strong>Navigation Bar</strong></td>
+        <td>
+            <ul>
+                <li>Display company logo</li>
+                <li>Search bar icon</li>
+                <li>Hamburger menu</li>
+            </ul>
+        </td>
+        <td>Always visible</td>
+    </tr>
+    <tr>
+        <td><strong>Anchor Bar (below navbar)</strong></td>
+        <td>
+            <ul>
+                <li>Display coupons from CRM</li>
+            </ul>
+        </td>
+        <td>Dynamic content</td>
+    </tr>
+    <tr>
+        <td><strong>Hero Section</strong></td>
+        <td>
+            <ul>
+                <li><strong>H1 Title Split:</strong> Rotating carousel of categories (Medical cannabis, Weight loss, Hair regrowth, Testosterone, Skin care, Better sex, Online Pharmacy). Each in different color.</li>
+                <li>Subtitle: "Service Just for you"</li>
+                <li><strong>USPs with green check icons:</strong> Discreet & qualified treatments, Online consultation & prescription, Shipping 1–2 days, Secure information.</li>
+                <li>Search bar (with magnifying glass)</li>
+                <li>Trusted Shops widget (reviews)</li>
+                <li>CTA button: "Finde my treatment"</li>
+            </ul>
+        </td>
+        <td>Must look trustworthy and professional</td>
+    </tr>
+    <tr>
+        <td><strong>Categories Display</strong></td>
+        <td>
+            <ul>
+                <li>Grid/list of top categories in exact order: Medical cannabis, Erectile dysfunction, Weight loss, Hair loss, Premature ejaculation, Prevention, Facial hair, Vaginal complaints, Chlamydia, Gonorrhea, Genital warts, Overweight, Asthma, Type 2 diabetes.</li>
+                <li>Each with dedicated design/icon for developer embedding</li>
+            </ul>
+        </td>
+        <td>Must be easy to scan & click</td>
+    </tr>
+    <tr>
+        <td><strong>How It Works Section</strong></td>
+        <td>
+            <ul>
+                <li>Standard step-based design explaining process</li>
+            </ul>
+        </td>
+        <td>Current scroll drop-off suggests this must be shorter/visual</td>
+    </tr>
+    <tr>
+        <td><strong>OTC Section</strong></td>
+        <td>
+            <ul>
+                <li>Title: "Discover Our New OTC Products Online"</li>
+                <li>4 clickable banners: 1–3 = top OTC categories, 4 = CTA "Explore more categories (35+)"</li>
+            </ul>
+        </td>
+        <td>Visual emphasis</td>
+    </tr>
+    <tr>
+        <td><strong>Category DrillDown Sections</strong></td>
+        <td>Add 6 sections of categories, each with drilldown. Every section should have 3–4 cards with facts, info, and CTAs.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><strong>Self-Pickup Banner</strong></td>
+        <td>
+            <ul>
+                <li>Label "New!"</li>
+                <li>Title: Self-Pickup Service</li>
+                <li>Bullets: Prescription online, Plant-based medicines, Express pickup from 60 min* (depending on location)</li>
+            </ul>
+        </td>
+        <td>Styled as a promotional banner</td>
+    </tr>
+    <tr>
+        <td><strong>User Rating</strong></td>
+        <td>
+            <ul>
+                <li>Trusted Shops rating prominently displayed</li>
+            </ul>
+        </td>
+        <td>Reinforce trust</td>
+    </tr>
+    <tr>
+        <td><strong>Medical Advisory Board</strong></td>
+        <td>
+            <ul>
+                <li>Subheading: "Our advisory board consists of Europe's leading medical experts to ensure the highest standards of telemedicine!"</li>
+                <li>List of doctors with photo, title, specialty: Dr. Viktor Simunovic (Croatia), Dr. med. Roland Michael Ruiken (Norway), Dr. Salomé Apitz (Portugal)</li>
+                <li>Each profile links to dedicated doctor page</li>
+            </ul>
+        </td>
+        <td>Must appear authoritative</td>
+    </tr>
+    <tr>
+        <td><strong>FAQ</strong></td>
+        <td>
+            <ul>
+                <li>5 most common site FAQs</li>
+                <li>One example shown open by default</li>
+            </ul>
+        </td>
+        <td>Interactive accordion</td>
+    </tr>
+    <tr>
+        <td><strong>Newsletter Section</strong></td>
+        <td>
+            <ul>
+                <li>Join our newsletter & promotions CTA</li>
+                <li>Content/design to be finalized with CRM dept</li>
+            </ul>
+        </td>
+        <td>Capture leads</td>
+    </tr>
+    <tr>
+        <td><strong>Footer</strong></td>
+        <td>
+            <ul>
+                <li>Company logo</li>
+                <li>4 accordion tabs with links (same structure as current site)</li>
+                <li>Payment method icons (5)</li>
+                <li>Flags: France, Germany</li>
+                <li>Company address</li>
+                <li>Certifications</li>
+                <li>© 2025 http://DoktorABC.com</li>
+                <li>Disclaimer text (as current)</li>
+            </ul>
+        </td>
+        <td>Consistency with current</td>
+    </tr>
+</table>
+
+<h2>6. Development Requirements: https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=8079-38328&p=f&t=mQEnvCtpvkt1eu1k-11</h2>
+<p>https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=0#gid=0</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Requirement</th>
+        <th>Description / Development Requirements</th>
+        <th>Country note</th>
+        <th>Figma link</th>
+    </tr>
+    <tr>
+        <td><strong>R1</strong></td>
+        <td><strong>Smart Logic (Personalization)</strong></td>
+        <td>The system must define for each user (when possible) whether the user is male or female and which category they belong to, in order to display personalized homepage content.</td>
+        <td>All countries unchanged</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><strong>R2</strong></td>
+        <td><strong>Header - Black USP Component</strong></td>
+        <td>Display the black USP component at the top of the page. The USPs rotate automatically at a fixed speed. The text "Why us" remains static and does not rotate. The entire USP component is sticky during scroll.</td>
+        <td>All countries unchanged</td>
+        <td>[Image: USP Component]</td>
+    </tr>
+    <tr>
+        <td><strong>R3</strong></td>
+        <td><strong>Navigation Bar (Navbar)</strong></td>
+        <td>Add a sticky navigation bar that includes: company logo, search icon, hamburger menu, and My Account icon. The navbar remains visible while scrolling.</td>
+        <td>All countries unchanged</td>
+        <td>[Image: Navigation Bar]</td>
+    </tr>
+    <tr>
+        <td><strong>R4</strong></td>
+        <td><strong>Anchor Bar (CRM)</strong></td>
+        <td>Add an Anchor Bar below the navbar, displaying CRM content (coupon or banner). The Anchor Bar is sticky during scroll.</td>
+        <td>All countries unchanged</td>
+        <td>[Image: Anchor Bar]</td>
+    </tr>
+    <tr>
+        <td><strong>R5</strong></td>
+        <td><strong>Hero Section</strong></td>
+        <td>Hero section contains: H1 title carousel with rotating categories, static line "Made easy with DoktorABC", subtitle (localized), search bar, Trusted Reviews widget, CTA button "All Treatments". Button becomes sticky when scrolled past.</td>
+        <td>All countries unchanged</td>
+        <td>[Image: Hero Section]</td>
+    </tr>
+    <tr>
+        <td><strong>R6</strong></td>
+        <td><strong>Categories Section</strong></td>
+        <td>Display top categories in exact order. Each item links to category page. Note alternating images and animation in desktop version.</td>
+        <td>Varies in each country</td>
+        <td>[Image: Categories]</td>
+    </tr>
+    <tr>
+        <td><strong>R7</strong></td>
+        <td><strong>"How It Works" Component</strong></td>
+        <td>Add a static "How It Works" section explaining the service flow in a clear, simple visual layout. Note animation in the desktop version.</td>
+        <td>All countries unchanged</td>
+        <td>[Image: How It Works]</td>
+    </tr>
+    <tr>
+        <td><strong>R8</strong></td>
+        <td><strong>Trusted care starts here Component</strong></td>
+        <td>Static section with metric blocks: 600K+ customers, 7+ years of trust, 40+ categories, 3M orders delivered. Center image is static but inner USPs rotate.</td>
+        <td>Section is fully static with only inner USPs rotating</td>
+        <td></td>
+    </tr>
+</table>
+
+<hr>
+<p><em>Source: Confluence Page ID 1930067988</em></p>
+<p><em>Last updated: December 14, 2025</em></p>
+<p><em>Owner: Dean Gabay</em></p>
+</body>
+</html>

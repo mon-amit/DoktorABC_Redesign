@@ -1,0 +1,301 @@
+{
+  "project_overview": {
+    "name": "DoktorABC Redesign Project",
+    "status": "DRAFT",
+    "total_prds": 16,
+    "total_requirements": 45,
+    "key_pages": [
+      "Homepage",
+      "RX Category Page",
+      "RX Product Page",
+      "OTC Category Page",
+      "OTC Product Page",
+      "Cannabis Category Page",
+      "Cannabis Product Page",
+      "About Us Page",
+      "Shipping Page",
+      "Error Pages (404/500/502)",
+      "Information Pages",
+      "BMI Calculator",
+      "OTC Brand Page",
+      "Search Results Page",
+      "Registration Page",
+      "My Account Pop-ups"
+    ]
+  },
+  "prds_collected": [
+    {
+      "title": "ReDesign Doktorabc Project",
+      "type": "Project Overview",
+      "status": "DRAFT",
+      "requirements_count": 2,
+      "key_deliverables": [
+        "CMS Design (Step One)",
+        "Funnel Design & Optimization (Step Two)"
+      ],
+      "success_metrics": [
+        "+30% Increase in Conversion - Start Consultation",
+        "+20% Increase in Conversion - Paid Order",
+        "+20% Increase in Average Order Value (AOV)",
+        "-20% Reduction in Cart Abandonment Rate",
+        "Google PageSpeed Score ≥ 90"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: Main Homepage",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "requirements_count": 8,
+      "key_sections": [
+        "Navigation Bar",
+        "Anchor Bar (CRM)",
+        "Hero Section",
+        "Categories Display",
+        "How It Works Section",
+        "OTC Section",
+        "Category DrillDown Sections",
+        "Footer"
+      ],
+      "personas": ["New Visitors", "Returning Visitors"],
+      "analytics_data": {
+        "unique_users_landing": "590K",
+        "conversion_rate": "7.31%",
+        "bounce_rate": "16%"
+      }
+    },
+    {
+      "title": "PRD ReDesign: RX Category Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "requirements_count": 13,
+      "key_sections": [
+        "Hero Section",
+        "Search Bar Section",
+        "How It Works Section",
+        "Category Drilldown Section",
+        "User Reviews Section",
+        "User Videos Section",
+        "Doctor Section",
+        "FAQ Section",
+        "CRM Banner"
+      ],
+      "success_metrics": [
+        "+20% increase in conversion from RX category page → start consultation",
+        "+10% improvement in conversion from RX category page → paid order",
+        "Maintain page bounce rate under 15%"
+      ]
+    }
+  ],
+  "design_system_components": [
+    {
+      "component": "Navigation Bar",
+      "usage": "All pages",
+      "elements": ["Company logo", "Search icon", "Hamburger menu", "My Account icon"],
+      "behavior": "Sticky during scroll"
+    },
+    {
+      "component": "Anchor Bar (CRM)",
+      "usage": "Homepage, Category pages",
+      "elements": ["Dynamic CRM content", "Coupons", "Banners"],
+      "behavior": "Sticky during scroll"
+    },
+    {
+      "component": "Hero Section",
+      "usage": "Homepage, Category pages",
+      "elements": ["H1 title carousel", "Subtitle", "USPs", "Search bar", "Trusted Shops widget", "CTA button"],
+      "behavior": "CTA becomes sticky"
+    },
+    {
+      "component": "Trusted Shops Widget",
+      "usage": "All major pages",
+      "source": "eTrusted",
+      "purpose": "Trust building"
+    },
+    {
+      "component": "How It Works Component",
+      "usage": "Homepage, Category pages",
+      "elements": ["3-step visual process"],
+      "purpose": "User education"
+    },
+    {
+      "component": "FAQ Section",
+      "usage": "Most pages",
+      "source": "BO (Back Office)",
+      "behavior": "Accordion format, first item open"
+    },
+    {
+      "component": "Customer Reviews",
+      "usage": "Category pages, Product pages",
+      "source": "Database",
+      "format": "Carousel"
+    },
+    {
+      "component": "CRM Subscription Component",
+      "usage": "Footer area",
+      "purpose": "Lead capture"
+    },
+    {
+      "component": "Footer",
+      "usage": "All pages",
+      "elements": ["Logo", "Navigation links", "Payment methods", "Certifications", "Address", "Disclaimer"],
+      "consistency": "Standard across DoktorABC"
+    }
+  ],
+  "technical_requirements": [
+    {
+      "category": "Smart Logic (Personalization)",
+      "description": "System defines user gender and category for personalized content",
+      "implementation": "Based on marketing campaign parameters or purchase history",
+      "scope": "Hero section, category drilldown, CTAs"
+    },
+    {
+      "category": "Dynamic Content",
+      "description": "Content pulled from Back Office (BO)",
+      "elements": ["Category images", "Titles", "Descriptions", "FAQs", "Doctor information"],
+      "localization": "Per country (DE/FR)"
+    },
+    {
+      "category": "Pricing Integration",
+      "description": "Dynamic pricing from database",
+      "elements": ["Consultation fees", "Product prices", "Shipping costs"],
+      "updates": "Real-time from DB"
+    },
+    {
+      "category": "Search Functionality",
+      "description": "Category-specific search components",
+      "behavior": "Shows only relevant products",
+      "implementation": "Same as current production"
+    },
+    {
+      "category": "Analytics Integration",
+      "description": "Full event mapping for data-driven decisions",
+      "tools": ["Mixpanel", "Google Analytics 4"],
+      "purpose": "Conversion tracking and optimization"
+    }
+  ],
+  "user_stories": [
+    {
+      "persona": "New Visitor",
+      "journey": "Arrives via Google search → Lands on category page → Reads trust signals → Starts consultation → Completes purchase",
+      "pain_points": ["Lack of trust", "Unclear process", "Price transparency", "Slow loading"],
+      "success_criteria": ["Clear trust signals", "Simple navigation", "Fast loading", "Transparent pricing"]
+    },
+    {
+      "persona": "Returning Customer",
+      "journey": "Direct visit → Quick product search → Fast checkout → Reliable delivery",
+      "expectations": ["Consistent experience", "Account recognition", "Faster process", "Reliable service"],
+      "success_criteria": ["Personalization", "Streamlined flow", "Account features", "Trust reinforcement"]
+    },
+    {
+      "persona": "Medical Professional",
+      "journey": "Research treatments → Verify credibility → Recommend to patients",
+      "needs": ["Medical accuracy", "Trust signals", "Professional appearance", "Educational content"],
+      "success_criteria": ["Medical board approval", "Doctor profiles", "Educational content", "Professional design"]
+    }
+  ],
+  "quality_assurance": [
+    {
+      "aspect": "Performance",
+      "requirements": ["Google PageSpeed Score ≥ 90", "Fast loading (<2.5s LCP)", "Mobile optimization"],
+      "testing": ["Core Web Vitals", "Cross-browser testing", "Mobile responsiveness"]
+    },
+    {
+      "aspect": "Accessibility",
+      "requirements": ["WCAG compliance", "Screen reader support", "Keyboard navigation"],
+      "testing": ["Automated accessibility tools", "Manual testing", "User feedback"]
+    },
+    {
+      "aspect": "SEO",
+      "requirements": ["Meta tags", "Structured data", "Fast loading", "Mobile-friendly"],
+      "testing": ["Google Search Console", "Page speed tools", "Mobile usability"]
+    },
+    {
+      "aspect": "Security",
+      "requirements": ["HTTPS", "Data encryption", "GDPR compliance", "Secure payments"],
+      "testing": ["Security audits", "Penetration testing", "Compliance checks"]
+    }
+  ],
+  "implementation_phases": [
+    {
+      "phase": "Step One: CMS Design",
+      "deadline": "Tuesday, September 30, 2025",
+      "focus": "Core CMS pages implementation",
+      "pages": [
+        "Countries Page", "Homepage", "Cannabis Category Page", "Cannabis Product Page",
+        "OTC Home Page", "OTC Subcategory Page", "OTC Product Page", "OTC Search Bar Windows",
+        "OTC Brand Page", "RX Category Page", "RX Product Page", "Main Menu",
+        "Search Bar Windows", "Shopping Cart", "Search Results Page", "Registration Page",
+        "My Account Pop-ups", "Company Information Pages", "Footer Pages"
+      ],
+      "deliverables": ["Pixel-perfect Figma implementation", "BO integration", "Localization", "Testing"]
+    },
+    {
+      "phase": "Step Two: Funnel Design & Optimization",
+      "focus": "Conversion optimization and funnel improvements",
+      "scope": ["Focus on Funnel.doktorabc", "Continued optimization based on data"],
+      "approach": "Data-driven iterative improvements"
+    }
+  ],
+  "dependencies_and_integrations": [
+    {
+      "system": "Back Office (BO)",
+      "purpose": "Content management",
+      "integrations": ["Category images", "Product data", "FAQ content", "Doctor profiles"]
+    },
+    {
+      "system": "Database",
+      "purpose": "Dynamic pricing and product data",
+      "integrations": ["Real-time pricing", "Product availability", "User data"]
+    },
+    {
+      "system": "CRM",
+      "purpose": "Customer relationship management",
+      "integrations": ["Lead capture", "Email marketing", "Customer segmentation"]
+    },
+    {
+      "system": "Analytics",
+      "purpose": "Performance tracking and optimization",
+      "integrations": ["Mixpanel", "Google Analytics 4", "Conversion tracking"]
+    },
+    {
+      "system": "Payment Systems",
+      "purpose": "Secure payment processing",
+      "integrations": ["Credit cards", "PayPal", "Klarna", "Local payment methods"]
+    },
+    {
+      "system": "Shipping Systems",
+      "purpose": "Order fulfillment and delivery",
+      "integrations": ["Pharmacy networks", "Express delivery", "Tracking systems"]
+    }
+  ],
+  "localization_requirements": [
+    {
+      "markets": ["Germany (DE)", "France (FR)"],
+      "content_types": ["Product descriptions", "Legal text", "FAQs", "Marketing copy"],
+      "technical": ["Currency display", "Date formats", "Legal compliance"],
+      "cultural": ["Medical terminology", "Trust signals", "Payment preferences"]
+    }
+  ],
+  "risks_and_mitigations": [
+    {
+      "risk": "Performance degradation",
+      "impact": "High",
+      "mitigation": ["Performance testing", "Optimization reviews", "Monitoring setup"]
+    },
+    {
+      "risk": "SEO impact",
+      "impact": "High",
+      "mitigation": ["SEO audits", "URL structure planning", "Meta tag optimization"]
+    },
+    {
+      "risk": "Conversion drop during transition",
+      "impact": "Medium",
+      "mitigation": ["A/B testing", "Gradual rollout", "Fallback options"]
+    },
+    {
+      "risk": "Integration failures",
+      "impact": "High",
+      "mitigation": ["API testing", "Data validation", "Rollback procedures"]
+    }
+  ]
+}

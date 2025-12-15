@@ -1,0 +1,128 @@
+{
+  "current_performance": {
+    "homepage": {
+      "unique_users_landing": "590K monthly",
+      "new_users": "497K (84%)",
+      "returning_users": "110K (16%)",
+      "scroll_depth": {
+        "navigation_tabs_reach": "69%",
+        "past_how_it_works": "10%"
+      },
+      "bounce_rate": "16%",
+      "conversion_rate": "7.31% (view → paid order within 24h)",
+      "page_load_performance": "Target: Google PageSpeed ≥90"
+    }
+  },
+  "redesign_targets": {
+    "primary_kpis": [
+      "+30% Increase in Conversion – Start Consultation",
+      "+20% Increase in Conversion – Paid Order"
+    ],
+    "otc_growth": [
+      "+20% Increase in Average Order Value (AOV)",
+      "-20% Reduction in Cart Abandonment Rate"
+    ],
+    "performance": [
+      "Google PageSpeed Score ≥ 90"
+    ]
+  },
+  "key_metrics_by_page_type": {
+    "rx_category_pages": {
+      "current_conversion": "Baseline to be measured",
+      "target_improvement": "+20% to start consultation, +10% to paid order",
+      "bounce_rate_target": "<15%"
+    },
+    "otc_pages": {
+      "focus": "E-commerce engine launch",
+      "metrics": ["AOV increase", "Cart abandonment reduction"],
+      "user_journey": "Discovery → Purchase (vs. current lead generation)"
+    },
+    "cannabis_pages": {
+      "monthly_traffic": "~350K unique visits",
+      "audience": "Recreational users + medical patients",
+      "performance": "Strong engagement, room for conversion optimization"
+    }
+  },
+  "analytics_implementation": {
+    "tools": ["Mixpanel", "Google Analytics 4"],
+    "purpose": "Full event mapping for data-backed decisions",
+    "scope": "User journeys, conversion funnels, A/B testing",
+    "events_to_track": [
+      "Page views",
+      "Search interactions",
+      "CTA clicks",
+      "Form starts/completions",
+      "Purchase funnel steps",
+      "User engagement metrics",
+      "Error rates",
+      "Performance metrics"
+    ]
+  },
+  "competitor_benchmarks": {
+    "direct_competitors": ["Hims", "Ro"],
+    "insights": [
+      "Clean, trustworthy layouts",
+      "Strong credibility signals",
+      "Clear CTAs guiding to prescription flow",
+      "Professional medical tone"
+    ]
+  },
+  "conversion_funnel_analysis": {
+    "current_issues": [
+      "Weak scroll depth (only 10% past 'How it works')",
+      "Bounce rate of 16%",
+      "Limited trust signals below fold"
+    ],
+    "redesign_solutions": [
+      "Improved content hierarchy",
+      "Better trust signals placement",
+      "Optimized CTA positioning",
+      "Enhanced user education"
+    ]
+  },
+  "segmentation_data": {
+    "user_types": {
+      "new_visitors": {
+        "percentage": "84%",
+        "behavior": "Marketing campaigns, organic search",
+        "priorities": "Trust, clarity, simplicity, fast delivery"
+      },
+      "returning_visitors": {
+        "percentage": "16%",
+        "behavior": "Direct visits, repurchase intent",
+        "priorities": "Consistency, efficiency, reliability"
+      }
+    },
+    "traffic_sources": {
+      "organic_search": "Primary source for RX treatments",
+      "marketing_campaigns": "Brand awareness and conversions",
+      "direct_traffic": "Returning users and bookmarks"
+    }
+  },
+  "performance_monitoring": {
+    "core_web_vitals": {
+      "lcp_target": "<2.5s (Largest Contentful Paint)",
+      "pagespeed_target": "≥90",
+      "monitoring": "Continuous tracking and alerts"
+    },
+    "user_experience": {
+      "mobile_optimization": "Responsive design priority",
+      "loading_speed": "Critical for bounce rate reduction",
+      "accessibility": "WCAG compliance"
+    }
+  },
+  "ab_testing_framework": {
+    "planned_tests": [
+      "Hero section variations",
+      "CTA button placement",
+      "Trust signal positioning",
+      "Content hierarchy changes"
+    ],
+    "success_metrics": [
+      "Conversion rate improvements",
+      "Bounce rate reduction",
+      "Time on page increases",
+      "Scroll depth improvements"
+    ]
+  }
+}

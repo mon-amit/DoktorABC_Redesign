@@ -247,7 +247,7 @@
             <div class="left-panel">
                 <div class="metric-card">
                     <h3>Total Events</h3>
-                    <div class="value">115</div>
+                    <div class="value">118</div>
                     <div class="subtitle">100% Coverage Achieved</div>
                 </div>
 
@@ -266,87 +266,80 @@
                 <div class="insights-card">
                     <h3>Key PM Insights</h3>
                     <ul>
-                        <li>Homepage drives 18 unique conversion events</li>
-                        <li>Product pages have highest interaction depth (16 events)</li>
-                        <li>Search functionality fully instrumented (21 events)</li>
-                        <li>8 popup events ensure compliance tracking</li>
-                        <li>5 mobile events ready for expansion</li>
+                        <li>Homepage has the highest surface area (20 events across web+mobile)</li>
+                        <li>Category browsing is deeply instrumented (23 events)</li>
+                        <li>Search is fully instrumented (21 events)</li>
+                        <li>Checkout is lean and conversion-focused (5 events)</li>
+                        <li>Mobile-specific interactions captured (5 events) and extendable</li>
                     </ul>
                 </div>
             </div>
 
             <div class="right-panel">
                 <div class="chart-container">
-                    <h3>Event Distribution by Page</h3>
+                    <h3>Event Distribution by Page (combined platforms)</h3>
                     <div class="chart-bar">
                         <div class="chart-label">Homepage</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 15.7%"></div>
-                        </div>
-                        <div class="chart-value">18</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="chart-label">Category</div>
-                        <div class="chart-bar-fill">
-                            <div class="fill" style="width: 17.4%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
                         <div class="chart-value">20</div>
                     </div>
                     <div class="chart-bar">
+                        <div class="chart-label">Category</div>
+                        <div class="chart-bar-fill">
+                            <div class="fill" style="width: 0%"></div>
+                        </div>
+                        <div class="chart-value">23</div>
+                    </div>
+                    <div class="chart-bar">
                         <div class="chart-label">Product</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 13.9%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
-                        <div class="chart-value">16</div>
+                        <div class="chart-value">18</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Search OTC</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 18.3%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
                         <div class="chart-value">21</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Checkout</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 7.8%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
-                        <div class="chart-value">9</div>
+                        <div class="chart-value">5</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Navigation</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 7.8%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
-                        <div class="chart-value">9</div>
+                        <div class="chart-value">7</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Account</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 7.0%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
-                        <div class="chart-value">8</div>
+                        <div class="chart-value">9</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Popups</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 7.0%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
-                        <div class="chart-value">8</div>
+                        <div class="chart-value">12</div>
                     </div>
                     <div class="chart-bar">
                         <div class="chart-label">Treatment</div>
                         <div class="chart-bar-fill">
-                            <div class="fill" style="width: 2.6%"></div>
+                            <div class="fill" style="width: 0%"></div>
                         </div>
                         <div class="chart-value">3</div>
-                    </div>
-                    <div class="chart-bar">
-                        <div class="chart-label">Mobile Total</div>
-                        <div class="chart-bar-fill">
-                            <div class="fill" style="width: 4.3%"></div>
-                        </div>
-                        <div class="chart-value">5</div>
                     </div>
                 </div>
             </div>
@@ -354,19 +347,26 @@
 
         <div class="footer">
             <p><span class="highlight">Growth Impact:</span> Complete funnel visibility enables data-driven optimization</p>
-            <p><span class="highlight">Performance Tracking:</span> 115 events provide comprehensive user journey analytics</p>
+            <p><span class="highlight">Performance Tracking:</span> 118 events provide comprehensive user journey analytics</p>
             <p><span class="highlight">Merge Opportunities:</span> Category clicks, product cards, and navigation events ready for consolidation</p>
         </div>
     </div>
 
-    <script>
-        // Animate chart bars on load
+        <script>
+        // Animate chart bars on load (normalize by max value)
         document.addEventListener('DOMContentLoaded', function() {
-            const chartBars = document.querySelectorAll('.chart-bar-fill .fill');
-            chartBars.forEach((bar, index) => {
+            const rows = Array.from(document.querySelectorAll('.chart-bar'));
+            const values = rows.map(row => Number(row.querySelector('.chart-value')?.textContent ?? 0)).filter(v => !Number.isNaN(v));
+            const max = Math.max(...values, 1);
+
+            rows.forEach((row, index) => {
+                const bar = row.querySelector('.chart-bar-fill .fill');
+                const value = Number(row.querySelector('.chart-value')?.textContent ?? 0);
+                const pct = Math.round((value / max) * 100);
+
                 setTimeout(() => {
-                    bar.style.width = bar.parentElement.parentElement.querySelector('.chart-value').textContent + '%';
-                }, index * 100);
+                    if (bar) bar.style.width = pct + '%';
+                }, index * 80);
             });
         });
     </script>

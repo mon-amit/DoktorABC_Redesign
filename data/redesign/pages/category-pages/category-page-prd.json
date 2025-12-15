@@ -1,0 +1,124 @@
+{
+  "title": "PRD ReDesign: Category Page",
+  "confluence_id": "1997013045",
+  "created": "2025-11-16",
+  "personas": {
+    "primary_persona": {
+      "name": "First-Time Visitor",
+      "characteristics": [
+        "Male or female, depending on category",
+        "Has a specific symptom or category of interest",
+        "Looking for a clear explanation and trustworthy medical service",
+        "Wants to understand treatment options quickly",
+        "Needs confidence, safety, and clarity before starting a consultation"
+      ]
+    },
+    "returning_user": {
+      "characteristics": [
+        "Has completed at least one consultation",
+        "Familiar with DoktorABC",
+        "Wants fast access to sub-categories and medical journeys",
+        "Expects a streamlined experience and consistent navigation"
+      ]
+    },
+    "compliance_sensitive": {
+      "characteristics": [
+        "Wants to see certifications, privacy protection, and medical legitimacy",
+        "Responds strongly to credibility elements (reviews, medical USPs, etc.)"
+      ]
+    }
+  },
+  "success_metrics": [
+    "Increase CTR to sub-categories",
+    "Increase funnel starts for each category",
+    "Reduce drop-off between category page → sub-category page"
+  ],
+  "functional_overview": "This page template must be generated automatically for any category created in the CMS. All content (titles, descriptions, images, sub-categories, metadata, USPs) must be pulled from the DB.",
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Automatic Page Generation",
+      "description": "When a new category is created in the CMS, the system automatically generates a Category Page using this template. No developer involvement. Category fields include: name, hero image, description, SEO content, and sub-categories."
+    },
+    {
+      "id": "R2",
+      "requirement": "USPS Component",
+      "description": "Display the global DoktorABC USPS bar at the top of the page. Same USP design used across site."
+    },
+    {
+      "id": "R3",
+      "requirement": "Navbar Component",
+      "description": "Show the global sticky navbar with Logo, Search, Account, Cart, and Menu. Behavior identical to production."
+    },
+    {
+      "id": "R4",
+      "requirement": "CRM Coupon Component",
+      "description": "Show the global CRM coupon strip under the navbar. Content pulled from CRM."
+    },
+    {
+      "id": "R5",
+      "requirement": "Hero Section",
+      "description": "Hero must display: Category hero image (from DB), Category name, Category description"
+    },
+    {
+      "id": "R6",
+      "requirement": "RX USP Block",
+      "description": "Display the 4 fixed RX USPs for ALL category pages: Prescription issued online, Delivered in 1-2 days, Original German medicine, Advice via online questionnaire"
+    },
+    {
+      "id": "R7",
+      "requirement": "Sub-Category Section",
+      "description": "Display a vertical or horizontal list of all sub-categories under the category. Each item includes: Sub-category name, Short description, Hero image (from DB), CTA button → navigates to sub-category page"
+    },
+    {
+      "id": "R8",
+      "requirement": "Review Component",
+      "description": "Display the standard customer review component (same as homepage). Use same API and rotation logic as today."
+    },
+    {
+      "id": "R9",
+      "requirement": "Payment Methods Component",
+      "description": "Show row of accepted payment logos (PayPal, Visa, MasterCard, Klarna, etc.). SVG assets, responsive layout."
+    },
+    {
+      "id": "R10",
+      "requirement": "Data Privacy Component",
+      "description": "Show 'Your Privacy. Our Priority.' section with certifications (PCA, DMCA, LegitScript, etc.). Identical design as homepage."
+    },
+    {
+      "id": "R11",
+      "requirement": "Press Component",
+      "description": "Show the Press carousel with publication logos. Auto-rotating carousel."
+    },
+    {
+      "id": "R12",
+      "requirement": "CRM Subscription Component",
+      "description": "Show the CRM email subscription block. Sends: User email, Category Page URL, Category name. Duplicate check + HubSpot lead creation."
+    },
+    {
+      "id": "R13",
+      "requirement": "Footer Component",
+      "description": "Render the global site footer with localized links and legal text. Same as site-wide footer."
+    },
+    {
+      "id": "R14",
+      "requirement": "Localization",
+      "description": "All text (title, descriptions, USPs, sub-category content) must be fully localized for DE + FR and must not break UI."
+    },
+    {
+      "id": "R15",
+      "requirement": "CMS Data Mapping",
+      "description": "CMS must store: Category title, Category description, Category hero image (desktop + mobile), Sub-categories list (+ images + text), SEO content, Visibility toggles for components"
+    }
+  ],
+  "page_flow": [
+    "User arrives from homepage, search, funnel, or SEO landing.",
+    "Sees category hero → understands scope of treatments.",
+    "Scrolls to sub-categories → finds relevant medical path.",
+    "Reads trust components (USPs, reviews, privacy, press).",
+    "Optionally signs up via CRM block.",
+    "Footer ends the page."
+  ],
+  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-79915&t=F5at0F3hLYIB0bIH-11",
+  "source": "Confluence Page ID 1997013045"
+}

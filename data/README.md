@@ -10,6 +10,17 @@ data/
 ├── analytics/                   # Analytics data and configurations
 │   ├── event-tracking-config.json  # Event definitions and properties
 │   └── data-collection.js       # Data collection utilities
+├── redesign/                    # DoktorABC Redesign Project Data
+│   ├── project-overview.json    # Main project overview and goals
+│   ├── requirements-index.json  # Comprehensive requirements catalog
+│   ├── analytics-summary.json   # Performance metrics and targets
+│   ├── deans-space-content.json # Dean's Confluence space content inventory
+│   ├── prds/                    # Product Requirements Documents
+│   │   ├── homepage-prd.json    # Main homepage redesign specs
+│   │   └── rx-category-prd.json # RX category page redesign specs
+│   ├── pages/                   # Page-specific data and specs
+│   ├── components/              # Reusable component specifications
+│   └── requirements/            # Detailed requirement breakdowns
 ├── events/                      # Raw event data storage
 ├── users/                       # User profile and segmentation data
 └── reports/                     # Generated reports and insights
@@ -32,6 +43,12 @@ The project implements comprehensive event tracking across user interactions, fe
 - **Search**: Query analysis and result interactions
 - **Performance**: Load times, errors, and technical metrics
 - **Conversions**: Lead generation, trials, and purchases
+
+#### Redesign Project Data
+- **Project Overview**: Strategic goals, success metrics, and rollout phases
+- **Product Requirements**: Detailed specifications for all redesigned pages and components
+- **Analytics & Metrics**: Performance tracking, conversion goals, and user segmentation
+- **Technical Requirements**: Implementation specifications and integration points
 
 ## 📊 Analytics Configuration
 
@@ -96,6 +113,13 @@ tracker.exportEvents('events_backup.json');
 - **Lead Tracking**: Sales funnel and opportunity management
 - **Engagement Scoring**: Interaction and interest measurement
 - **Campaign Attribution**: Marketing effectiveness analysis
+
+#### DoktorABC Redesign Project
+- **Confluence Integration**: Product requirements documents and design specifications
+- **Figma Designs**: Visual design systems and component libraries
+- **Analytics Dashboard**: Performance monitoring and conversion tracking
+- **A/B Testing Framework**: Iterative optimization and user experience improvements
+- **Dean's Space Content**: Complete local archive of 35+ pages including 17 redesign PRDs, competitive analysis, and release notes
 
 ## 📈 Reporting & Analytics
 
@@ -204,9 +228,125 @@ User Interaction → MCP Server → Event Validation → Data Enrichment → Sto
 - **Node.js**: Data processing and API development
 - **Cursor MCP**: AI-assisted development environment
 
+## 🏗️ DoktorABC Redesign Project Data
+
+### Project Overview
+The redesign project data contains comprehensive specifications for the DoktorABC platform redesign, focusing on improving conversion rates, user experience, and trust signals across all major pages and components.
+
+### Data Structure
+
+#### Project Management
+- **`project-overview.json`**: Strategic goals, success metrics, rollout phases, and stakeholder information
+- **`requirements-index.json`**: Complete catalog of all requirements, components, and technical specifications
+- **`analytics-summary.json`**: Current performance metrics, targets, and optimization opportunities
+
+#### Product Requirements Documents (PRDs)
+Located in `redesign/prds/`, containing detailed specifications for:
+- **Homepage**: Hero section, navigation, categories, trust signals
+- **RX Category Pages**: Medical content, doctor profiles, consultation flow
+- **OTC E-commerce**: Product discovery, shopping cart, checkout optimization
+- **Cannabis Pages**: Medical cannabis navigation and trust building
+- **Information Pages**: About us, shipping, FAQ, and trust content
+
+#### Component Specifications
+- **Navigation Systems**: Sticky headers, breadcrumbs, search functionality
+- **Trust Signals**: Reviews, certifications, doctor profiles, security badges
+- **Conversion Elements**: CTAs, forms, pricing displays, social proof
+- **Content Management**: Dynamic content from Back Office (BO) integration
+
+### Key Metrics & Targets
+
+#### Primary KPIs
+- **+30%** increase in consultation start conversion
+- **+20%** increase in paid order conversion
+- **+20%** increase in Average Order Value (AOV)
+- **-20%** reduction in cart abandonment
+- **≥90** Google PageSpeed score
+
+#### Current Performance Baseline
+- **590K** monthly unique visitors to homepage
+- **7.31%** conversion rate (view → paid order within 24h)
+- **16%** bounce rate
+- **10%** scroll depth past "How it works" section
+
+### Implementation Phases
+
+#### Phase 1: CMS Design (Sept 30, 2025)
+Complete redesign of core pages with pixel-perfect Figma implementation:
+- Homepage, category pages, product pages
+- Information pages, error pages, account management
+- Mobile-first responsive design with performance optimization
+
+#### Phase 2: Funnel Optimization
+Data-driven improvements to conversion funnel:
+- A/B testing of key elements
+- Analytics integration and tracking
+- Iterative optimization based on user behavior
+
+### Technical Architecture
+
+#### Integration Points
+- **Confluence**: Requirements documentation and specifications
+- **Figma**: Design systems and component libraries
+- **Back Office (BO)**: Dynamic content management
+- **Database**: Real-time pricing and product data
+- **Analytics**: Mixpanel and GA4 event tracking
+
+#### Smart Personalization
+- **User Segmentation**: New vs returning visitors, category preferences
+- **Dynamic Content**: Personalized hero sections and recommendations
+- **CRM Integration**: Coupon displays and lead capture
+- **Localization**: German/French market adaptations
+
+### Dean's Confluence Space Content
+
+Dean's personal Confluence space contains the most comprehensive collection of redesign documentation. **Local copies** of key documents are now available in `data/redesign/deans-space-content/`:
+
+#### Local Document Archive
+- **`main-redesign-project.html`** - Complete project overview and strategic goals
+- **`homepage-prd.html`** - Detailed homepage redesign specification
+- **`rx-category-prd.html`** - RX category page complete requirements
+- **`competitive-landscape.html`** - Comprehensive competitor analysis
+- **`README.md`** - Archive overview and usage guidelines
+
+#### Available Online (35+ pages total)
+- **Redesign PRDs**: 17 comprehensive page and feature specifications
+- **Product Requirements**: 13 feature development and optimization specs
+- **Analysis Documents**: Competitive research, funnel analysis, performance metrics
+- **Release Notes**: 5 recent feature deployments and updates
+
+### Usage Guidelines
+
+#### For Developers
+```javascript
+// Access project specifications
+const homepageSpecs = require('./data/redesign/prds/homepage-prd.json');
+const requirements = require('./data/redesign/requirements-index.json');
+const deansContent = require('./data/redesign/deans-space-content.json');
+
+// Check implementation requirements
+const navigationReqs = requirements.design_system_components.find(
+  c => c.component === 'Navigation Bar'
+);
+
+// Find specific PRDs in Dean's space
+const redesignPRDs = deansContent.content_categories.redesign_project;
+```
+
+#### For Product Managers
+- Use `requirements-index.json` for comprehensive requirement tracking
+- Reference `analytics-summary.json` for performance baselines and targets
+- Access specific PRDs for detailed page/component specifications
+
+#### For Designers
+- Figma links embedded in all PRD documents
+- Component specifications in `requirements-index.json`
+- Performance constraints and accessibility requirements
+
 ---
 
 **Data Lead**: Amit Yogev
-**Last Updated**: December 14, 2025
+**Last Updated**: December 15, 2025
 **Data Collection Status**: 🟢 **ACTIVE** - Ready for implementation
-**Tags**: #analytics #data-collection #mixpanel #tracking
+**Redesign Project Status**: 🟢 **ACTIVE** - Data collection complete
+**Tags**: #analytics #data-collection #mixpanel #tracking #redesign #conversion-optimization

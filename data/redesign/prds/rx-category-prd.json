@@ -1,0 +1,158 @@
+{
+  "title": "PRD ReDesign: RX Category Page",
+  "background_context": "The RX Category Page serves as the main gateway for users exploring prescription treatments on DoktorABC. It must communicate trust, professionalism, and simplicity while leading users efficiently toward starting a consultation.",
+  "personas": {
+    "new_visitors": "Arrive via search engines or campaigns, looking for trustworthy online consultation for prescription treatment",
+    "returning_visitors": "Have purchased before or used another treatment category, expect consistency and reliability"
+  },
+  "success_metrics": [
+    "+20% increase in conversion from RX category page → start consultation",
+    "+10% improvement in conversion from RX category page → paid order",
+    "Maintain page bounce rate under 15%"
+  ],
+  "competitors": ["Hims", "Ro"],
+  "key_sections": [
+    {
+      "section": "Anchor Bar (Top)",
+      "requirements": "Displays general USPs identical to homepage"
+    },
+    {
+      "section": "Nav Bar (Sticky)",
+      "requirements": "Company logo, search button, hamburger menu"
+    },
+    {
+      "section": "Breadcrumb Navigation",
+      "requirements": "Displays navigation path (Home → RX Category)"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": "Hero image, title, USP content, CTA button 'Start a consultation', Trusted Shops widget, 3 visual stories, RX-specific USPs"
+    },
+    {
+      "section": "Search Bar Section",
+      "requirements": "Title 'Search here by product name', prominent search bar"
+    },
+    {
+      "section": "How It Works Section",
+      "requirements": "Reuse existing 3-step visual component from homepage"
+    },
+    {
+      "section": "Category Drilldown Section",
+      "requirements": "Visual display of subcategories/treatments similar to homepage category grid"
+    },
+    {
+      "section": "User Reviews Section",
+      "requirements": "Trusted Shops review carousel"
+    },
+    {
+      "section": "User Videos Section",
+      "requirements": "Carousel of 3-5 short marketing videos with creator name, age, short quote/testimonial"
+    },
+    {
+      "section": "Doctor Section",
+      "requirements": "Doctor photo + specialization, content about doctor (ASO text), CTA 'Learn more'"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": "5-7 FAQs about RX treatments and consultation process"
+    },
+    {
+      "section": "Topic List Section",
+      "requirements": "Dynamic content pulled from ASO"
+    },
+    {
+      "section": "Additional Content Section",
+      "requirements": "Supplementary text from ASO (educational or informational)"
+    },
+    {
+      "section": "CRM Banner (Lead Capture)",
+      "requirements": "Banner promoting newsletter or special offers, user can input email or close banner"
+    },
+    {
+      "section": "Sources Section",
+      "requirements": "Dynamic content pulled from ASO"
+    },
+    {
+      "section": "Additional Information Section",
+      "requirements": "Links to related content or policies (from ASO)"
+    },
+    {
+      "section": "Footer",
+      "requirements": "Standard site footer with logo, navigation links, certifications, payment methods, address, disclaimer"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "General Page Structure",
+      "description": "Every RX Category Page built in consistent structure order with all components listed above"
+    },
+    {
+      "id": "R2",
+      "requirement": "Hero Section (Category Header)",
+      "description": "Category image from BO, breadcrumb navigation, main title from BO, subtitle from BO, CTA button with category colors, sticky behavior"
+    },
+    {
+      "id": "R3",
+      "requirement": "Medical Evaluation & Prescription Section",
+      "description": "Display pricing line with dynamic numbers from DB"
+    },
+    {
+      "id": "R4",
+      "requirement": "Trusted Shops Widget",
+      "description": "Integrate Trusted Shops widget exactly as in production"
+    },
+    {
+      "id": "R5",
+      "requirement": "RX Category USPS Section",
+      "description": "Fixed USPs: Prescription online, Delivered 1-2 days, Original German medicine, Advice via questionnaire"
+    },
+    {
+      "id": "R6",
+      "requirement": "Category Search Section",
+      "description": "Search component specific to current RX category, shows only products in this category"
+    },
+    {
+      "id": "R7",
+      "requirement": "'How It Works' Component",
+      "description": "Standard DoktorABC 'How It Works' component"
+    },
+    {
+      "id": "R8",
+      "requirement": "'Top Ratings & Best Guarantee' Component",
+      "description": "Standard component with same design and logic as other pages"
+    },
+    {
+      "id": "R9",
+      "requirement": "FAQ Section",
+      "description": "Questions and answers pulled from BO, first question open by default, localized"
+    },
+    {
+      "id": "R10",
+      "requirement": "Customer Reviews Section",
+      "description": "Standard Customer Reviews component, pulls reviews from DB"
+    },
+    {
+      "id": "R11",
+      "requirement": "Payment Methods Section",
+      "description": "Horizontal strip of payment method logos"
+    },
+    {
+      "id": "R12",
+      "requirement": "'Medically and Professionally Tested' Section",
+      "description": "Content exactly as implemented in production, using same DB source"
+    },
+    {
+      "id": "R13",
+      "requirement": "'Your Privacy. Our Priority.' Banner",
+      "description": "DoktorABC privacy banner component, localized for each country"
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=Vg83C0ZXAteeI0s4-1",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9791-14284&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_links": [
+    "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1029534888#gid=1029534888"
+  ]
+}

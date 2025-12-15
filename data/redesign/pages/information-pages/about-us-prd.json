@@ -1,0 +1,93 @@
+{
+  "title": "PRD Redesign: About Us Page (DoktorABC)",
+  "confluence_id": "1968046092",
+  "created": "2025-10-29",
+  "context": "The 'About Us' page is the main brand credibility touchpoint for new and returning customers. It must communicate who we are, our mission and vision, and the trustworthiness of DoktorABC's medical and operational infrastructure.",
+  "personas": {
+    "new_visitors": {
+      "description": "Arrive from Google or marketing campaigns",
+      "goal": "Build trust, understand the company's mission, and feel safe to purchase or start consultation"
+    },
+    "returning_customers": {
+      "description": "Existing patients checking credibility",
+      "goal": "Learn more about regulatory framework, physicians, and global presence"
+    },
+    "press_partners": {
+      "description": "Journalists or potential business partners",
+      "goal": "Quickly identify company scope, certifications, and media mentions"
+    }
+  },
+  "success_metrics": {
+    "time_on_page": "≥ 1 minute (indicates engagement and trust reading)",
+    "click_through_rate": "5-8% to consultation or treatments",
+    "scroll_depth": "≥ 75% (users reach the medical & certifications sections)"
+  },
+  "design_sections": [
+    {
+      "section": "Navbar",
+      "requirements": "Standard DoktorABC header with: Company logo, Cart, My Account, Hamburger menu",
+      "notes": "Same as across main site. Sticky at top."
+    },
+    {
+      "section": "Hero Section – 'Who We Are'",
+      "requirements": "Title: 'Who We Are', Text: 'DoktorABC is a trusted European telemedicine platform...', Visual: Image of doctor with patient or pharmacy team",
+      "notes": "First fold must establish brand identity, professionalism, and tone of trust."
+    },
+    {
+      "section": "Our Mission Section",
+      "requirements": "Title: 'Our Mission', Text: Mission statement, Graphic: Process line or icons showing flow – Consult → Diagnosis → Prescription → Dispensing",
+      "notes": "Design should mirror the slide visual with a clean, medical layout."
+    },
+    {
+      "section": "Our Vision Section",
+      "requirements": "Title: 'Our Vision', Text: 'To redefine the way people access healthcare...'",
+      "notes": "Place after Mission for logical flow. Minimal visual needed."
+    },
+    {
+      "section": "Where We Operate Section",
+      "requirements": "Title: 'Where We Operate', Text: Operating regions description, Map Visualization: Interactive or static map with flag regions",
+      "notes": "Use green brand markers on map."
+    },
+    {
+      "section": "Our Numbers (Growth & Scale)",
+      "requirements": "Title: 'How We Grow', 4 Data Blocks: 1M+ Customers Served, 40+ Types of Treatments, 50+ Partner Pharmacies, 100+ Employees, 7 years of trust, Include Trustpilot rating (4.6★ from 13,000+ reviews) and Käuferschutz badge",
+      "notes": "Should visually match presentation 'How we grow' slide."
+    },
+    {
+      "section": "Our Doctors Section",
+      "requirements": "Title: 'Meet Our Doctors', Doctor Card Template: photo, name/title, country, bio, regulatory authority, registration link",
+      "notes": "Display 3-4 doctor cards per row, scrollable on mobile."
+    },
+    {
+      "section": "Customer Reviews Section",
+      "requirements": "Title: 'What Our Patients Say', Content: Carousel of 4-6 verified Trustpilot reviews with rating stars and review snippet, Include average rating",
+      "notes": "Consistency with homepage Trustpilot integration."
+    },
+    {
+      "section": "Press Mentions Section",
+      "requirements": "Title: 'As Seen In' or 'Our Press', Logos carousel of media outlets (Yahoo Finance, Tagesspiegel, Nordbayern.de, OK! Magazin, Vital)",
+      "notes": "Same press logo order and styling as homepage."
+    },
+    {
+      "section": "Certifications & Compliance Section",
+      "requirements": "Title: 'Our Certifications', Include logos and short descriptions: LegitScript, PCI Security Standards Council, DMCA Protected, BIM Membership",
+      "notes": "Display horizontally in logo row with small text below each."
+    },
+    {
+      "section": "Payment & Privacy Section",
+      "requirements": "Title: 'Your Privacy & Payment Security', Icons for accepted payment methods, Include DoktorABC Data Privacy logo (GDPR compliance)",
+      "notes": "Compact visual design – trust-focused close to footer."
+    },
+    {
+      "section": "Final CTA Section",
+      "requirements": "Title: 'Start Your Treatment Today', Button: 'View All Treatments' or 'Start Consultation'",
+      "notes": "Optional closing CTA to lead back to main conversion funnel."
+    },
+    {
+      "section": "Footer",
+      "requirements": "Standard DoktorABC footer with: Logo, Navigation links, Payment methods, Country flags, Company address & certifications, © 2025, Disclaimer text",
+      "notes": "Must match global site structure and styling."
+    }
+  ],
+  "source": "Confluence Page ID 1968046092"
+}

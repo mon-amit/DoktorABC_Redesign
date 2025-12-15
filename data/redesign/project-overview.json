@@ -1,0 +1,81 @@
+{
+  "project": {
+    "name": "DoktorABC Redesign Project",
+    "status": "DRAFT",
+    "owner": "Dean Gabay",
+    "designers": ["Lauren Levy", "Mariie Mordikova", "Roman Gorelik"],
+    "tech_lead": "Hussein",
+    "qa": "",
+    "target_release": "TBD"
+  },
+  "scope": "Perform a facelift and design refresh for the website to make it more attractive and reliable to customers → Improve conversion and overall website performance.",
+  "challenge": "Balancing a modern design refresh with proven high performing elements, all within our available resource timeline.",
+  "strategic_goals": [
+    "Build Trust: Consistent professional design, Clear, page-specific USPs and new trust banners (Data Privacy, Reviews, Medical Board, Press).",
+    "Simplify User Navigation: Redesign site architecture to guide users to their treatment with zero friction.",
+    "Launch the OTC E-commerce Engine: Build a full \"online store\" (Homepage, Category, Product) Moving from a lead generation strategy → profitability",
+    "Data-Driven Design: Implement full event mapping (Mixpanel, GA4) for data-backed decisions."
+  ],
+  "success_metrics": {
+    "primary_kpis": [
+      "+30% Increase in Conversion – Start Consultation",
+      "+20% Increase in Conversion – Paid Order"
+    ],
+    "otc_growth": [
+      "+20% Increase in Average Order Value (AOV)",
+      "-20% Reduction in Cart Abandonment Rate"
+    ],
+    "performance": [
+      "Google PageSpeed Score ≥ 90"
+    ]
+  },
+  "rollout_stages": {
+    "step_one": {
+      "name": "CMS Design",
+      "deadline": "Tuesday, September 30, 2025 - First presentation",
+      "core_cms_pages": [
+        "Countries Page",
+        "Homepage",
+        "Cannabis Category Page",
+        "Cannabis Product Page",
+        "OTC Home Page",
+        "OTC Subcategory Page",
+        "OTC Product Page",
+        "OTC Search Bar Windows",
+        "OTC Brand Page",
+        "RX Category Page",
+        "RX Product Page",
+        "Main Menu",
+        "Search Bar Windows",
+        "Shopping Cart",
+        "Search Results Page (for OTC, Cannabis, RX products)",
+        "Registration Page",
+        "My Account (Pop-up windows)"
+      ],
+      "company_information_pages": [
+        "About Us",
+        "FAQ",
+        "How It Works",
+        "Shipping"
+      ],
+      "footer_pages": [
+        "Manufacturers",
+        "DoktorABC Experience",
+        "Press",
+        "Editorial Process",
+        "Treatments"
+      ]
+    },
+    "step_two": {
+      "name": "Funnel Design & Optimization",
+      "focus": "Focus on Funnel.doktorabc",
+      "note": "This will continue as the second phase of the project."
+    }
+  },
+  "approvals": {
+    "product": ["Eran", "David"],
+    "aso_team": ["Olexander"],
+    "marketing": ["Miki"],
+    "dev": ["Hussein"]
+  }
+}

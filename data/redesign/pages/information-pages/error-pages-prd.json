@@ -1,0 +1,48 @@
+{
+  "title": "PRD ReDesign: Error Pages (404 / 500 / 502)",
+  "confluence_id": "1960574989",
+  "created": "2025-10-22",
+  "context": "Error pages are part of the user experience, not just a technical fallback. When users hit a broken or unavailable page, they experience frustration, uncertainty, and sometimes distrust. Our responsibility is to turn that negative moment into a reassuring, helpful, and brand-consistent experience.",
+  "personas": [
+    "New visitors: Users arriving from organic search, ads, or backlinks",
+    "Returning customers: Users who have purchased or consulted before",
+    "High intent users: Users in checkout or consultation flow when error occurred",
+    "Support seekers: Users seeking information about delivery, accounts, or prescriptions"
+  ],
+  "error_pages": {
+    "404_page_not_found": {
+      "context": "This page appears when a user follows a broken link, mistypes a URL, or accesses a page that no longer exists.",
+      "content_messaging": {
+        "headline": "Page Not Found or We can't seem to find that page.",
+        "body_copy": "Sorry, the page you're looking for doesn't exist or may have been moved.",
+        "image": "A clean, on-brand graphic, e.g a stylized, empty."
+      },
+      "buttons_actions": {
+        "primary_button": "Go to Homepage - main recovery route",
+        "helpful_links": ["How It Works", "Contact Support / Help Center"]
+      }
+    },
+    "500_502_server_error": {
+      "context": "This occurs when DoktorABC experiences a temporary backend failure or technical issue. The user did nothing wrong, our responsibility is to reassure them and guide them safely.",
+      "content_messaging": {
+        "headline": "Something went wrong on our end.",
+        "body_copy": "We're sorry, but we're experiencing a temporary technical issue. Our team has been automatically notified and is working to fix it. Please try refreshing the page in a few moments.",
+        "image": "A calm and supportive image."
+      },
+      "buttons_actions": {
+        "primary_button": "Refresh This Page - since 500 errors are often temporary, this is the main action",
+        "secondary_button": "Go to Homepage - backup route if refresh doesn't resolve it",
+        "key_link": "Contact Support - critical for users in checkout or consultation"
+      }
+    }
+  },
+  "design_principles": [
+    "Calm, professional, and trustworthy",
+    "Not overly playful or alarming",
+    "Reassuring and helpful",
+    "Brand-consistent with main site"
+  ],
+  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-84592&p=f&t=F5at0F3hLYIB0bIH-11",
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=433031967#gid=433031967",
+  "source": "Confluence Page ID 1960574989"
+}

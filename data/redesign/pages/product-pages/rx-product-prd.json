@@ -1,0 +1,191 @@
+{
+  "title": "PRD ReDesign: RX Product Page",
+  "confluence_id": "1944682552",
+  "created": "2025-10-07",
+  "background": "The RX (Prescription) Product Page is one of the most important points in the medical treatment funnel. It's where users decide whether to begin the consultation process for a prescription medication.",
+  "goal": "The page should clearly communicate trust, credibility, and simplicity - guiding users toward starting the online consultation.",
+  "personas": {
+    "new_visitors": {
+      "characteristics": [
+        "Arrive from search or marketing campaigns (Google Ads, SEO)",
+        "Often unfamiliar with DoktorABC",
+        "Need reassurance that the process is legitimate, fast, and discreet",
+        "Sensitive to price transparency and data security"
+      ]
+    },
+    "returning_users": {
+      "characteristics": [
+        "Have previously used DoktorABC for another treatment",
+        "Expect an easy and fast process to start a new consultation",
+        "Trust the service but still want clarity on delivery and prescription details"
+      ]
+    }
+  },
+  "success_indicators": [
+    "+20% increase in conversion from RX product page → start consultation",
+    "+10% increase in completed paid orders from users who reached the RX product page",
+    "Maintain a bounce rate below 15% on RX product pages"
+  ],
+  "competitor_inspiration": ["Hims", "Ro"],
+  "design_sections": [
+    {
+      "section": "Anchor Bar (Top)",
+      "requirements": "General USPs reused from homepage (Discreet & qualified treatments, Online consultation & prescription, 1-2 day delivery, Information security)",
+      "notes": "Must match homepage styling"
+    },
+    {
+      "section": "Nav Bar (Sticky)",
+      "requirements": "Company logo, Search button, Hamburger menu",
+      "notes": "Consistent across RX pages"
+    },
+    {
+      "section": "Breadcrumb Navigation",
+      "requirements": "Shows full path to the page (Home → Category → Product)",
+      "notes": "Helps orient users"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": "Product image, Product name, Share button, Dosage (number + unit), Package options with pricing, CTA button: 'Start consultation', Text below button, RX USPs",
+      "notes": "Primary conversion area"
+    },
+    {
+      "section": "Product Description (Short)",
+      "requirements": "Text provided from ASO content team",
+      "notes": "Appears below hero"
+    },
+    {
+      "section": "Sticky CTA Bar (Bottom)",
+      "requirements": "CTA button: 'Start consultation', Pricing text",
+      "notes": "Always visible"
+    },
+    {
+      "section": "Drug Description (Detailed)",
+      "requirements": "Full HTML content from ASO",
+      "notes": "Structured with headings and lists"
+    },
+    {
+      "section": "How It Works Section",
+      "requirements": "Visual 3-step screenshot (same as homepage)",
+      "notes": "Use same design"
+    },
+    {
+      "section": "Doctor Explanation Section",
+      "requirements": "Doctor screenshot, photo, name, title, short content, CTA: 'Learn more'",
+      "notes": "Same component as current site"
+    },
+    {
+      "section": "Resources Section",
+      "requirements": "Expandable section titled 'Resources', Links and materials from ASO",
+      "notes": "Supports SEO and transparency"
+    },
+    {
+      "section": "Footer",
+      "requirements": "Standard site footer (logo, accordion links, payment methods, certifications, address, disclaimer)",
+      "notes": "Consistent with homepage"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Scope",
+      "description": "This design and structure apply to all RX product pages except those under the Cannabis category"
+    },
+    {
+      "id": "R2",
+      "requirement": "USPS Section",
+      "description": "Display the standard DoktorABC USPS component at the top of the page"
+    },
+    {
+      "id": "R3",
+      "requirement": "Navbar Section",
+      "description": "Display the Navbar identical to other RX pages: Company logo, Search, Cart, My Account, Hamburger menu. Sticky while scrolling."
+    },
+    {
+      "id": "R4",
+      "requirement": "CRM Coupon Section",
+      "description": "Display the CRM coupon banner showing active promotions. Content pulled dynamically from CRM."
+    },
+    {
+      "id": "R5",
+      "requirement": "Breadcrumb Navigation",
+      "description": "Display breadcrumb navigation path: Home → Category → Sub-category → Product. Must update dynamically."
+    },
+    {
+      "id": "R6",
+      "requirement": "Hero Section",
+      "description": "Product image, Stock label, Share button (opens share popup), Product name, Trusted Shops widget. Section adapts responsively for mobile and desktop."
+    },
+    {
+      "id": "R6.1",
+      "requirement": "Share button",
+      "description": "Opens centered popup with: Title 'Share', Close (X) icon, 5 share options (Facebook, WhatsApp, X.com, Pinterest, E-mail), URL field with copy icon, 'Link copied' confirmation"
+    },
+    {
+      "id": "R7",
+      "requirement": "USPS Section (Product Level)",
+      "description": "Display RX USPS block: Prescription issued online, Delivered 1-2 days, Original German medicine, Advice via questionnaire"
+    },
+    {
+      "id": "R8",
+      "requirement": "Pricing Section",
+      "description": "Display product's price information clearly. CTA button visually emphasized and localized per language (FR/DE)."
+    },
+    {
+      "id": "R9",
+      "requirement": "Treatment Fee Section",
+      "description": "Display dynamic line: 'You pay for your medication + treatment fee €18.90'. Treatment fee value pulled dynamically from DB. Text localized."
+    },
+    {
+      "id": "R10",
+      "requirement": "SEO Short Description Section",
+      "description": "Display product description content (HTML) pulled from DB"
+    },
+    {
+      "id": "R11",
+      "requirement": "FAQ Section",
+      "description": "Questions and answers come from the DB"
+    },
+    {
+      "id": "R12",
+      "requirement": "Additional Treatments Section",
+      "description": "Display 'Additional Treatments' section showing other RX treatments related to current product category. Use standard RX product card component. Content pulled dynamically from DB."
+    },
+    {
+      "id": "R13",
+      "requirement": "SEO Section",
+      "description": "Add the SEO text widget for SEO team to manage optimized content for product page. Content from DB or BO."
+    },
+    {
+      "id": "R14",
+      "requirement": "'Medically and Professionally Tested' Section",
+      "description": "Display section using same content and structure as production. Content and visuals from DB."
+    },
+    {
+      "id": "R15",
+      "requirement": "'Your Privacy. Our Priority.' Section",
+      "description": "Display global privacy banner component. Text localized per country (FR/DE)."
+    },
+    {
+      "id": "R16",
+      "requirement": "'Top Ratings & Best Guarantee' Section",
+      "description": "Add component matching design and structure used across other DoktorABC pages"
+    },
+    {
+      "id": "R17",
+      "requirement": "'How It Works' Section",
+      "description": "Display component - static explanation of the process. Layout identical to homepage and RX category pages."
+    },
+    {
+      "id": "R18",
+      "requirement": "'More Information' Section",
+      "description": "Display section pulling content dynamically from DB (same source and logic as current production)"
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=Vg83C0ZXAteeI0s4-1",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-51315&p=f&t=mQEnvCtpvkt1eu1k-11",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9766-24700&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1029534888#gid=1029534888",
+  "source": "Confluence Page ID 1944682552"
+}

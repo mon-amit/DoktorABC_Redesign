@@ -1,0 +1,125 @@
+{
+  "title": "PRD ReDesign: OTC Product Page",
+  "confluence_id": "1943011424",
+  "created": "2025-10-05",
+  "background": "The OTC Product Page is one of the most critical points in the OTC funnel. It's where users decide whether to purchase, based on the product's purpose, price, brand, trust, and delivery promises.",
+  "user_arrival": {
+    "internal_navigation": "Via the Homepage or subcategory pages",
+    "external_traffic": "From marketing campaigns (mainly Google Merchant)"
+  },
+  "key_challenge": "Users coming directly from Google Merchant often don't know DoktorABC, they lack context and trust. The page must communicate who we are, why we're reliable, and why it's worth purchasing through us.",
+  "analytics_last_30_days": {
+    "monthly_revenue": "€63K",
+    "gross_profit": "€11.48K",
+    "aov": "€19.32",
+    "avg_orders_per_month": "~3,000",
+    "conversion_from_merchant": "2.5% (Google Merchant → Product Page → Paid Order)"
+  },
+  "main_user_problems": [
+    "Limited product variety (only ~2,000 SKUs) compared to competitors with tens of thousands",
+    "Users arriving directly from ads don't understand who DoktorABC is or why they can trust us",
+    "Lack of visible product and service reviews makes users hesitant to complete a purchase"
+  ],
+  "success_indicators": [
+    "+20% increase in conversion from product page → paid order",
+    "+10% increase in AOV via the 'Usually bought together' product carousels"
+  ],
+  "competitor_inspiration": ["Shop Apotheke", "iHerb"],
+  "design_sections": [
+    {
+      "section": "Navbar (sticky)",
+      "requirements": "E-Prescription button, Shopping cart button, Search bar with hamburger menu, CRM promo anchor bar above",
+      "notes": "Standard for all OTC pages"
+    },
+    {
+      "section": "Breadcrumb Navigation",
+      "requirements": "Displays full path: Home → Category → Subcategory → Product",
+      "notes": "Helps orient users"
+    },
+    {
+      "section": "Hero Section (Product Header)",
+      "requirements": "Product image carousel, Product name, Share button, Price + previous price (if discounted), In Stock / Out of Stock label, Package selector (size/variant), Quantity counter, Add to Cart button",
+      "notes": "Focus on clarity and quick purchase"
+    },
+    {
+      "section": "4 USP Section",
+      "requirements": "Free shipping for orders over €30, Fast delivery: 1-3 business days, Secure payment for all orders, Trusted: 1M+ patients in Germany",
+      "notes": "Visual icons with color, same style as homepage"
+    },
+    {
+      "section": "Usually Bought Together",
+      "requirements": "Display user's product + up to 2 complementary products (max 3 total), Show combined price and savings, CTA: 'Add both products to cart'",
+      "notes": "Designed to boost AOV"
+    },
+    {
+      "section": "Description",
+      "requirements": "Product description (HTML from BO). Include all relevant details: usage, ingredients, manufacturer, dosage, etc.",
+      "notes": "Pulled dynamically"
+    },
+    {
+      "section": "You May Also Like",
+      "requirements": "Carousel of related products (same structure as Homepage product cards). Include discount tags, stock label, add-to-cart button.",
+      "notes": "Cross-sell feature"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": "4 questions about DoktorABC (trust, shipping, returns, security). Accordion format (first open by default).",
+      "notes": "Builds credibility"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "OTC NavBar Section",
+      "description": "OTC Navbar component: Company logo, Search bar (OTC products only), E-prescription button (navigates to DoktorABC homepage), Cart icon, My Account, Hamburger menu. Sticky during scroll."
+    },
+    {
+      "id": "R2",
+      "requirement": "OTC Coupon Code Section",
+      "description": "Display OTC CRM coupon strip. On mobile, appears above navbar. Content pulled from CRM and controlled by marketing team."
+    },
+    {
+      "id": "R3",
+      "requirement": "Navigation Section (Breadcrumbs)",
+      "description": "Display full breadcrumb navigation path: Home → Category → Sub-category → Product. Updates dynamically."
+    },
+    {
+      "id": "R4",
+      "requirement": "Product Section",
+      "description": "Product images with discount badge, Stock label, Share button (opens share popup), Product name, Product price (discounted in red with strike-through on old price), Package selector (dropdown), Quantity selector (dropdown), Add to cart button, Free shipping info if applicable. All data dynamic from DB."
+    },
+    {
+      "id": "R5",
+      "requirement": "OTC USPS Section",
+      "description": "Display 4 OTC USPs: Delivered 1-2 days, 24/7 customer service, Free shipping over €30 (value from DB), Our own brand product. If free shipping value = 0, hide that USP and center the other three."
+    },
+    {
+      "id": "R6",
+      "requirement": "'Other Bought Together' Section",
+      "description": "Purpose: increase AOV. Display 3 products: Product 1 = main product, Products 2-3 = two OTC products most frequently purchased together in last 30 days. If no data, extend to 3 months → 12 months. If no data found, display 2 random in-stock products from same category. Default state: all 3 products selected."
+    },
+    {
+      "id": "R7",
+      "requirement": "'Products You May Also Like' Section",
+      "description": "Display carousel of OTC product cards pulled randomly from all OTC categories. Same card layout as other pages."
+    },
+    {
+      "id": "R8",
+      "requirement": "Product Description Section",
+      "description": "Display product description (HTML) pulled from DB. Must support formatted text (paragraphs, bullet lists, links)."
+    },
+    {
+      "id": "R9",
+      "requirement": "OTC FAQ Section",
+      "description": "Display standard OTC FAQ section (accordion format) with default OTC questions from DB. First question open by default. Localized (DE/FR)."
+    },
+    {
+      "id": "R10",
+      "requirement": "Footer Section",
+      "description": "Display DoktorABC footer component identical to other OTC pages. Includes localized content, links, and compliance information."
+    }
+  ],
+  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-28887&p=f&t=mQEnvCtpvkt1eu1k-11",
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1954933257#gid=1954933257",
+  "source": "Confluence Page ID 1943011424"
+}

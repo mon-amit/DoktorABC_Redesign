@@ -1,0 +1,110 @@
+{
+  "title": "PRD ReDesign: Shipping Page",
+  "confluence_id": "1956053007",
+  "created": "2025-10-18",
+  "background": "The Shipping Page is a key informational page designed to provide users with clear, transparent details about DoktorABC's delivery methods, timelines, packaging, and policies.",
+  "target_audience": {
+    "pre_order_users": "Researching delivery options before making a purchase",
+    "post_order_users": "Looking for details about their shipment, expected delivery times, or carrier information"
+  },
+  "analytics_last_30_days": {
+    "conversion_rate_24h": "18.15%",
+    "conversion_rate_1h": "13.63%",
+    "unique_users": "5,869",
+    "total_page_views": "8,415"
+  },
+  "page_purpose": "To give users a complete, transparent, and trustworthy overview of DoktorABC's shipping methods including: Delivery types and timelines, Availability and restrictions, Privacy and packaging standards, Contact guidance for support",
+  "success_indicators": [
+    "Increase conversion rate from users who view the shipping page → paid order",
+    "Reduce % of customer service tickets related to pre-order shipping questions"
+  ],
+  "shipping_options": [
+    {
+      "option": "2-hour express delivery (Uber/courier)",
+      "description": "If you need it especially quickly, In select cities, we offer 2-hour delivery directly via courier. As soon as your prescription is approved, the courier will be on its way - directly to your address.",
+      "highlights": [
+        "Immediate shipping after the doctor's approval",
+        "Delivery within approximately 2 hours*",
+        "Perfect for urgent needs"
+      ],
+      "note": "Participation varies by region - check availability at checkout."
+    },
+    {
+      "option": "DHL - 24-48h delivery",
+      "title": "DHL Express 24-48 h",
+      "description": "Our standard shipping method: Once your prescription has been created, we forward the package to our service provider DHL. Delivery in Germany is usually within 1-2 business days.",
+      "highlights": [
+        "Delivery on weekdays within 24-48 hours",
+        "Tracking included",
+        "Delivered to your desired address or Packstation"
+      ]
+    },
+    {
+      "option": "Pickup - Pick up at the pharmacy",
+      "title": "Pick up on site",
+      "description": "If you prefer to visit in person, select 'Pickup' when ordering and pick up your medication from one of our partner pharmacies.",
+      "highlights": [
+        "No waiting for delivery - ready for immediate pickup",
+        "Discreet delivery in neutral packaging",
+        "Ideal if you're already there"
+      ]
+    }
+  ],
+  "design_sections": [
+    {
+      "section": "Navbar",
+      "requirements": "Standard DoktorABC navbar",
+      "notes": "Same structure as homepage and category pages"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": "Title: 'Fast. Discreet. Reliable: Your shipping with DoktorABC', Subtitle with USPs, Relevant hero image (delivery or neutral packaging theme)",
+      "hero_usps": [
+        ">90% of all orders are shipped within 24 hours",
+        "Express delivery in 2 hours is available in selected locations",
+        "Neutral packaging with no externally visible indication of contents",
+        "Free delivery with all options (where applicable)",
+        "Shipment tracking included",
+        "Delivery on working days (Monday - Friday)"
+      ],
+      "notes": "Must be visually clear, premium, and trustworthy"
+    },
+    {
+      "section": "Our Shipping Options Section",
+      "requirements": "Main title, subtitle, Three Option Cards: 2-hour express, DHL 24-48h, Pickup",
+      "notes": "Each shipping option must be presented as an individual card with clear icons and visual differentiation"
+    },
+    {
+      "section": "Neutral Packaging Section",
+      "requirements": "Heading: 'Our neutral packaging: Why, how, what?', Explanation paragraph, Bullet points explaining neutral packaging",
+      "notes": "Design should visually emphasize discretion. Use muted colors, clean layout, and iconography of packaging and privacy."
+    },
+    {
+      "section": "How It Works - Step by Step Section",
+      "requirements": "Heading: 'How your shipping works with DoktorABC', Numbered steps (5 steps total)",
+      "notes": "Present steps in a horizontal timeline or numbered column layout with icons for each step."
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": "Heading: 'Frequently asked questions about shipping', 6 questions with answers",
+      "notes": "FAQs should appear in collapsible accordion format with icons for each question"
+    },
+    {
+      "section": "Final Call to Action Section",
+      "requirements": "Heading: 'Ready for your treatment?', Paragraph, Button: 'Start consultation now', Category navigation buttons below",
+      "notes": "CTA must be strong and visible, styled like homepage buttons."
+    },
+    {
+      "section": "Payment method",
+      "requirements": "Add payment method logo strip",
+      "notes": ""
+    },
+    {
+      "section": "Legal & Notes Section",
+      "requirements": "Small print paragraph with disclaimers",
+      "notes": "Must appear at bottom of page before footer. Simple, readable text format."
+    }
+  ],
+  "figma_link": "",
+  "source": "Confluence Page ID 1956053007"
+}

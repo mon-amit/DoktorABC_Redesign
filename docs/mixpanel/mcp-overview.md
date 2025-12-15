@@ -28,7 +28,18 @@ MCP (Model Context Protocol) is a protocol that enables AI assistants to interac
   - Deal tracking and updates
   - Engagement logging
 
-#### 3. Notion Documentation
+#### 3. Confluence Wiki
+- **Purpose**: Enterprise documentation and knowledge base management
+- **MCP Server**: `@aashari/mcp-server-atlassian-confluence`
+- **Authentication**: API token via environment variables
+- **Tools Available**:
+  - Page creation, reading, and updating
+  - Space management
+  - Content search and filtering
+  - Blog post management
+  - Label and metadata operations
+
+#### 4. Notion Documentation
 - **Purpose**: Enhanced documentation and knowledge management
 - **MCP Server**: Official Notion MCP server
 - **Authentication**: API integration (currently none configured)
@@ -54,6 +65,19 @@ MCP (Model Context Protocol) is a protocol that enables AI assistants to interac
   "args": [],
   "env": {
     "HUBSPOT_ACCESS_TOKEN": "YOUR_TOKEN"
+  }
+}
+```
+
+### Confluence Configuration
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@aashari/mcp-server-atlassian-confluence"],
+  "env": {
+    "ATLASSIAN_SITE_NAME": "doktorabc",
+    "ATLASSIAN_USER_EMAIL": "nir.l@helfy.co",
+    "ATLASSIAN_API_TOKEN": "YOUR_API_TOKEN"
   }
 }
 ```
@@ -91,6 +115,29 @@ hubspot_create_contact({
   firstname: "John",
   lastname: "Doe",
   company: "Example Corp"
+});
+```
+
+### Wiki Operations
+```javascript
+// Get spaces
+conf_get({
+  path: "/wiki/api/v2/spaces",
+  queryParams: { limit: "10" },
+  jq: "results[*].{id: id, key: key, name: name}"
+});
+
+// Create a new page
+conf_post({
+  path: "/wiki/api/v2/pages",
+  body: {
+    spaceId: "140606812",
+    title: "Project Documentation",
+    body: {
+      representation: "storage",
+      value: "<p>This is the project documentation.</p>"
+    }
+  }
 });
 ```
 

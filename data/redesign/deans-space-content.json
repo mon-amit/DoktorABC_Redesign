@@ -1,0 +1,265 @@
+{
+  "space_info": {
+    "space_id": "1882685454",
+    "space_name": "Dean Gabay's Personal Space",
+    "space_url": "~7120209ec1fadd43394b5d8cebb1d220ce2353",
+    "total_pages": 35,
+    "owner": "Dean Gabay",
+    "last_updated": "2025-12-15"
+  },
+  "content_categories": {
+    "redesign_project": {
+      "main_project": {
+        "id": "1912864772",
+        "title": "ReDesign Doktorabc Project",
+        "created": "2025-09-02",
+        "last_modified": "2025-11-16",
+        "status": "DRAFT",
+        "description": "Main project overview with strategic goals, rollout phases, and stakeholder information"
+      },
+      "homepage_redesign": {
+        "id": "1930067988",
+        "title": "PRD ReDesign: Main Homepage",
+        "created": "2025-09-19",
+        "last_modified": "2025-12-14",
+        "status": "Design Requirements",
+        "description": "Complete homepage redesign with hero carousel, categories grid, trust signals"
+      },
+      "category_pages": [
+        {
+          "id": "1997013045",
+          "title": "PRD ReDesign: Category Page",
+          "created": "2025-11-16",
+          "description": "General category page redesign specifications"
+        },
+        {
+          "id": "1945174024",
+          "title": "PRD ReDesign: RX Category Page",
+          "created": "2025-10-07",
+          "description": "Prescription category page with medical credibility and doctor profiles"
+        },
+        {
+          "id": "1930068084",
+          "title": "PRD ReDesign: Cannabis Category Page",
+          "created": "2025-09-20",
+          "description": "Cannabis category page with ~350K monthly visits"
+        },
+        {
+          "id": "1935802370",
+          "title": "PRD ReDesign: OTC Category Page",
+          "created": "2025-09-26",
+          "description": "Over-the-counter category page redesign"
+        }
+      ],
+      "product_pages": [
+        {
+          "id": "1944682552",
+          "title": "PRD ReDesign: RX Product Page",
+          "created": "2025-10-07",
+          "description": "Prescription product page with trust building elements"
+        },
+        {
+          "id": "1943011424",
+          "title": "PRD ReDesign: OTC Product Page",
+          "created": "2025-10-05",
+          "description": "OTC product page for e-commerce conversion"
+        },
+        {
+          "id": "1932165125",
+          "title": "PRD ReDesign: Cannabis Product Page",
+          "created": "2025-09-23",
+          "description": "Cannabis product page for high-intent users"
+        }
+      ],
+      "specialized_pages": [
+        {
+          "id": "1930068117",
+          "title": "PRD ReDesign: OTC Homepage - Online Pharmacy Home",
+          "created": "2025-09-20",
+          "description": "Dedicated OTC homepage for e-commerce strategy"
+        },
+        {
+          "id": "1960575007",
+          "title": "PRD ReDesign: OTC Brand Page",
+          "created": "2025-10-22",
+          "description": "Brand-specific pages for OTC products"
+        },
+        {
+          "id": "1956053007",
+          "title": "PRD ReDesign: Shipping Page",
+          "created": "2025-10-18",
+          "description": "Shipping and delivery information page"
+        },
+        {
+          "id": "1960574989",
+          "title": "PRD ReDesign: Error Pages (404/500/502)",
+          "created": "2025-10-22",
+          "description": "Error page redesign for better user experience"
+        },
+        {
+          "id": "1955364894",
+          "title": "PRD ReDesign: BMI Calculator For Weight Loss Category",
+          "created": "2025-10-17",
+          "description": "Interactive BMI calculator for weight loss category"
+        },
+        {
+          "id": "1968046092",
+          "title": "PRD Redesign: About Us Page (DoktorABC)",
+          "created": "2025-10-29",
+          "description": "About Us page with credibility and trust elements"
+        },
+        {
+          "id": "1996324916",
+          "title": "PRD ReDesign: Inforamtion Pages",
+          "created": "2025-11-16",
+          "description": "Information pages (FAQ, How It Works, etc.)"
+        }
+      ]
+    },
+    "product_requirements": [
+      {
+        "id": "1924399335",
+        "title": "PRD: Data Alignment",
+        "created": "2025-09-14",
+        "description": "Data alignment project to create single source of truth"
+      },
+      {
+        "id": "1963819018",
+        "title": "PRD: Cannabis Upsell & Optimization Improvement",
+        "created": "2025-10-26",
+        "description": "Cannabis checkout upsell optimization"
+      },
+      {
+        "id": "1916796978",
+        "title": "PRD: Self Pickup Project",
+        "created": "2025-09-07",
+        "description": "Self-pickup option for orders"
+      },
+      {
+        "id": "1907720219",
+        "title": "PRD: Automation of CS Prescription & Tracking Workflow",
+        "created": "2025-08-26",
+        "description": "Customer service prescription workflow automation"
+      },
+      {
+        "id": "1958510612",
+        "title": "PRD: Complaint Alignment Project (France)",
+        "created": "2025-10-21",
+        "description": "France market complaint handling alignment"
+      },
+      {
+        "id": "1920040970",
+        "title": "PRD: Customer Name Verification After Google Login",
+        "created": "2025-09-10",
+        "description": "Name verification for Google OAuth users"
+      },
+      {
+        "id": "1920729089",
+        "title": "PRD: Reduce Zipcode Popup Noise",
+        "created": "2025-09-10",
+        "description": "Optimize zipcode popup frequency"
+      }
+    ],
+    "competitive_analysis": [
+      {
+        "id": "1896087554",
+        "title": "Competitive Landscape",
+        "created": "2025-08-12",
+        "last_modified": "2025-09-01",
+        "description": "Competitive analysis for DoktorABC market position"
+      },
+      {
+        "id": "2042003458",
+        "title": "Bloomwell",
+        "created": "2025-12-13",
+        "description": "Competitor analysis - Bloomwell"
+      }
+    ],
+    "improvement_ideas": [
+      {
+        "id": "1899626551",
+        "title": "DoktorABC website & funnel review – Improvement ideas",
+        "created": "2025-08-17",
+        "last_modified": "2025-08-17",
+        "description": "Website and funnel improvement recommendations"
+      }
+    ],
+    "release_notes": [
+      {
+        "id": "2043478017",
+        "title": "Update: We've overhauled the Cannabis Treatment Screen (Released 10.12)",
+        "created": "2025-12-15",
+        "description": "Cannabis treatment screen update release notes"
+      },
+      {
+        "id": "1935736888",
+        "title": "Release Note: New Treatments Menu (Desktop & Mobile)",
+        "created": "2025-09-28",
+        "description": "Treatments menu update release notes"
+      },
+      {
+        "id": "1919123466",
+        "title": "Release Note: Uber Delivery Price Display Update",
+        "created": "2025-09-09",
+        "description": "Uber delivery pricing display changes"
+      },
+      {
+        "id": "1917878307",
+        "title": "Release Note: Self-Pickup Option for Returned Uber Orders",
+        "created": "2025-09-08",
+        "description": "Self-pickup feature for returned orders"
+      },
+      {
+        "id": "2028208129",
+        "title": "Release Note: Product Page Social Sharing",
+        "created": "2025-12-08",
+        "description": "Social sharing feature on product pages"
+      }
+    ],
+    "templates_and_methodology": [
+      {
+        "id": "1905885218",
+        "title": "PRD Template For Product Team",
+        "created": "2025-08-23",
+        "description": "Standardized PRD template for product team"
+      }
+    ],
+    "operational_analysis": [
+      {
+        "id": "1903001604",
+        "title": "Route Analysis: Uber 2-Hour Delivery (All Categories)",
+        "created": "2025-08-20",
+        "description": "Delivery route analysis for Uber 2-hour service"
+      },
+      {
+        "id": "1957199878",
+        "title": "Mens Health Unit: Erectile Dysfunction (ED) Category",
+        "created": "2025-10-20",
+        "description": "ED category analysis and optimization"
+      }
+    ],
+    "overview_and_navigation": [
+      {
+        "id": "1882685580",
+        "title": "Overview",
+        "created": "2025-07-29",
+        "description": "Main space overview page"
+      }
+    ]
+  },
+  "content_statistics": {
+    "total_redesign_pages": 17,
+    "total_prds": 13,
+    "total_release_notes": 5,
+    "total_analysis_pages": 4,
+    "date_range": "2025-07-29 to 2025-12-15",
+    "most_recent_update": "2025-12-15"
+  },
+  "key_insights": {
+    "redesign_scope": "Complete platform redesign covering homepage, categories, products, and information pages",
+    "strategic_focus": "Trust building, navigation improvement, OTC e-commerce launch, data-driven design",
+    "technical_complexity": "Smart personalization, dynamic content, multi-market localization, analytics integration",
+    "timeline": "CMS Design phase (Sept 2025) → Funnel optimization phase (ongoing)",
+    "success_metrics": "+30% consultation conversion, +20% order conversion, +20% AOV, -20% cart abandonment"
+  }
+}
