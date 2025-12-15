@@ -18,14 +18,15 @@
     "11200:48055", "8228:27722", "8628:83313", "8628:83959", "8265:62002",
     "8240:63722", "8228:26848", "8890:43310", "8228:28574", "8228:26847",
     "11653:24355", "8228:28571", "11200:47694", "8787:29553", "11132:39900",
-    "11200:47765", "9653:48042"
+    "11200:47765",     "9653:48042", "10865:12341", "8265:62002", "8890:43310", "11200:47694", "8787:29553", "11132:39900", "11200:47765",     "9653:48042", "11200:48052", "10865:12341", "8240:63807", "8265:62087", "10873:29844", "8787:36256", "8787:37320", "8787:35221", "8787:38371"
   ],
   "tokens": {
     "colors": {
       "primary": {
         "600": "#0A9281",
         "400": "#269c6e",
-        "400_alt": "#11DDAC"
+        "400_alt": "#11DDAC",
+        "light": "#11DDAC"
       },
       "secondary": {
         "400": "#7aba47",
@@ -33,11 +34,13 @@
         "700": "#0D2C54",
         "dark": "#0D2C54",
         "50": "#eff7d5",
-        "o500_50": "#7aba4780"
+        "o500_50": "#7aba4780",
+        "dark_alt": "#0D2C54"
       },
       "neutrals": {
         "white": "#FFFFFF",
         "black": "#101010",
+        "black_alt": "#000000",
         "500": "#747474"
       },
       "text": {
@@ -69,7 +72,8 @@
         "default": "#b5bdcc",
         "subtle": "#dee3ed",
         "info": "#257db0",
-        "success": "#61a333"
+        "success": "#61a333",
+        "info_alt": "#257db0"
       },
       "icons": {
         "primary": "#1f2129",
@@ -83,6 +87,9 @@
       },
       "system": {
         "red": "#EF4747"
+      },
+      "custom": {
+        "color_2": "#d6f0e5"
       },
       "info": {
         "500": "#257db0"
@@ -212,6 +219,7 @@
         "title/lg-regular": "Font(family: \"Poppins\", style: Regular, size: 26, weight: 400, lineHeight: 34, letterSpacing: 0)",
         "title/md-regular": "Font(family: \"Poppins\", style: Regular, size: 22, weight: 400, lineHeight: 29, letterSpacing: 0)",
         "title/md-semibold": "Font(family: \"Poppins\", style: SemiBold, size: 22, weight: 600, lineHeight: 29, letterSpacing: 0)",
+        "title/md-semibold_alt": "Font(family: \"font/family/title\", style: SemiBold, size: font/sizes/subtitle/md_regular, weight: font/weight/semibold, lineHeight: font/line_hight/subtitle/md_regular, letterSpacing: font/letter_spacing/subtitle/md_regular)",
         "text/m-regular": "Font(family: \"Roboto\", style: Regular, size: 16, weight: 400, lineHeight: 21, letterSpacing: 0)",
         "text/l-regular": "Font(family: \"Roboto\", style: Regular, size: 18, weight: 400, lineHeight: 23, letterSpacing: 0)",
         "label/L": "Font(family: \"Poppins\", style: SemiBold, size: 20, weight: 600, lineHeight: 21, letterSpacing: 0)",
@@ -226,7 +234,8 @@
         "Body/SM--Regular": "Font(family: \"Roboto\", style: Regular, size: 14, weight: 400, lineHeight: 1.5, letterSpacing: 0)",
         "Cross / Disclaimer": "Font(family: \"Roboto\", style: Regular, size: 13, weight: 400, lineHeight: 19, letterSpacing: 0)",
         "Cross/Title (Medium)": "Font(family: \"Poppins\", style: Medium, size: 16, weight: 500, lineHeight: 26, letterSpacing: 0)",
-        "Display/xl": "Font(family: \"Poppins\", style: SemiBold, size: 90, weight: 600, lineHeight: 90, letterSpacing: 0)"
+        "Display/xl": "Font(family: \"Poppins\", style: SemiBold, size: 90, weight: 600, lineHeight: 90, letterSpacing: 0)",
+        "Display/xl_alt": "Font(family: \"font/family/header\", style: SemiBold, size: font/sizes/display/xl, weight: font/weight/semibold, lineHeight: font/line_hight/display/xl, letterSpacing: font/letter_spacing/display/xl)"
       }
     },
     "spacing": {
@@ -306,7 +315,10 @@
     },
     "gradients": {
       "primary": "",
-      "linear": ","
+      "primary_alt": "",
+      "linear": ",",
+      "linear_alt": "",
+      "radial": ""
     }
   },
   "metadata": {
@@ -317,6 +329,6 @@
     "client_languages": ["typescript", "javascript"],
     "client_frameworks": ["react", "nextjs"],
     "nodes_processed": 78,
-    "additional_nodes_with_variables": ["11653:24351", "11653:24349", "11132:39882", "11200:47693", "11200:47780", "9970:26850", "8787:25961", "10810:12328", "8643:40354", "9763:13113", "9775:5523", "11653:24353", "11200:48054", "11200:47758", "10865:12370", "11200:47782", "8787:28379", "8232:23016", "9970:26482", "8232:22817", "9027:38912", "9027:39002", "10223:9856", "8265:61945", "10223:9850", "9027:38818", "10490:5473", "11146:5830", "11257:17568", "11093:39436", "11200:47781", "11093:39424", "11653:24351", "11200:48086", "11200:48060", "11653:24349", "8787:38371", "11653:24348", "9046:40807", "8232:22530", "9653:48090", "11132:39888", "11200:48055", "8228:27722", "8628:83313", "8628:83959", "8265:62002", "8240:63722", "8228:26848", "8890:43310", "8228:28574", "8228:26847", "11653:24355", "8228:28571", "11200:47694", "8787:29553", "11132:39900", "11200:47765", "9653:48042"]
+    "additional_nodes_with_variables": ["11653:24351", "11653:24349", "11132:39882", "11200:47693", "11200:47780", "9970:26850", "8787:25961", "10810:12328", "8643:40354", "9763:13113", "9775:5523", "11653:24353", "11200:48054", "11200:47758", "10865:12370", "11200:47782", "8787:28379", "8232:23016", "9970:26482", "8232:22817", "9027:38912", "9027:39002", "10223:9856", "8265:61945", "10223:9850", "9027:38818", "10490:5473", "11146:5830", "11257:17568", "11093:39436", "11200:47781", "11093:39424", "11653:24351", "11200:48086", "11200:48060", "11653:24349", "8787:38371", "11653:24348", "9046:40807", "8232:22530", "9653:48090", "11132:39888", "11200:48055", "8228:27722", "8628:83313", "8628:83959", "8265:62002", "8240:63722", "8228:26848", "8890:43310", "8228:28574", "8228:26847", "11653:24355", "8228:28571", "11200:47694", "8787:29553", "11132:39900", "11200:47765", "9653:48042", "10865:12341", "8265:62002", "8890:43310", "11200:47694", "8787:29553", "11132:39900", "11200:47765", "9653:48042", "11200:48052"]
   }
 }

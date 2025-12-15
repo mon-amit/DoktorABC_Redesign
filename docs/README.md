@@ -1,146 +1,86 @@
-# DoktorABC_Redesign Knowledge Base
+# 📚 DoktorABC Documentation Hub
 
-This knowledge base contains all documentation, learning resources, and project-related materials for the DoktorABC_Redesign project.
+## 🎯 **Analytics & Event Tracking** (Primary Focus)
 
-## 📁 Knowledge Base Structure
+### 📊 **Event Review Tables** (18 Files)
+**Location**: `docs/design/ui-event-mapping/final-tables/`
+- Complete event catalog split by page/platform
+- 118 events total, 100% coverage
+- Table-per-page structure for easy maintenance
 
-```
-docs/
-├── README.md                    # This file - Knowledge base overview
-├── mixpanel/                    # Mixpanel analytics documentation
-│   ├── README.md               # Analytics overview
-│   └── mcp-overview.md         # MCP integration guide
-├── prds/                        # Product Requirements Documents
-│   ├── README.md               # PRD overview
-│   └── templates/              # PRD templates and guides
-├── design/                      # Design system and documentation
-│   ├── README.md               # Design overview
-│   └── design-system/          # Colors, typography, components
-├── setup/                       # Project setup and configuration guides
-├── architecture/                # System architecture and design decisions
-├── troubleshooting/             # Common issues and their solutions
-├── learning-resources/          # Tutorials, references, and learning materials
-└── project-updates/             # Meeting notes, progress updates, and milestones
-```
+| Page | Web | Mobile | Total |
+|------|-----|--------|-------|
+| Homepage | ✅ 19 events | ✅ 1 event | 20 |
+| Category | ✅ 23 events | ⏳ 0 events | 23 |
+| Account | ✅ 9 events | ⏳ 0 events | 9 |
+| Checkout | ✅ 5 events | ⏳ 0 events | 5 |
+| Product | ✅ 17 events | ✅ 1 event | 18 |
+| Navigation | ✅ 6 events | ✅ 1 event | 7 |
+| Popups | ✅ 12 events | ⏳ 0 events | 12 |
+| Search OTC | ✅ 19 events | ✅ 2 events | 21 |
+| Treatment | ✅ 3 events | ⏳ 0 events | 3 |
 
-## 🚀 Quick Access
+**Format**: `Event Name,Properties,Short Description of TRIGGER`
 
-### Analytics & Data
-- [Mixpanel Analytics Overview](mixpanel/README.md)
-- [MCP Integration Guide](mixpanel/mcp-overview.md)
-- [Event Tracking Guide](mixpanel/event-tracking.md)
+### 📋 **Ready for Excel/Google Sheets**
+All CSV files are formatted for direct import into Excel or Google Sheets with standard comma separation.
 
-### Product Requirements
-- [PRD Overview](prds/README.md)
-- [PRD Template](prds/templates/prd-template.md)
-- [Main Redesign PRD](prds/doktorabc-redesign/prd-main-redesign.md)
+### 📖 **Analytics Documentation**
+**Location**: `docs/analytics/`
+- **README-analytics-tools.md**: Complete usage guide
+- **mixpanel-implementation-guide.md**: Technical implementation
+- **implementation-summary.md**: Project status overview
+- **sample-trigger-formats.md**: TRIGGER column guidelines
+- **event-merge-analysis-report.md**: Optimization recommendations
 
-### Design System
-- [Design Overview](design/README.md)
-- [Color System](design/design-system/colors.md)
-- [Figma Integration](design/figma-integration.md)
-- [Confluence Integration](confluence-integration.md)
-- [Component Library](design/design-system/components.md)
+## 🎨 **Presentations & Reports**
+**Location**: `docs/presentations/`
+- **redesign-analytics-presentation.html**: Executive overview slides
+- **project-audit-slides.html**: Audit findings
+- **project-status-onepager.html**: Project status summary
 
-### Setup & Configuration
-- [Project Setup Guide](setup/project-setup.md)
-- [Development Environment](setup/development-environment.md)
+## 📋 **Design System**
+**Location**: `docs/design/`
+- **ui-event-mapping/**: Event mapping process and final tables
+- **design-system/**: Colors, typography, components, spacing
 
-### Troubleshooting
-- [Common Issues](troubleshooting/common-issues.md)
-- [MCP Server Problems](troubleshooting/mcp-issues.md)
-- [Git & SSH Issues](troubleshooting/git-ssh-problems.md)
+## 🏛️ **Legacy Documentation**
+**Location**: `docs/legacy/`
+- Previous documentation and archived materials
+- Notion import guides, MCP configurations
+- Historical audit reports
 
-### Learning Resources
-- [MCP Protocol Guide](learning-resources/mcp-protocol.md)
-- [Git Best Practices](learning-resources/git-workflow.md)
-- [Project Documentation](learning-resources/documentation-standards.md)
+## 📊 **Key Metrics at a Glance**
 
-### Project Updates
-- [Weekly Updates](project-updates/weekly-updates.md)
-- [Meeting Notes](project-updates/meeting-notes.md)
-- [Milestone Tracking](project-updates/milestones.md)
+### Event Coverage
+- **Total Events**: 118 (100% coverage achieved)
+- **High Priority Events**: 77 (65.3%)
+- **Conversion Events**: 16 (13.6%)
+- **Engagement Events**: 13 (11.0%)
 
-## 📝 Documentation Standards
+### Platform Distribution
+- **Web Events**: 113 (95.8%)
+- **Mobile Events**: 5 (4.2%)
 
-### File Naming
-- Use lowercase with hyphens: `file-name.md`
-- Be descriptive but concise
-- Include dates for time-sensitive docs: `2025-12-meeting-notes.md`
+### Page Distribution
+- **Homepage**: 20 events
+- **Category**: 23 events
+- **Product**: 19 events
+- **Search OTC**: 21 events
 
-### Content Structure
-```markdown
-# Document Title
+## 🚀 **Quick Start with CSV Files**
 
-## Overview
-Brief description of what this document covers.
+1. **Open any CSV file** in Excel or Google Sheets
+2. **Use built-in filters** to sort by event type, page, or properties
+3. **Apply conditional formatting** to highlight different event categories
+4. **Create pivot tables** for event analysis and reporting
 
-## Table of Contents
-- [Section 1](#section-1)
-- [Section 2](#section-2)
+## 📞 **Need Help?**
 
-## Section 1
-Detailed content...
-
-## Section 2
-Detailed content...
-
-## References
-- [Link to related documents]
-- [External resources]
-
----
-**Author**: Your Name
-**Last Updated**: YYYY-MM-DD
-**Version**: 1.0
-```
-
-### Categories and Tags
-Use these tags in your documents:
-- `#setup` - Installation and configuration
-- `#architecture` - System design and structure
-- `#mcp` - Model Context Protocol related
-- `#troubleshooting` - Problem solving
-- `#learning` - Educational content
-- `#meeting` - Meeting notes and discussions
-
-## 🔄 Maintenance
-
-### Regular Updates
-- Review and update documents quarterly
-- Archive outdated information
-- Update contact information as needed
-
-### Contributing
-1. Follow the documentation standards above
-2. Place files in appropriate subdirectories
-3. Update this README when adding major sections
-4. Commit changes with descriptive messages
-
-### Review Process
-- Technical documents reviewed by development team
-- Process documents reviewed by project manager
-- All documents version controlled
-
-## 📊 Metrics
-
-Track these knowledge base metrics:
-- Number of documents
-- Most accessed documents
-- Document freshness (last updated)
-- User feedback and suggestions
-
-## 🎯 Goals
-
-This knowledge base aims to:
-- **Centralize** all project information
-- **Accelerate** onboarding of new team members
-- **Preserve** institutional knowledge
-- **Facilitate** problem-solving and troubleshooting
-- **Support** continuous learning and improvement
+- **CSV Files**: Located in `docs/design/ui-event-mapping/final-tables/`
+- **Table Structure**: Check `docs/design/ui-event-mapping/final-tables/README.md`
+- **Implementation**: Read `docs/analytics/mixpanel-implementation-guide.md`
 
 ---
 
-**Knowledge Base Administrator**: Amit Yogev
-**Created**: December 14, 2025
-**Last Updated**: December 14, 2025
+*This documentation hub provides organized access to all DoktorABC redesign materials, with analytics and event tracking as the primary focus.*

@@ -1,0 +1,4 @@
+Event Name,Properties,Short Description of TRIGGER
+web_treatment_button_next_click,"current_step, total_steps",RCA: Treatment consultation progression and completion likelihood. Pre-events: Current step completion
+web_treatment_button_previous_click,"current_step, total_steps",RCA: Information review and consultation refinement. Pre-events: Current step view
+web_treatment_button_submit_click,"consultation_type, responses_count",RCA: Treatment consultation completion and lead generation. Pre-events: Final step completion

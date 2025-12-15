@@ -1,381 +1,110 @@
-# Typography Styles
+# Typography Style Definitions
 
-This document defines typography styles extracted from the Figma design system.
+This document contains comprehensive text style definitions extracted from the Figma design system.
 
 ## Font Families
 
-```css
-:root {
-  --font-header: 'Poppins', sans-serif;
-  --font-body: 'Roboto', sans-serif;
-  --font-title: 'Poppins', sans-serif;
-}
-```
+- **Headers**: Poppins (modern, clean)
+- **Body Text**: Roboto (highly readable)
+- **Titles**: Poppins (consistent with headers)
 
-## Display Typography
+## Font Weights
 
-### Display Extra Large
+- **Regular**: 400 - For body text and descriptions
+- **Medium**: 500 - For subtitles and labels
+- **SemiBold**: 600 - For headers and emphasis
+- **Bold**: 700 - For strong emphasis and mobile titles
 
-```css
-.display-xl {
-  font-family: var(--font-header);
-  font-size: 90px;
-  font-weight: 600;
-  line-height: 90px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
+## Text Styles Hierarchy
 
-### Display Medium
+### Display Text (Largest)
+- **Display XL**: 90px Poppins SemiBold - Hero headlines
+- **Display MD**: 80px Poppins Medium - Large display text
 
-```css
-.display-md {
-  font-family: var(--font-header);
-  font-size: 80px;
-  font-weight: 500;
-  line-height: 80px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
+### Headers (H1-H5)
+- **H2**: 52px Poppins SemiBold, 57px line height
+- **H3**: 40px Poppins SemiBold, 48px line height
+- **H4**: 32px Poppins SemiBold, 38px line height
+- **H5**: 26px Poppins Medium, 34px line height
 
-## Header Typography
+### Titles and Subtitles
+- **Title XL**: 28px Poppins Regular/Medium
+- **Title LG**: 26px Poppins Regular/Medium
+- **Title MD**: 22px Poppins Regular/SemiBold
 
-### Header 2
+### Body Text
+- **Large**: 18px Roboto Regular
+- **Medium**: 16px Roboto Regular
+- **Small**: 14px Roboto Regular
+- **Extra Small**: 12px Roboto Regular
 
-```css
-.h2, .header-h2 {
-  font-family: var(--font-header);
-  font-size: 52px;
-  font-weight: 600;
-  line-height: 57px;
-  letter-spacing: 0;
-  color: #08080a;
-  margin: 0 0 20px 0;
-}
-```
+### Labels and UI Text
+- **Label Large**: 20px Poppins SemiBold
+- **Label Medium**: 16px Poppins Medium
 
-### Header 3
+## Typography Presets
 
-```css
-.h3, .header-h3 {
-  font-family: var(--font-header);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: 0;
-  color: #08080a;
-  margin: 0 0 18px 0;
-}
-```
+### Complete Preset List
+1. `Display/xl` - Largest display text
+2. `Display/md` - Medium display text
+3. `header/H2` - H2 headings
+4. `header/H3` - H3 headings
+5. `header/H4` - H4 headings
+6. `header/H5` - H5 headings
+7. `title/xl-medium` - Extra large titles (medium)
+8. `title/xl-regular` - Extra large titles (regular)
+9. `title/lg-medium` - Large titles (medium)
+10. `title/lg-regular` - Large titles (regular)
+11. `title/md-regular` - Medium titles (regular)
+12. `title/md-semibold` - Medium titles (semibold)
+13. `text/m-regular` - Medium body text
+14. `text/l-regular` - Large body text
+15. `label/L` - Large labels
+16. `label/M` - Medium labels
+17. `Body/XS--Regular` - Extra small body
+18. `Body/SM--Regular` - Small body
+19. `Mobile/Title - M` - Mobile titles (bold)
+20. `Cross / Body - S` - Cross-platform body small
+21. `Headlines/Mobile/Web-LG` - Large headlines
+22. `Subtitles/12/Regular` - Small subtitles
+23. `Cross / Disclaimer` - Disclaimer text
+24. `Cross/Title (Medium)` - Cross-platform titles
 
-### Header 4
+## Color Usage
 
-```css
-.h4, .header-h4 {
-  font-family: var(--font-header);
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: 0;
-  color: #08080a;
-  margin: 0 0 16px 0;
-}
-```
+### Text Colors by Context
+- **Primary Text**: `text/primary: #08080a` - Main content
+- **Secondary Text**: `text/secondary: #616975` - Supporting content
+- **Tertiary Text**: `text/tertiary: #99a3b2` - Muted content
+- **On Primary**: `text/on_primary: #ffffff` - Text on colored backgrounds
+- **Links**: `text/link: #00734a` - Interactive links
+- **Info**: `text/info: #1f638c` - Informational text
 
-### Header 5
-
-```css
-.h5, .header-h5 {
-  font-family: var(--font-header);
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0;
-  color: #08080a;
-  margin: 0 0 16px 0;
-}
-```
-
-## Title Typography
-
-### Title Extra Large Medium
-
-```css
-.title-xl-medium {
-  font-family: var(--font-title);
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 39px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Title Extra Large Regular
-
-```css
-.title-xl-regular {
-  font-family: var(--font-title);
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 39px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Title Large Medium
-
-```css
-.title-lg-medium {
-  font-family: var(--font-title);
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Title Large Regular
-
-```css
-.title-lg-regular {
-  font-family: var(--font-title);
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 34px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Title Medium Regular
-
-```css
-.title-md-regular {
-  font-family: var(--font-title);
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 29px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Title Medium Semibold
-
-```css
-.title-md-semibold {
-  font-family: var(--font-title);
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 29px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-## Text Typography
-
-### Text Medium Regular
-
-```css
-.text-m-regular, .body-text {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Text Large Regular
-
-```css
-.text-l-regular {
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-## Label Typography
-
-### Label Large
-
-```css
-.label-l {
-  font-family: var(--font-title);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 21px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Label Medium
-
-```css
-.label-m {
-  font-family: var(--font-title);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 21px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-## Mobile/Web Specific Typography
-
-### Mobile Title Medium
-
-```css
-.mobile-title-m {
-  font-family: var(--font-header);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Body Extra Small Regular
-
-```css
-.body-xs-regular {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Body Small Regular
-
-```css
-.body-sm-regular {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Headlines Mobile/Web Large
-
-```css
-.headlines-mobile-lg {
-  font-family: var(--font-header);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-### Cross Body Small
-
-```css
-.cross-body-s {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: #08080a;
-}
-```
-
-## Text Colors
-
-```css
-.text-primary {
-  color: #08080a;
-}
-
-.text-secondary {
-  color: #616975;
-}
-
-.text-tertiary {
-  color: #99a3b2;
-}
-
-.text-on-primary {
-  color: #ffffff;
-}
-
-.text-link {
-  color: #00734a;
-}
-
-.text-info {
-  color: #1f638c;
-}
-
-.text-success {
-  color: #61a333;
-}
-```
+### Body Text Colors
+- **Body 400**: `body/400: #656D79` - Standard body text
+- **Body 300**: `body/300: #98A0AF` - Light body text
+- **Body Gray Light**: `body/gray_light: #EEF1F6` - Very light
+- **Body Gray Mid-Dark**: `body/gray_middark: #98A0AF` - Medium-dark
 
 ## Usage Guidelines
 
-### Typography Hierarchy
+### Hierarchy
+1. Use Display styles sparingly (hero sections only)
+2. Headers (H2-H5) for section titles
+3. Titles for component headers
+4. Body text for content
+5. Labels for UI elements
 
-1. **Display**: Hero text, major page headings
-2. **Headers (H2-H5)**: Section headings, page titles
-3. **Titles**: Card titles, component headings
-4. **Text**: Body content, descriptions
-5. **Labels**: Form labels, button text, UI elements
+### Accessibility
+- Maintain minimum contrast ratios
+- Use semantic color tokens
+- Ensure readable line heights
 
-### Font Family Usage
+### Responsive Design
+- Mobile titles: `Mobile/Title - M` (18px Bold)
+- Cross-platform: `Cross / Body - S`, `Cross/Title (Medium)`
 
-- **Poppins**: Headers, titles, display text, labels
-- **Roboto**: Body text, content, descriptions
+---
 
-### Responsive Typography
-
-- **Desktop**: Full size scale
-- **Tablet**: Slight size reductions for H1-H3
-- **Mobile**: Significant size reductions, increased line heights
-
-### Color Application
-
-- **Primary text**: Main content, headings
-- **Secondary text**: Supporting information
-- **Tertiary text**: Metadata, timestamps
-- **Link text**: Interactive elements
-- **On-primary**: Text over colored backgrounds
-
-## Implementation Notes
-
-- **Line heights**: Specified in pixels for consistent rendering
-- **Letter spacing**: Set to 0 for optimal readability
-- **Margins**: Bottom margins on headings for proper spacing
-- **Color variables**: All colors reference the design token system
-- **Font loading**: Ensure Poppins and Roboto are loaded for optimal performance
-
-## Source Variables
-
-Typography styles derived from preset variables:
-- `Display/xl`, `Display/md`
-- `header/H2`, `header/H3`, `header/H4`, `header/H5`
-- `title/xl-medium`, `title/xl-regular`, `title/lg-medium`, etc.
-- `text/m-regular`, `text/l-regular`
-- `label/L`, `label/M`
-- Color variables from the color system
+*Last updated: December 14, 2025*
+*Source: Consolidated from 79 Figma nodes*
