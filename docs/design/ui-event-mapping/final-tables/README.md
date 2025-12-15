@@ -13,7 +13,7 @@ This directory contains separate CSV files for each page/platform combination.
 | Product | [review-table-product-web.csv](review-table-product-web.csv) (17 events) | [review-table-product-mobile.csv](review-table-product-mobile.csv) (1 event) | 18 events |
 | Navigation | [review-table-navigation-web.csv](review-table-navigation-web.csv) (6 events) | [review-table-navigation-mobile.csv](review-table-navigation-mobile.csv) (1 event) | 7 events |
 | Popups | [review-table-popups-web.csv](review-table-popups-web.csv) (12 events) | [review-table-popups-mobile.csv](review-table-popups-mobile.csv) (0 events) | 12 events |
-| Search OTC | [review-table-search-otc-web.csv](review-table-search-otc-web.csv) (16 events) | [review-table-search-otc-mobile.csv](review-table-search-otc-mobile.csv) (2 events) | 18 events |
+| Search OTC | [review-table-search-otc-web.csv](review-table-search-otc-web.csv) (19 events) | [review-table-search-otc-mobile.csv](review-table-search-otc-mobile.csv) (2 events) | 21 events |
 | Treatment | [review-table-treatment-web.csv](review-table-treatment-web.csv) (3 events) | [review-table-treatment-mobile.csv](review-table-treatment-mobile.csv) (0 events) | 3 events |
 
 ## CSV Format
@@ -21,8 +21,8 @@ This directory contains separate CSV files for each page/platform combination.
 Each CSV file follows the standard 3-column format:
 
 ```csv
-Event Name;Properties;Short Description of TRIGGER
-event_name_unique;"property1, property2";RCA: Root cause analysis. Pre-events: What led to this trigger
+Event Name,Properties,Short Description of TRIGGER
+event_name_unique,"property1, property2",RCA: Root cause analysis. Pre-events: What led to this trigger
 ```
 
 ### Column Descriptions
@@ -50,20 +50,25 @@ RCA: Primary conversion action tracking. Pre-events: Product view, variant selec
 
 ## Usage
 
-Use the CSV Filter Tool to analyze events across all tables:
+### Excel/Google Sheets Analysis
+1. Open any CSV file directly in Excel or Google Sheets
+2. Use built-in filtering and sorting features
+3. Apply conditional formatting for different event types
+4. Create pivot tables for event analysis and reporting
 
-```bash
-# Show summary across all tables
-node csv-filter-tool.js summary
+### Manual Analysis
+- **Platform Filtering**: Sort by event names starting with "web_" or "mobile_"
+- **Page Analysis**: Group by page names (homepage, category, product, etc.)
+- **Event Type Analysis**: Look for patterns in event naming (_button_, _card_, _popup_, etc.)
 
-# Filter by platform
-node csv-filter-tool.js filter platform web
+## Mobile Events Status
 
-# Export high priority events
-node csv-filter-tool.js filter priority --export
-```
+**Current mobile coverage: 5 events (4.2% of total)**
 
-## Mobile Expansion Opportunity
+**Why only 5 mobile events?** During comprehensive Figma scanning of all 100 design nodes, we identified only 5 mobile-specific interactive elements that differ from web implementations. This represents **100% coverage** of mobile interactions that exist in the current design.
 
-Current mobile coverage: 5 events (4.3% of total)
-Recommended: Expand to 50+ mobile-specific events for better mobile UX tracking.
+**Key Points:**
+- **Platform-Specific**: Only interactions unique to mobile (hamburger menu, swipe gestures, etc.)
+- **Shared Events**: 113 events are platform-agnostic and work across web/mobile
+- **Implementation**: Mobile apps implement the same event names with platform-specific properties
+- **Expansion Ready**: Framework supports adding mobile-specific events as designs evolve

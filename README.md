@@ -10,7 +10,7 @@ A redesign project for DoktorABC with integrated analytics and CRM capabilities.
 All event data is available as standard CSV files that open directly in Excel or Google Sheets:
 
 #### 📁 **CSV File Locations**
-- **All Event Tables**: `docs/design/ui-event-mapping/final-tables/`
+- **All Event Tables**: `docs/design/ui-event-mapping/final-tables/` and `deliverables/dean-delivery-package/excel-files/`
 - **Master Index**: `docs/design/ui-event-mapping/final-tables/README.md`
 
 #### 📈 **Key Metrics**
@@ -109,8 +109,8 @@ All deliverables are production-ready and can be deployed immediately.
 5. **Launch**: Begin development with complete event tracking and design system
 
 #### 📦 **Dean Delivery Package**
-**Ready for PM Review**: `dean-analytics-package.zip` (27KB)
-- **18 Excel-ready CSV files** for easy analysis
+**Ready for PM Review**: `deliverables/dean-analytics-package.zip` (27KB)
+- **18 Excel-ready CSV files** in `deliverables/dean-delivery-package/excel-files/`
 - **Complete documentation** for PM and technical teams
 - **Implementation guides** and conversion tools
 - **Production-ready** analytics foundation
@@ -269,18 +269,27 @@ npm test
 ## Project Structure
 
 ```
-├── src/                 # Source code
-├── tests/              # Test files and validation scripts
+├── deliverables/       # Delivery packages and artifacts
+│   ├── dean-analytics-package.zip    # Complete delivery package
+│   ├── dean-delivery-package/        # Excel exports and guides
+│   │   └── excel-files/              # 18 CSV files for Excel/Sheets
+│   └── README.md                     # Delivery documentation
+├── exports/           # Generated HTML and CSV exports
+│   ├── excel-migration-guide.html    # Migration guide
+│   ├── project-status-onepager.html  # Status summary
+│   └── redesign-analytics-review-table.csv  # Analytics data
+├── src/               # Source code
+├── tests/             # Test files and validation scripts
 │   ├── review-tables.test.js     # Schema validation for PM tables
 │   ├── event-coverage.test.js    # 100% coverage validation
 │   └── event-merge-analysis.js   # Consolidation analysis
-├── docs/               # Knowledge base and documentation
-│   ├── README.md       # Knowledge base overview
-│   ├── analytics/      # Analytics documentation
+├── docs/              # Knowledge base and documentation
+│   ├── README.md      # Knowledge base overview
+│   ├── analytics/     # Analytics documentation
 │   │   ├── mixpanel-implementation-guide.md  # Mixpanel setup guide
 │   │   └── implementation-summary.md  # Implementation roadmap
-│   ├── setup/          # Project setup guides
-│   ├── design/         # UI/UX and design system
+│   ├── setup/         # Project setup guides
+│   ├── design/        # UI/UX and design system
 │   │   ├── design-system/        # Design tokens and components
 │   │   │   ├── consolidated/design-tokens.json  # All extracted variables
 │   │   │   ├── variables/        # Variable documentation
@@ -290,15 +299,15 @@ npm test
 │   │   │   ├── master-event-map.md  # Complete event list
 │   │   │   └── *-events.md       # Category-specific mappings
 │   │   └── full export/          # Figma design assets
-│   ├── mixpanel/       # Legacy analytics documentation
-│   ├── prds/           # Product requirements
-│   ├── presentations/  # Project presentations and demos
+│   ├── legacy/        # Legacy files and documentation
+│   ├── mixpanel/      # Legacy analytics documentation
+│   ├── prds/          # Product requirements
+│   ├── presentations/ # Project presentations and demos
 │   ├── project-updates/# Meeting notes and progress
 │   └── project-tracking/# Comprehensive status tracking
-├── RCA_MCP_Configuration.md  # Root cause analysis of setup issues
-├── .gitignore         # Git ignore rules
-├── package.json       # Dependencies and scripts
-└── README.md          # This file (project documentation)
+├── .gitignore        # Git ignore rules
+├── package.json      # Dependencies and scripts
+└── README.md         # This file (project documentation)
 ```
 
 ### Detailed Directory Status
