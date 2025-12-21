@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoktorABC_Redesign - Project Audit Presentation</title>
     <style>
+        /* 
+         * shadcn/ui Component Integration Notes:
+         * - Metric Cards: Use shadcn Card component
+         * - Badges: Use shadcn Badge component with variants
+         * - Progress Bars: Use shadcn Progress component
+         * - Tables: Use shadcn Table component
+         * - Navigation: Use shadcn Button component
+         * - Alerts: Use shadcn Alert component for key insights
+         */
+        
         * {
             margin: 0;
             padding: 0;
@@ -318,12 +328,31 @@
             </div>
         </div>
 
-        <!-- Slide 3: Current Status Overview -->
+        <!-- Slide 3: Design Preview -->
         <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <div class="slide-title">Source Material: Figma Designs</div>
+                <div class="slide-section">100 Figma nodes analyzed across all pages</div>
+
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <img src="../../exports/full export/Home Page _ Desktop.png" alt="Homepage Desktop" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);">
+                        <p style="margin-top: 1rem; font-size: 1.3rem; font-weight: 600;">Homepage Desktop</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../../exports/full export/Home Page _Mobile.png" alt="Homepage Mobile" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);">
+                        <p style="margin-top: 1rem; font-size: 1.3rem; font-weight: 600;">Homepage Mobile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Current Status Overview -->
+        <div class="slide" data-slide="4">
             <div class="slide-content">
                 <div class="slide-title">Current Status Overview</div>
 
-                <div class="slide-section">Phase: Figma Design System & Event Mapping</div>
+                <div class="slide-section">Phase: Complete - Ready for Mixpanel Implementation</div>
 
                 <div class="comparison-table">
                     <div class="table-row">
@@ -361,7 +390,7 @@
         </div>
 
         <!-- Slide 4: Platform Comparison -->
-        <div class="slide" data-slide="4">
+        <div class="slide" data-slide="5">
             <div class="slide-content">
                 <div class="slide-title">Platform Comparison</div>
 
@@ -395,8 +424,31 @@
             </div>
         </div>
 
-        <!-- Slide 5: Strengths -->
+        <!-- Slide 5: Design Gallery -->
         <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <div class="slide-title">Pages Analyzed</div>
+                <div class="slide-section">Visual proof: These are the actual screens we mapped</div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <img src="../../exports/full export/Home Page _ Desktop.png" alt="Homepage" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                        <p style="margin-top: 0.8rem; font-size: 1.1rem;">Homepage (20 events)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../../exports/full export/Login _ Desktop.png" alt="Login" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                        <p style="margin-top: 0.8rem; font-size: 1.1rem;">Login (9 events)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="../../exports/full export/Registration _ Desktop.png" alt="Registration" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                        <p style="margin-top: 0.8rem; font-size: 1.1rem;">Registration (account flow)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Strengths -->
+        <div class="slide" data-slide="6">
             <div class="slide-content">
                 <div class="slide-title">Key Strengths</div>
 
@@ -441,12 +493,12 @@
             </div>
         </div>
 
-        <!-- Slide 6: Critical Issues -->
-        <div class="slide" data-slide="6">
+        <!-- Slide 7: Historical Issues (Resolved) -->
+        <div class="slide" data-slide="7">
             <div class="slide-content">
-                <div class="slide-title">Critical Issues</div>
+                <div class="slide-title">Historical Issues (Now Resolved)</div>
 
-                <div class="slide-section">Quality Issues Found</div>
+                <div class="slide-section">Quality issues that were identified and corrected</div>
 
                 <div class="metric-grid">
                     <div class="metric-card">
@@ -476,8 +528,8 @@
             </div>
         </div>
 
-        <!-- Slide 7: Recommendations -->
-        <div class="slide" data-slide="7">
+        <!-- Slide 8: Recommendations -->
+        <div class="slide" data-slide="8">
             <div class="slide-content">
                 <div class="slide-title">Recommendations</div>
 
@@ -504,7 +556,7 @@
         </div>
 
         <!-- Slide 8: Success Criteria -->
-        <div class="slide" data-slide="8">
+        <div class="slide" data-slide="9">
             <div class="slide-content">
                 <div class="slide-title">Success Criteria Status</div>
 
@@ -546,7 +598,7 @@
         </div>
 
         <!-- Slide 9: Next Steps -->
-        <div class="slide" data-slide="9">
+        <div class="slide" data-slide="10">
             <div class="slide-content">
                 <div class="slide-title">Next Steps</div>
 
@@ -584,8 +636,52 @@
             </div>
         </div>
 
-        <!-- Slide 10: Conclusion -->
+        <!-- Slide 10: Component Library Integration -->
         <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <div class="slide-title">Component Library Integration</div>
+
+                <div class="slide-section">shadcn/ui Components Ready</div>
+
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">📦</div>
+                        <div class="metric-label">MCP Server</div>
+                        <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.9;">
+                            shadcn MCP server configured<br>
+                            Natural language component install<br>
+                            Browse, search, install components
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">🎨</div>
+                        <div class="metric-label">Design System</div>
+                        <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.9;">
+                            410+ design tokens<br>
+                            Aligned with shadcn patterns<br>
+                            Ready for component integration
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">🔧</div>
+                        <div class="metric-label">Components</div>
+                        <div style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.9;">
+                            Card, Badge, Progress, Table<br>
+                            Button, Alert, Accordion<br>
+                            Ready for React/Next.js
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <h3>🎯 Implementation Path</h3>
+                    <p>Convert these HTML slides to React components using shadcn/ui Card, Badge, Progress, Table, and Button components for production use.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Conclusion -->
+        <div class="slide" data-slide="11">
             <div class="slide-content">
                 <div class="slide-title">Conclusion</div>
 
@@ -610,6 +706,7 @@
                     <span class="badge excellent">Excellent Foundation</span>
                     <span class="badge good">Clear Next Steps</span>
                     <span class="badge good">Quality Assurance</span>
+                    <span class="badge good">shadcn/ui Ready</span>
                 </div>
 
                 <div style="text-align: center; margin-top: 3rem; font-size: 1.2rem; opacity: 0.8;">
@@ -619,7 +716,7 @@
         </div>
     </div>
 
-    <div class="slide-indicator">Slide <span id="current-slide">1</span> of <span id="total-slides">10</span></div>
+    <div class="slide-indicator">Slide <span id="current-slide">1</span> of <span id="total-slides">12</span></div>
 
     <div class="slide-navigation">
         <button class="nav-button" id="prev-slide" disabled>← Previous</button>
@@ -628,7 +725,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 10;
+        const totalSlides = 12;
         const slides = document.querySelectorAll('.slide');
         const prevButton = document.getElementById('prev-slide');
         const nextButton = document.getElementById('next-slide');

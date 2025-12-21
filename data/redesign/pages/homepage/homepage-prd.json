@@ -1,0 +1,229 @@
+{
+  "title": "PRD ReDesign: Main Homepage",
+  "confluence_id": "1930067988",
+  "created": "2025-09-19",
+  "last_modified": "2025-12-14",
+  "status": "Design Requirements",
+  "background": {
+    "monthly_landings": "590K (497K new, 110K returning)",
+    "current_performance": {
+      "bounce_rate": "16%",
+      "conversion_to_paid_order_24h": "7.31%",
+      "scroll_depth_navigation_tabs": "69%",
+      "scroll_past_how_it_works": "10%"
+    },
+    "goals": [
+      "Improve clarity and usability for new visitors",
+      "Reinforce trust and credibility for returning visitors",
+      "Optimize conversion by improving navigation, product discoverability, and trust signals"
+    ]
+  },
+  "personas": {
+    "new_visitors": {
+      "count": "497K/month",
+      "characteristics": [
+        "Likely arrive from marketing campaigns or organic search",
+        "Priorities: trust, anonymity, security, fast delivery, easy navigation to relevant treatment"
+      ]
+    },
+    "returning_visitors": {
+      "count": "110K/month",
+      "characteristics": [
+        "Previously purchased or explored our services",
+        "Need reassurance of consistent service and motivation to repurchase"
+      ]
+    }
+  },
+  "success_metrics": {
+    "bounce_rate": "Target ≤ 12% (currently 16%)",
+    "page_speed": "Google PageSpeed score ≥ 90, LCP < 2.5s",
+    "conversion": "Improve from 7.31% to ≥ 8.04% (+10%) from homepage view → paid order within 24h"
+  },
+  "competitor_inspiration": [
+    {
+      "name": "Ro",
+      "url": "https://ro.co/",
+      "region": "United States",
+      "focus": "Digital health services including sexual health, hair loss, weight loss, and general wellness"
+    },
+    {
+      "name": "Hims",
+      "url": "https://www.hims.com/",
+      "region": "United States, Canada, UK, and parts of Europe",
+      "focus": "Digital health services including sexual health, hair, skin, and mental health"
+    }
+  ],
+  "design_sections": [
+    {
+      "section": "Navigation Bar",
+      "requirements": [
+        "Display company logo",
+        "Search bar icon",
+        "Hamburger menu"
+      ],
+      "notes": "Always visible"
+    },
+    {
+      "section": "Anchor Bar (below navbar)",
+      "requirements": [
+        "Display coupons from CRM"
+      ],
+      "notes": "Dynamic content"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": [
+        "H1 Title Split: Rotating carousel of categories (Medical cannabis, Weight loss, Hair regrowth, Testosterone, Skin care, Better sex, Online Pharmacy)",
+        "Subtitle: 'Service Just for you'",
+        "USPs with green check icons: Discreet & qualified treatments, Online consultation & prescription, Shipping 1-2 days, Secure information",
+        "Search bar (with magnifying glass)",
+        "Trusted Shops widget (reviews)",
+        "CTA button: 'Finde my treatment'"
+      ],
+      "notes": "Must look trustworthy and professional"
+    },
+    {
+      "section": "Categories Display",
+      "requirements": [
+        "Grid/list of top categories in exact order: Medical cannabis, Erectile dysfunction, Weight loss, Hair loss, Premature ejaculation, Prevention, Facial hair, Vaginal complaints, Chlamydia, Gonorrhea, Genital warts, Overweight, Asthma, Type 2 diabetes",
+        "Each with dedicated design/icon for developer embedding"
+      ],
+      "notes": "Must be easy to scan & click"
+    },
+    {
+      "section": "How It Works Section",
+      "requirements": [
+        "Standard step-based design explaining process"
+      ],
+      "notes": "Current scroll drop-off suggests this must be shorter/visual"
+    },
+    {
+      "section": "OTC Section",
+      "requirements": [
+        "Title: 'Discover Our New OTC Products Online'",
+        "4 clickable banners: 1-3 = top OTC categories, 4 = CTA 'Explore more categories (35+)'"
+      ],
+      "notes": "Visual emphasis"
+    },
+    {
+      "section": "Category DrillDown Sections",
+      "requirements": [
+        "Add 6 sections of categories, each with drilldown",
+        "Every section should have 3-4 cards with facts, info, and CTAs",
+        "CTAs should either push the user to start a consultation or take them to the category page"
+      ],
+      "notes": "Content ideas in Google Drive file"
+    },
+    {
+      "section": "Self-Pickup Banner",
+      "requirements": [
+        "Label 'New!'",
+        "Title: Self-Pickup Service",
+        "Bullets: Prescription online, Plant-based medicines, Express pickup from 60 min* (depending on location)"
+      ],
+      "notes": "Styled as a promotional banner"
+    },
+    {
+      "section": "User Rating",
+      "requirements": [
+        "Trusted Shops rating prominently displayed"
+      ],
+      "notes": "Reinforce trust"
+    },
+    {
+      "section": "Medical Advisory Board",
+      "requirements": [
+        "Subheading: 'Our advisory board consists of Europe's leading medical experts to ensure the highest standards of telemedicine!'",
+        "List of doctors with photo, title, specialty: Dr. Viktor Simunovic (Croatia), Dr. med. Roland Michael Ruiken (Norway), Dr. Salomé Apitz (Portugal)",
+        "Each profile links to dedicated doctor page"
+      ],
+      "notes": "Must appear authoritative"
+    },
+    {
+      "section": "FAQ",
+      "requirements": [
+        "5 most common site FAQs",
+        "One example shown open by default"
+      ],
+      "notes": "Interactive accordion"
+    },
+    {
+      "section": "Newsletter Section",
+      "requirements": [
+        "Join our newsletter & promotions CTA",
+        "Content/design to be finalized with CRM dept"
+      ],
+      "notes": "Capture leads"
+    },
+    {
+      "section": "Footer",
+      "requirements": [
+        "Company logo",
+        "4 accordion tabs with links (same structure as current site)",
+        "Payment method icons (5)",
+        "Flags: France, Germany",
+        "Company address",
+        "Certifications",
+        "© 2025 DoktorABC.com",
+        "Disclaimer text (as current)"
+      ],
+      "notes": "Consistency with current"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Smart Logic (Personalization)",
+      "description": "The system must define for each user (when possible) whether the user is male or female and which category they belong to, in order to display personalized homepage content. If new user arrives via marketing campaign with URL parameter (e.g., utm_category=ED), system defines user as ED user. If returning user (completed at least one purchase), system identifies category of most recent purchase and defines user according to that category and gender. Smart Logic used to personalize homepage sections (hero, category drilldown, and CTAs) based on gender and category intent.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R2",
+      "requirement": "Header - Black USP Component",
+      "description": "Display the black USP component at the top of the page. The USPs rotate automatically at a fixed speed. The text 'Why us' remains static and does not rotate. The entire USP component is sticky during scroll. In mobile we always display one USPS at a time.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R3",
+      "requirement": "Navigation Bar (Navbar)",
+      "description": "Add a sticky navigation bar that includes: company logo, search icon, hamburger menu, and My Account icon. The navbar remains visible while scrolling.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R4",
+      "requirement": "Anchor Bar (CRM)",
+      "description": "Add an Anchor Bar below the navbar, displaying CRM content (coupon or banner). The Anchor Bar is sticky during scroll.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R5",
+      "requirement": "Hero Section",
+      "description": "Hero section contains: H1 title carousel with rotating categories (Medical Cannabis, Weight Loss, Hair Regrowth, Testosterone, Skin Care, Better Sex, Online Pharmacy). A static line below: 'Made easy with DoktorABC'. Subtitle: 'Only original German medicaments, Online-Rezepte & medizinisches in 24-48 St. geliefert.' (Localized by language). Search bar (with magnifying glass) - same functionality as current homepage search. Trusted Reviews widget - embedded from eTrusted. CTA button: 'All Treatments.' Clicking it opens the user menu. Sticky behavior: The button becomes sticky when the user scrolls past it. Mobile: sticky at the bottom of the screen. Desktop: appears as a button inside the navbar.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R6",
+      "requirement": "Categories Section",
+      "description": "Display a list or grid of top categories in this exact order: Medical Cannabis, Erectile Dysfunction, Weight Loss, Hair Loss, Prevention (Birth Control), Asthma, Facial Hair, Vaginal Complaints, Premature Ejaculation, Chlamydia, Gonorrhea, Genital Warts, Type 2 Diabetes. Each item links to its category page when clicked. Note the alternating images and animation in the desktop version.",
+      "country_note": "Varies in each country"
+    },
+    {
+      "id": "R7",
+      "requirement": "'How It Works' Component",
+      "description": "Add a static 'How It Works' section explaining the service flow to users in a clear, simple visual layout. Note animation in the desktop version.",
+      "country_note": "All countries unchanged"
+    },
+    {
+      "id": "R8",
+      "requirement": "Trusted care starts here Component",
+      "description": "Implement a static section titled 'Trusted care starts here,' containing all text blocks and images exactly as designed. The section includes four static metric blocks: 600K+ customers, 7+ years of trust, 40+ categories, 3M orders delivered. The center image ('Around-the-clock help from trusted doctors') is static, but the USPs inside this image rotate in sync with the rotating USPS that appear in the homepage header.",
+      "country_note": "Varies in each country"
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=a4oYARjYajOu1vkg-1",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=8079-38328&p=f&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=0#gid=0",
+  "source": "Confluence Page ID 1930067988"
+}

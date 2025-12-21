@@ -1,0 +1,14 @@
+Event Name,Properties,Short Description of TRIGGER
+web_information_page_view,"page_type, page_id",RCA: Information page discovery and trust-building engagement. Pre-events: Footer link, navigation menu, external link
+web_information_page_cta_click,"page_type, cta_type, page_id",RCA: Conversion from information pages to main funnel. Pre-events: Information page view
+web_information_page_faq_accordion_open,"page_type, faq_id, page_id",RCA: FAQ engagement and information seeking behavior. Pre-events: Information page view
+web_information_page_faq_accordion_close,"page_type, faq_id, page_id",RCA: FAQ content consumption completion. Pre-events: FAQ accordion open
+web_information_page_section_scroll,"page_type, section_name, scroll_depth, page_id",RCA: Content engagement depth and reading behavior. Pre-events: Information page view
+web_information_page_link_click,"page_type, link_destination, page_id",RCA: Cross-page navigation and information architecture usage. Pre-events: Information page view
+web_shipping_page_method_card_click,"shipping_method",RCA: Shipping option interest and delivery preference. Pre-events: Shipping page view
+web_shipping_page_tracking_info_click,"N/A",RCA: Shipping tracking information access. Pre-events: Shipping page view
+web_about_us_section_view,"section_name",RCA: Credibility section engagement (medical team, certifications, etc.). Pre-events: About Us page view
+web_about_us_press_mention_click,"press_source",RCA: Press coverage engagement and external credibility verification. Pre-events: About Us page view
+web_error_page_home_click,"error_type, error_code",RCA: Error recovery and user retention from error pages. Pre-events: Error page view
+web_error_page_help_click,"error_type, error_code",RCA: Support need identification from error pages. Pre-events: Error page view
+web_error_page_refresh_click,"error_type, error_code",RCA: Error recovery attempt (for 500/502 errors). Pre-events: Error page view

@@ -1,2 +1,2 @@
 Event Name,Properties,Short Description of TRIGGER
-mobile_product_button_add_to_cart_click,"product_id, quantity, variant_id",RCA: Mobile purchase conversion tracking. Pre-events: Product view, variant selection
+"product_id, quantity, variant_id",RCA: Mobile purchase conversion tracking. Pre-events: Product view, variant selection

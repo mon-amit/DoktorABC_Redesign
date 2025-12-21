@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Share Button Expansion - Investigation One Pager</title>
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:#0f1624;
+      --panel2:#111b2d;
+      --text:#e8eefc;
+      --muted:#aab7d6;
+      --line:#223253;
+      --brand:#7aa2ff;
+      --good:#34d399;
+      --warn:#fbbf24;
+      --bad:#fb7185;
+      --chip:#182645;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 14px;
+      --radius2: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 700px at 10% 0%, rgba(122,162,255,.18), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(52,211,153,.12), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 18px 54px;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 980px){
+      .wrap{grid-template-columns:1fr}
+    }
+    header{
+      grid-column: 1 / -1;
+      background: linear-gradient(180deg, rgba(122,162,255,.18), rgba(15,22,36,.0));
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px;
+      position: relative;
+      overflow:hidden;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-120px -200px auto auto;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle at 30% 30%, rgba(122,162,255,.28), transparent 55%);
+      filter: blur(0px);
+      pointer-events:none;
+    }
+    .title{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+      position:relative;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: 22px;
+      letter-spacing:.2px;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 13px;
+    }
+    .meta{
+      display:flex;
+      gap: 8px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+      position:relative;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(15,22,36,.65);
+      color: var(--text);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+    .chip b{font-weight:650}
+    .chip .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 3px rgba(122,162,255,.18);
+    }
+    .chip.good .dot{background:var(--good); box-shadow:0 0 0 3px rgba(52,211,153,.18)}
+    .chip.warn .dot{background:var(--warn); box-shadow:0 0 0 3px rgba(251,191,36,.16)}
+    .chip.bad  .dot{background:var(--bad);  box-shadow:0 0 0 3px rgba(251,113,133,.16)}
+    .aside{
+      position: sticky;
+      top: 14px;
+      align-self: start;
+      background: rgba(15,22,36,.72);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+      max-height: calc(100vh - 28px);
+      overflow:auto;
+    }
+    @media (max-width: 980px){
+      .aside{position:relative; top:0; max-height:none}
+    }
+    .nav h3{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .nav a{
+      display:block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .nav a:hover{
+      background: rgba(24,38,69,.55);
+      border-color: var(--line);
+      text-decoration:none;
+    }
+    .nav .small{
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+      padding: 10px;
+      background: rgba(24,38,69,.35);
+      border:1px dashed rgba(34,50,83,.9);
+      border-radius: 12px;
+    }
+    main{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+    section{
+      background: rgba(15,22,36,.72);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+    section h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing:.2px;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 12px;
+    }
+    @media (max-width: 980px){
+      .grid2{grid-template-columns:1fr}
+    }
+    .callout{
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(17,27,45,.55);
+      padding: 12px;
+    }
+    .callout p{margin:0}
+    .callout .k{color:var(--muted); font-size:12px; margin-bottom:6px}
+    .callout .v{font-size:13px}
+    .note{
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      border:1px solid rgba(34,50,83,.9);
+      background: rgba(24,38,69,.32);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .twoCols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 980px){
+      .twoCols{grid-template-columns:1fr}
+    }
+    table{
+      width:100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow:hidden;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(17,27,45,.55);
+    }
+    th,td{
+      padding: 10px 10px;
+      vertical-align: top;
+      border-bottom:1px solid var(--line);
+      font-size: 13px;
+    }
+    th{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing:.1em;
+      color: var(--muted);
+      background: rgba(24,38,69,.42);
+    }
+    tr:last-child td{border-bottom:none}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(24,38,69,.55);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+    .pill.live{border-color: rgba(52,211,153,.35); background: rgba(52,211,153,.08); color: #c8ffe9}
+    .pill.none{border-color: rgba(251,113,133,.35); background: rgba(251,113,133,.08); color: #ffd0da}
+    .pill.risk{border-color: rgba(251,191,36,.35); background: rgba(251,191,36,.08); color: #ffe7b3}
+    .cards{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 1100px){
+      .cards{grid-template-columns: 1fr}
+    }
+    .card{
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(17,27,45,.55);
+      padding: 12px;
+    }
+    .card h3{
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+    .card p{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .bullets{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .bullets li{margin: 6px 0}
+    .bullets .warnTxt{color: #ffd0a8}
+    .mini{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #d8e3ff;
+      background: rgba(24,38,69,.42);
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px;
+      overflow:auto;
+    }
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 980px){ .split{grid-template-columns:1fr} }
+    .templateBar{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    select,button{
+      font: inherit;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(24,38,69,.55);
+      border:1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+      outline:none;
+    }
+    button{cursor:pointer}
+    button:hover{background: rgba(24,38,69,.75)}
+    .btnRow{display:flex; gap:8px; flex-wrap:wrap}
+    .kpiGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 980px){ .kpiGrid{grid-template-columns:1fr} }
+    .kpi{
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(17,27,45,.55);
+      padding: 12px;
+    }
+    .kpi .label{
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .kpi .value{
+      font-size: 18px;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+    .kpi .desc{
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-top: 6px;
+    }
+    .bars{
+      margin-top: 10px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(24,38,69,.35);
+      padding: 10px;
+    }
+    .barRow{
+      display:grid;
+      grid-template-columns: 140px 1fr 70px;
+      gap: 10px;
+      align-items:center;
+      margin: 8px 0;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .bar{
+      height: 10px;
+      border-radius: 999px;
+      border:1px solid rgba(34,50,83,.9);
+      background: rgba(15,22,36,.65);
+      overflow:hidden;
+    }
+    .fill{
+      height:100%;
+      width: 0%;
+      background: linear-gradient(90deg, rgba(122,162,255,.75), rgba(52,211,153,.55));
+      border-radius: 999px;
+    }
+    .footer{
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+    .printHint{
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media print{
+      body{background:#fff; color:#111}
+      a{color:#111; text-decoration:underline}
+      header, section, .aside{box-shadow:none}
+      .aside{display:none}
+      .wrap{grid-template-columns:1fr; padding: 0}
+      header, section{border-color:#ddd; background:#fff}
+      table{border-color:#ddd}
+      th,td{border-color:#eee}
+      .mini{background:#fafafa; border-color:#eee; color:#222}
+      .pill, .chip{border-color:#ddd; background:#f7f7f7; color:#222}
+      .fill{background:#bbb}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header id="top">
+      <div class="title">
+        <div>
+          <h1>Investigating - Share Button Expansion (Organic, Incentive-Free)</h1>
+          <p class="sub">
+            Expand the existing Share Button (launched on product pages on Dec 9, 2025) to additional touchpoints across the platform to drive organic sharing without referral incentives.
+          </p>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span class="chip warn"><span class="dot"></span><b>Priority:</b> High</span>
+        <span class="chip"><span class="dot"></span><b>Status:</b> Investigating</span>
+        <span class="chip"><span class="dot"></span><b>Requested by:</b> David B.</span>
+        <span class="chip"><span class="dot"></span><b>Added:</b> 17/12/2025</span>
+        <span class="chip good"><span class="dot"></span><b>Owner (original impl):</b> Dean Gabay</span>
+        <span class="chip"><span class="dot"></span><b>RICE:</b> Ready (no calc needed)</span>
+      </div>
+
+      <div class="note">
+        Key question: How do we drive users to use the share button with no incentive besides their own motivation?
+        <br/>
+        Small legal note: this one-pager is about placement and UX. It does not attempt to bribe anyone. No incentives were harmed in the making of this roadmap.
+      </div>
+    </header>
+
+    <aside class="aside">
+      <div class="nav">
+        <h3>Sections</h3>
+        <a href="#overview">Overview</a>
+        <a href="#target-areas">Target areas for expansion</a>
+        <a href="#personas">Persona analysis</a>
+        <a href="#best-practices">UI and UX best practices</a>
+        <a href="#existing">Existing implementation</a>
+        <a href="#templates">Context-aware message templates</a>
+        <a href="#uvp">Unique value proposition</a>
+        <a href="#rollout">Rollout plan</a>
+        <a href="#metrics">Success metrics</a>
+        <a href="#notes">Investigation notes</a>
+        <a href="#links">Links and references</a>
+
+        <div class="small">
+          Tip: Use your browser print dialog for a clean PDF export.
+          <div class="printHint">macOS: Cmd + P</div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section id="overview">
+        <h2>Overview</h2>
+        <div class="grid2">
+          <div class="callout">
+            <div class="k">What</div>
+            <div class="v">Expand the Share Button beyond product pages to additional touchpoints (funnel Thank You, OTC, reorder surfaces, cart share for influencer-type users).</div>
+          </div>
+          <div class="callout">
+            <div class="k">Why</div>
+            <div class="v">Leverage word-of-mouth by making sharing frictionless and context-aware, without relying on referral incentives.</div>
+          </div>
+        </div>
+
+        <div class="bars" aria-label="Working hypothesis about intent by moment">
+          <div class="barRow">
+            <div>Post-purchase (Thank You)</div>
+            <div class="bar"><div class="fill" data-w="88"></div></div>
+            <div>Highest</div>
+          </div>
+          <div class="barRow">
+            <div>Confirmation email</div>
+            <div class="bar"><div class="fill" data-w="72"></div></div>
+            <div>High</div>
+          </div>
+          <div class="barRow">
+            <div>Product page browsing</div>
+            <div class="bar"><div class="fill" data-w="55"></div></div>
+            <div>Medium</div>
+          </div>
+          <div class="barRow">
+            <div>Pre-checkout cart</div>
+            <div class="bar"><div class="fill" data-w="45"></div></div>
+            <div>Medium</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="target-areas">
+        <h2>Target Areas for Expansion</h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:120px;">Area</th>
+              <th style="width:180px;">Current state</th>
+              <th>Proposed placement</th>
+              <th style="width:360px;">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>CMS</b></td>
+              <td><span class="pill live">Live</span> Product pages</td>
+              <td>Keep as is</td>
+              <td>Already implemented by Dean</td>
+            </tr>
+            <tr>
+              <td><b>In-funnel</b></td>
+              <td><span class="pill none">Not present</span></td>
+              <td>Thank You page only</td>
+              <td><span class="pill risk">Risk</span> WhatsApp can pull users out of the funnel. Do not interrupt intent. Only post-payment.</td>
+            </tr>
+            <tr>
+              <td><b>OTC</b></td>
+              <td><span class="pill none">Not present</span></td>
+              <td>Product page, carousel, Thank You</td>
+              <td>Thank You message can support pickup and shipping coordination (share to collect package).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="note">
+          Guiding rule: a share button is allowed to be visible, but it is not allowed to be a speed bump.
+        </div>
+      </section>
+
+      <section id="personas">
+        <h2>Persona Analysis</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>FTB - First Time Buyers</h3>
+            <p>Motivation: compare prices and get help from friends or family. Behavior: still deciding and may need validation.</p>
+            <ul class="bullets">
+              <li class="warnTxt">Do not interrupt the funnel - avoid hard stops and avoid forcing a WhatsApp exit mid-decision</li>
+              <li>Place on Thank You page post-payment</li>
+              <li>Also add to post-purchase confirmation emails</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>RP - Repeat Purchasers</h3>
+            <p>Motivation: trust already established. Behavior: comfortable recommending after positive experience.</p>
+            <ul class="bullets">
+              <li>Order history and reorder surfaces</li>
+              <li>Post-delivery follow-up emails</li>
+              <li>Product pages they browse</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Influencer-type users</h3>
+            <p>Motivation: share full cart and what they use. Behavior: active sharers and wants visibility.</p>
+            <ul class="bullets">
+              <li>Cart page - "Share your cart"</li>
+              <li>Order confirmation with full cart summary</li>
+              <li>Account or profile area</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="best-practices">
+        <h2>UI and UX Best Practices</h2>
+
+        <div class="twoCols">
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Placement</th>
+                  <th>When to use</th>
+                  <th>Conversion impact</th>
+                  <th>DoktorABC fit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Product page</b> (near title or price)</td>
+                  <td>Always</td>
+                  <td>Medium</td>
+                  <td><span class="pill live">Already live</span></td>
+                </tr>
+                <tr>
+                  <td><b>Thank You page</b></td>
+                  <td>Post-purchase</td>
+                  <td><b>High</b></td>
+                  <td><span class="pill live">Best for funnel</span></td>
+                </tr>
+                <tr>
+                  <td><b>Cart page</b></td>
+                  <td>Before checkout</td>
+                  <td>Medium</td>
+                  <td><span class="pill risk">Consider for influencer-type</span></td>
+                </tr>
+                <tr>
+                  <td><b>Sticky or floating share</b></td>
+                  <td>Long pages</td>
+                  <td>Low to Medium</td>
+                  <td><span class="pill none">Too intrusive</span></td>
+                </tr>
+                <tr>
+                  <td><b>Image overlay</b> (hover)</td>
+                  <td>Visual products</td>
+                  <td>Medium</td>
+                  <td><span class="pill risk">Consider for OTC</span></td>
+                </tr>
+                <tr>
+                  <td><b>Order confirmation email</b></td>
+                  <td>Post-purchase</td>
+                  <td>Medium to High</td>
+                  <td><span class="pill live">Good for CRM</span></td>
+                </tr>
+                <tr>
+                  <td><b>Post-delivery email</b></td>
+                  <td>After receipt</td>
+                  <td><b>High</b></td>
+                  <td><span class="pill live">Great for share and reviews</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout">
+            <div class="k">Key insight</div>
+            <div class="v">
+              Post-purchase moments (Thank You, confirmation email, post-delivery) have the highest share intent because the user has already committed and is in a positive state.
+            </div>
+            <div class="note" style="margin-top:10px;">
+              Best practices checklist:
+              <ul class="bullets" style="margin-top:8px;">
+                <li>Visible but not intrusive</li>
+                <li>Limit to 3 to 5 relevant platforms</li>
+                <li>Mobile: native share sheet (already implemented)</li>
+                <li>Desktop: custom modal (already implemented)</li>
+                <li>Do not interrupt conversion flow</li>
+              </ul>
+            </div>
+            <div class="note">
+              Sources: ShareThis best practices, Marketing Labs placement guidance, CopyPress overview (see links section).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="existing">
+        <h2>Existing Implementation (Dean's Work)</h2>
+
+        <div class="split">
+          <div>
+            <div class="callout">
+              <div class="k">Status</div>
+              <div class="v">Share button is live on product pages (launched Dec 9, 2025).</div>
+            </div>
+
+            <div class="note" style="margin-top:10px;">
+              Current features:
+              <ul class="bullets" style="margin-top:8px;">
+                <li>Mobile: Native OS share sheet via <span style="font-family:var(--mono)">navigator.share</span></li>
+                <li>Desktop: Custom modal (Facebook, WhatsApp, X, Reddit, Email, Copy Link)</li>
+                <li>UTM tracking: <span style="font-family:var(--mono)">?utm_source=share_button</span></li>
+                <li>Mixpanel events: <span style="font-family:var(--mono)">Share Page Loaded</span>, <span style="font-family:var(--mono)">Button Share Clicked</span></li>
+                <li>Open Graph meta tags for link previews (product name, DoktorABC logo)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="callout">
+              <div class="k">Current message template</div>
+              <div class="v">
+                <div class="mini" id="currentTemplate">
+Hi, I found this product on DoktorABC, I think you might be interested!
+[Product Name]
+[Link to Product]
+                </div>
+              </div>
+            </div>
+
+            <div class="note">
+              Scope: RX, OTC, and Cannabis product pages in all countries.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="templates">
+        <h2>Context-Aware Message Templates</h2>
+
+        <div class="templateBar" role="group" aria-label="Template selection">
+          <select id="contextSelect" aria-label="Choose context">
+            <option value="product">Product page (browsing)</option>
+            <option value="thankyou">Thank You (post-purchase)</option>
+            <option value="otc">OTC pickup or shipping coordination</option>
+            <option value="cart">Cart share (influencer-type)</option>
+            <option value="reorder">Reorder (repeat purchaser)</option>
+          </select>
+          <div class="btnRow">
+            <button id="copyBtn" type="button">Copy template</button>
+            <button id="resetBtn" type="button">Reset placeholders</button>
+          </div>
+        </div>
+
+        <div class="mini" id="templateBox" aria-live="polite"></div>
+
+        <div class="note">
+          Principle: different placements mean different intent. The copy should match the moment.
+        </div>
+      </section>
+
+      <section id="uvp">
+        <h2>Unique Value Proposition</h2>
+
+        <div class="twoCols">
+          <div class="callout">
+            <div class="k">Why share without incentives</div>
+            <div class="v">
+              People share when it solves a problem or makes them look good - not just for discounts.
+            </div>
+            <div class="note">
+              Core insight:
+              <ul class="bullets" style="margin-top:8px;">
+                <li>FTB: price comparison and validation</li>
+                <li>OTC: logistics coordination ("pick up my order")</li>
+                <li>RP: authentic recommendation after satisfaction</li>
+                <li>Influencer-type: visibility, cart flex, social proof</li>
+              </ul>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>User need</th>
+                <th>How share helps</th>
+                <th>Compared to referral programs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Compare prices</b></td>
+                <td>Share for advice and validation</td>
+                <td>No discount needed, just decision support</td>
+              </tr>
+              <tr>
+                <td><b>Coordinate logistics</b></td>
+                <td>Share details for pickup or shipping handoff</td>
+                <td>Solves a real problem, not a paid behavior</td>
+              </tr>
+              <tr>
+                <td><b>Social proof</b></td>
+                <td>Share after a good experience</td>
+                <td>Authentic recommendation beats paid referral</td>
+              </tr>
+              <tr>
+                <td><b>Influence</b></td>
+                <td>Share cart as content</td>
+                <td>Brand exposure without affiliate costs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          Differentiators:
+          <ul class="bullets" style="margin-top:8px;">
+            <li>Context-aware messaging</li>
+            <li>Native mobile share feels like the OS, not a widget</li>
+            <li>No funnel interruption - post-purchase only for funnel placements</li>
+            <li>Practical utility for pickup coordination</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="rollout">
+        <h2>Rollout Plan</h2>
+
+        <div class="twoCols">
+          <div>
+            <h3 style="margin:0 0 8px; font-size:14px;">Phase 1 - Foundation (Week 1-2)</h3>
+            <table>
+              <thead><tr><th>Task</th><th style="width:140px;">Owner</th><th style="width:110px;">Status</th></tr></thead>
+              <tbody>
+                <tr><td>Baseline metrics from current product page share button</td><td>Analytics</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Define context-aware message templates</td><td>PM + Copy</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Design mockups for Thank You placement</td><td>Design</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Technical assessment for OTC integration</td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 8px; font-size:14px;">Phase 2 - Thank You Page (Week 3-4)</h3>
+            <table>
+              <thead><tr><th>Task</th><th style="width:140px;">Owner</th><th style="width:110px;">Status</th></tr></thead>
+              <tbody>
+                <tr><td>Implement share button on funnel Thank You page</td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Add Mixpanel event: <span style="font-family:var(--mono)">Share Button Clicked - Thank You</span></td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>A/B test: with vs without share button</td><td>CRO</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Monitor funnel impact (target: zero)</td><td>Analytics</td><td><span class="pill risk">Pending</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="twoCols" style="margin-top:12px;">
+          <div>
+            <h3 style="margin:0 0 8px; font-size:14px;">Phase 3 - OTC Expansion (Week 5-6)</h3>
+            <table>
+              <thead><tr><th>Task</th><th style="width:140px;">Owner</th><th style="width:110px;">Status</th></tr></thead>
+              <tbody>
+                <tr><td>Add share to OTC product pages</td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Add share to OTC carousels</td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Add share to OTC Thank You with pickup message</td><td>Dev</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>QA across all OTC pages</td><td>QA</td><td><span class="pill risk">Pending</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div>
+            <h3 style="margin:0 0 8px; font-size:14px;">Phase 4 - CRM Integration (Week 7-8)</h3>
+            <table>
+              <thead><tr><th>Task</th><th style="width:140px;">Owner</th><th style="width:110px;">Status</th></tr></thead>
+              <tbody>
+                <tr><td>Add share link to order confirmation email</td><td>CRM</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Add share link to post-delivery email</td><td>CRM</td><td><span class="pill risk">Pending</span></td></tr>
+                <tr><td>Track email share clicks in Mixpanel</td><td>Analytics</td><td><span class="pill risk">Pending</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="note">
+          Phase 5 - Measure and iterate (Week 9+): analyze share rates by placement, identify top contexts, optimize underperformers, and report to stakeholders.
+        </div>
+      </section>
+
+      <section id="metrics">
+        <h2>Success Metrics</h2>
+
+        <div class="kpiGrid">
+          <div class="kpi">
+            <div class="label">North Star</div>
+            <div class="value">Referral traffic from share buttons</div>
+            <div class="desc">Monthly sessions attributed to <span style="font-family:var(--mono)">utm_source=share_button</span></div>
+          </div>
+          <div class="kpi">
+            <div class="label">Leading indicators</div>
+            <div class="value">Click rate + completion rate</div>
+            <div class="desc">By placement and platform distribution (WhatsApp, Email, Copy Link, etc.)</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Guardrails</div>
+            <div class="value">No funnel regression</div>
+            <div class="desc">No change to conversion rate, time to purchase, or bounce rate from baseline</div>
+          </div>
+        </div>
+
+        <div class="twoCols" style="margin-top:12px;">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature metric</th>
+                <th>Definition</th>
+                <th style="width:110px;">Target</th>
+                <th>How to measure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Share click rate</b></td>
+                <td>Clicks divided by impressions per placement</td>
+                <td>2-5%</td>
+                <td>Mixpanel: <span style="font-family:var(--mono)">Button Share Clicked</span> divided by page views</td>
+              </tr>
+              <tr>
+                <td><b>Share completion rate</b></td>
+                <td>Completed shares divided by clicks</td>
+                <td>60%+</td>
+                <td>Native share API callback (where available)</td>
+              </tr>
+              <tr>
+                <td><b>Platform mix</b></td>
+                <td>Share distribution by platform</td>
+                <td>Track</td>
+                <td>Mixpanel property: <span style="font-family:var(--mono)">share_platform</span></td>
+              </tr>
+              <tr>
+                <td><b>Top placement</b></td>
+                <td>Highest click rate location</td>
+                <td>Identify</td>
+                <td>Compare by <span style="font-family:var(--mono)">share_location</span></td>
+              </tr>
+              <tr>
+                <td><b>Message engagement</b></td>
+                <td>Recipient clicks shared link</td>
+                <td>10%+ CTR</td>
+                <td>UTM attribution: <span style="font-family:var(--mono)">utm_source=share_button</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Business metric</th>
+                <th>Definition</th>
+                <th style="width:110px;">Target</th>
+                <th>How to measure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Referral traffic</b></td>
+                <td>Sessions from shared links</td>
+                <td>+5% MoM</td>
+                <td>GA or Mixpanel using UTM</td>
+              </tr>
+              <tr>
+                <td><b>Referred conversion</b></td>
+                <td>Orders from shared links divided by visits</td>
+                <td>3%+</td>
+                <td>UTM to purchase funnel</td>
+              </tr>
+              <tr>
+                <td><b>Revenue from shares</b></td>
+                <td>Revenue attributed to shared links</td>
+                <td>Track</td>
+                <td>Attribution from UTM to order value</td>
+              </tr>
+              <tr>
+                <td><b>CAC impact</b></td>
+                <td>Cost per acquired user via shares</td>
+                <td>0</td>
+                <td>Compare to paid CAC (organic channel)</td>
+              </tr>
+              <tr>
+                <td><b>Viral coefficient</b></td>
+                <td>New users generated per share</td>
+                <td>0.1+</td>
+                <td>Shares to new signups</td>
+              </tr>
+              <tr>
+                <td><b>NPS correlation</b></td>
+                <td>Sharers vs non-sharers NPS</td>
+                <td>Track</td>
+                <td>Survey segmentation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="notes">
+        <h2>Investigation Notes</h2>
+        <ul class="bullets">
+          <li>Share button launched on product pages on Dec 9, 2025 by Dean.</li>
+          <li>David requested expanding share to more areas.</li>
+          <li>Slack context: popup designed for RX and Cannabis product screens with sharing options and "copy link".</li>
+          <li>Known issue: "Share" wrapped in an <span style="font-family:var(--mono)">&lt;h3&gt;</span> tag twice - should be changed to <span style="font-family:var(--mono)">&lt;span&gt;</span> (reported by Oleksandr).</li>
+          <li>Consider A/B testing different placements (especially Thank You placement).</li>
+          <li>Track personas and contexts: who shares, where, and which platform they choose.</li>
+          <li>Review Confluence for page architecture details and placement constraints.</li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2>Links and References</h2>
+
+        <div class="twoCols">
+          <div class="callout">
+            <div class="k">Internal</div>
+            <div class="v">
+              <ul class="bullets" style="margin-top:8px;">
+                <li>Jira: Feature - Add Social Share Button to Product Pages (Mobile Native + Desktop Custom)</li>
+                <li>Figma: UI and UX Redesign - Share Button</li>
+                <li>Confluence PRD: Social Sharing Feature (full details and analytics)</li>
+                <li>Slack: #general (launch announcement Dec 9), #doktorabc_redesign-kickoff, #cms-redesign-project</li>
+                <li>Analytics: Mixpanel events <span style="font-family:var(--mono)">Share Page Loaded</span>, <span style="font-family:var(--mono)">Button Share Clicked</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div class="k">External research</div>
+            <div class="v">
+              <ul class="bullets" style="margin-top:8px;">
+                <li><a href="https://sharethis.com/best-practices/2017/08/how-to-strategically-use-share-buttons-to-boost-engagement-and-seo/" target="_blank" rel="noopener">ShareThis - best practices for share buttons</a></li>
+                <li><a href="https://marketinglabs.co.uk/how-and-where-to-add-social-share-buttons/" target="_blank" rel="noopener">Marketing Labs - where to add social share buttons</a></li>
+                <li><a href="https://www.copypress.com/blog/social-sharing-buttons/" target="_blank" rel="noopener">CopyPress - social sharing buttons overview</a></li>
+                <li><a href="https://www.opengraph.xyz/" target="_blank" rel="noopener">OpenGraph.xyz - test link preview appearance</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div>Last updated: 17/12/2025</div>
+          <div><a href="#top">Back to top</a></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function(){
+      // Fill hypothesis bars
+      document.querySelectorAll(".fill").forEach(el => {
+        const w = el.getAttribute("data-w") || "0";
+        el.style.width = w + "%";
+      });
+
+      const templates = {
+        product:
+`Hi, I found this product on DoktorABC, I think you might be interested!
+[Product Name]
+[Link to Product]`,
+        thankyou:
+`I just ordered from DoktorABC - you might like it too.
+[Product Name]
+[Link to Product]`,
+        otc:
+`Can you help me with my order pickup or delivery? Here are the details:
+[Order Details Summary]
+[Order Link]`,
+        cart:
+`Here is what I am getting from DoktorABC:
+[Cart Summary]
+[Cart Link]`,
+        reorder:
+`I keep buying this from DoktorABC - highly recommend.
+[Product Name]
+[Link to Product]`
+      };
+
+      const select = document.getElementById("contextSelect");
+      const box = document.getElementById("templateBox");
+      const copyBtn = document.getElementById("copyBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      function render(){
+        const key = select.value;
+        box.textContent = templates[key];
+      }
+
+      async function copy(){
+        try{
+          await navigator.clipboard.writeText(box.textContent);
+          copyBtn.textContent = "Copied";
+          setTimeout(() => copyBtn.textContent = "Copy template", 900);
+        } catch(e){
+          copyBtn.textContent = "Copy failed";
+          setTimeout(() => copyBtn.textContent = "Copy template", 1200);
+        }
+      }
+
+      select.addEventListener("change", render);
+      copyBtn.addEventListener("click", copy);
+      resetBtn.addEventListener("click", render);
+
+      render();
+    })();
+  </script>
+</body>
+</html>

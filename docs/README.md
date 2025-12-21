@@ -53,11 +53,12 @@ All CSV files are formatted for direct import into Excel or Google Sheets with s
 - **ui-event-mapping/**: Event mapping process and final tables
 - **design-system/**: Colors, typography, components, spacing
 
-## 🏛️ **Legacy Documentation**
-**Location**: `docs/legacy/`
-- Previous documentation and archived materials
-- Notion import guides, MCP configurations
-- Historical audit reports
+## 🏗️ **Internal Development Docs**
+**Location**: `docs/internal/`
+- Development setup and configuration guides
+- MCP server configurations and setup
+- Internal meeting notes and PRD templates
+- Historical documentation and archives
 
 ## 📊 **Key Metrics at a Glance**
 

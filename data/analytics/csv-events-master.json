@@ -1,0 +1,4999 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-15T13:18:02.719Z",
+    "csv_directory": "/Users/Amit Yogev/Downloads/projects /redesign/deliverables/dean-delivery-package/excel-files",
+    "total_events": 162,
+    "valid_events": 162,
+    "invalid_events": 0,
+    "csv_files_processed": 19,
+    "pages_covered": [
+      "review-table-account",
+      "review-table-bmi-calculator",
+      "review-table-category",
+      "review-table-checkout",
+      "review-table-homepage",
+      "review-table-information-pages",
+      "review-table-navigation",
+      "review-table-otc-brand",
+      "review-table-popups",
+      "review-table-product",
+      "review-table-search-otc",
+      "review-table-treatment"
+    ],
+    "platforms_covered": [
+      "web",
+      "mobile"
+    ],
+    "property_distribution": {
+      "login_method": 1,
+      "signup_method": 1,
+      "fields_updated": 1,
+      "menu_level": 2,
+      "trigger_location": 6,
+      "bmi_calculated": 2,
+      "close_method": 2,
+      "height_value": 4,
+      "weight_value": 4,
+      "bmi_value": 4,
+      "bmi_category": 4,
+      "section_name": 5,
+      "scroll_depth": 3,
+      "filter_criteria": 1,
+      "category_id": 25,
+      "sort_type": 4,
+      "current_page": 3,
+      "price_min": 1,
+      "price_max": 1,
+      "brand_ids": 1,
+      "product_id": 21,
+      "position": 12,
+      "breadcrumb_level": 2,
+      "image_index": 1,
+      "otc_categories": 1,
+      "search_query": 2,
+      "category_filter": 1,
+      "order_total": 3,
+      "payment_method": 1,
+      "item_count": 1,
+      "cart_total": 2,
+      "shipping_method": 3,
+      "promo_code": 1,
+      "quantity_removed": 1,
+      "old_quantity": 1,
+      "new_quantity": 1,
+      "treatment_type": 2,
+      "consultation_type": 2,
+      "email": 3,
+      "preferences": 1,
+      "product_name": 3,
+      "link_destination": 4,
+      "tab_name": 1,
+      "tab_index": 1,
+      "age_verified": 2,
+      "cookie_preferences": 2,
+      "page_type": 12,
+      "page_id": 12,
+      "cta_type": 2,
+      "faq_id": 4,
+      "error_type": 7,
+      "error_code": 5,
+      "n/a": 1,
+      "press_source": 1,
+      "menu_state": 1,
+      "footer_section": 3,
+      "search_type": 2,
+      "cart_item_count": 1,
+      "brand_id": 21,
+      "brand_name": 2,
+      "discount_percent": 2,
+      "current_product_count": 2,
+      "section": 2,
+      "direction": 1,
+      "review_index": 2,
+      "order_id": 2,
+      "rca:_mobile_purchase_conversion_tracking._pre-events:_product_view": 1,
+      "rca:_primary_conversion_action_tracking._pre-events:_product_view": 1,
+      "rca:_direct_purchase_intent_measurement._pre-events:_product_view": 1,
+      "rca:_social_proof_engagement_before_purchase._pre-events:_product_view": 1,
+      "rca:_purchase_intent_strength_(quantity_increases)._pre-events:_product_view": 1,
+      "rca:_cart_optimization_and_price_sensitivity._pre-events:_product_view": 1,
+      "rca:_product_variant_preference_tracking._pre-events:_product_view": 1,
+      "rca:_customer_engagement_and_review_funnel_entry._pre-events:_product_purchase_or_view": 1,
+      "rca:_product_image_engagement_and_detail_interest._pre-events:_product_view": 1,
+      "rca:_product_exploration_depth._pre-events:_product_view": 1,
+      "rca:_cross-selling_and_product_discovery._pre-events:_product_view": 1,
+      "rca:_trust_signal_access_patterns._pre-events:_product_view": 1,
+      "rca:_product_information_engagement._pre-events:_product_view": 1,
+      "rca:_usage_instruction_access._pre-events:_product_view": 1,
+      "rca:_social_proof_section_access._pre-events:_product_view": 1,
+      "rca:_viral_coefficient_and_social_sharing._pre-events:_product_view": 1,
+      "rca:_product_interest_and_navigation_patterns._pre-events:_page_view": 1,
+      "rca:_search_result_click-through_rates_and_position_effectiveness._pre-events:_search_results_view": 1,
+      "\"search_type": 1,
+      "input_method\"": 1,
+      "rca:_mobile_search_intent_tracking._pre-events:_page_navigation": 1,
+      "\"search_query": 1,
+      "result_count": 1,
+      "search_time\"": 1,
+      "rca:_mobile_search_performance_metrics._pre-events:_search_input": 1,
+      "previous_query": 1,
+      "current_step": 2,
+      "total_steps": 2,
+      "responses_count": 1
+    },
+    "normalization_confidence": {
+      "high": 125,
+      "medium": 24,
+      "low": 13
+    },
+    "top_properties": [
+      {
+        "property": "category_id",
+        "count": 25,
+        "percentage": "15.4"
+      },
+      {
+        "property": "product_id",
+        "count": 21,
+        "percentage": "13.0"
+      },
+      {
+        "property": "brand_id",
+        "count": 21,
+        "percentage": "13.0"
+      },
+      {
+        "property": "position",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "page_type",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "page_id",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "error_type",
+        "count": 7,
+        "percentage": "4.3"
+      },
+      {
+        "property": "trigger_location",
+        "count": 6,
+        "percentage": "3.7"
+      },
+      {
+        "property": "section_name",
+        "count": 5,
+        "percentage": "3.1"
+      },
+      {
+        "property": "error_code",
+        "count": 5,
+        "percentage": "3.1"
+      },
+      {
+        "property": "height_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "weight_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "bmi_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "bmi_category",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "sort_type",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "link_destination",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "faq_id",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "scroll_depth",
+        "count": 3,
+        "percentage": "1.9"
+      },
+      {
+        "property": "current_page",
+        "count": 3,
+        "percentage": "1.9"
+      },
+      {
+        "property": "order_total",
+        "count": 3,
+        "percentage": "1.9"
+      }
+    ]
+  },
+  "events": [
+    {
+      "event_name": "web_account_button_login_click",
+      "properties": [
+        "login_method"
+      ],
+      "rca_description": "RCA: Authentication method preference and login funnel entry. Pre-events: Account access need",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_button_login_click",
+      "semantic_components": {
+        "original_name": "web_account_button_login_click",
+        "normalized_name": "web_account_button_login_click",
+        "platform": "web",
+        "page": "account",
+        "element": "button_login",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_account_button_login_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_click_button_login"
+      ]
+    },
+    {
+      "event_name": "web_account_button_signup_click",
+      "properties": [
+        "signup_method"
+      ],
+      "rca_description": "RCA: New user acquisition and registration funnel entry. Pre-events: Service interest",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_button_signup_click",
+      "semantic_components": {
+        "original_name": "web_account_button_signup_click",
+        "normalized_name": "web_account_button_signup_click",
+        "platform": "web",
+        "page": "account",
+        "element": "button_signup",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_account_button_signup_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_click_button_signup"
+      ]
+    },
+    {
+      "event_name": "web_account_button_forgot_password_click",
+      "properties": [],
+      "rca_description": "RCA: Password reset need identification. Pre-events: Failed login attempt",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_button_forgot_password_click",
+      "semantic_components": {
+        "original_name": "web_account_button_forgot_password_click",
+        "normalized_name": "web_account_button_forgot_password_click",
+        "platform": "web",
+        "page": "account",
+        "element": "button_forgot_password",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_account_button_forgot_password_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_click_button_forgot_password"
+      ]
+    },
+    {
+      "event_name": "web_account_button_update_profile_click",
+      "properties": [
+        "fields_updated"
+      ],
+      "rca_description": "RCA: Profile completeness and user engagement depth. Pre-events: Profile view",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_button_update_profile_click",
+      "semantic_components": {
+        "original_name": "web_account_button_update_profile_click",
+        "normalized_name": "web_account_button_update_profile_click",
+        "platform": "web",
+        "page": "account",
+        "element": "button_update_profile",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_account_button_update_profile_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_click_button_update_profile"
+      ]
+    },
+    {
+      "event_name": "web_account_button_change_password_click",
+      "properties": [],
+      "rca_description": "RCA: Account security and password management. Pre-events: Profile view",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_button_change_password_click",
+      "semantic_components": {
+        "original_name": "web_account_button_change_password_click",
+        "normalized_name": "web_account_button_change_password_click",
+        "platform": "web",
+        "page": "account",
+        "element": "button_change_password",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_account_button_change_password_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_click_button_change_password"
+      ]
+    },
+    {
+      "event_name": "popup_delete_account_show",
+      "properties": [],
+      "rca_description": "RCA: Account churn risk identification. Pre-events: Profile settings access",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "account_show",
+      "semantic_components": {
+        "original_name": "popup_delete_account_show",
+        "normalized_name": "account_show",
+        "platform": "unknown",
+        "page": "account",
+        "element": "unknown",
+        "action": "show",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_delete_account_show",
+        "account_show",
+        "unknown_account_show",
+        "unknown_account__show",
+        "unknown_account_button_show",
+        "unknown_account_unknown_show",
+        "unknown_account_show_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_delete_account_confirm_click",
+      "properties": [],
+      "rca_description": "RCA: Account deletion completion and churn analysis. Pre-events: Delete confirmation display",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "account_confirm_click",
+      "semantic_components": {
+        "original_name": "popup_delete_account_confirm_click",
+        "normalized_name": "account_confirm_click",
+        "platform": "unknown",
+        "page": "account",
+        "element": "confirm",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "popup_delete_account_confirm_click",
+        "account_confirm_click",
+        "unknown_account_click",
+        "unknown_account__click",
+        "unknown_account_button_click",
+        "unknown_account_confirm_click",
+        "unknown_account_click_confirm"
+      ]
+    },
+    {
+      "event_name": "popup_delete_account_cancel_click",
+      "properties": [],
+      "rca_description": "RCA: Account retention through deletion cancellation. Pre-events: Delete confirmation display",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "account_cancel_click",
+      "semantic_components": {
+        "original_name": "popup_delete_account_cancel_click",
+        "normalized_name": "account_cancel_click",
+        "platform": "unknown",
+        "page": "account",
+        "element": "cancel",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "popup_delete_account_cancel_click",
+        "account_cancel_click",
+        "unknown_account_click",
+        "unknown_account__click",
+        "unknown_account_button_click",
+        "unknown_account_cancel_click",
+        "unknown_account_click_cancel"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_account_click",
+      "properties": [
+        "menu_level"
+      ],
+      "rca_description": "RCA: Account access and return user identification. Pre-events: Page view",
+      "source_file": "review-table-account-web.csv",
+      "page": "review-table-account",
+      "platform": "web",
+      "normalized_name": "web_account_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_account_click",
+        "normalized_name": "web_account_click",
+        "platform": "web",
+        "page": "account",
+        "element": "unknown",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_account_click",
+        "web_account_click",
+        "web_account__click",
+        "web_account_button_click",
+        "web_account_unknown_click",
+        "web_account_click_unknown"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_button_click",
+      "properties": [
+        "trigger_location"
+      ],
+      "rca_description": "RCA: BMI calculator engagement trigger (mobile). Pre-events: Weight Loss category page view",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_button_click",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_button_click",
+        "normalized_name": "mobile_bmi_calculator_button_click",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_button",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_button_click",
+        "mobile_bmi_click",
+        "mobile_bmi__click",
+        "mobile_bmi_button_click",
+        "mobile_bmi_click_calculator_button"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_popup_open",
+      "properties": [
+        "trigger_location"
+      ],
+      "rca_description": "RCA: BMI calculator popup display and user interest (mobile). Pre-events: BMI calculator button click",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_popup_open",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_popup_open",
+        "normalized_name": "mobile_bmi_calculator_popup_open",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_popup",
+        "action": "open",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_popup_open",
+        "mobile_bmi_open",
+        "mobile_bmi__open",
+        "mobile_bmi_button_open",
+        "mobile_bmi_open_calculator_popup"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_popup_close",
+      "properties": [
+        "bmi_calculated",
+        "close_method"
+      ],
+      "rca_description": "RCA: BMI calculator abandonment or completion tracking (mobile). Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_popup_close",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_popup_close",
+        "normalized_name": "mobile_bmi_calculator_popup_close",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_popup",
+        "action": "close",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_popup_close",
+        "mobile_bmi_close",
+        "mobile_bmi__close",
+        "mobile_bmi_button_close",
+        "mobile_bmi_close_calculator_popup"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_height_input",
+      "properties": [
+        "height_value"
+      ],
+      "rca_description": "RCA: User input engagement and form completion progress (mobile). Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_height_input",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_height_input",
+        "normalized_name": "mobile_bmi_calculator_height_input",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_height_input",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_height_input",
+        "mobile_bmi_unknown",
+        "mobile_bmi__unknown",
+        "mobile_bmi_button_unknown",
+        "mobile_bmi_calculator_height_input_unknown",
+        "mobile_bmi_unknown_calculator_height_input"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_weight_input",
+      "properties": [
+        "weight_value"
+      ],
+      "rca_description": "RCA: User input engagement and form completion progress (mobile). Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_weight_input",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_weight_input",
+        "normalized_name": "mobile_bmi_calculator_weight_input",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_weight_input",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_weight_input",
+        "mobile_bmi_unknown",
+        "mobile_bmi__unknown",
+        "mobile_bmi_button_unknown",
+        "mobile_bmi_calculator_weight_input_unknown",
+        "mobile_bmi_unknown_calculator_weight_input"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_calculate_click",
+      "properties": [
+        "height_value",
+        "weight_value"
+      ],
+      "rca_description": "RCA: BMI calculation completion and result generation (mobile). Pre-events: Height and weight input",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_calculate_click",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_calculate_click",
+        "normalized_name": "mobile_bmi_calculator_calculate_click",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_calculate",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_calculate_click",
+        "mobile_bmi_click",
+        "mobile_bmi__click",
+        "mobile_bmi_button_click",
+        "mobile_bmi_click_calculator_calculate"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_result_display",
+      "properties": [
+        "bmi_value",
+        "bmi_category"
+      ],
+      "rca_description": "RCA: BMI result visibility and category classification (mobile). Pre-events: Calculate button click",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_result_display",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_result_display",
+        "normalized_name": "mobile_bmi_calculator_result_display",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_result_display",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_result_display",
+        "mobile_bmi_unknown",
+        "mobile_bmi__unknown",
+        "mobile_bmi_button_unknown",
+        "mobile_bmi_calculator_result_display_unknown",
+        "mobile_bmi_unknown_calculator_result_display"
+      ]
+    },
+    {
+      "event_name": "mobile_bmi_calculator_cta_start_consultation_click",
+      "properties": [
+        "bmi_value",
+        "bmi_category",
+        "trigger_location"
+      ],
+      "rca_description": "RCA: Conversion from BMI calculator to consultation funnel (mobile). Pre-events: BMI result display",
+      "source_file": "review-table-bmi-calculator-mobile.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "mobile",
+      "normalized_name": "mobile_bmi_calculator_cta_start_consultation_click",
+      "semantic_components": {
+        "original_name": "mobile_bmi_calculator_cta_start_consultation_click",
+        "normalized_name": "mobile_bmi_calculator_cta_start_consultation_click",
+        "platform": "mobile",
+        "page": "bmi",
+        "element": "calculator_cta_start_consultation",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_bmi_calculator_cta_start_consultation_click",
+        "mobile_bmi_click",
+        "mobile_bmi__click",
+        "mobile_bmi_button_click",
+        "mobile_bmi_click_calculator_cta_start_consultation"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_button_click",
+      "properties": [
+        "trigger_location"
+      ],
+      "rca_description": "RCA: BMI calculator engagement trigger. Pre-events: Weight Loss category page view",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_button_click",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_button_click",
+        "normalized_name": "web_bmi_calculator_button_click",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_button",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_button_click",
+        "web_bmi_click",
+        "web_bmi__click",
+        "web_bmi_button_click",
+        "web_bmi_click_calculator_button"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_popup_open",
+      "properties": [
+        "trigger_location"
+      ],
+      "rca_description": "RCA: BMI calculator popup display and user interest. Pre-events: BMI calculator button click",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_popup_open",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_popup_open",
+        "normalized_name": "web_bmi_calculator_popup_open",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_popup",
+        "action": "open",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_popup_open",
+        "web_bmi_open",
+        "web_bmi__open",
+        "web_bmi_button_open",
+        "web_bmi_open_calculator_popup"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_popup_close",
+      "properties": [
+        "bmi_calculated",
+        "close_method"
+      ],
+      "rca_description": "RCA: BMI calculator abandonment or completion tracking. Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_popup_close",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_popup_close",
+        "normalized_name": "web_bmi_calculator_popup_close",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_popup",
+        "action": "close",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_popup_close",
+        "web_bmi_close",
+        "web_bmi__close",
+        "web_bmi_button_close",
+        "web_bmi_close_calculator_popup"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_height_input",
+      "properties": [
+        "height_value"
+      ],
+      "rca_description": "RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_height_input",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_height_input",
+        "normalized_name": "web_bmi_calculator_height_input",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_height_input",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_bmi_calculator_height_input",
+        "web_bmi_unknown",
+        "web_bmi__unknown",
+        "web_bmi_button_unknown",
+        "web_bmi_calculator_height_input_unknown",
+        "web_bmi_unknown_calculator_height_input"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_weight_input",
+      "properties": [
+        "weight_value"
+      ],
+      "rca_description": "RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_weight_input",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_weight_input",
+        "normalized_name": "web_bmi_calculator_weight_input",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_weight_input",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_bmi_calculator_weight_input",
+        "web_bmi_unknown",
+        "web_bmi__unknown",
+        "web_bmi_button_unknown",
+        "web_bmi_calculator_weight_input_unknown",
+        "web_bmi_unknown_calculator_weight_input"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_calculate_click",
+      "properties": [
+        "height_value",
+        "weight_value"
+      ],
+      "rca_description": "RCA: BMI calculation completion and result generation. Pre-events: Height and weight input",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_calculate_click",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_calculate_click",
+        "normalized_name": "web_bmi_calculator_calculate_click",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_calculate",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_calculate_click",
+        "web_bmi_click",
+        "web_bmi__click",
+        "web_bmi_button_click",
+        "web_bmi_click_calculator_calculate"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_result_display",
+      "properties": [
+        "bmi_value",
+        "bmi_category"
+      ],
+      "rca_description": "RCA: BMI result visibility and category classification. Pre-events: Calculate button click",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_result_display",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_result_display",
+        "normalized_name": "web_bmi_calculator_result_display",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_result_display",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_bmi_calculator_result_display",
+        "web_bmi_unknown",
+        "web_bmi__unknown",
+        "web_bmi_button_unknown",
+        "web_bmi_calculator_result_display_unknown",
+        "web_bmi_unknown_calculator_result_display"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_cta_start_consultation_click",
+      "properties": [
+        "bmi_value",
+        "bmi_category",
+        "trigger_location"
+      ],
+      "rca_description": "RCA: Conversion from BMI calculator to consultation funnel. Pre-events: BMI result display",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_cta_start_consultation_click",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_cta_start_consultation_click",
+        "normalized_name": "web_bmi_calculator_cta_start_consultation_click",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_cta_start_consultation",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_cta_start_consultation_click",
+        "web_bmi_click",
+        "web_bmi__click",
+        "web_bmi_button_click",
+        "web_bmi_click_calculator_cta_start_consultation"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_static_section_view",
+      "properties": [
+        "section_name"
+      ],
+      "rca_description": "RCA: SEO content engagement and information consumption. Pre-events: Weight Loss category page view",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_static_section_view",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_static_section_view",
+        "normalized_name": "web_bmi_calculator_static_section_view",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_static_section",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_static_section_view",
+        "web_bmi_view",
+        "web_bmi__view",
+        "web_bmi_button_view",
+        "web_bmi_view_calculator_static_section"
+      ]
+    },
+    {
+      "event_name": "web_bmi_calculator_seo_content_scroll",
+      "properties": [
+        "scroll_depth"
+      ],
+      "rca_description": "RCA: SEO content engagement depth and reading behavior. Pre-events: Static section view",
+      "source_file": "review-table-bmi-calculator-web.csv",
+      "page": "review-table-bmi-calculator",
+      "platform": "web",
+      "normalized_name": "web_bmi_calculator_seo_content_scroll",
+      "semantic_components": {
+        "original_name": "web_bmi_calculator_seo_content_scroll",
+        "normalized_name": "web_bmi_calculator_seo_content_scroll",
+        "platform": "web",
+        "page": "bmi",
+        "element": "calculator_seo_content",
+        "action": "scroll",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_bmi_calculator_seo_content_scroll",
+        "web_bmi_scroll",
+        "web_bmi__scroll",
+        "web_bmi_button_scroll",
+        "web_bmi_scroll_calculator_seo_content"
+      ]
+    },
+    {
+      "event_name": "web_category_button_apply_filters_click",
+      "properties": [
+        "filter_criteria",
+        "category_id"
+      ],
+      "rca_description": "RCA: Filter usage and product discovery efficiency. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_apply_filters_click",
+      "semantic_components": {
+        "original_name": "web_category_button_apply_filters_click",
+        "normalized_name": "web_category_button_apply_filters_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_apply_filters",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_apply_filters_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_apply_filters"
+      ]
+    },
+    {
+      "event_name": "web_category_button_clear_filters_click",
+      "properties": [
+        "category_id"
+      ],
+      "rca_description": "RCA: Filter reset patterns and user frustration. Pre-events: Filter application",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_clear_filters_click",
+      "semantic_components": {
+        "original_name": "web_category_button_clear_filters_click",
+        "normalized_name": "web_category_button_clear_filters_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_clear_filters",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_clear_filters_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_clear_filters"
+      ]
+    },
+    {
+      "event_name": "web_category_button_sort_price_low_click",
+      "properties": [
+        "sort_type",
+        "category_id"
+      ],
+      "rca_description": "RCA: Price sensitivity and shopping intent. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_sort_price_low_click",
+      "semantic_components": {
+        "original_name": "web_category_button_sort_price_low_click",
+        "normalized_name": "web_category_button_sort_price_low_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_sort_price_low",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_sort_price_low_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_sort_price_low"
+      ]
+    },
+    {
+      "event_name": "web_category_button_sort_price_high_click",
+      "properties": [
+        "sort_type",
+        "category_id"
+      ],
+      "rca_description": "RCA: Premium product interest. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_sort_price_high_click",
+      "semantic_components": {
+        "original_name": "web_category_button_sort_price_high_click",
+        "normalized_name": "web_category_button_sort_price_high_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_sort_price_high",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_sort_price_high_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_sort_price_high"
+      ]
+    },
+    {
+      "event_name": "web_category_button_sort_newest_click",
+      "properties": [
+        "sort_type",
+        "category_id"
+      ],
+      "rca_description": "RCA: Trend-following and novelty-seeking behavior. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_sort_newest_click",
+      "semantic_components": {
+        "original_name": "web_category_button_sort_newest_click",
+        "normalized_name": "web_category_button_sort_newest_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_sort_newest",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_sort_newest_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_sort_newest"
+      ]
+    },
+    {
+      "event_name": "web_category_button_sort_rating_click",
+      "properties": [
+        "sort_type",
+        "category_id"
+      ],
+      "rca_description": "RCA: Quality-focused shopping behavior. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_sort_rating_click",
+      "semantic_components": {
+        "original_name": "web_category_button_sort_rating_click",
+        "normalized_name": "web_category_button_sort_rating_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_sort_rating",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_sort_rating_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_sort_rating"
+      ]
+    },
+    {
+      "event_name": "web_category_button_load_more_click",
+      "properties": [
+        "current_page",
+        "category_id"
+      ],
+      "rca_description": "RCA: Content consumption depth and pagination UX. Pre-events: View current page",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_load_more_click",
+      "semantic_components": {
+        "original_name": "web_category_button_load_more_click",
+        "normalized_name": "web_category_button_load_more_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_load_more",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_load_more_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_load_more"
+      ]
+    },
+    {
+      "event_name": "web_category_button_prev_page_click",
+      "properties": [
+        "current_page",
+        "category_id"
+      ],
+      "rca_description": "RCA: Navigation patterns and content exploration. Pre-events: View current page",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_prev_page_click",
+      "semantic_components": {
+        "original_name": "web_category_button_prev_page_click",
+        "normalized_name": "web_category_button_prev_page_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_prev_page",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_prev_page_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_prev_page"
+      ]
+    },
+    {
+      "event_name": "web_category_button_next_page_click",
+      "properties": [
+        "current_page",
+        "category_id"
+      ],
+      "rca_description": "RCA: Content consumption progression. Pre-events: View current page",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_next_page_click",
+      "semantic_components": {
+        "original_name": "web_category_button_next_page_click",
+        "normalized_name": "web_category_button_next_page_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_next_page",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_next_page_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_next_page"
+      ]
+    },
+    {
+      "event_name": "web_category_button_price_filter_click",
+      "properties": [
+        "price_min",
+        "price_max",
+        "category_id"
+      ],
+      "rca_description": "RCA: Budget-based product filtering. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_price_filter_click",
+      "semantic_components": {
+        "original_name": "web_category_button_price_filter_click",
+        "normalized_name": "web_category_button_price_filter_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_price_filter",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_price_filter_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_price_filter"
+      ]
+    },
+    {
+      "event_name": "web_category_button_brand_filter_click",
+      "properties": [
+        "brand_ids",
+        "category_id"
+      ],
+      "rca_description": "RCA: Brand loyalty and preference tracking. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_button_brand_filter_click",
+      "semantic_components": {
+        "original_name": "web_category_button_brand_filter_click",
+        "normalized_name": "web_category_button_brand_filter_click",
+        "platform": "web",
+        "page": "category",
+        "element": "button_brand_filter",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_button_brand_filter_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_button_brand_filter"
+      ]
+    },
+    {
+      "event_name": "web_category_card_product_1_click",
+      "properties": [
+        "product_id",
+        "position",
+        "category_id"
+      ],
+      "rca_description": "RCA: Product visibility and position effectiveness. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_product_1_click",
+      "semantic_components": {
+        "original_name": "web_category_card_product_1_click",
+        "normalized_name": "web_category_card_product_1_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_product_1",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_product_1_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_product_1"
+      ]
+    },
+    {
+      "event_name": "web_category_card_product_2_click",
+      "properties": [
+        "product_id",
+        "position",
+        "category_id"
+      ],
+      "rca_description": "RCA: Product visibility and position effectiveness. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_product_2_click",
+      "semantic_components": {
+        "original_name": "web_category_card_product_2_click",
+        "normalized_name": "web_category_card_product_2_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_product_2",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_product_2_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_product_2"
+      ]
+    },
+    {
+      "event_name": "web_category_card_product_3_click",
+      "properties": [
+        "product_id",
+        "position",
+        "category_id"
+      ],
+      "rca_description": "RCA: Product visibility and position effectiveness. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_product_3_click",
+      "semantic_components": {
+        "original_name": "web_category_card_product_3_click",
+        "normalized_name": "web_category_card_product_3_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_product_3",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_product_3_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_product_3"
+      ]
+    },
+    {
+      "event_name": "web_category_card_product_4_click",
+      "properties": [
+        "product_id",
+        "position",
+        "category_id"
+      ],
+      "rca_description": "RCA: Product visibility and position effectiveness. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_product_4_click",
+      "semantic_components": {
+        "original_name": "web_category_card_product_4_click",
+        "normalized_name": "web_category_card_product_4_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_product_4",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_product_4_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_product_4"
+      ]
+    },
+    {
+      "event_name": "web_category_breadcrumb_home_click",
+      "properties": [
+        "breadcrumb_level",
+        "category_id"
+      ],
+      "rca_description": "RCA: Navigation hierarchy usage. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_breadcrumb_home_click",
+      "semantic_components": {
+        "original_name": "web_category_breadcrumb_home_click",
+        "normalized_name": "web_category_breadcrumb_home_click",
+        "platform": "web",
+        "page": "category",
+        "element": "breadcrumb_home",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_breadcrumb_home_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_breadcrumb_home"
+      ]
+    },
+    {
+      "event_name": "web_category_breadcrumb_category_click",
+      "properties": [
+        "breadcrumb_level",
+        "category_id"
+      ],
+      "rca_description": "RCA: Category navigation patterns. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_breadcrumb_category_click",
+      "semantic_components": {
+        "original_name": "web_category_breadcrumb_category_click",
+        "normalized_name": "web_category_breadcrumb_category_click",
+        "platform": "web",
+        "page": "category",
+        "element": "breadcrumb_category",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_breadcrumb_category_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_breadcrumb_category"
+      ]
+    },
+    {
+      "event_name": "web_category_card_quick_view_click",
+      "properties": [
+        "product_id",
+        "category_id"
+      ],
+      "rca_description": "RCA: Product preview engagement without full navigation. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_quick_view_click",
+      "semantic_components": {
+        "original_name": "web_category_card_quick_view_click",
+        "normalized_name": "web_category_card_quick_view_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_quick_view",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_quick_view_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_quick_view"
+      ]
+    },
+    {
+      "event_name": "web_category_card_wishlist_click",
+      "properties": [
+        "product_id",
+        "category_id"
+      ],
+      "rca_description": "RCA: Purchase intent and product interest. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_card_wishlist_click",
+      "semantic_components": {
+        "original_name": "web_category_card_wishlist_click",
+        "normalized_name": "web_category_card_wishlist_click",
+        "platform": "web",
+        "page": "category",
+        "element": "card_wishlist",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_card_wishlist_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_card_wishlist"
+      ]
+    },
+    {
+      "event_name": "web_category_image_product_click",
+      "properties": [
+        "product_id",
+        "image_index",
+        "category_id"
+      ],
+      "rca_description": "RCA: Visual product engagement. Pre-events: Category view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_category_image_product_click",
+      "semantic_components": {
+        "original_name": "web_category_image_product_click",
+        "normalized_name": "web_category_image_product_click",
+        "platform": "web",
+        "page": "category",
+        "element": "image_product",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_category_image_product_click",
+        "web_category_click",
+        "web_category__click",
+        "web_category_button_click",
+        "web_category_click_image_product"
+      ]
+    },
+    {
+      "event_name": "web_product_button_back_to_category_click",
+      "properties": [
+        "category_id",
+        "product_id"
+      ],
+      "rca_description": "RCA: Navigation pattern and product abandonment. Pre-events: Product view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_product_button_back_to_category_click",
+      "semantic_components": {
+        "original_name": "web_product_button_back_to_category_click",
+        "normalized_name": "web_product_button_back_to_category_click",
+        "platform": "web",
+        "page": "product",
+        "element": "button_back_to_category",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_product_button_back_to_category_click",
+        "web_product_click",
+        "web_product__click",
+        "web_product_button_click",
+        "web_product_click_button_back_to_category"
+      ]
+    },
+    {
+      "event_name": "web_search_otc_button_filter_category_click",
+      "properties": [
+        "otc_categories",
+        "search_query"
+      ],
+      "rca_description": "RCA: Category-based search refinement. Pre-events: Search results view",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_search_otc_button_filter_category_click",
+      "semantic_components": {
+        "original_name": "web_search_otc_button_filter_category_click",
+        "normalized_name": "web_search_otc_button_filter_category_click",
+        "platform": "web",
+        "page": "search",
+        "element": "otc_button_filter_category",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_search_otc_button_filter_category_click",
+        "web_search_click",
+        "web_search__click",
+        "web_search_button_click",
+        "web_search_click_otc_button_filter_category"
+      ]
+    },
+    {
+      "event_name": "web_search_otc_filter_category_applied",
+      "properties": [
+        "category_filter",
+        "search_query"
+      ],
+      "rca_description": "RCA: Filter application success and usage patterns. Pre-events: Filter selection",
+      "source_file": "review-table-category-web.csv",
+      "page": "review-table-category",
+      "platform": "web",
+      "normalized_name": "web_search_otc_filter_category_applied",
+      "semantic_components": {
+        "original_name": "web_search_otc_filter_category_applied",
+        "normalized_name": "web_search_otc_filter_category_applied",
+        "platform": "web",
+        "page": "search",
+        "element": "otc_filter_category_applied",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_search_otc_filter_category_applied",
+        "web_search_unknown",
+        "web_search__unknown",
+        "web_search_button_unknown",
+        "web_search_otc_filter_category_applied_unknown",
+        "web_search_unknown_otc_filter_category_applied"
+      ]
+    },
+    {
+      "event_name": "web_checkout_button_place_order_click",
+      "properties": [
+        "order_total",
+        "payment_method",
+        "item_count"
+      ],
+      "rca_description": "RCA: Final conversion completion tracking. Pre-events: Payment method selection",
+      "source_file": "review-table-checkout-web.csv",
+      "page": "review-table-checkout",
+      "platform": "web",
+      "normalized_name": "web_checkout_button_place_order_click",
+      "semantic_components": {
+        "original_name": "web_checkout_button_place_order_click",
+        "normalized_name": "web_checkout_button_place_order_click",
+        "platform": "web",
+        "page": "checkout",
+        "element": "button_place_order",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_checkout_button_place_order_click",
+        "web_checkout_click",
+        "web_checkout__click",
+        "web_checkout_button_click",
+        "web_checkout_click_button_place_order"
+      ]
+    },
+    {
+      "event_name": "web_checkout_button_continue_payment_click",
+      "properties": [
+        "cart_total",
+        "shipping_method"
+      ],
+      "rca_description": "RCA: Checkout funnel progression to payment. Pre-events: Shipping selection",
+      "source_file": "review-table-checkout-web.csv",
+      "page": "review-table-checkout",
+      "platform": "web",
+      "normalized_name": "web_checkout_button_continue_payment_click",
+      "semantic_components": {
+        "original_name": "web_checkout_button_continue_payment_click",
+        "normalized_name": "web_checkout_button_continue_payment_click",
+        "platform": "web",
+        "page": "checkout",
+        "element": "button_continue_payment",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_checkout_button_continue_payment_click",
+        "web_checkout_click",
+        "web_checkout__click",
+        "web_checkout_button_click",
+        "web_checkout_click_button_continue_payment"
+      ]
+    },
+    {
+      "event_name": "web_checkout_button_promo_apply_click",
+      "properties": [
+        "promo_code",
+        "cart_total"
+      ],
+      "rca_description": "RCA: Discount code usage and price optimization. Pre-events: Cart view",
+      "source_file": "review-table-checkout-web.csv",
+      "page": "review-table-checkout",
+      "platform": "web",
+      "normalized_name": "web_checkout_button_promo_apply_click",
+      "semantic_components": {
+        "original_name": "web_checkout_button_promo_apply_click",
+        "normalized_name": "web_checkout_button_promo_apply_click",
+        "platform": "web",
+        "page": "checkout",
+        "element": "button_promo_apply",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_checkout_button_promo_apply_click",
+        "web_checkout_click",
+        "web_checkout__click",
+        "web_checkout_button_click",
+        "web_checkout_click_button_promo_apply"
+      ]
+    },
+    {
+      "event_name": "web_checkout_button_remove_item_click",
+      "properties": [
+        "product_id",
+        "quantity_removed"
+      ],
+      "rca_description": "RCA: Cart abandonment and product removal reasons. Pre-events: Cart view",
+      "source_file": "review-table-checkout-web.csv",
+      "page": "review-table-checkout",
+      "platform": "web",
+      "normalized_name": "web_checkout_button_remove_item_click",
+      "semantic_components": {
+        "original_name": "web_checkout_button_remove_item_click",
+        "normalized_name": "web_checkout_button_remove_item_click",
+        "platform": "web",
+        "page": "checkout",
+        "element": "button_remove_item",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_checkout_button_remove_item_click",
+        "web_checkout_click",
+        "web_checkout__click",
+        "web_checkout_button_click",
+        "web_checkout_click_button_remove_item"
+      ]
+    },
+    {
+      "event_name": "web_checkout_button_update_quantity_click",
+      "properties": [
+        "product_id",
+        "old_quantity",
+        "new_quantity"
+      ],
+      "rca_description": "RCA: Cart optimization and purchase intent adjustment. Pre-events: Cart view",
+      "source_file": "review-table-checkout-web.csv",
+      "page": "review-table-checkout",
+      "platform": "web",
+      "normalized_name": "web_checkout_button_update_quantity_click",
+      "semantic_components": {
+        "original_name": "web_checkout_button_update_quantity_click",
+        "normalized_name": "web_checkout_button_update_quantity_click",
+        "platform": "web",
+        "page": "checkout",
+        "element": "button_update_quantity",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_checkout_button_update_quantity_click",
+        "web_checkout_click",
+        "web_checkout__click",
+        "web_checkout_button_click",
+        "web_checkout_click_button_update_quantity"
+      ]
+    },
+    {
+      "event_name": "mobile_homepage_cta_start_click",
+      "properties": [
+        "treatment_type"
+      ],
+      "rca_description": "RCA: Mobile conversion funnel entry point. Pre-events: Page load",
+      "source_file": "review-table-homepage-mobile.csv",
+      "page": "review-table-homepage",
+      "platform": "mobile",
+      "normalized_name": "mobile_homepage_cta_start_click",
+      "semantic_components": {
+        "original_name": "mobile_homepage_cta_start_click",
+        "normalized_name": "mobile_homepage_cta_start_click",
+        "platform": "mobile",
+        "page": "homepage",
+        "element": "cta_start",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_homepage_cta_start_click",
+        "mobile_homepage_click",
+        "mobile_homepage__click",
+        "mobile_homepage_button_click",
+        "mobile_homepage_click_cta_start"
+      ]
+    },
+    {
+      "event_name": "web_homepage_cta_start_click",
+      "properties": [
+        "treatment_type"
+      ],
+      "rca_description": "RCA: Main conversion funnel entry point. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_cta_start_click",
+      "semantic_components": {
+        "original_name": "web_homepage_cta_start_click",
+        "normalized_name": "web_homepage_cta_start_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "cta_start",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_cta_start_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_cta_start"
+      ]
+    },
+    {
+      "event_name": "web_homepage_cta_consultation_click",
+      "properties": [
+        "consultation_type"
+      ],
+      "rca_description": "RCA: Consultation booking intent. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_cta_consultation_click",
+      "semantic_components": {
+        "original_name": "web_homepage_cta_consultation_click",
+        "normalized_name": "web_homepage_cta_consultation_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "cta_consultation",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_cta_consultation_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_cta_consultation"
+      ]
+    },
+    {
+      "event_name": "web_homepage_button_learn_more_click",
+      "properties": [
+        "section_name"
+      ],
+      "rca_description": "RCA: Content engagement and information seeking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_button_learn_more_click",
+      "semantic_components": {
+        "original_name": "web_homepage_button_learn_more_click",
+        "normalized_name": "web_homepage_button_learn_more_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "button_learn_more",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_button_learn_more_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_button_learn_more"
+      ]
+    },
+    {
+      "event_name": "web_homepage_button_view_products_click",
+      "properties": [
+        "category_id"
+      ],
+      "rca_description": "RCA: Product browsing intent. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_button_view_products_click",
+      "semantic_components": {
+        "original_name": "web_homepage_button_view_products_click",
+        "normalized_name": "web_homepage_button_view_products_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "button_view_products",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_button_view_products_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_button_view_products"
+      ]
+    },
+    {
+      "event_name": "web_homepage_button_category_skin_click",
+      "properties": [
+        "category_id"
+      ],
+      "rca_description": "RCA: Category-specific interest tracking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_button_category_skin_click",
+      "semantic_components": {
+        "original_name": "web_homepage_button_category_skin_click",
+        "normalized_name": "web_homepage_button_category_skin_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "button_category_skin",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_button_category_skin_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_button_category_skin"
+      ]
+    },
+    {
+      "event_name": "web_homepage_button_category_hair_click",
+      "properties": [
+        "category_id"
+      ],
+      "rca_description": "RCA: Category-specific interest tracking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_button_category_hair_click",
+      "semantic_components": {
+        "original_name": "web_homepage_button_category_hair_click",
+        "normalized_name": "web_homepage_button_category_hair_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "button_category_hair",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_button_category_hair_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_button_category_hair"
+      ]
+    },
+    {
+      "event_name": "web_homepage_button_newsletter_subscribe_click",
+      "properties": [
+        "email",
+        "preferences"
+      ],
+      "rca_description": "RCA: Lead generation and marketing opt-in. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_button_newsletter_subscribe_click",
+      "semantic_components": {
+        "original_name": "web_homepage_button_newsletter_subscribe_click",
+        "normalized_name": "web_homepage_button_newsletter_subscribe_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "button_newsletter_subscribe",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_button_newsletter_subscribe_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_button_newsletter_subscribe"
+      ]
+    },
+    {
+      "event_name": "web_homepage_card_acne_cream_click",
+      "properties": [
+        "product_id",
+        "product_name"
+      ],
+      "rca_description": "RCA: Product-specific interest and conversion tracking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_card_acne_cream_click",
+      "semantic_components": {
+        "original_name": "web_homepage_card_acne_cream_click",
+        "normalized_name": "web_homepage_card_acne_cream_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "card_acne_cream",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_card_acne_cream_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_card_acne_cream"
+      ]
+    },
+    {
+      "event_name": "web_homepage_card_hair_growth_click",
+      "properties": [
+        "product_id",
+        "product_name"
+      ],
+      "rca_description": "RCA: Product-specific interest and conversion tracking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_card_hair_growth_click",
+      "semantic_components": {
+        "original_name": "web_homepage_card_hair_growth_click",
+        "normalized_name": "web_homepage_card_hair_growth_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "card_hair_growth",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_card_hair_growth_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_card_hair_growth"
+      ]
+    },
+    {
+      "event_name": "web_homepage_card_vitamin_c_click",
+      "properties": [
+        "product_id",
+        "product_name"
+      ],
+      "rca_description": "RCA: Product-specific interest and conversion tracking. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_card_vitamin_c_click",
+      "semantic_components": {
+        "original_name": "web_homepage_card_vitamin_c_click",
+        "normalized_name": "web_homepage_card_vitamin_c_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "card_vitamin_c",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_card_vitamin_c_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_card_vitamin_c"
+      ]
+    },
+    {
+      "event_name": "web_homepage_link_privacy_click",
+      "properties": [
+        "link_destination"
+      ],
+      "rca_description": "RCA: Privacy compliance and trust behavior. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_link_privacy_click",
+      "semantic_components": {
+        "original_name": "web_homepage_link_privacy_click",
+        "normalized_name": "web_homepage_link_privacy_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "link_privacy",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_link_privacy_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_link_privacy"
+      ]
+    },
+    {
+      "event_name": "web_homepage_link_terms_click",
+      "properties": [
+        "link_destination"
+      ],
+      "rca_description": "RCA: Legal content access. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_link_terms_click",
+      "semantic_components": {
+        "original_name": "web_homepage_link_terms_click",
+        "normalized_name": "web_homepage_link_terms_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "link_terms",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_link_terms_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_link_terms"
+      ]
+    },
+    {
+      "event_name": "web_homepage_tab_featured_click",
+      "properties": [
+        "tab_name",
+        "tab_index"
+      ],
+      "rca_description": "RCA: Content organization preference. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "web_homepage_tab_featured_click",
+      "semantic_components": {
+        "original_name": "web_homepage_tab_featured_click",
+        "normalized_name": "web_homepage_tab_featured_click",
+        "platform": "web",
+        "page": "homepage",
+        "element": "tab_featured",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_homepage_tab_featured_click",
+        "web_homepage_click",
+        "web_homepage__click",
+        "web_homepage_button_click",
+        "web_homepage_click_tab_featured"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_show_homepage",
+      "properties": [],
+      "rca_description": "RCA: Age verification compliance requirement. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_age_verify_show_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_show_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_close_homepage",
+      "properties": [],
+      "rca_description": "RCA: Age verification bypass attempts. Pre-events: Age verification display",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_age_verify_close_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_close_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_continue_homepage",
+      "properties": [
+        "age_verified"
+      ],
+      "rca_description": "RCA: Legal compliance completion. Pre-events: Age verification display",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_age_verify_continue_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_continue_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_cookie_consent_show_homepage",
+      "properties": [],
+      "rca_description": "RCA: GDPR compliance and privacy consent. Pre-events: Page load",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_cookie_consent_show_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_cookie_consent_show_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_cookie_consent_accept_click_homepage",
+      "properties": [
+        "cookie_preferences"
+      ],
+      "rca_description": "RCA: Privacy consent completion. Pre-events: Cookie consent display",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_cookie_consent_accept_click_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_cookie_consent_accept_click_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_newsletter_show_homepage",
+      "properties": [],
+      "rca_description": "RCA: Email list growth opportunity. Pre-events: Scroll engagement",
+      "source_file": "review-table-homepage-web.csv",
+      "page": "review-table-homepage",
+      "platform": "web",
+      "normalized_name": "homepage",
+      "semantic_components": {
+        "original_name": "popup_newsletter_show_homepage",
+        "normalized_name": "homepage",
+        "platform": "unknown",
+        "page": "homepage",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_newsletter_show_homepage",
+        "homepage",
+        "unknown_homepage_unknown",
+        "unknown_homepage__unknown",
+        "unknown_homepage_button_unknown",
+        "unknown_homepage_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_view",
+      "properties": [
+        "page_type",
+        "page_id"
+      ],
+      "rca_description": "RCA: Information page discovery and trust-building engagement (mobile). Pre-events: Footer link",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_view",
+      "semantic_components": {
+        "original_name": "mobile_information_page_view",
+        "normalized_name": "mobile_information_page_view",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_view",
+        "mobile_information_view",
+        "mobile_information__view",
+        "mobile_information_button_view",
+        "mobile_information_view_page"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_cta_click",
+      "properties": [
+        "page_type",
+        "cta_type",
+        "page_id"
+      ],
+      "rca_description": "RCA: Conversion from information pages to main funnel (mobile). Pre-events: Information page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_cta_click",
+      "semantic_components": {
+        "original_name": "mobile_information_page_cta_click",
+        "normalized_name": "mobile_information_page_cta_click",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page_cta",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_cta_click",
+        "mobile_information_click",
+        "mobile_information__click",
+        "mobile_information_button_click",
+        "mobile_information_click_page_cta"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_faq_accordion_open",
+      "properties": [
+        "page_type",
+        "faq_id",
+        "page_id"
+      ],
+      "rca_description": "RCA: FAQ engagement and information seeking behavior (mobile). Pre-events: Information page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_faq_accordion_open",
+      "semantic_components": {
+        "original_name": "mobile_information_page_faq_accordion_open",
+        "normalized_name": "mobile_information_page_faq_accordion_open",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page_faq_accordion",
+        "action": "open",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_faq_accordion_open",
+        "mobile_information_open",
+        "mobile_information__open",
+        "mobile_information_button_open",
+        "mobile_information_open_page_faq_accordion"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_faq_accordion_close",
+      "properties": [
+        "page_type",
+        "faq_id",
+        "page_id"
+      ],
+      "rca_description": "RCA: FAQ content consumption completion (mobile). Pre-events: FAQ accordion open",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_faq_accordion_close",
+      "semantic_components": {
+        "original_name": "mobile_information_page_faq_accordion_close",
+        "normalized_name": "mobile_information_page_faq_accordion_close",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page_faq_accordion",
+        "action": "close",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_faq_accordion_close",
+        "mobile_information_close",
+        "mobile_information__close",
+        "mobile_information_button_close",
+        "mobile_information_close_page_faq_accordion"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_section_scroll",
+      "properties": [
+        "page_type",
+        "section_name",
+        "scroll_depth",
+        "page_id"
+      ],
+      "rca_description": "RCA: Content engagement depth and reading behavior (mobile). Pre-events: Information page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_section_scroll",
+      "semantic_components": {
+        "original_name": "mobile_information_page_section_scroll",
+        "normalized_name": "mobile_information_page_section_scroll",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page_section",
+        "action": "scroll",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_section_scroll",
+        "mobile_information_scroll",
+        "mobile_information__scroll",
+        "mobile_information_button_scroll",
+        "mobile_information_scroll_page_section"
+      ]
+    },
+    {
+      "event_name": "mobile_information_page_link_click",
+      "properties": [
+        "page_type",
+        "link_destination",
+        "page_id"
+      ],
+      "rca_description": "RCA: Cross-page navigation and information architecture usage (mobile). Pre-events: Information page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_information_page_link_click",
+      "semantic_components": {
+        "original_name": "mobile_information_page_link_click",
+        "normalized_name": "mobile_information_page_link_click",
+        "platform": "mobile",
+        "page": "information",
+        "element": "page_link",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_information_page_link_click",
+        "mobile_information_click",
+        "mobile_information__click",
+        "mobile_information_button_click",
+        "mobile_information_click_page_link"
+      ]
+    },
+    {
+      "event_name": "mobile_shipping_page_method_card_click",
+      "properties": [
+        "shipping_method"
+      ],
+      "rca_description": "RCA: Shipping option interest and delivery preference (mobile). Pre-events: Shipping page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_shipping_page_method_card_click",
+      "semantic_components": {
+        "original_name": "mobile_shipping_page_method_card_click",
+        "normalized_name": "mobile_shipping_page_method_card_click",
+        "platform": "mobile",
+        "page": "unknown",
+        "element": "shipping_page_method_card",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_shipping_page_method_card_click",
+        "mobile_unknown_click",
+        "mobile_unknown__click",
+        "mobile_unknown_button_click",
+        "mobile_unknown_shipping_page_method_card_click",
+        "mobile_unknown_click_shipping_page_method_card"
+      ]
+    },
+    {
+      "event_name": "mobile_error_page_home_click",
+      "properties": [
+        "error_type",
+        "error_code"
+      ],
+      "rca_description": "RCA: Error recovery and user retention from error pages (mobile). Pre-events: Error page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_error_page_home_click",
+      "semantic_components": {
+        "original_name": "mobile_error_page_home_click",
+        "normalized_name": "mobile_error_page_home_click",
+        "platform": "mobile",
+        "page": "unknown",
+        "element": "error_page_home",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_error_page_home_click",
+        "mobile_unknown_click",
+        "mobile_unknown__click",
+        "mobile_unknown_button_click",
+        "mobile_unknown_error_page_home_click",
+        "mobile_unknown_click_error_page_home"
+      ]
+    },
+    {
+      "event_name": "mobile_error_page_help_click",
+      "properties": [
+        "error_type",
+        "error_code"
+      ],
+      "rca_description": "RCA: Support need identification from error pages (mobile). Pre-events: Error page view",
+      "source_file": "review-table-information-pages-mobile.csv",
+      "page": "review-table-information-pages",
+      "platform": "mobile",
+      "normalized_name": "mobile_error_page_help_click",
+      "semantic_components": {
+        "original_name": "mobile_error_page_help_click",
+        "normalized_name": "mobile_error_page_help_click",
+        "platform": "mobile",
+        "page": "unknown",
+        "element": "error_page_help",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_error_page_help_click",
+        "mobile_unknown_click",
+        "mobile_unknown__click",
+        "mobile_unknown_button_click",
+        "mobile_unknown_error_page_help_click",
+        "mobile_unknown_click_error_page_help"
+      ]
+    },
+    {
+      "event_name": "web_information_page_view",
+      "properties": [
+        "page_type",
+        "page_id"
+      ],
+      "rca_description": "RCA: Information page discovery and trust-building engagement. Pre-events: Footer link",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_view",
+      "semantic_components": {
+        "original_name": "web_information_page_view",
+        "normalized_name": "web_information_page_view",
+        "platform": "web",
+        "page": "information",
+        "element": "page",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_view",
+        "web_information_view",
+        "web_information__view",
+        "web_information_button_view",
+        "web_information_view_page"
+      ]
+    },
+    {
+      "event_name": "web_information_page_cta_click",
+      "properties": [
+        "page_type",
+        "cta_type",
+        "page_id"
+      ],
+      "rca_description": "RCA: Conversion from information pages to main funnel. Pre-events: Information page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_cta_click",
+      "semantic_components": {
+        "original_name": "web_information_page_cta_click",
+        "normalized_name": "web_information_page_cta_click",
+        "platform": "web",
+        "page": "information",
+        "element": "page_cta",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_cta_click",
+        "web_information_click",
+        "web_information__click",
+        "web_information_button_click",
+        "web_information_click_page_cta"
+      ]
+    },
+    {
+      "event_name": "web_information_page_faq_accordion_open",
+      "properties": [
+        "page_type",
+        "faq_id",
+        "page_id"
+      ],
+      "rca_description": "RCA: FAQ engagement and information seeking behavior. Pre-events: Information page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_faq_accordion_open",
+      "semantic_components": {
+        "original_name": "web_information_page_faq_accordion_open",
+        "normalized_name": "web_information_page_faq_accordion_open",
+        "platform": "web",
+        "page": "information",
+        "element": "page_faq_accordion",
+        "action": "open",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_faq_accordion_open",
+        "web_information_open",
+        "web_information__open",
+        "web_information_button_open",
+        "web_information_open_page_faq_accordion"
+      ]
+    },
+    {
+      "event_name": "web_information_page_faq_accordion_close",
+      "properties": [
+        "page_type",
+        "faq_id",
+        "page_id"
+      ],
+      "rca_description": "RCA: FAQ content consumption completion. Pre-events: FAQ accordion open",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_faq_accordion_close",
+      "semantic_components": {
+        "original_name": "web_information_page_faq_accordion_close",
+        "normalized_name": "web_information_page_faq_accordion_close",
+        "platform": "web",
+        "page": "information",
+        "element": "page_faq_accordion",
+        "action": "close",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_faq_accordion_close",
+        "web_information_close",
+        "web_information__close",
+        "web_information_button_close",
+        "web_information_close_page_faq_accordion"
+      ]
+    },
+    {
+      "event_name": "web_information_page_section_scroll",
+      "properties": [
+        "page_type",
+        "section_name",
+        "scroll_depth",
+        "page_id"
+      ],
+      "rca_description": "RCA: Content engagement depth and reading behavior. Pre-events: Information page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_section_scroll",
+      "semantic_components": {
+        "original_name": "web_information_page_section_scroll",
+        "normalized_name": "web_information_page_section_scroll",
+        "platform": "web",
+        "page": "information",
+        "element": "page_section",
+        "action": "scroll",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_section_scroll",
+        "web_information_scroll",
+        "web_information__scroll",
+        "web_information_button_scroll",
+        "web_information_scroll_page_section"
+      ]
+    },
+    {
+      "event_name": "web_information_page_link_click",
+      "properties": [
+        "page_type",
+        "link_destination",
+        "page_id"
+      ],
+      "rca_description": "RCA: Cross-page navigation and information architecture usage. Pre-events: Information page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_information_page_link_click",
+      "semantic_components": {
+        "original_name": "web_information_page_link_click",
+        "normalized_name": "web_information_page_link_click",
+        "platform": "web",
+        "page": "information",
+        "element": "page_link",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_information_page_link_click",
+        "web_information_click",
+        "web_information__click",
+        "web_information_button_click",
+        "web_information_click_page_link"
+      ]
+    },
+    {
+      "event_name": "web_shipping_page_method_card_click",
+      "properties": [
+        "shipping_method"
+      ],
+      "rca_description": "RCA: Shipping option interest and delivery preference. Pre-events: Shipping page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_shipping_page_method_card_click",
+      "semantic_components": {
+        "original_name": "web_shipping_page_method_card_click",
+        "normalized_name": "web_shipping_page_method_card_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "shipping_page_method_card",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_shipping_page_method_card_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_shipping_page_method_card_click",
+        "web_unknown_click_shipping_page_method_card"
+      ]
+    },
+    {
+      "event_name": "web_shipping_page_tracking_info_click",
+      "properties": [
+        "n/a"
+      ],
+      "rca_description": "RCA: Shipping tracking information access. Pre-events: Shipping page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_shipping_page_tracking_info_click",
+      "semantic_components": {
+        "original_name": "web_shipping_page_tracking_info_click",
+        "normalized_name": "web_shipping_page_tracking_info_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "shipping_page_tracking_info",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_shipping_page_tracking_info_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_shipping_page_tracking_info_click",
+        "web_unknown_click_shipping_page_tracking_info"
+      ]
+    },
+    {
+      "event_name": "web_about_us_section_view",
+      "properties": [
+        "section_name"
+      ],
+      "rca_description": "RCA: Credibility section engagement (medical team",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_about_us_section_view",
+      "semantic_components": {
+        "original_name": "web_about_us_section_view",
+        "normalized_name": "web_about_us_section_view",
+        "platform": "web",
+        "page": "unknown",
+        "element": "about_us_section",
+        "action": "view",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_about_us_section_view",
+        "web_unknown_view",
+        "web_unknown__view",
+        "web_unknown_button_view",
+        "web_unknown_about_us_section_view",
+        "web_unknown_view_about_us_section"
+      ]
+    },
+    {
+      "event_name": "web_about_us_press_mention_click",
+      "properties": [
+        "press_source"
+      ],
+      "rca_description": "RCA: Press coverage engagement and external credibility verification. Pre-events: About Us page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_about_us_press_mention_click",
+      "semantic_components": {
+        "original_name": "web_about_us_press_mention_click",
+        "normalized_name": "web_about_us_press_mention_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "about_us_press_mention",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_about_us_press_mention_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_about_us_press_mention_click",
+        "web_unknown_click_about_us_press_mention"
+      ]
+    },
+    {
+      "event_name": "web_error_page_home_click",
+      "properties": [
+        "error_type",
+        "error_code"
+      ],
+      "rca_description": "RCA: Error recovery and user retention from error pages. Pre-events: Error page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_error_page_home_click",
+      "semantic_components": {
+        "original_name": "web_error_page_home_click",
+        "normalized_name": "web_error_page_home_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "error_page_home",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_error_page_home_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_error_page_home_click",
+        "web_unknown_click_error_page_home"
+      ]
+    },
+    {
+      "event_name": "web_error_page_help_click",
+      "properties": [
+        "error_type",
+        "error_code"
+      ],
+      "rca_description": "RCA: Support need identification from error pages. Pre-events: Error page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_error_page_help_click",
+      "semantic_components": {
+        "original_name": "web_error_page_help_click",
+        "normalized_name": "web_error_page_help_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "error_page_help",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_error_page_help_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_error_page_help_click",
+        "web_unknown_click_error_page_help"
+      ]
+    },
+    {
+      "event_name": "web_error_page_refresh_click",
+      "properties": [
+        "error_type",
+        "error_code"
+      ],
+      "rca_description": "RCA: Error recovery attempt (for 500/502 errors). Pre-events: Error page view",
+      "source_file": "review-table-information-pages-web.csv",
+      "page": "review-table-information-pages",
+      "platform": "web",
+      "normalized_name": "web_error_page_refresh_click",
+      "semantic_components": {
+        "original_name": "web_error_page_refresh_click",
+        "normalized_name": "web_error_page_refresh_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "error_page_refresh",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_error_page_refresh_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_error_page_refresh_click",
+        "web_unknown_click_error_page_refresh"
+      ]
+    },
+    {
+      "event_name": "mobile_nav_button_hamburger_click",
+      "properties": [
+        "menu_state"
+      ],
+      "rca_description": "RCA: Mobile navigation usage and menu interaction. Pre-events: Page view",
+      "source_file": "review-table-navigation-mobile.csv",
+      "page": "review-table-navigation",
+      "platform": "mobile",
+      "normalized_name": "mobile_nav_button_hamburger_click",
+      "semantic_components": {
+        "original_name": "mobile_nav_button_hamburger_click",
+        "normalized_name": "mobile_nav_button_hamburger_click",
+        "platform": "mobile",
+        "page": "unknown",
+        "element": "nav_button_hamburger",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_nav_button_hamburger_click",
+        "mobile_unknown_click",
+        "mobile_unknown__click",
+        "mobile_unknown_button_click",
+        "mobile_unknown_nav_button_hamburger_click",
+        "mobile_unknown_click_nav_button_hamburger"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_categories_click",
+      "properties": [
+        "menu_level"
+      ],
+      "rca_description": "RCA: Category browsing intent and information architecture effectiveness. Pre-events: Page view",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_nav_button_categories_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_categories_click",
+        "normalized_name": "web_nav_button_categories_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "nav_button_categories",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_categories_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_nav_button_categories_click",
+        "web_unknown_click_nav_button_categories"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_footer_contact_click",
+      "properties": [
+        "footer_section"
+      ],
+      "rca_description": "RCA: Support need identification and contact funnel entry. Pre-events: Scroll to footer",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_nav_button_footer_contact_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_footer_contact_click",
+        "normalized_name": "web_nav_button_footer_contact_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "nav_button_footer_contact",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_footer_contact_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_nav_button_footer_contact_click",
+        "web_unknown_click_nav_button_footer_contact"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_footer_privacy_click",
+      "properties": [
+        "footer_section"
+      ],
+      "rca_description": "RCA: Privacy compliance and trust behavior. Pre-events: Scroll to footer",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_nav_button_footer_privacy_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_footer_privacy_click",
+        "normalized_name": "web_nav_button_footer_privacy_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "nav_button_footer_privacy",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_footer_privacy_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_nav_button_footer_privacy_click",
+        "web_unknown_click_nav_button_footer_privacy"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_footer_terms_click",
+      "properties": [
+        "footer_section"
+      ],
+      "rca_description": "RCA: Legal content access and compliance awareness. Pre-events: Scroll to footer",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_nav_button_footer_terms_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_footer_terms_click",
+        "normalized_name": "web_nav_button_footer_terms_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "nav_button_footer_terms",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_footer_terms_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_nav_button_footer_terms_click",
+        "web_unknown_click_nav_button_footer_terms"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_search_click",
+      "properties": [
+        "search_type"
+      ],
+      "rca_description": "RCA: Search functionality discovery and usage intent. Pre-events: Page view",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_search_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_search_click",
+        "normalized_name": "web_search_click",
+        "platform": "web",
+        "page": "search",
+        "element": "unknown",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_search_click",
+        "web_search_click",
+        "web_search__click",
+        "web_search_button_click",
+        "web_search_unknown_click",
+        "web_search_click_unknown"
+      ]
+    },
+    {
+      "event_name": "web_nav_button_cart_click",
+      "properties": [
+        "cart_item_count"
+      ],
+      "rca_description": "RCA: Purchase intent and cart status checking. Pre-events: Page view",
+      "source_file": "review-table-navigation-web.csv",
+      "page": "review-table-navigation",
+      "platform": "web",
+      "normalized_name": "web_nav_button_cart_click",
+      "semantic_components": {
+        "original_name": "web_nav_button_cart_click",
+        "normalized_name": "web_nav_button_cart_click",
+        "platform": "web",
+        "page": "unknown",
+        "element": "nav_button_cart",
+        "action": "click",
+        "confidence": 75
+      },
+      "name_variations": [
+        "web_nav_button_cart_click",
+        "web_unknown_click",
+        "web_unknown__click",
+        "web_unknown_button_click",
+        "web_unknown_nav_button_cart_click",
+        "web_unknown_click_nav_button_cart"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_page_view",
+      "properties": [
+        "brand_id",
+        "brand_name"
+      ],
+      "rca_description": "RCA: Brand page discovery and brand interest tracking (mobile). Pre-events: OTC category page",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_page_view",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_page_view",
+        "normalized_name": "mobile_otc_brand_page_view",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_page",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_page_view",
+        "mobile_otc_view",
+        "mobile_otc__view",
+        "mobile_otc_button_view",
+        "mobile_otc_view_brand_page"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_banner_product_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position"
+      ],
+      "rca_description": "RCA: Featured product engagement from brand banner (mobile). Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_banner_product_click",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_banner_product_click",
+        "normalized_name": "mobile_otc_brand_banner_product_click",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_banner_product",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_banner_product_click",
+        "mobile_otc_click",
+        "mobile_otc__click",
+        "mobile_otc_button_click",
+        "mobile_otc_click_brand_banner_product"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_sale_product_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position",
+        "discount_percent"
+      ],
+      "rca_description": "RCA: Sale product interest and discount effectiveness (mobile). Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_sale_product_click",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_sale_product_click",
+        "normalized_name": "mobile_otc_brand_sale_product_click",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_sale_product",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_sale_product_click",
+        "mobile_otc_click",
+        "mobile_otc__click",
+        "mobile_otc_button_click",
+        "mobile_otc_click_brand_sale_product"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_all_products_load_more_click",
+      "properties": [
+        "brand_id",
+        "current_product_count"
+      ],
+      "rca_description": "RCA: Brand catalog exploration depth (mobile). Pre-events: View all products section",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_all_products_load_more_click",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_all_products_load_more_click",
+        "normalized_name": "mobile_otc_brand_all_products_load_more_click",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_all_products_load_more",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_all_products_load_more_click",
+        "mobile_otc_click",
+        "mobile_otc__click",
+        "mobile_otc_button_click",
+        "mobile_otc_click_brand_all_products_load_more"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_product_card_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position",
+        "section"
+      ],
+      "rca_description": "RCA: Product interest from brand page (mobile). Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_product_card_click",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_product_card_click",
+        "normalized_name": "mobile_otc_brand_product_card_click",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_product_card",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_product_card_click",
+        "mobile_otc_click",
+        "mobile_otc__click",
+        "mobile_otc_button_click",
+        "mobile_otc_click_brand_product_card"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_crm_subscribe_click",
+      "properties": [
+        "brand_id",
+        "email"
+      ],
+      "rca_description": "RCA: Brand-specific lead generation and newsletter opt-in (mobile). Pre-events: Scroll to CRM section",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_crm_subscribe_click",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_crm_subscribe_click",
+        "normalized_name": "mobile_otc_brand_crm_subscribe_click",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_crm_subscribe",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_otc_brand_crm_subscribe_click",
+        "mobile_otc_click",
+        "mobile_otc__click",
+        "mobile_otc_button_click",
+        "mobile_otc_click_brand_crm_subscribe"
+      ]
+    },
+    {
+      "event_name": "mobile_otc_brand_review_swipe",
+      "properties": [
+        "brand_id",
+        "direction"
+      ],
+      "rca_description": "RCA: Trust signal engagement via swipe gesture (mobile). Pre-events: View review section",
+      "source_file": "review-table-otc-brand-mobile.csv",
+      "page": "review-table-otc-brand",
+      "platform": "mobile",
+      "normalized_name": "mobile_otc_brand_review_swipe",
+      "semantic_components": {
+        "original_name": "mobile_otc_brand_review_swipe",
+        "normalized_name": "mobile_otc_brand_review_swipe",
+        "platform": "mobile",
+        "page": "otc",
+        "element": "brand_review_swipe",
+        "action": "unknown",
+        "confidence": 75
+      },
+      "name_variations": [
+        "mobile_otc_brand_review_swipe",
+        "mobile_otc_unknown",
+        "mobile_otc__unknown",
+        "mobile_otc_button_unknown",
+        "mobile_otc_brand_review_swipe_unknown",
+        "mobile_otc_unknown_brand_review_swipe"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_page_view",
+      "properties": [
+        "brand_id",
+        "brand_name"
+      ],
+      "rca_description": "RCA: Brand page discovery and brand interest tracking. Pre-events: OTC category page",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_page_view",
+      "semantic_components": {
+        "original_name": "web_otc_brand_page_view",
+        "normalized_name": "web_otc_brand_page_view",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_page",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_page_view",
+        "web_otc_view",
+        "web_otc__view",
+        "web_otc_button_view",
+        "web_otc_view_brand_page"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_banner_product_1_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position"
+      ],
+      "rca_description": "RCA: Featured product engagement from brand banner. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_banner_product_1_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_banner_product_1_click",
+        "normalized_name": "web_otc_brand_banner_product_1_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_banner_product_1",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_banner_product_1_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_banner_product_1"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_banner_product_2_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position"
+      ],
+      "rca_description": "RCA: Featured product engagement from brand banner. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_banner_product_2_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_banner_product_2_click",
+        "normalized_name": "web_otc_brand_banner_product_2_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_banner_product_2",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_banner_product_2_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_banner_product_2"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_banner_product_3_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position"
+      ],
+      "rca_description": "RCA: Featured product engagement from brand banner. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_banner_product_3_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_banner_product_3_click",
+        "normalized_name": "web_otc_brand_banner_product_3_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_banner_product_3",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_banner_product_3_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_banner_product_3"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_sale_product_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position",
+        "discount_percent"
+      ],
+      "rca_description": "RCA: Sale product interest and discount effectiveness. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_sale_product_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_sale_product_click",
+        "normalized_name": "web_otc_brand_sale_product_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_sale_product",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_sale_product_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_sale_product"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_all_products_load_more_click",
+      "properties": [
+        "brand_id",
+        "current_product_count"
+      ],
+      "rca_description": "RCA: Brand catalog exploration depth. Pre-events: View all products section",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_all_products_load_more_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_all_products_load_more_click",
+        "normalized_name": "web_otc_brand_all_products_load_more_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_all_products_load_more",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_all_products_load_more_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_all_products_load_more"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_product_card_click",
+      "properties": [
+        "brand_id",
+        "product_id",
+        "position",
+        "section"
+      ],
+      "rca_description": "RCA: Product interest from brand page (sale vs all products). Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_product_card_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_product_card_click",
+        "normalized_name": "web_otc_brand_product_card_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_product_card",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_product_card_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_product_card"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_crm_subscribe_click",
+      "properties": [
+        "brand_id",
+        "email"
+      ],
+      "rca_description": "RCA: Brand-specific lead generation and newsletter opt-in. Pre-events: Scroll to CRM section",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_crm_subscribe_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_crm_subscribe_click",
+        "normalized_name": "web_otc_brand_crm_subscribe_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_crm_subscribe",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_crm_subscribe_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_crm_subscribe"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_review_carousel_next_click",
+      "properties": [
+        "brand_id",
+        "review_index"
+      ],
+      "rca_description": "RCA: Trust signal engagement and social proof consumption. Pre-events: View review section",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_review_carousel_next_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_review_carousel_next_click",
+        "normalized_name": "web_otc_brand_review_carousel_next_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_review_carousel_next",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_review_carousel_next_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_review_carousel_next"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_review_carousel_prev_click",
+      "properties": [
+        "brand_id",
+        "review_index"
+      ],
+      "rca_description": "RCA: Trust signal engagement and social proof consumption. Pre-events: View review section",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_review_carousel_prev_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_review_carousel_prev_click",
+        "normalized_name": "web_otc_brand_review_carousel_prev_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_review_carousel_prev",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_review_carousel_prev_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_review_carousel_prev"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_breadcrumb_home_click",
+      "properties": [
+        "brand_id"
+      ],
+      "rca_description": "RCA: Navigation pattern from brand page to homepage. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_breadcrumb_home_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_breadcrumb_home_click",
+        "normalized_name": "web_otc_brand_breadcrumb_home_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_breadcrumb_home",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_breadcrumb_home_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_breadcrumb_home"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_breadcrumb_category_click",
+      "properties": [
+        "brand_id",
+        "category_id"
+      ],
+      "rca_description": "RCA: Navigation pattern from brand page to category. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_breadcrumb_category_click",
+      "semantic_components": {
+        "original_name": "web_otc_brand_breadcrumb_category_click",
+        "normalized_name": "web_otc_brand_breadcrumb_category_click",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_breadcrumb_category",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_breadcrumb_category_click",
+        "web_otc_click",
+        "web_otc__click",
+        "web_otc_button_click",
+        "web_otc_click_brand_breadcrumb_category"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_usps_section_view",
+      "properties": [
+        "brand_id"
+      ],
+      "rca_description": "RCA: Trust signal visibility (delivery",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_usps_section_view",
+      "semantic_components": {
+        "original_name": "web_otc_brand_usps_section_view",
+        "normalized_name": "web_otc_brand_usps_section_view",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_usps_section",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_usps_section_view",
+        "web_otc_view",
+        "web_otc__view",
+        "web_otc_button_view",
+        "web_otc_view_brand_usps_section"
+      ]
+    },
+    {
+      "event_name": "web_otc_brand_description_section_view",
+      "properties": [
+        "brand_id"
+      ],
+      "rca_description": "RCA: Brand information engagement and credibility reading. Pre-events: Brand page view",
+      "source_file": "review-table-otc-brand-web.csv",
+      "page": "review-table-otc-brand",
+      "platform": "web",
+      "normalized_name": "web_otc_brand_description_section_view",
+      "semantic_components": {
+        "original_name": "web_otc_brand_description_section_view",
+        "normalized_name": "web_otc_brand_description_section_view",
+        "platform": "web",
+        "page": "otc",
+        "element": "brand_description_section",
+        "action": "view",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_otc_brand_description_section_view",
+        "web_otc_view",
+        "web_otc__view",
+        "web_otc_button_view",
+        "web_otc_view_brand_description_section"
+      ]
+    },
+    {
+      "event_name": "popup_order_confirmation_show",
+      "properties": [
+        "order_id",
+        "order_total"
+      ],
+      "rca_description": "RCA: Successful purchase confirmation display. Pre-events: Place order click",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_order_confirmation_show",
+      "semantic_components": {
+        "original_name": "popup_order_confirmation_show",
+        "normalized_name": "popup_order_confirmation_show",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_order_confirmation",
+        "action": "show",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_order_confirmation_show",
+        "unknown_unknown_show",
+        "unknown_unknown__show",
+        "unknown_unknown_button_show",
+        "unknown_unknown_popup_order_confirmation_show",
+        "unknown_unknown_show_popup_order_confirmation"
+      ]
+    },
+    {
+      "event_name": "popup_order_confirmation_continue_click",
+      "properties": [
+        "order_id"
+      ],
+      "rca_description": "RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_order_confirmation_continue_click",
+      "semantic_components": {
+        "original_name": "popup_order_confirmation_continue_click",
+        "normalized_name": "popup_order_confirmation_continue_click",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_order_confirmation_continue",
+        "action": "click",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_order_confirmation_continue_click",
+        "unknown_unknown_click",
+        "unknown_unknown__click",
+        "unknown_unknown_button_click",
+        "unknown_unknown_popup_order_confirmation_continue_click",
+        "unknown_unknown_click_popup_order_confirmation_continue"
+      ]
+    },
+    {
+      "event_name": "popup_payment_error_show",
+      "properties": [
+        "error_type",
+        "order_total"
+      ],
+      "rca_description": "RCA: Payment failure identification and recovery tracking. Pre-events: Payment attempt",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_payment_error_show",
+      "semantic_components": {
+        "original_name": "popup_payment_error_show",
+        "normalized_name": "popup_payment_error_show",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_payment_error",
+        "action": "show",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_payment_error_show",
+        "unknown_unknown_show",
+        "unknown_unknown__show",
+        "unknown_unknown_button_show",
+        "unknown_unknown_popup_payment_error_show",
+        "unknown_unknown_show_popup_payment_error"
+      ]
+    },
+    {
+      "event_name": "popup_payment_error_retry_click",
+      "properties": [
+        "error_type"
+      ],
+      "rca_description": "RCA: Payment error recovery success rate. Pre-events: Payment error display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_payment_error_retry_click",
+      "semantic_components": {
+        "original_name": "popup_payment_error_retry_click",
+        "normalized_name": "popup_payment_error_retry_click",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_payment_error_retry",
+        "action": "click",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_payment_error_retry_click",
+        "unknown_unknown_click",
+        "unknown_unknown__click",
+        "unknown_unknown_button_click",
+        "unknown_unknown_popup_payment_error_retry_click",
+        "unknown_unknown_click_popup_payment_error_retry"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_show_popups",
+      "properties": [],
+      "rca_description": "RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_age_verify_show_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_show_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_close_popups",
+      "properties": [],
+      "rca_description": "RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_age_verify_close_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_close_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_age_verify_continue_popups",
+      "properties": [
+        "age_verified"
+      ],
+      "rca_description": "RCA: Legal compliance completion and content access. Pre-events: Age verification display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_age_verify_continue_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_age_verify_continue_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_cookie_consent_show_popups",
+      "properties": [],
+      "rca_description": "RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_cookie_consent_show_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_cookie_consent_show_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_cookie_consent_accept_click_popups",
+      "properties": [
+        "cookie_preferences"
+      ],
+      "rca_description": "RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_cookie_consent_accept_click_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_cookie_consent_accept_click_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_newsletter_show_popups",
+      "properties": [],
+      "rca_description": "RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popups",
+      "semantic_components": {
+        "original_name": "popup_newsletter_show_popups",
+        "normalized_name": "popups",
+        "platform": "unknown",
+        "page": "popups",
+        "element": "unknown",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "popup_newsletter_show_popups",
+        "popups",
+        "unknown_popups_unknown",
+        "unknown_popups__unknown",
+        "unknown_popups_button_unknown",
+        "unknown_popups_unknown_unknown"
+      ]
+    },
+    {
+      "event_name": "popup_login_required_show",
+      "properties": [],
+      "rca_description": "RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_login_required_show",
+      "semantic_components": {
+        "original_name": "popup_login_required_show",
+        "normalized_name": "popup_login_required_show",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_login_required",
+        "action": "show",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_login_required_show",
+        "unknown_unknown_show",
+        "unknown_unknown__show",
+        "unknown_unknown_button_show",
+        "unknown_unknown_popup_login_required_show",
+        "unknown_unknown_show_popup_login_required"
+      ]
+    },
+    {
+      "event_name": "popup_login_required_login_click",
+      "properties": [],
+      "rca_description": "RCA: Authentication conversion from friction points. Pre-events: Login required display",
+      "source_file": "review-table-popups-web.csv",
+      "page": "review-table-popups",
+      "platform": "web",
+      "normalized_name": "popup_login_required_login_click",
+      "semantic_components": {
+        "original_name": "popup_login_required_login_click",
+        "normalized_name": "popup_login_required_login_click",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "popup_login_required_login",
+        "action": "click",
+        "confidence": 50
+      },
+      "name_variations": [
+        "popup_login_required_login_click",
+        "unknown_unknown_click",
+        "unknown_unknown__click",
+        "unknown_unknown_button_click",
+        "unknown_unknown_popup_login_required_login_click",
+        "unknown_unknown_click_popup_login_required_login"
+      ]
+    },
+    {
+      "event_name": "product_id, quantity, variant_id",
+      "properties": [
+        "rca:_mobile_purchase_conversion_tracking._pre-events:_product_view"
+      ],
+      "rca_description": "variant selection",
+      "source_file": "review-table-product-mobile.csv",
+      "page": "review-table-product",
+      "platform": "mobile",
+      "normalized_name": "product_id, quantity, variant_id",
+      "semantic_components": {
+        "original_name": "product_id, quantity, variant_id",
+        "normalized_name": "product_id, quantity, variant_id",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, quantity, variant_id",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, quantity, variant_id",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, quantity, variant_id_unknown",
+        "unknown_product_unknown_id, quantity, variant_id"
+      ]
+    },
+    {
+      "event_name": "product_id, quantity, variant_id",
+      "properties": [
+        "rca:_primary_conversion_action_tracking._pre-events:_product_view"
+      ],
+      "rca_description": "variant selection",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, quantity, variant_id",
+      "semantic_components": {
+        "original_name": "product_id, quantity, variant_id",
+        "normalized_name": "product_id, quantity, variant_id",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, quantity, variant_id",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, quantity, variant_id",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, quantity, variant_id_unknown",
+        "unknown_product_unknown_id, quantity, variant_id"
+      ]
+    },
+    {
+      "event_name": "product_id, variant_id",
+      "properties": [
+        "rca:_direct_purchase_intent_measurement._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, variant_id",
+      "semantic_components": {
+        "original_name": "product_id, variant_id",
+        "normalized_name": "product_id, variant_id",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, variant_id",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, variant_id",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, variant_id_unknown",
+        "unknown_product_unknown_id, variant_id"
+      ]
+    },
+    {
+      "event_name": "product_id, review_count",
+      "properties": [
+        "rca:_social_proof_engagement_before_purchase._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, review_count",
+      "semantic_components": {
+        "original_name": "product_id, review_count",
+        "normalized_name": "product_id, review_count",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, review_count",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, review_count",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, review_count_unknown",
+        "unknown_product_unknown_id, review_count"
+      ]
+    },
+    {
+      "event_name": "product_id, current_quantity",
+      "properties": [
+        "rca:_purchase_intent_strength_(quantity_increases)._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, current_quantity",
+      "semantic_components": {
+        "original_name": "product_id, current_quantity",
+        "normalized_name": "product_id, current_quantity",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, current_quantity",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, current_quantity",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, current_quantity_unknown",
+        "unknown_product_unknown_id, current_quantity"
+      ]
+    },
+    {
+      "event_name": "product_id, current_quantity",
+      "properties": [
+        "rca:_cart_optimization_and_price_sensitivity._pre-events:_product_view"
+      ],
+      "rca_description": "quantity increase",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, current_quantity",
+      "semantic_components": {
+        "original_name": "product_id, current_quantity",
+        "normalized_name": "product_id, current_quantity",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, current_quantity",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, current_quantity",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, current_quantity_unknown",
+        "unknown_product_unknown_id, current_quantity"
+      ]
+    },
+    {
+      "event_name": "product_id, variant_id, variant_size",
+      "properties": [
+        "rca:_product_variant_preference_tracking._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, variant_id, variant_size",
+      "semantic_components": {
+        "original_name": "product_id, variant_id, variant_size",
+        "normalized_name": "product_id, variant_id, variant_size",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, variant_id, variant_size",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, variant_id, variant_size",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, variant_id, variant_size_unknown",
+        "unknown_product_unknown_id, variant_id, variant_size"
+      ]
+    },
+    {
+      "event_name": "product_id, user_id",
+      "properties": [
+        "rca:_customer_engagement_and_review_funnel_entry._pre-events:_product_purchase_or_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, user_id",
+      "semantic_components": {
+        "original_name": "product_id, user_id",
+        "normalized_name": "product_id, user_id",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, user_id",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, user_id",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, user_id_unknown",
+        "unknown_product_unknown_id, user_id"
+      ]
+    },
+    {
+      "event_name": "product_id, image_index",
+      "properties": [
+        "rca:_product_image_engagement_and_detail_interest._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, image_index",
+      "semantic_components": {
+        "original_name": "product_id, image_index",
+        "normalized_name": "product_id, image_index",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, image_index",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, image_index",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, image_index_unknown",
+        "unknown_product_unknown_id, image_index"
+      ]
+    },
+    {
+      "event_name": "product_id, image_index, thumbnail_position",
+      "properties": [
+        "rca:_product_exploration_depth._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, image_index, thumbnail_position",
+      "semantic_components": {
+        "original_name": "product_id, image_index, thumbnail_position",
+        "normalized_name": "product_id, image_index, thumbnail_position",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, image_index, thumbnail_position",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, image_index, thumbnail_position",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, image_index, thumbnail_position_unknown",
+        "unknown_product_unknown_id, image_index, thumbnail_position"
+      ]
+    },
+    {
+      "event_name": "product_id, related_product_id",
+      "properties": [
+        "rca:_cross-selling_and_product_discovery._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, related_product_id",
+      "semantic_components": {
+        "original_name": "product_id, related_product_id",
+        "normalized_name": "product_id, related_product_id",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, related_product_id",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, related_product_id",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, related_product_id_unknown",
+        "unknown_product_unknown_id, related_product_id"
+      ]
+    },
+    {
+      "event_name": "product_id, review_sort",
+      "properties": [
+        "rca:_trust_signal_access_patterns._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, review_sort",
+      "semantic_components": {
+        "original_name": "product_id, review_sort",
+        "normalized_name": "product_id, review_sort",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, review_sort",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, review_sort",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, review_sort_unknown",
+        "unknown_product_unknown_id, review_sort"
+      ]
+    },
+    {
+      "event_name": "product_id, tab_name",
+      "properties": [
+        "rca:_product_information_engagement._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, tab_name",
+      "semantic_components": {
+        "original_name": "product_id, tab_name",
+        "normalized_name": "product_id, tab_name",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, tab_name",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, tab_name",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, tab_name_unknown",
+        "unknown_product_unknown_id, tab_name"
+      ]
+    },
+    {
+      "event_name": "product_id, tab_name",
+      "properties": [
+        "rca:_usage_instruction_access._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, tab_name",
+      "semantic_components": {
+        "original_name": "product_id, tab_name",
+        "normalized_name": "product_id, tab_name",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, tab_name",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, tab_name",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, tab_name_unknown",
+        "unknown_product_unknown_id, tab_name"
+      ]
+    },
+    {
+      "event_name": "product_id, tab_name",
+      "properties": [
+        "rca:_social_proof_section_access._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, tab_name",
+      "semantic_components": {
+        "original_name": "product_id, tab_name",
+        "normalized_name": "product_id, tab_name",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, tab_name",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, tab_name",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, tab_name_unknown",
+        "unknown_product_unknown_id, tab_name"
+      ]
+    },
+    {
+      "event_name": "product_id, share_platform",
+      "properties": [
+        "rca:_viral_coefficient_and_social_sharing._pre-events:_product_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, share_platform",
+      "semantic_components": {
+        "original_name": "product_id, share_platform",
+        "normalized_name": "product_id, share_platform",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, share_platform",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, share_platform",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, share_platform_unknown",
+        "unknown_product_unknown_id, share_platform"
+      ]
+    },
+    {
+      "event_name": "menu_level",
+      "properties": [
+        "rca:_product_interest_and_navigation_patterns._pre-events:_page_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "menu_level",
+      "semantic_components": {
+        "original_name": "menu_level",
+        "normalized_name": "menu_level",
+        "platform": "unknown",
+        "page": "unknown",
+        "element": "menu_level",
+        "action": "unknown",
+        "confidence": 25
+      },
+      "name_variations": [
+        "menu_level",
+        "unknown_unknown_unknown",
+        "unknown_unknown__unknown",
+        "unknown_unknown_button_unknown",
+        "unknown_unknown_menu_level_unknown",
+        "unknown_unknown_unknown_menu_level"
+      ]
+    },
+    {
+      "event_name": "product_id, position, search_query",
+      "properties": [
+        "rca:_search_result_click-through_rates_and_position_effectiveness._pre-events:_search_results_view"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-product-web.csv",
+      "page": "review-table-product",
+      "platform": "web",
+      "normalized_name": "product_id, position, search_query",
+      "semantic_components": {
+        "original_name": "product_id, position, search_query",
+        "normalized_name": "product_id, position, search_query",
+        "platform": "unknown",
+        "page": "product",
+        "element": "id, position, search_query",
+        "action": "unknown",
+        "confidence": 50
+      },
+      "name_variations": [
+        "product_id, position, search_query",
+        "unknown_product_unknown",
+        "unknown_product__unknown",
+        "unknown_product_button_unknown",
+        "unknown_product_id, position, search_query_unknown",
+        "unknown_product_unknown_id, position, search_query"
+      ]
+    },
+    {
+      "event_name": "mobile_search_otc_input_focus",
+      "properties": [
+        "\"search_type",
+        "input_method\"",
+        "rca:_mobile_search_intent_tracking._pre-events:_page_navigation"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-search-otc-mobile.csv",
+      "page": "review-table-search-otc",
+      "platform": "mobile",
+      "normalized_name": "mobile_search_otc_input_focus",
+      "semantic_components": {
+        "original_name": "mobile_search_otc_input_focus",
+        "normalized_name": "mobile_search_otc_input_focus",
+        "platform": "mobile",
+        "page": "search",
+        "element": "otc_input",
+        "action": "focus",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_search_otc_input_focus",
+        "mobile_search_focus",
+        "mobile_search__focus",
+        "mobile_search_button_focus",
+        "mobile_search_focus_otc_input"
+      ]
+    },
+    {
+      "event_name": "mobile_search_otc_submit",
+      "properties": [
+        "\"search_query",
+        "result_count",
+        "search_time\"",
+        "rca:_mobile_search_performance_metrics._pre-events:_search_input"
+      ],
+      "rca_description": "",
+      "source_file": "review-table-search-otc-mobile.csv",
+      "page": "review-table-search-otc",
+      "platform": "mobile",
+      "normalized_name": "mobile_search_otc_submit",
+      "semantic_components": {
+        "original_name": "mobile_search_otc_submit",
+        "normalized_name": "mobile_search_otc_submit",
+        "platform": "mobile",
+        "page": "search",
+        "element": "otc",
+        "action": "submit",
+        "confidence": 100
+      },
+      "name_variations": [
+        "mobile_search_otc_submit",
+        "mobile_search_submit",
+        "mobile_search__submit",
+        "mobile_search_button_submit",
+        "mobile_search_submit_otc"
+      ]
+    },
+    {
+      "event_name": "web_search_otc_button_voice_click",
+      "properties": [
+        "search_type"
+      ],
+      "rca_description": "RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus",
+      "source_file": "review-table-search-otc-web.csv",
+      "page": "review-table-search-otc",
+      "platform": "web",
+      "normalized_name": "web_search_otc_button_voice_click",
+      "semantic_components": {
+        "original_name": "web_search_otc_button_voice_click",
+        "normalized_name": "web_search_otc_button_voice_click",
+        "platform": "web",
+        "page": "search",
+        "element": "otc_button_voice",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_search_otc_button_voice_click",
+        "web_search_click",
+        "web_search__click",
+        "web_search_button_click",
+        "web_search_click_otc_button_voice"
+      ]
+    },
+    {
+      "event_name": "web_search_otc_button_clear_click",
+      "properties": [
+        "previous_query"
+      ],
+      "rca_description": "RCA: Search refinement and query reset patterns. Pre-events: Search submission",
+      "source_file": "review-table-search-otc-web.csv",
+      "page": "review-table-search-otc",
+      "platform": "web",
+      "normalized_name": "web_search_otc_button_clear_click",
+      "semantic_components": {
+        "original_name": "web_search_otc_button_clear_click",
+        "normalized_name": "web_search_otc_button_clear_click",
+        "platform": "web",
+        "page": "search",
+        "element": "otc_button_clear",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_search_otc_button_clear_click",
+        "web_search_click",
+        "web_search__click",
+        "web_search_button_click",
+        "web_search_click_otc_button_clear"
+      ]
+    },
+    {
+      "event_name": "web_treatment_button_next_click",
+      "properties": [
+        "current_step",
+        "total_steps"
+      ],
+      "rca_description": "RCA: Treatment consultation progression and completion likelihood. Pre-events: Current step completion",
+      "source_file": "review-table-treatment-web.csv",
+      "page": "review-table-treatment",
+      "platform": "web",
+      "normalized_name": "web_treatment_button_next_click",
+      "semantic_components": {
+        "original_name": "web_treatment_button_next_click",
+        "normalized_name": "web_treatment_button_next_click",
+        "platform": "web",
+        "page": "treatment",
+        "element": "button_next",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_treatment_button_next_click",
+        "web_treatment_click",
+        "web_treatment__click",
+        "web_treatment_button_click",
+        "web_treatment_click_button_next"
+      ]
+    },
+    {
+      "event_name": "web_treatment_button_previous_click",
+      "properties": [
+        "current_step",
+        "total_steps"
+      ],
+      "rca_description": "RCA: Information review and consultation refinement. Pre-events: Current step view",
+      "source_file": "review-table-treatment-web.csv",
+      "page": "review-table-treatment",
+      "platform": "web",
+      "normalized_name": "web_treatment_button_previous_click",
+      "semantic_components": {
+        "original_name": "web_treatment_button_previous_click",
+        "normalized_name": "web_treatment_button_previous_click",
+        "platform": "web",
+        "page": "treatment",
+        "element": "button_previous",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_treatment_button_previous_click",
+        "web_treatment_click",
+        "web_treatment__click",
+        "web_treatment_button_click",
+        "web_treatment_click_button_previous"
+      ]
+    },
+    {
+      "event_name": "web_treatment_button_submit_click",
+      "properties": [
+        "consultation_type",
+        "responses_count"
+      ],
+      "rca_description": "RCA: Treatment consultation completion and lead generation. Pre-events: Final step completion",
+      "source_file": "review-table-treatment-web.csv",
+      "page": "review-table-treatment",
+      "platform": "web",
+      "normalized_name": "web_treatment_button_submit_click",
+      "semantic_components": {
+        "original_name": "web_treatment_button_submit_click",
+        "normalized_name": "web_treatment_button_submit_click",
+        "platform": "web",
+        "page": "treatment",
+        "element": "button_submit",
+        "action": "click",
+        "confidence": 100
+      },
+      "name_variations": [
+        "web_treatment_button_submit_click",
+        "web_treatment_click",
+        "web_treatment__click",
+        "web_treatment_button_click",
+        "web_treatment_click_button_submit"
+      ]
+    }
+  ],
+  "validation": {
+    "total_events": 162,
+    "valid_events": 162,
+    "invalid_events": 0,
+    "issues": []
+  },
+  "summary": {
+    "total_events": 162,
+    "valid_events": 162,
+    "invalid_events": 0,
+    "csv_files_processed": 19,
+    "pages_covered": [
+      "review-table-account",
+      "review-table-bmi-calculator",
+      "review-table-category",
+      "review-table-checkout",
+      "review-table-homepage",
+      "review-table-information-pages",
+      "review-table-navigation",
+      "review-table-otc-brand",
+      "review-table-popups",
+      "review-table-product",
+      "review-table-search-otc",
+      "review-table-treatment"
+    ],
+    "platforms_covered": [
+      "web",
+      "mobile"
+    ],
+    "property_distribution": {
+      "login_method": 1,
+      "signup_method": 1,
+      "fields_updated": 1,
+      "menu_level": 2,
+      "trigger_location": 6,
+      "bmi_calculated": 2,
+      "close_method": 2,
+      "height_value": 4,
+      "weight_value": 4,
+      "bmi_value": 4,
+      "bmi_category": 4,
+      "section_name": 5,
+      "scroll_depth": 3,
+      "filter_criteria": 1,
+      "category_id": 25,
+      "sort_type": 4,
+      "current_page": 3,
+      "price_min": 1,
+      "price_max": 1,
+      "brand_ids": 1,
+      "product_id": 21,
+      "position": 12,
+      "breadcrumb_level": 2,
+      "image_index": 1,
+      "otc_categories": 1,
+      "search_query": 2,
+      "category_filter": 1,
+      "order_total": 3,
+      "payment_method": 1,
+      "item_count": 1,
+      "cart_total": 2,
+      "shipping_method": 3,
+      "promo_code": 1,
+      "quantity_removed": 1,
+      "old_quantity": 1,
+      "new_quantity": 1,
+      "treatment_type": 2,
+      "consultation_type": 2,
+      "email": 3,
+      "preferences": 1,
+      "product_name": 3,
+      "link_destination": 4,
+      "tab_name": 1,
+      "tab_index": 1,
+      "age_verified": 2,
+      "cookie_preferences": 2,
+      "page_type": 12,
+      "page_id": 12,
+      "cta_type": 2,
+      "faq_id": 4,
+      "error_type": 7,
+      "error_code": 5,
+      "n/a": 1,
+      "press_source": 1,
+      "menu_state": 1,
+      "footer_section": 3,
+      "search_type": 2,
+      "cart_item_count": 1,
+      "brand_id": 21,
+      "brand_name": 2,
+      "discount_percent": 2,
+      "current_product_count": 2,
+      "section": 2,
+      "direction": 1,
+      "review_index": 2,
+      "order_id": 2,
+      "rca:_mobile_purchase_conversion_tracking._pre-events:_product_view": 1,
+      "rca:_primary_conversion_action_tracking._pre-events:_product_view": 1,
+      "rca:_direct_purchase_intent_measurement._pre-events:_product_view": 1,
+      "rca:_social_proof_engagement_before_purchase._pre-events:_product_view": 1,
+      "rca:_purchase_intent_strength_(quantity_increases)._pre-events:_product_view": 1,
+      "rca:_cart_optimization_and_price_sensitivity._pre-events:_product_view": 1,
+      "rca:_product_variant_preference_tracking._pre-events:_product_view": 1,
+      "rca:_customer_engagement_and_review_funnel_entry._pre-events:_product_purchase_or_view": 1,
+      "rca:_product_image_engagement_and_detail_interest._pre-events:_product_view": 1,
+      "rca:_product_exploration_depth._pre-events:_product_view": 1,
+      "rca:_cross-selling_and_product_discovery._pre-events:_product_view": 1,
+      "rca:_trust_signal_access_patterns._pre-events:_product_view": 1,
+      "rca:_product_information_engagement._pre-events:_product_view": 1,
+      "rca:_usage_instruction_access._pre-events:_product_view": 1,
+      "rca:_social_proof_section_access._pre-events:_product_view": 1,
+      "rca:_viral_coefficient_and_social_sharing._pre-events:_product_view": 1,
+      "rca:_product_interest_and_navigation_patterns._pre-events:_page_view": 1,
+      "rca:_search_result_click-through_rates_and_position_effectiveness._pre-events:_search_results_view": 1,
+      "\"search_type": 1,
+      "input_method\"": 1,
+      "rca:_mobile_search_intent_tracking._pre-events:_page_navigation": 1,
+      "\"search_query": 1,
+      "result_count": 1,
+      "search_time\"": 1,
+      "rca:_mobile_search_performance_metrics._pre-events:_search_input": 1,
+      "previous_query": 1,
+      "current_step": 2,
+      "total_steps": 2,
+      "responses_count": 1
+    },
+    "normalization_confidence": {
+      "high": 125,
+      "medium": 24,
+      "low": 13
+    },
+    "top_properties": [
+      {
+        "property": "category_id",
+        "count": 25,
+        "percentage": "15.4"
+      },
+      {
+        "property": "product_id",
+        "count": 21,
+        "percentage": "13.0"
+      },
+      {
+        "property": "brand_id",
+        "count": 21,
+        "percentage": "13.0"
+      },
+      {
+        "property": "position",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "page_type",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "page_id",
+        "count": 12,
+        "percentage": "7.4"
+      },
+      {
+        "property": "error_type",
+        "count": 7,
+        "percentage": "4.3"
+      },
+      {
+        "property": "trigger_location",
+        "count": 6,
+        "percentage": "3.7"
+      },
+      {
+        "property": "section_name",
+        "count": 5,
+        "percentage": "3.1"
+      },
+      {
+        "property": "error_code",
+        "count": 5,
+        "percentage": "3.1"
+      },
+      {
+        "property": "height_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "weight_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "bmi_value",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "bmi_category",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "sort_type",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "link_destination",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "faq_id",
+        "count": 4,
+        "percentage": "2.5"
+      },
+      {
+        "property": "scroll_depth",
+        "count": 3,
+        "percentage": "1.9"
+      },
+      {
+        "property": "current_page",
+        "count": 3,
+        "percentage": "1.9"
+      },
+      {
+        "property": "order_total",
+        "count": 3,
+        "percentage": "1.9"
+      }
+    ]
+  }
+}

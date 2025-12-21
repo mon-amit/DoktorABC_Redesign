@@ -18,6 +18,8 @@
   "author": "Amit Yogev",
   "license": "UNLICENSED",
   "private": true,
-  "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "glob": "^13.0.0"
+  }
 }

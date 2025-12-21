@@ -1,13 +1,13 @@
 Event Name,Properties,Short Description of TRIGGER
 popup_order_confirmation_show,"order_id, order_total",RCA: Successful purchase confirmation display. Pre-events: Place order click
-popup_order_confirmation_continue_click,"order_id",RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display
+popup_order_confirmation_continue_click,order_id,RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display
 popup_payment_error_show,"error_type, order_total",RCA: Payment failure identification and recovery tracking. Pre-events: Payment attempt
-popup_payment_error_retry_click,"error_type",RCA: Payment error recovery success rate. Pre-events: Payment error display
-popup_age_verify_show_popups,"N/A",RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load
-popup_age_verify_close_popups,"N/A",RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display
-popup_age_verify_continue_popups,"age_verified",RCA: Legal compliance completion and content access. Pre-events: Age verification display
-popup_cookie_consent_show_popups,"N/A",RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load
-popup_cookie_consent_accept_click_popups,"cookie_preferences",RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display
-popup_newsletter_show_popups,"N/A",RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger
-popup_login_required_show,"N/A",RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt
-popup_login_required_login_click,"N/A",RCA: Authentication conversion from friction points. Pre-events: Login required display
+popup_payment_error_retry_click,error_type,RCA: Payment error recovery success rate. Pre-events: Payment error display
+popup_age_verify_show_popups,,RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load
+popup_age_verify_close_popups,,RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display
+popup_age_verify_continue_popups,age_verified,RCA: Legal compliance completion and content access. Pre-events: Age verification display
+popup_cookie_consent_show_popups,,RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load
+popup_cookie_consent_accept_click_popups,cookie_preferences,RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display
+popup_newsletter_show_popups,,RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger
+popup_login_required_show,,RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt
+popup_login_required_login_click,,RCA: Authentication conversion from friction points. Pre-events: Login required display

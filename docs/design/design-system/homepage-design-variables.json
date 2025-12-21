@@ -1,0 +1,286 @@
+{
+  "source": "Figma UI UX Redesign - Node 10810:10533",
+  "extracted_date": "2025-01-27",
+  "design_tokens": {
+    "colors": {
+      "primary": {
+        "400": "#269c6e",
+        "600": "#0A9281",
+        "gradient": ""
+      },
+      "secondary": {
+        "400": "#7aba47",
+        "50": "#eff7d5",
+        "o500_50": "#7aba4780"
+      },
+      "text": {
+        "primary": "#08080a",
+        "secondary": "#616975",
+        "tertiary": "#99a3b2",
+        "on_primary": "#ffffff",
+        "link": "#00734a",
+        "info": "#1f638c",
+        "success": "#61a333"
+      },
+      "surface": {
+        "background": "#ffffff",
+        "background_dsrk": "#08080a",
+        "card": "#f5f6f7",
+        "primary": "#269c6e",
+        "green": "#f7faef",
+        "success": "#61a333",
+        "focus": "#61a333",
+        "overlay": "#dee3ed"
+      },
+      "border": {
+        "default": "#b5bdcc",
+        "white": "#ffffff",
+        "subtle": "#dee3ed",
+        "info": "#257db0",
+        "success": "#61a333"
+      },
+      "icons": {
+        "brand": "#269c6e",
+        "primary": "#1f2129",
+        "on_primary": "#ffffff"
+      },
+      "info": {
+        "500": "#257db0"
+      },
+      "neutrals": {
+        "white": "#FFFFFF"
+      },
+      "day": {
+        "base/base-09": "#000000"
+      },
+      "color": {
+        "green_light/25": "#f7faef",
+        "orange/550": "#db8300"
+      }
+    },
+    "typography": {
+      "font_families": {
+        "header": "Poppins",
+        "title": "Poppins",
+        "body": "Roboto"
+      },
+      "display": {
+        "xl": {
+          "family": "font/family/header",
+          "style": "SemiBold",
+          "size": 90,
+          "weight": 600,
+          "lineHeight": 90,
+          "letterSpacing": 0
+        },
+        "md": {
+          "family": "font/family/header",
+          "style": "Medium",
+          "size": 80,
+          "weight": 500,
+          "lineHeight": 80,
+          "letterSpacing": 0
+        }
+      },
+      "header": {
+        "h2": {
+          "family": "font/family/header",
+          "style": "SemiBold",
+          "size": 52,
+          "weight": 600,
+          "lineHeight": 57,
+          "letterSpacing": 0
+        },
+        "h3": {
+          "family": "font/family/header",
+          "style": "SemiBold",
+          "size": 40,
+          "weight": 600,
+          "lineHeight": 48,
+          "letterSpacing": 0
+        },
+        "h4": {
+          "family": "font/family/header",
+          "style": "SemiBold",
+          "size": 32,
+          "weight": 600,
+          "lineHeight": 38,
+          "letterSpacing": 0
+        },
+        "h5": {
+          "family": "font/family/header",
+          "style": "Medium",
+          "size": 26,
+          "weight": 500,
+          "lineHeight": 34,
+          "letterSpacing": 0
+        }
+      },
+      "title": {
+        "xl_medium": {
+          "family": "font/family/title",
+          "style": "Medium",
+          "size": 28,
+          "weight": 500,
+          "lineHeight": 39,
+          "letterSpacing": 0,
+          "paragraphSpacing": 20
+        },
+        "xl_regular": {
+          "family": "font/family/title",
+          "style": "Regular",
+          "size": 28,
+          "weight": 400,
+          "lineHeight": 39,
+          "letterSpacing": 0
+        },
+        "lg_medium": {
+          "family": "font/family/title",
+          "style": "Medium",
+          "size": 26,
+          "weight": 500,
+          "lineHeight": 34,
+          "letterSpacing": 0,
+          "paragraphSpacing": 18
+        },
+        "lg_regular": {
+          "family": "font/family/title",
+          "style": "Regular",
+          "size": 26,
+          "weight": 400,
+          "lineHeight": 34,
+          "letterSpacing": 0
+        },
+        "md_regular": {
+          "family": "font/family/title",
+          "style": "Regular",
+          "size": 22,
+          "weight": 400,
+          "lineHeight": 29,
+          "letterSpacing": 0,
+          "paragraphSpacing": 16
+        },
+        "md_semibold": {
+          "family": "font/family/title",
+          "style": "SemiBold",
+          "size": 22,
+          "weight": 600,
+          "lineHeight": 29,
+          "letterSpacing": 0
+        }
+      },
+      "text": {
+        "l_regular": {
+          "family": "font/family/body",
+          "style": "Regular",
+          "size": 18,
+          "weight": 400,
+          "lineHeight": 23,
+          "letterSpacing": 0,
+          "paragraphSpacing": 18
+        },
+        "m_regular": {
+          "family": "font/family/body",
+          "style": "Regular",
+          "size": 16,
+          "weight": 400,
+          "lineHeight": 21,
+          "letterSpacing": 0,
+          "paragraphSpacing": 14
+        }
+      },
+      "label": {
+        "L": {
+          "family": "font/family/title",
+          "style": "SemiBold",
+          "size": 20,
+          "weight": 600,
+          "lineHeight": 21,
+          "letterSpacing": 0
+        },
+        "M": {
+          "family": "font/family/title",
+          "style": "Medium",
+          "size": 16,
+          "weight": 500,
+          "lineHeight": 21,
+          "letterSpacing": 0
+        }
+      },
+      "body": {
+        "SM_Regular": {
+          "family": "Roboto",
+          "style": "Regular",
+          "size": 14,
+          "weight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": 0
+        },
+        "XS_Regular": {
+          "family": "Roboto",
+          "style": "Regular",
+          "size": 12,
+          "weight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": 0
+        }
+      }
+    },
+    "spacing": {
+      "gaps": {
+        "0": 0,
+        "8": 8,
+        "12": 12,
+        "16": 16,
+        "24": 24,
+        "32": 32,
+        "60": 60,
+        "vertical_gaps": {
+          "xxl": 110
+        }
+      }
+    },
+    "border_radius": {
+      "20": 20,
+      "24": 24,
+      "button_round": 999
+    },
+    "components": {
+      "button": {
+        "text_color": "#1f2129",
+        "font_size": 22,
+        "padding_h": 32,
+        "padding_v": 20,
+        "padding_h_icon": 16,
+        "padding_v_icon": 16,
+        "gap": 8,
+        "fill": "#ffffff",
+        "border": "#ffffff00",
+        "icon_size": 24,
+        "round": 999
+      },
+      "input": {
+        "font_size": 16,
+        "padding_h": 16,
+        "padding_v": 18,
+        "left_icon": 8,
+        "weight_border": 1,
+        "bg": "#ffffff",
+        "border": "#c2c9d6",
+        "placeholder": "#99a3b2",
+        "icon_size": 24
+      }
+    },
+    "effects": {
+      "search": "DROP_SHADOW(color: #CED0D8B2, offset: (0, 11), radius: 20.8, spread: 0); DROP_SHADOW(color: #FFFFFFD1, offset: (0, -12), radius: 15.1, spread: 0)",
+      "background_blur_32": "BACKGROUND_BLUR(radius: 32)"
+    }
+  },
+  "usage_notes": {
+    "color_system": "Primary green (#269c6e) for main CTAs and brand elements. Secondary green (#7aba47) for accents. Text hierarchy uses primary (#08080a), secondary (#616975), and tertiary (#99a3b2).",
+    "typography_system": "Poppins for headers and titles (display, headers, labels). Roboto for body text. Clear size hierarchy from Display XL (90px) down to Body XS (12px).",
+    "spacing_system": "8px base unit. Common gaps: 8, 12, 16, 24, 32, 60. Vertical section spacing uses 110px for XXL gaps.",
+    "component_patterns": "Buttons use 999px border radius for fully rounded appearance. Inputs have 1px borders with subtle gray (#c2c9d6). Icons standardized at 24px."
+  }
+}
+

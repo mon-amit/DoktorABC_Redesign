@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoktorABC Events by Page - Complete Report</title>
+    <style>
+        /* shadcn/ui inspired styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --primary: 222.2 47.4% 11.2%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 222.2 47.4% 11.2%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96.1%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+            --border: 214.3 31.8% 91.4%;
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: hsl(var(--muted));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: hsl(var(--foreground));
+        }
+
+        .header p {
+            color: hsl(var(--muted-foreground));
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--primary));
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .page-section {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid hsl(var(--border));
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: hsl(var(--foreground));
+        }
+
+        .page-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .screenshot-card {
+            background: hsl(var(--muted));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .screenshot-label {
+            font-weight: 600;
+            color: hsl(var(--foreground));
+            font-size: 0.9rem;
+        }
+
+        .platform-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid hsl(var(--border));
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-weight: 600;
+            color: hsl(var(--muted-foreground));
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            color: hsl(var(--foreground));
+        }
+
+        .tab.active {
+            color: hsl(var(--primary));
+            border-bottom-color: hsl(var(--primary));
+        }
+
+        .events-list {
+            display: none;
+        }
+
+        .events-list.active {
+            display: block;
+        }
+
+        .event-card {
+            background: hsl(var(--muted));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.2s;
+        }
+
+        .event-card:hover {
+            border-color: hsl(var(--primary));
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .event-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: hsl(var(--foreground));
+            margin-bottom: 8px;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+
+        .event-properties {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .event-properties strong {
+            color: hsl(var(--foreground));
+        }
+
+        .event-description {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .event-count {
+            display: inline-block;
+            padding: 4px 8px;
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .toc {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h2 {
+            margin-bottom: 20px;
+            color: hsl(var(--foreground));
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .toc-item {
+            padding: 12px;
+            background: hsl(var(--muted));
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--border));
+        }
+
+        .toc-item a {
+            color: hsl(var(--primary));
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .toc-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DoktorABC Events by Page</h1>
+            <p>Complete Event Mapping Report with Screenshots</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: hsl(var(--muted-foreground));">
+                Generated: December 15, 2025 | Source: Excel CSV files + Figma exports
+            </p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Pages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">179</div>
+                <div class="stat-label">Total Events</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">150</div>
+                <div class="stat-label">Web Events</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">29</div>
+                <div class="stat-label">Mobile Events</div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <div class="toc-list">
+                <div class="toc-item"><a href="#homepage">Homepage</a></div>
+                <div class="toc-item"><a href="#category">Category</a></div>
+                <div class="toc-item"><a href="#product">Product</a></div>
+                <div class="toc-item"><a href="#checkout">Checkout</a></div>
+                <div class="toc-item"><a href="#account">Account</a></div>
+                <div class="toc-item"><a href="#search-otc">Search OTC</a></div>
+                <div class="toc-item"><a href="#navigation">Navigation</a></div>
+                <div class="toc-item"><a href="#popups">Popups</a></div>
+                <div class="toc-item"><a href="#treatment">Treatment</a></div>
+                <div class="toc-item"><a href="#bmi-calculator">BMI Calculator</a></div>
+                <div class="toc-item"><a href="#otc-brand">OTC Brand</a></div>
+                <div class="toc-item"><a href="#information-pages">Information Pages</a></div>
+            </div>
+        </div>
+
+        <!-- Homepage -->
+        <div class="page-section" id="homepage">
+            <div class="page-header">
+                <h2 class="page-title">Homepage</h2>
+                <div>
+                    <span class="page-badge">19 Web</span>
+                    <span class="page-badge">1 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <img src="../../exports/full export/Home Page _ Desktop.png" alt="Homepage Desktop" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding:20px; color:hsl(var(--muted-foreground));">Screenshot not found: Home Page _ Desktop.png</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+                <div class="screenshot-card">
+                    <img src="../../exports/full export/Home Page _Mobile.png" alt="Homepage Mobile" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding:20px; color:hsl(var(--muted-foreground));">Screenshot not found: Home Page _Mobile.png</div>
+                    <div class="screenshot-label">Mobile</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('homepage', 'web')">Web Events (19)</button>
+                <button class="tab" onclick="showPlatform('homepage', 'mobile')">Mobile Events (1)</button>
+            </div>
+
+            <div id="homepage-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_homepage_cta_start_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> treatment_type</div>
+                    <div class="event-description">RCA: Main conversion funnel entry point. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_cta_consultation_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> consultation_type</div>
+                    <div class="event-description">RCA: Consultation booking intent. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_button_learn_more_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> section_name</div>
+                    <div class="event-description">RCA: Content engagement and information seeking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_button_view_products_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_id</div>
+                    <div class="event-description">RCA: Product browsing intent. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_button_category_skin_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_id</div>
+                    <div class="event-description">RCA: Category-specific interest tracking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_button_category_hair_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_id</div>
+                    <div class="event-description">RCA: Category-specific interest tracking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_button_newsletter_subscribe_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> email, preferences</div>
+                    <div class="event-description">RCA: Lead generation and marketing opt-in. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_card_acne_cream_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, product_name</div>
+                    <div class="event-description">RCA: Product-specific interest and conversion tracking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_card_hair_growth_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, product_name</div>
+                    <div class="event-description">RCA: Product-specific interest and conversion tracking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_card_vitamin_c_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, product_name</div>
+                    <div class="event-description">RCA: Product-specific interest and conversion tracking. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_link_privacy_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> link_destination</div>
+                    <div class="event-description">RCA: Privacy compliance and trust behavior. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_link_terms_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> link_destination</div>
+                    <div class="event-description">RCA: Legal content access. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_homepage_tab_featured_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> tab_name, tab_index</div>
+                    <div class="event-description">RCA: Content organization preference. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_show_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Age verification compliance requirement. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_close_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Age verification bypass attempts. Pre-events: Age verification display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_continue_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> age_verified</div>
+                    <div class="event-description">RCA: Legal compliance completion. Pre-events: Age verification display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_cookie_consent_show_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: GDPR compliance and privacy consent. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_cookie_consent_accept_click_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> cookie_preferences</div>
+                    <div class="event-description">RCA: Privacy consent completion. Pre-events: Cookie consent display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_newsletter_show_homepage</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Email list growth opportunity. Pre-events: Scroll engagement</div>
+                </div>
+            </div>
+
+            <div id="homepage-mobile" class="events-list">
+                <div class="event-card">
+                    <div class="event-name">mobile_homepage_cta_start_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> treatment_type</div>
+                    <div class="event-description">RCA: Mobile conversion funnel entry point. Pre-events: Page load</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Page -->
+        <div class="page-section" id="category">
+            <div class="page-header">
+                <h2 class="page-title">Category Page</h2>
+                <div>
+                    <span class="page-badge">23 Web</span>
+                    <span class="page-badge">0 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Category page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('category', 'web')">Web Events (23)</button>
+            </div>
+
+            <div id="category-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_category_button_apply_filters_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> filter_criteria, category_id</div>
+                    <div class="event-description">RCA: Filter usage and product discovery efficiency. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_clear_filters_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_id</div>
+                    <div class="event-description">RCA: Filter reset patterns and user frustration. Pre-events: Filter application</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_sort_price_low_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> sort_type, category_id</div>
+                    <div class="event-description">RCA: Price sensitivity and shopping intent. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_sort_price_high_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> sort_type, category_id</div>
+                    <div class="event-description">RCA: Premium product interest. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_sort_newest_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> sort_type, category_id</div>
+                    <div class="event-description">RCA: Trend-following and novelty-seeking behavior. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_sort_rating_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> sort_type, category_id</div>
+                    <div class="event-description">RCA: Quality-focused shopping behavior. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_load_more_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> current_page, category_id</div>
+                    <div class="event-description">RCA: Content consumption depth and pagination UX. Pre-events: View current page</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_prev_page_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> current_page, category_id</div>
+                    <div class="event-description">RCA: Navigation patterns and content exploration. Pre-events: View current page</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_next_page_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> current_page, category_id</div>
+                    <div class="event-description">RCA: Content consumption progression. Pre-events: View current page</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_price_filter_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> price_min, price_max, category_id</div>
+                    <div class="event-description">RCA: Budget-based product filtering. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_button_brand_filter_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_ids, category_id</div>
+                    <div class="event-description">RCA: Brand loyalty and preference tracking. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_product_1_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, position, category_id</div>
+                    <div class="event-description">RCA: Product visibility and position effectiveness. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_product_2_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, position, category_id</div>
+                    <div class="event-description">RCA: Product visibility and position effectiveness. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_product_3_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, position, category_id</div>
+                    <div class="event-description">RCA: Product visibility and position effectiveness. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_product_4_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, position, category_id</div>
+                    <div class="event-description">RCA: Product visibility and position effectiveness. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_breadcrumb_home_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> breadcrumb_level, category_id</div>
+                    <div class="event-description">RCA: Navigation hierarchy usage. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_breadcrumb_category_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> breadcrumb_level, category_id</div>
+                    <div class="event-description">RCA: Category navigation patterns. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_quick_view_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, category_id</div>
+                    <div class="event-description">RCA: Product preview engagement without full navigation. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_card_wishlist_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, category_id</div>
+                    <div class="event-description">RCA: Purchase intent and product interest. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_category_image_product_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, image_index, category_id</div>
+                    <div class="event-description">RCA: Visual product engagement. Pre-events: Category view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_back_to_category_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_id, product_id</div>
+                    <div class="event-description">RCA: Navigation pattern and product abandonment. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_search_otc_button_filter_category_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> otc_categories, search_query</div>
+                    <div class="event-description">RCA: Category-based search refinement. Pre-events: Search results view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_search_otc_filter_category_applied</div>
+                    <div class="event-properties"><strong>Properties:</strong> category_filter, search_query</div>
+                    <div class="event-description">RCA: Filter application success and usage patterns. Pre-events: Filter selection</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Page -->
+        <div class="page-section" id="product">
+            <div class="page-header">
+                <h2 class="page-title">Product Page</h2>
+                <div>
+                    <span class="page-badge">17 Web</span>
+                    <span class="page-badge">1 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Product page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('product', 'web')">Web Events (17)</button>
+                <button class="tab" onclick="showPlatform('product', 'mobile')">Mobile Events (1)</button>
+            </div>
+
+            <div id="product-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_product_button_add_to_cart_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, quantity, variant_id</div>
+                    <div class="event-description">RCA: Primary conversion action tracking. Pre-events: Product view, variant selection</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_buy_now_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, variant_id</div>
+                    <div class="event-description">RCA: Direct purchase intent measurement. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_reviews_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, review_count</div>
+                    <div class="event-description">RCA: Social proof engagement before purchase. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_quantity_increase_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, current_quantity</div>
+                    <div class="event-description">RCA: Purchase intent strength (quantity increases). Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_quantity_decrease_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, current_quantity</div>
+                    <div class="event-description">RCA: Cart optimization and price sensitivity. Pre-events: Product view, quantity increase</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_variant_select_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, variant_id, variant_size</div>
+                    <div class="event-description">RCA: Product variant preference tracking. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_write_review_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, user_id</div>
+                    <div class="event-description">RCA: Customer engagement and review funnel entry. Pre-events: Product purchase or view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_image_main_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, image_index</div>
+                    <div class="event-description">RCA: Product image engagement and detail interest. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_image_thumbnail_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, image_index, thumbnail_position</div>
+                    <div class="event-description">RCA: Product exploration depth. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_card_related_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, related_product_id</div>
+                    <div class="event-description">RCA: Cross-selling and product discovery. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_sort_reviews_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, review_sort</div>
+                    <div class="event-description">RCA: Trust signal access patterns. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_tab_description_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, tab_name</div>
+                    <div class="event-description">RCA: Product information engagement. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_tab_instructions_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, tab_name</div>
+                    <div class="event-description">RCA: Usage instruction access. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_tab_reviews_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, tab_name</div>
+                    <div class="event-description">RCA: Social proof section access. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_product_button_share_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, share_platform</div>
+                    <div class="event-description">RCA: Viral coefficient and social sharing. Pre-events: Product view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_categories_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> menu_level</div>
+                    <div class="event-description">RCA: Product interest and navigation patterns. Pre-events: Page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_search_otc_result_product_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, position, search_query</div>
+                    <div class="event-description">RCA: Search result click-through rates and position effectiveness. Pre-events: Search results view</div>
+                </div>
+            </div>
+
+            <div id="product-mobile" class="events-list">
+                <div class="event-card">
+                    <div class="event-name">mobile_product_button_add_to_cart_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, quantity, variant_id</div>
+                    <div class="event-description">RCA: Mobile purchase conversion tracking. Pre-events: Product view, variant selection</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Page -->
+        <div class="page-section" id="checkout">
+            <div class="page-header">
+                <h2 class="page-title">Checkout</h2>
+                <div>
+                    <span class="page-badge">5 Web</span>
+                    <span class="page-badge">0 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Checkout page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('checkout', 'web')">Web Events (5)</button>
+            </div>
+
+            <div id="checkout-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_checkout_button_place_order_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> order_total, payment_method, item_count</div>
+                    <div class="event-description">RCA: Final conversion completion tracking. Pre-events: Payment method selection</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_checkout_button_continue_payment_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> cart_total, shipping_method</div>
+                    <div class="event-description">RCA: Checkout funnel progression to payment. Pre-events: Shipping selection</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_checkout_button_promo_apply_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> promo_code, cart_total</div>
+                    <div class="event-description">RCA: Discount code usage and price optimization. Pre-events: Cart view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_checkout_button_remove_item_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, quantity_removed</div>
+                    <div class="event-description">RCA: Cart abandonment and product removal reasons. Pre-events: Cart view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_checkout_button_update_quantity_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> product_id, old_quantity, new_quantity</div>
+                    <div class="event-description">RCA: Cart optimization and purchase intent adjustment. Pre-events: Cart view</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Page -->
+        <div class="page-section" id="account">
+            <div class="page-header">
+                <h2 class="page-title">Account</h2>
+                <div>
+                    <span class="page-badge">9 Web</span>
+                    <span class="page-badge">0 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <img src="../../exports/full export/Login _ Desktop.png" alt="Login Desktop" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding:20px; color:hsl(var(--muted-foreground));">Screenshot not found: Login _ Desktop.png</div>
+                    <div class="screenshot-label">Login</div>
+                </div>
+                <div class="screenshot-card">
+                    <img src="../../exports/full export/Registration _ Desktop.png" alt="Registration Desktop" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding:20px; color:hsl(var(--muted-foreground));">Screenshot not found: Registration _ Desktop.png</div>
+                    <div class="screenshot-label">Registration</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('account', 'web')">Web Events (9)</button>
+            </div>
+
+            <div id="account-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_account_button_login_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> login_method</div>
+                    <div class="event-description">RCA: Authentication method preference and login funnel entry. Pre-events: Account access need</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_account_button_signup_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> signup_method</div>
+                    <div class="event-description">RCA: New user acquisition and registration funnel entry. Pre-events: Service interest</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_account_button_forgot_password_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Password reset need identification. Pre-events: Failed login attempt</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_account_button_update_profile_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> fields_updated</div>
+                    <div class="event-description">RCA: Profile completeness and user engagement depth. Pre-events: Profile view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_account_button_change_password_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Account security and password management. Pre-events: Profile view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_delete_account_show</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Account churn risk identification. Pre-events: Profile settings access</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_delete_account_confirm_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Account deletion completion and churn analysis. Pre-events: Delete confirmation display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_delete_account_cancel_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Account retention through deletion cancellation. Pre-events: Delete confirmation display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_account_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> menu_level</div>
+                    <div class="event-description">RCA: Account access and return user identification. Pre-events: Page view</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search OTC -->
+        <div class="page-section" id="search-otc">
+            <div class="page-header">
+                <h2 class="page-title">Search OTC</h2>
+                <div>
+                    <span class="page-badge">19 Web</span>
+                    <span class="page-badge">2 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Search OTC page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('search-otc', 'web')">Web Events (19)</button>
+                <button class="tab" onclick="showPlatform('search-otc', 'mobile')">Mobile Events (2)</button>
+            </div>
+
+            <div id="search-otc-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_search_otc_button_voice_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> search_type</div>
+                    <div class="event-description">RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_search_otc_button_clear_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> previous_query</div>
+                    <div class="event-description">RCA: Search refinement and query reset patterns. Pre-events: Search submission</div>
+                </div>
+                <div class="empty-state">
+                    <p>Additional search events are documented in the CSV files. See <code>review-table-search-otc-web.csv</code> for complete list.</p>
+                </div>
+            </div>
+
+            <div id="search-otc-mobile" class="events-list">
+                <div class="event-card">
+                    <div class="event-name">mobile_search_otc_input_focus</div>
+                    <div class="event-properties"><strong>Properties:</strong> search_type, input_method</div>
+                    <div class="event-description">RCA: Mobile search intent tracking. Pre-events: Page navigation</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">mobile_search_otc_submit</div>
+                    <div class="event-properties"><strong>Properties:</strong> search_query, result_count, search_time</div>
+                    <div class="event-description">RCA: Mobile search performance metrics. Pre-events: Search input</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="page-section" id="navigation">
+            <div class="page-header">
+                <h2 class="page-title">Navigation</h2>
+                <div>
+                    <span class="page-badge">6 Web</span>
+                    <span class="page-badge">1 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <img src="../../exports/full export/Menu - Ohne Rezept.png" alt="Menu" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; padding:20px; color:hsl(var(--muted-foreground));">Screenshot not found</div>
+                    <div class="screenshot-label">Menu</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('navigation', 'web')">Web Events (6)</button>
+                <button class="tab" onclick="showPlatform('navigation', 'mobile')">Mobile Events (1)</button>
+            </div>
+
+            <div id="navigation-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_categories_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> menu_level</div>
+                    <div class="event-description">RCA: Category browsing intent and information architecture effectiveness. Pre-events: Page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_footer_contact_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> footer_section</div>
+                    <div class="event-description">RCA: Support need identification and contact funnel entry. Pre-events: Scroll to footer</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_footer_privacy_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> footer_section</div>
+                    <div class="event-description">RCA: Privacy compliance and trust behavior. Pre-events: Scroll to footer</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_footer_terms_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> footer_section</div>
+                    <div class="event-description">RCA: Legal content access and compliance awareness. Pre-events: Scroll to footer</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_search_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> search_type</div>
+                    <div class="event-description">RCA: Search functionality discovery and usage intent. Pre-events: Page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_nav_button_cart_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> cart_item_count</div>
+                    <div class="event-description">RCA: Purchase intent and cart status checking. Pre-events: Page view</div>
+                </div>
+            </div>
+
+            <div id="navigation-mobile" class="events-list">
+                <div class="event-card">
+                    <div class="event-name">mobile_nav_button_hamburger_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> menu_state</div>
+                    <div class="event-description">RCA: Mobile navigation usage and menu interaction. Pre-events: Page view</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popups -->
+        <div class="page-section" id="popups">
+            <div class="page-header">
+                <h2 class="page-title">Popups & Modals</h2>
+                <div>
+                    <span class="page-badge">12 Web</span>
+                    <span class="page-badge">0 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Popup screenshots not available in exports</div>
+                    <div class="screenshot-label">Various Popups</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('popups', 'web')">Web Events (12)</button>
+            </div>
+
+            <div id="popups-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">popup_order_confirmation_show</div>
+                    <div class="event-properties"><strong>Properties:</strong> order_id, order_total</div>
+                    <div class="event-description">RCA: Successful purchase confirmation display. Pre-events: Place order click</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_order_confirmation_continue_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> order_id</div>
+                    <div class="event-description">RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_payment_error_show</div>
+                    <div class="event-properties"><strong>Properties:</strong> error_type, order_total</div>
+                    <div class="event-description">RCA: Payment failure identification and recovery tracking. Pre-events: Payment attempt</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_payment_error_retry_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> error_type</div>
+                    <div class="event-description">RCA: Payment error recovery success rate. Pre-events: Payment error display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_show_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_close_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_age_verify_continue_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> age_verified</div>
+                    <div class="event-description">RCA: Legal compliance completion and content access. Pre-events: Age verification display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_cookie_consent_show_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_cookie_consent_accept_click_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> cookie_preferences</div>
+                    <div class="event-description">RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_newsletter_show_popups</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_login_required_show</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">popup_login_required_login_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> (none)</div>
+                    <div class="event-description">RCA: Authentication conversion from friction points. Pre-events: Login required display</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Treatment -->
+        <div class="page-section" id="treatment">
+            <div class="page-header">
+                <h2 class="page-title">Treatment</h2>
+                <div>
+                    <span class="page-badge">3 Web</span>
+                    <span class="page-badge">0 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Treatment page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('treatment', 'web')">Web Events (3)</button>
+            </div>
+
+            <div id="treatment-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_treatment_button_next_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> current_step, total_steps</div>
+                    <div class="event-description">RCA: Treatment consultation progression and completion likelihood. Pre-events: Current step completion</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_treatment_button_previous_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> current_step, total_steps</div>
+                    <div class="event-description">RCA: Information review and consultation refinement. Pre-events: Current step view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_treatment_button_submit_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> consultation_type, responses_count</div>
+                    <div class="event-description">RCA: Treatment consultation completion and lead generation. Pre-events: Final step completion</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BMI Calculator -->
+        <div class="page-section" id="bmi-calculator">
+            <div class="page-header">
+                <h2 class="page-title">BMI Calculator</h2>
+                <div>
+                    <span class="page-badge">10 Web</span>
+                    <span class="page-badge">8 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">BMI Calculator screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('bmi-calculator', 'web')">Web Events (10)</button>
+                <button class="tab" onclick="showPlatform('bmi-calculator', 'mobile')">Mobile Events (8)</button>
+            </div>
+
+            <div id="bmi-calculator-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_button_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> trigger_location</div>
+                    <div class="event-description">RCA: BMI calculator engagement trigger. Pre-events: Weight Loss category page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_popup_open</div>
+                    <div class="event-properties"><strong>Properties:</strong> trigger_location</div>
+                    <div class="event-description">RCA: BMI calculator popup display and user interest. Pre-events: BMI calculator button click</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_popup_close</div>
+                    <div class="event-properties"><strong>Properties:</strong> bmi_calculated, close_method</div>
+                    <div class="event-description">RCA: BMI calculator abandonment or completion tracking. Pre-events: BMI calculator popup open</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_height_input</div>
+                    <div class="event-properties"><strong>Properties:</strong> height_value</div>
+                    <div class="event-description">RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_weight_input</div>
+                    <div class="event-properties"><strong>Properties:</strong> weight_value</div>
+                    <div class="event-description">RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_calculate_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> height_value, weight_value</div>
+                    <div class="event-description">RCA: BMI calculation completion and result generation. Pre-events: Height and weight input</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_result_display</div>
+                    <div class="event-properties"><strong>Properties:</strong> bmi_value, bmi_category</div>
+                    <div class="event-description">RCA: BMI result visibility and category classification. Pre-events: Calculate button click</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_cta_start_consultation_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> bmi_value, bmi_category, trigger_location</div>
+                    <div class="event-description">RCA: Conversion from BMI calculator to consultation funnel. Pre-events: BMI result display</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_static_section_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> section_name</div>
+                    <div class="event-description">RCA: SEO content engagement and information consumption. Pre-events: Weight Loss category page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_bmi_calculator_seo_content_scroll</div>
+                    <div class="event-properties"><strong>Properties:</strong> scroll_depth</div>
+                    <div class="event-description">RCA: SEO content engagement depth and reading behavior. Pre-events: Static section view</div>
+                </div>
+            </div>
+
+            <div id="bmi-calculator-mobile" class="events-list">
+                <div class="empty-state">
+                    <p>Mobile BMI calculator events are documented in <code>review-table-bmi-calculator-mobile.csv</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- OTC Brand -->
+        <div class="page-section" id="otc-brand">
+            <div class="page-header">
+                <h2 class="page-title">OTC Brand Page</h2>
+                <div>
+                    <span class="page-badge">14 Web</span>
+                    <span class="page-badge">7 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">OTC Brand page screenshot not available in exports</div>
+                    <div class="screenshot-label">Desktop</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('otc-brand', 'web')">Web Events (14)</button>
+                <button class="tab" onclick="showPlatform('otc-brand', 'mobile')">Mobile Events (7)</button>
+            </div>
+
+            <div id="otc-brand-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_page_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, brand_name</div>
+                    <div class="event-description">RCA: Brand page discovery and brand interest tracking. Pre-events: OTC category page, brand carousel click</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_banner_product_1_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, product_id, position</div>
+                    <div class="event-description">RCA: Featured product engagement from brand banner. Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_banner_product_2_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, product_id, position</div>
+                    <div class="event-description">RCA: Featured product engagement from brand banner. Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_banner_product_3_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, product_id, position</div>
+                    <div class="event-description">RCA: Featured product engagement from brand banner. Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_sale_product_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, product_id, position, discount_percent</div>
+                    <div class="event-description">RCA: Sale product interest and discount effectiveness. Pre-events: Brand page view, scroll to sale section</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_all_products_load_more_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, current_product_count</div>
+                    <div class="event-description">RCA: Brand catalog exploration depth. Pre-events: View all products section</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_product_card_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, product_id, position, section</div>
+                    <div class="event-description">RCA: Product interest from brand page (sale vs all products). Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_crm_subscribe_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, email</div>
+                    <div class="event-description">RCA: Brand-specific lead generation and newsletter opt-in. Pre-events: Scroll to CRM section</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_review_carousel_next_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, review_index</div>
+                    <div class="event-description">RCA: Trust signal engagement and social proof consumption. Pre-events: View review section</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_review_carousel_prev_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, review_index</div>
+                    <div class="event-description">RCA: Trust signal engagement and social proof consumption. Pre-events: View review section</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_breadcrumb_home_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id</div>
+                    <div class="event-description">RCA: Navigation pattern from brand page to homepage. Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_breadcrumb_category_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id, category_id</div>
+                    <div class="event-description">RCA: Navigation pattern from brand page to category. Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_usps_section_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id</div>
+                    <div class="event-description">RCA: Trust signal visibility (delivery, service, shipping). Pre-events: Brand page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_otc_brand_description_section_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> brand_id</div>
+                    <div class="event-description">RCA: Brand information engagement and credibility reading. Pre-events: Brand page view</div>
+                </div>
+            </div>
+
+            <div id="otc-brand-mobile" class="events-list">
+                <div class="empty-state">
+                    <p>Mobile OTC Brand events are documented in <code>review-table-otc-brand-mobile.csv</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Information Pages -->
+        <div class="page-section" id="information-pages">
+            <div class="page-header">
+                <h2 class="page-title">Information Pages</h2>
+                <div>
+                    <span class="page-badge">13 Web</span>
+                    <span class="page-badge">9 Mobile</span>
+                </div>
+            </div>
+
+            <div class="screenshot-grid">
+                <div class="screenshot-card">
+                    <div style="padding:40px; color:hsl(var(--muted-foreground));">Information pages screenshots not available in exports</div>
+                    <div class="screenshot-label">Various Pages</div>
+                </div>
+            </div>
+
+            <div class="platform-tabs">
+                <button class="tab active" onclick="showPlatform('information-pages', 'web')">Web Events (13)</button>
+                <button class="tab" onclick="showPlatform('information-pages', 'mobile')">Mobile Events (9)</button>
+            </div>
+
+            <div id="information-pages-web" class="events-list active">
+                <div class="event-card">
+                    <div class="event-name">web_information_page_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, page_id</div>
+                    <div class="event-description">RCA: Information page discovery and trust-building engagement. Pre-events: Footer link, navigation menu, external link</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_information_page_cta_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, cta_type, page_id</div>
+                    <div class="event-description">RCA: Conversion from information pages to main funnel. Pre-events: Information page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_information_page_faq_accordion_open</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, faq_id, page_id</div>
+                    <div class="event-description">RCA: FAQ engagement and information seeking behavior. Pre-events: Information page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_information_page_faq_accordion_close</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, faq_id, page_id</div>
+                    <div class="event-description">RCA: FAQ content consumption completion. Pre-events: FAQ accordion open</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_information_page_section_scroll</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, section_name, scroll_depth, page_id</div>
+                    <div class="event-description">RCA: Content engagement depth and reading behavior. Pre-events: Information page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_information_page_link_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> page_type, link_destination, page_id</div>
+                    <div class="event-description">RCA: Cross-page navigation and information architecture usage. Pre-events: Information page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_shipping_page_method_card_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> shipping_method</div>
+                    <div class="event-description">RCA: Shipping option interest and delivery preference. Pre-events: Shipping page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_shipping_page_tracking_info_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> N/A</div>
+                    <div class="event-description">RCA: Shipping tracking information access. Pre-events: Shipping page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_about_us_section_view</div>
+                    <div class="event-properties"><strong>Properties:</strong> section_name</div>
+                    <div class="event-description">RCA: Credibility section engagement (medical team, certifications, etc.). Pre-events: About Us page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_about_us_press_mention_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> press_source</div>
+                    <div class="event-description">RCA: Press coverage engagement and external credibility verification. Pre-events: About Us page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_error_page_home_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> error_type, error_code</div>
+                    <div class="event-description">RCA: Error recovery and user retention from error pages. Pre-events: Error page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_error_page_help_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> error_type, error_code</div>
+                    <div class="event-description">RCA: Support need identification from error pages. Pre-events: Error page view</div>
+                </div>
+                <div class="event-card">
+                    <div class="event-name">web_error_page_refresh_click</div>
+                    <div class="event-properties"><strong>Properties:</strong> error_type, error_code</div>
+                    <div class="event-description">RCA: Error recovery attempt (for 500/502 errors). Pre-events: Error page view</div>
+                </div>
+            </div>
+
+            <div id="information-pages-mobile" class="events-list">
+                <div class="empty-state">
+                    <p>Mobile Information Pages events are documented in <code>review-table-information-pages-mobile.csv</code></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section" style="margin-top: 40px; text-align: center; padding: 40px;">
+            <h2 style="margin-bottom: 20px;">Report Complete</h2>
+            <p style="color: hsl(var(--muted-foreground)); margin-bottom: 20px;">
+                This report maps all 179 events across 13 pages with their corresponding screenshots and event details.
+            </p>
+            <p style="color: hsl(var(--muted-foreground)); font-size: 0.9rem;">
+                <strong>Source:</strong> Excel CSV files from <code>deliverables/dean-delivery-package/excel-files/</code><br>
+                <strong>Screenshots:</strong> Figma exports from <code>exports/full export/</code><br>
+                <strong>Generated:</strong> December 15, 2025
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showPlatform(pageId, platform) {
+            // Hide all event lists for this page
+            const eventLists = document.querySelectorAll(`#${pageId}-web, #${pageId}-mobile`);
+            eventLists.forEach(list => list.classList.remove('active'));
+
+            // Show selected platform
+            const selectedList = document.getElementById(`${pageId}-${platform}`);
+            if (selectedList) {
+                selectedList.classList.add('active');
+            }
+
+            // Update tab states
+            const tabs = document.querySelectorAll(`#${pageId}-web, #${pageId}-mobile`).closest('.page-section')?.querySelectorAll('.tab');
+            if (tabs) {
+                tabs.forEach(tab => {
+                    if (tab.textContent.toLowerCase().includes(platform)) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+            }
+
+            // Update all tabs in the page section
+            const pageSection = document.getElementById(pageId).closest('.page-section');
+            const allTabs = pageSection.querySelectorAll('.tab');
+            allTabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.textContent.toLowerCase().includes(platform)) {
+                    tab.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-item a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

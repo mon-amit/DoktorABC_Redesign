@@ -1,46 +1,33 @@
 Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-Event Name,Properties,Short Description of TRIGGER
-mobile_homepage_cta_start_click,"treatment_type",RCA: Mobile conversion funnel entry point. Pre-events: Page loadEvent Name,Properties,Short Description of TRIGGER
-mobile_nav_button_hamburger_click,"menu_state",RCA: Mobile navigation usage and menu interaction. Pre-events: Page viewEvent Name,Properties,Short Description of TRIGGER
-mobile_product_button_add_to_cart_click,"product_id, quantity, variant_id",RCA: Mobile purchase conversion tracking. Pre-events: Product view, variant selectionEvent Name,Properties,Short Description of TRIGGER
-mobile_search_otc_input_focus,""search_type, input_method"",RCA: Mobile search intent tracking. Pre-events: Page navigation
-mobile_search_otc_submit,""search_query, result_count, search_time"",RCA: Mobile search performance metrics. Pre-events: Search input
-popup_age_verify_close_homepage,"N/A",RCA: Age verification bypass attempts. Pre-events: Age verification display
-popup_age_verify_close_popups,"N/A",RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display
-popup_age_verify_continue_homepage,"age_verified",RCA: Legal compliance completion. Pre-events: Age verification display
-popup_age_verify_continue_popups,"age_verified",RCA: Legal compliance completion and content access. Pre-events: Age verification display
-popup_age_verify_show_homepage,"N/A",RCA: Age verification compliance requirement. Pre-events: Page load
-popup_age_verify_show_popups,"N/A",RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load
-popup_cookie_consent_accept_click_homepage,"cookie_preferences",RCA: Privacy consent completion. Pre-events: Cookie consent display
-popup_cookie_consent_accept_click_popups,"cookie_preferences",RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display
-popup_cookie_consent_show_homepage,"N/A",RCA: GDPR compliance and privacy consent. Pre-events: Page load
-popup_cookie_consent_show_popups,"N/A",RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load
-popup_delete_account_cancel_click,"N/A",RCA: Account retention through deletion cancellation. Pre-events: Delete confirmation display
-popup_delete_account_confirm_click,"N/A",RCA: Account deletion completion and churn analysis. Pre-events: Delete confirmation display
-popup_delete_account_show,"N/A",RCA: Account churn risk identification. Pre-events: Profile settings access
-popup_login_required_login_click,"N/A",RCA: Authentication conversion from friction points. Pre-events: Login required displayEvent Name,Properties,Short Description of TRIGGER
-popup_login_required_show,"N/A",RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt
-popup_newsletter_show_homepage,"N/A",RCA: Email list growth opportunity. Pre-events: Scroll engagementEvent Name,Properties,Short Description of TRIGGER
-popup_newsletter_show_popups,"N/A",RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger
-popup_order_confirmation_continue_click,"order_id",RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display
+popup_age_verify_close_homepage,,RCA: Age verification bypass attempts. Pre-events: Age verification display
+popup_age_verify_close_popups,,RCA: Age verification bypass attempts and compliance issues. Pre-events: Age verification display
+popup_age_verify_continue_homepage,age_verified,RCA: Legal compliance completion. Pre-events: Age verification display
+popup_age_verify_continue_popups,age_verified,RCA: Legal compliance completion and content access. Pre-events: Age verification display
+popup_age_verify_show_homepage,,RCA: Age verification compliance requirement. Pre-events: Page load
+popup_age_verify_show_popups,,RCA: Age verification compliance and legal requirement fulfillment. Pre-events: Page load
+popup_cookie_consent_accept_click_homepage,cookie_preferences,RCA: Privacy consent completion. Pre-events: Cookie consent display
+popup_cookie_consent_accept_click_popups,cookie_preferences,RCA: Privacy consent completion and user tracking authorization. Pre-events: Cookie consent display
+popup_cookie_consent_show_homepage,,RCA: GDPR compliance and privacy consent. Pre-events: Page load
+popup_cookie_consent_show_popups,,RCA: GDPR/privacy compliance and cookie preference collection. Pre-events: Page load
+popup_delete_account_cancel_click,,RCA: Account retention through deletion cancellation. Pre-events: Delete confirmation display
+popup_delete_account_confirm_click,,RCA: Account deletion completion and churn analysis. Pre-events: Delete confirmation display
+popup_delete_account_show,,RCA: Account churn risk identification. Pre-events: Profile settings access
+popup_login_required_show,,RCA: Authentication requirement identification and friction points. Pre-events: Restricted action attempt
+popup_newsletter_show_popups,,RCA: Email list growth and marketing opt-in opportunities. Pre-events: Scroll trigger
+popup_order_confirmation_continue_click,order_id,RCA: Post-purchase engagement and next steps. Pre-events: Order confirmation display
 popup_order_confirmation_show,"order_id, order_total",RCA: Successful purchase confirmation display. Pre-events: Place order click
-popup_payment_error_retry_click,"error_type",RCA: Payment error recovery success rate. Pre-events: Payment error display
+popup_payment_error_retry_click,error_type,RCA: Payment error recovery success rate. Pre-events: Payment error display
 popup_payment_error_show,"error_type, order_total",RCA: Payment failure identification and recovery tracking. Pre-events: Payment attempt
-web_account_button_change_password_click,"N/A",RCA: Account security and password management. Pre-events: Profile view
-web_account_button_forgot_password_click,"N/A",RCA: Password reset need identification. Pre-events: Failed login attempt
-web_account_button_login_click,"login_method",RCA: Authentication method preference and login funnel entry. Pre-events: Account access need
-web_account_button_signup_click,"signup_method",RCA: New user acquisition and registration funnel entry. Pre-events: Service interest
-web_account_button_update_profile_click,"fields_updated",RCA: Profile completeness and user engagement depth. Pre-events: Profile view
+web_account_button_change_password_click,,RCA: Account security and password management. Pre-events: Profile view
+web_account_button_forgot_password_click,,RCA: Password reset need identification. Pre-events: Failed login attempt
+web_account_button_login_click,login_method,RCA: Authentication method preference and login funnel entry. Pre-events: Account access need
+web_account_button_signup_click,signup_method,RCA: New user acquisition and registration funnel entry. Pre-events: Service interest
+web_account_button_update_profile_click,fields_updated,RCA: Profile completeness and user engagement depth. Pre-events: Profile view
 web_category_breadcrumb_category_click,"breadcrumb_level, category_id",RCA: Category navigation patterns. Pre-events: Category view
 web_category_breadcrumb_home_click,"breadcrumb_level, category_id",RCA: Navigation hierarchy usage. Pre-events: Category view
 web_category_button_apply_filters_click,"filter_criteria, category_id",RCA: Filter usage and product discovery efficiency. Pre-events: Category view
 web_category_button_brand_filter_click,"brand_ids, category_id",RCA: Brand loyalty and preference tracking. Pre-events: Category view
-web_category_button_clear_filters_click,"category_id",RCA: Filter reset patterns and user frustration. Pre-events: Filter application
+web_category_button_clear_filters_click,category_id,RCA: Filter reset patterns and user frustration. Pre-events: Filter application
 web_category_button_load_more_click,"current_page, category_id",RCA: Content consumption depth and pagination UX. Pre-events: View current page
 web_category_button_next_page_click,"current_page, category_id",RCA: Content consumption progression. Pre-events: View current page
 web_category_button_prev_page_click,"current_page, category_id",RCA: Navigation patterns and content exploration. Pre-events: View current page
@@ -60,32 +47,27 @@ web_checkout_button_continue_payment_click,"cart_total, shipping_method",RCA: Ch
 web_checkout_button_place_order_click,"order_total, payment_method, item_count",RCA: Final conversion completion tracking. Pre-events: Payment method selection
 web_checkout_button_promo_apply_click,"promo_code, cart_total",RCA: Discount code usage and price optimization. Pre-events: Cart view
 web_checkout_button_remove_item_click,"product_id, quantity_removed",RCA: Cart abandonment and product removal reasons. Pre-events: Cart view
-web_checkout_button_update_quantity_click,"product_id, old_quantity, new_quantity",RCA: Cart optimization and purchase intent adjustment. Pre-events: Cart viewEvent Name,Properties,Short Description of TRIGGER
-web_homepage_button_category_hair_click,"category_id",RCA: Category-specific interest tracking. Pre-events: Page load
-web_homepage_button_category_skin_click,"category_id",RCA: Category-specific interest tracking. Pre-events: Page load
-web_homepage_button_learn_more_click,"section_name",RCA: Content engagement and information seeking. Pre-events: Page load
+web_homepage_button_category_hair_click,category_id,RCA: Category-specific interest tracking. Pre-events: Page load
+web_homepage_button_category_skin_click,category_id,RCA: Category-specific interest tracking. Pre-events: Page load
+web_homepage_button_learn_more_click,section_name,RCA: Content engagement and information seeking. Pre-events: Page load
 web_homepage_button_newsletter_subscribe_click,"email, preferences",RCA: Lead generation and marketing opt-in. Pre-events: Page load
-web_homepage_button_view_products_click,"category_id",RCA: Product browsing intent. Pre-events: Page load
+web_homepage_button_view_products_click,category_id,RCA: Product browsing intent. Pre-events: Page load
 web_homepage_card_acne_cream_click,"product_id, product_name",RCA: Product-specific interest and conversion tracking. Pre-events: Page load
 web_homepage_card_hair_growth_click,"product_id, product_name",RCA: Product-specific interest and conversion tracking. Pre-events: Page load
 web_homepage_card_vitamin_c_click,"product_id, product_name",RCA: Product-specific interest and conversion tracking. Pre-events: Page load
-web_homepage_cta_consultation_click,"consultation_type",RCA: Consultation booking intent. Pre-events: Page load
-web_homepage_cta_start_click,"treatment_type",RCA: Main conversion funnel entry point. Pre-events: Page load
-web_homepage_link_privacy_click,"link_destination",RCA: Privacy compliance and trust behavior. Pre-events: Page load
-web_homepage_link_terms_click,"link_destination",RCA: Legal content access. Pre-events: Page load
+web_homepage_cta_consultation_click,consultation_type,RCA: Consultation booking intent. Pre-events: Page load
+web_homepage_cta_start_click,treatment_type,RCA: Main conversion funnel entry point. Pre-events: Page load
+web_homepage_link_privacy_click,link_destination,RCA: Privacy compliance and trust behavior. Pre-events: Page load
+web_homepage_link_terms_click,link_destination,RCA: Legal content access. Pre-events: Page load
 web_homepage_tab_featured_click,"tab_name, tab_index",RCA: Content organization preference. Pre-events: Page load
-web_nav_button_account_click,"menu_level",RCA: Account access and return user identification. Pre-events: Page viewEvent Name,Properties,Short Description of TRIGGER
-web_nav_button_cart_click,"cart_item_count",RCA: Purchase intent and cart status checking. Pre-events: Page viewEvent Name,Properties,Short Description of TRIGGER
-web_nav_button_categories_click,"menu_level",RCA: Category browsing intent and information architecture effectiveness. Pre-events: Page view
-web_nav_button_footer_contact_click,"footer_section",RCA: Support need identification and contact funnel entry. Pre-events: Scroll to footer
-web_nav_button_footer_privacy_click,"footer_section",RCA: Privacy compliance and trust behavior. Pre-events: Scroll to footer
-web_nav_button_footer_terms_click,"footer_section",RCA: Legal content access and compliance awareness. Pre-events: Scroll to footer
-web_nav_button_products_click,"menu_level",RCA: Product interest and navigation patterns. Pre-events: Page view
-web_nav_button_search_click,"search_type",RCA: Search functionality discovery and usage intent. Pre-events: Page view
-web_product_button_add_to_cart_click,"product_id, quantity, variant_id",RCA: Primary conversion action tracking. Pre-events: Product view, variant selection
+web_nav_button_categories_click,menu_level,RCA: Category browsing intent and information architecture effectiveness. Pre-events: Page view
+web_nav_button_footer_contact_click,footer_section,RCA: Support need identification and contact funnel entry. Pre-events: Scroll to footer
+web_nav_button_footer_privacy_click,footer_section,RCA: Privacy compliance and trust behavior. Pre-events: Scroll to footer
+web_nav_button_footer_terms_click,footer_section,RCA: Legal content access and compliance awareness. Pre-events: Scroll to footer
+web_nav_button_products_click,menu_level,RCA: Product interest and navigation patterns. Pre-events: Page view
+web_nav_button_search_click,search_type,RCA: Search functionality discovery and usage intent. Pre-events: Page view
 web_product_button_back_to_category_click,"category_id, product_id",RCA: Navigation pattern and product abandonment. Pre-events: Product view
 web_product_button_buy_now_click,"product_id, variant_id",RCA: Direct purchase intent measurement. Pre-events: Product view
-web_product_button_quantity_decrease_click,"product_id, current_quantity",RCA: Cart optimization and price sensitivity. Pre-events: Product view, quantity increase
 web_product_button_quantity_increase_click,"product_id, current_quantity",RCA: Purchase intent strength (quantity increases). Pre-events: Product view
 web_product_button_read_reviews_click,"product_id, review_count",RCA: Social proof engagement before purchase. Pre-events: Product view
 web_product_button_variant_50ml_click,"product_id, variant_id, variant_size",RCA: Product variant preference tracking. Pre-events: Product view
@@ -98,28 +80,67 @@ web_product_link_share_click,"product_id, share_platform",RCA: Viral coefficient
 web_product_tab_ingredients_click,"product_id, tab_name",RCA: Product information engagement. Pre-events: Product view
 web_product_tab_reviews_click,"product_id, tab_name",RCA: Social proof section access. Pre-events: Product view
 web_product_tab_usage_click,"product_id, tab_name",RCA: Usage instruction access. Pre-events: Product view
-web_search_otc_autocomplete_1_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_autocomplete_2_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_autocomplete_3_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_button_add_to_cart_click,""product_id, search_query, position"",RCA: Search-to-purchase conversion tracking. Pre-events: Search results view
-web_search_otc_button_clear_click,"previous_query",RCA: Search refinement and query reset patterns. Pre-events: Search submission
-web_search_otc_button_filter_brand_click,""otc_brands, search_query"",RCA: Brand preference in OTC search. Pre-events: Search results view
-web_search_otc_button_filter_category_click,""otc_categories, search_query"",RCA: Category-based search refinement. Pre-events: Search results view
+web_search_otc_button_clear_click,previous_query,RCA: Search refinement and query reset patterns. Pre-events: Search submission
 web_search_otc_button_filter_category_click,"otc_categories, search_query",RCA: Category-based search refinement. Pre-events: Search results view
-web_search_otc_button_filter_price_click,""price_range, search_query"",RCA: Price-based OTC product filtering. Pre-events: Search results view
-web_search_otc_button_load_more_click,""current_page, search_query"",RCA: Search result consumption depth. Pre-events: View current results
-web_search_otc_button_sort_click,""sort_type, search_query"",RCA: Result organization preferences. Pre-events: Search results view
-web_search_otc_button_submit_click,""search_query, search_type"",RCA: Search initiation and query submission tracking. Pre-events: Search input focus
-web_search_otc_button_voice_click,"search_type",RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus
-web_search_otc_filter_brand_applied,""brand_filter, search_query"",RCA: Brand filter effectiveness. Pre-events: Filter selection
-web_search_otc_filter_category_applied,""category_filter, search_query"",RCA: Filter application success and usage patterns. Pre-events: Filter selection
-web_search_otc_filter_category_applied,"category_filter, search_query",RCA: Filter application success and usage patterns. Pre-events: Filter selectionEvent Name,Properties,Short Description of TRIGGER
-web_search_otc_filter_price_applied,""price_filter, search_query"",RCA: Price filter usage patterns. Pre-events: Filter selection
-web_search_otc_input_focus,""search_type, input_method"",RCA: Search intent and interaction method. Pre-events: Page navigation
-web_search_otc_no_results_viewed,""search_query, suggestion_count"",RCA: Failed search experience and recovery options. Pre-events: Search submission
-web_search_otc_result_product_click,""product_id, position, search_query"",RCA: Search result click-through rates and position effectiveness. Pre-events: Search results view
-web_search_otc_result_product_click,"product_id, position, search_query",RCA: Search result click-through rates and position effectiveness. Pre-events: Search results viewEvent Name,Properties,Short Description of TRIGGER
-web_search_otc_submit,""search_query, result_count, search_time"",RCA: Search performance and result quality metrics. Pre-events: Search input
+web_search_otc_button_voice_click,search_type,RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus
 web_treatment_button_next_click,"current_step, total_steps",RCA: Treatment consultation progression and completion likelihood. Pre-events: Current step completion
 web_treatment_button_previous_click,"current_step, total_steps",RCA: Information review and consultation refinement. Pre-events: Current step view
-web_treatment_button_submit_click,"consultation_type, responses_count",RCA: Treatment consultation completion and lead generation. Pre-events: Final step completionEvent Name,Properties,Short Description of TRIGGER
+==> review-table-otc-brand-web.csv <==,,
+web_otc_brand_banner_product_1_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_banner_product_2_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_banner_product_3_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_all_products_load_more_click,"brand_id, current_product_count",RCA: Brand catalog exploration depth. Pre-events: View all products section
+web_otc_brand_product_card_click,"brand_id, product_id, position, section",RCA: Product interest from brand page (sale vs all products). Pre-events: Brand page view
+web_otc_brand_crm_subscribe_click,"brand_id, email",RCA: Brand-specific lead generation and newsletter opt-in. Pre-events: Scroll to CRM section
+web_otc_brand_review_carousel_next_click,"brand_id, review_index",RCA: Trust signal engagement and social proof consumption. Pre-events: View review section
+web_otc_brand_review_carousel_prev_click,"brand_id, review_index",RCA: Trust signal engagement and social proof consumption. Pre-events: View review section
+web_otc_brand_breadcrumb_home_click,brand_id,RCA: Navigation pattern from brand page to homepage. Pre-events: Brand page view
+web_otc_brand_breadcrumb_category_click,"brand_id, category_id",RCA: Navigation pattern from brand page to category. Pre-events: Brand page view
+web_otc_brand_description_section_view,brand_id,RCA: Brand information engagement and credibility reading. Pre-events: Brand page view
+==> review-table-otc-brand-mobile.csv <==,,
+mobile_otc_brand_banner_product_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner (mobile). Pre-events: Brand page view
+mobile_otc_brand_all_products_load_more_click,"brand_id, current_product_count",RCA: Brand catalog exploration depth (mobile). Pre-events: View all products section
+mobile_otc_brand_product_card_click,"brand_id, product_id, position, section",RCA: Product interest from brand page (mobile). Pre-events: Brand page view
+mobile_otc_brand_crm_subscribe_click,"brand_id, email",RCA: Brand-specific lead generation and newsletter opt-in (mobile). Pre-events: Scroll to CRM section
+mobile_otc_brand_review_swipe,"brand_id, direction",RCA: Trust signal engagement via swipe gesture (mobile). Pre-events: View review section
+==> review-table-bmi-calculator-web.csv <==,,
+web_bmi_calculator_button_click,trigger_location,RCA: BMI calculator engagement trigger. Pre-events: Weight Loss category page view
+web_bmi_calculator_popup_open,trigger_location,RCA: BMI calculator popup display and user interest. Pre-events: BMI calculator button click
+web_bmi_calculator_popup_close,"bmi_calculated, close_method",RCA: BMI calculator abandonment or completion tracking. Pre-events: BMI calculator popup open
+web_bmi_calculator_height_input,height_value,RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open
+web_bmi_calculator_weight_input,weight_value,RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open
+web_bmi_calculator_calculate_click,"height_value, weight_value",RCA: BMI calculation completion and result generation. Pre-events: Height and weight input
+web_bmi_calculator_result_display,"bmi_value, bmi_category",RCA: BMI result visibility and category classification. Pre-events: Calculate button click
+web_bmi_calculator_cta_start_consultation_click,"bmi_value, bmi_category, trigger_location",RCA: Conversion from BMI calculator to consultation funnel. Pre-events: BMI result display
+web_bmi_calculator_static_section_view,section_name,RCA: SEO content engagement and information consumption. Pre-events: Weight Loss category page view
+web_bmi_calculator_seo_content_scroll,scroll_depth,RCA: SEO content engagement depth and reading behavior. Pre-events: Static section view
+==> review-table-bmi-calculator-mobile.csv <==,,
+mobile_bmi_calculator_button_click,trigger_location,RCA: BMI calculator engagement trigger (mobile). Pre-events: Weight Loss category page view
+mobile_bmi_calculator_popup_open,trigger_location,RCA: BMI calculator popup display and user interest (mobile). Pre-events: BMI calculator button click
+mobile_bmi_calculator_popup_close,"bmi_calculated, close_method",RCA: BMI calculator abandonment or completion tracking (mobile). Pre-events: BMI calculator popup open
+mobile_bmi_calculator_height_input,height_value,RCA: User input engagement and form completion progress (mobile). Pre-events: BMI calculator popup open
+mobile_bmi_calculator_weight_input,weight_value,RCA: User input engagement and form completion progress (mobile). Pre-events: BMI calculator popup open
+mobile_bmi_calculator_calculate_click,"height_value, weight_value",RCA: BMI calculation completion and result generation (mobile). Pre-events: Height and weight input
+mobile_bmi_calculator_result_display,"bmi_value, bmi_category",RCA: BMI result visibility and category classification (mobile). Pre-events: Calculate button click
+mobile_bmi_calculator_cta_start_consultation_click,"bmi_value, bmi_category, trigger_location",RCA: Conversion from BMI calculator to consultation funnel (mobile). Pre-events: BMI result display
+==> review-table-information-pages-web.csv <==,,
+web_information_page_cta_click,"page_type, cta_type, page_id",RCA: Conversion from information pages to main funnel. Pre-events: Information page view
+web_information_page_faq_accordion_open,"page_type, faq_id, page_id",RCA: FAQ engagement and information seeking behavior. Pre-events: Information page view
+web_information_page_faq_accordion_close,"page_type, faq_id, page_id",RCA: FAQ content consumption completion. Pre-events: FAQ accordion open
+web_information_page_section_scroll,"page_type, section_name, scroll_depth, page_id",RCA: Content engagement depth and reading behavior. Pre-events: Information page view
+web_information_page_link_click,"page_type, link_destination, page_id",RCA: Cross-page navigation and information architecture usage. Pre-events: Information page view
+web_shipping_page_method_card_click,shipping_method,RCA: Shipping option interest and delivery preference. Pre-events: Shipping page view
+web_shipping_page_tracking_info_click,,RCA: Shipping tracking information access. Pre-events: Shipping page view
+web_about_us_press_mention_click,press_source,RCA: Press coverage engagement and external credibility verification. Pre-events: About Us page view
+web_error_page_home_click,"error_type, error_code",RCA: Error recovery and user retention from error pages. Pre-events: Error page view
+web_error_page_help_click,"error_type, error_code",RCA: Support need identification from error pages. Pre-events: Error page view
+web_error_page_refresh_click,"error_type, error_code",RCA: Error recovery attempt (for 500/502 errors). Pre-events: Error page view
+==> review-table-information-pages-mobile.csv <==,,
+mobile_information_page_cta_click,"page_type, cta_type, page_id",RCA: Conversion from information pages to main funnel (mobile). Pre-events: Information page view
+mobile_information_page_faq_accordion_open,"page_type, faq_id, page_id",RCA: FAQ engagement and information seeking behavior (mobile). Pre-events: Information page view
+mobile_information_page_faq_accordion_close,"page_type, faq_id, page_id",RCA: FAQ content consumption completion (mobile). Pre-events: FAQ accordion open
+mobile_information_page_section_scroll,"page_type, section_name, scroll_depth, page_id",RCA: Content engagement depth and reading behavior (mobile). Pre-events: Information page view
+mobile_information_page_link_click,"page_type, link_destination, page_id",RCA: Cross-page navigation and information architecture usage (mobile). Pre-events: Information page view
+mobile_shipping_page_method_card_click,shipping_method,RCA: Shipping option interest and delivery preference (mobile). Pre-events: Shipping page view
+mobile_error_page_home_click,"error_type, error_code",RCA: Error recovery and user retention from error pages (mobile). Pre-events: Error page view
+mobile_error_page_help_click,"error_type, error_code",RCA: Support need identification from error pages (mobile). Pre-events: Error page view

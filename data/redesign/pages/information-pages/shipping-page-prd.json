@@ -2,109 +2,110 @@
   "title": "PRD ReDesign: Shipping Page",
   "confluence_id": "1956053007",
   "created": "2025-10-18",
-  "background": "The Shipping Page is a key informational page designed to provide users with clear, transparent details about DoktorABC's delivery methods, timelines, packaging, and policies.",
-  "target_audience": {
-    "pre_order_users": "Researching delivery options before making a purchase",
-    "post_order_users": "Looking for details about their shipment, expected delivery times, or carrier information"
+  "status": "Design Requirements",
+  "background": {
+    "description": "The Shipping Page is a key informational page designed to provide users with clear, transparent details about DoktorABC's delivery methods, timelines, packaging, and policies.",
+    "user_types": [
+      "Pre-order users: researching delivery options before making a purchase",
+      "Post-order users: looking for details about their shipment, expected delivery times, or carrier information"
+    ],
+    "traffic_source": "Most traffic comes via the footer or the tab in the navbar (CMS pages)",
+    "goal": "Improve transparency, trust, and conversion by clearly presenting all shipping options and reinforcing DoktorABC's professionalism and discretion"
   },
-  "analytics_last_30_days": {
-    "conversion_rate_24h": "18.15%",
-    "conversion_rate_1h": "13.63%",
+  "data_last_30_days": {
+    "conversion_rate_24h": "18.15% (page view → paid order within 24h)",
+    "conversion_rate_1h": "13.63% (page view → paid order within 1h)",
     "unique_users": "5,869",
     "total_page_views": "8,415"
   },
+  "target_audience": [
+    "Users navigate from the nav bar, footer, or menu tab to learn about delivery",
+    "Users with questions or concerns about shipping before or after purchase",
+    "Users who encountered delivery-related issues or want to verify providers, timelines, or packaging discretion"
+  ],
   "page_purpose": "To give users a complete, transparent, and trustworthy overview of DoktorABC's shipping methods including: Delivery types and timelines, Availability and restrictions, Privacy and packaging standards, Contact guidance for support",
   "success_indicators": [
     "Increase conversion rate from users who view the shipping page → paid order",
     "Reduce % of customer service tickets related to pre-order shipping questions"
   ],
-  "shipping_options": [
-    {
-      "option": "2-hour express delivery (Uber/courier)",
-      "description": "If you need it especially quickly, In select cities, we offer 2-hour delivery directly via courier. As soon as your prescription is approved, the courier will be on its way - directly to your address.",
-      "highlights": [
-        "Immediate shipping after the doctor's approval",
-        "Delivery within approximately 2 hours*",
-        "Perfect for urgent needs"
-      ],
-      "note": "Participation varies by region - check availability at checkout."
-    },
-    {
-      "option": "DHL - 24-48h delivery",
-      "title": "DHL Express 24-48 h",
-      "description": "Our standard shipping method: Once your prescription has been created, we forward the package to our service provider DHL. Delivery in Germany is usually within 1-2 business days.",
-      "highlights": [
-        "Delivery on weekdays within 24-48 hours",
-        "Tracking included",
-        "Delivered to your desired address or Packstation"
-      ]
-    },
-    {
-      "option": "Pickup - Pick up at the pharmacy",
-      "title": "Pick up on site",
-      "description": "If you prefer to visit in person, select 'Pickup' when ordering and pick up your medication from one of our partner pharmacies.",
-      "highlights": [
-        "No waiting for delivery - ready for immediate pickup",
-        "Discreet delivery in neutral packaging",
-        "Ideal if you're already there"
-      ]
-    }
-  ],
   "design_sections": [
     {
       "section": "Navbar",
-      "requirements": "Standard DoktorABC navbar",
+      "requirements": [
+        "Standard DoktorABC navbar"
+      ],
       "notes": "Same structure as homepage and category pages"
     },
     {
       "section": "Hero Section",
-      "requirements": "Title: 'Fast. Discreet. Reliable: Your shipping with DoktorABC', Subtitle with USPs, Relevant hero image (delivery or neutral packaging theme)",
-      "hero_usps": [
-        ">90% of all orders are shipped within 24 hours",
-        "Express delivery in 2 hours is available in selected locations",
-        "Neutral packaging with no externally visible indication of contents",
-        "Free delivery with all options (where applicable)",
-        "Shipment tracking included",
-        "Delivery on working days (Monday - Friday)"
+      "requirements": [
+        "Title: 'Fast. Discreet. Reliable: Your shipping with DoktorABC'",
+        "Subtitle: 'We deliver your medicine as quickly as possible - in neutral packaging, with the utmost privacy and complete confidence. Your health deserves nothing less.'",
+        "Must include a relevant hero image (delivery or neutral packaging theme)",
+        "Include the following USPs: > 90% of all orders are shipped within 24 hours, Express delivery in 2 hours is available in selected locations, Neutral packaging with no externally visible indication of the contents, Free delivery with all options (where applicable), Shipment tracking included - stay informed at all times, Delivery on working days (Monday - Friday)"
       ],
-      "notes": "Must be visually clear, premium, and trustworthy"
+      "notes": "The hero section must be visually clear, premium, and trustworthy. It should reflect discretion, speed, and professionalism"
     },
     {
       "section": "Our Shipping Options Section",
-      "requirements": "Main title, subtitle, Three Option Cards: 2-hour express, DHL 24-48h, Pickup",
-      "notes": "Each shipping option must be presented as an individual card with clear icons and visual differentiation"
+      "requirements": [
+        "Main title: 'Your shipping methods at a glance'",
+        "Subtitle: 'Choose the shipping option that best suits your needs, depending on urgency, location, or pickup preference. All options are secure, discreet, and professionally organized.'",
+        "Three Option Cards: a) 2-hour express delivery (Uber/courier), b) DHL - 24-48h delivery, c) Pickup - Pick up at the pharmacy"
+      ],
+      "notes": "Each shipping option must be presented as an individual card with clear icons and visual differentiation. The section should appear structured, easy to scan, and mobile-friendly"
     },
     {
-      "section": "Neutral Packaging Section",
-      "requirements": "Heading: 'Our neutral packaging: Why, how, what?', Explanation paragraph, Bullet points explaining neutral packaging",
-      "notes": "Design should visually emphasize discretion. Use muted colors, clean layout, and iconography of packaging and privacy."
+      "section": "Neutral Packaging - Discreet & Secure Section",
+      "requirements": [
+        "Heading: 'Our neutral packaging: Why, how, what?'",
+        "Paragraph explaining privacy priority",
+        "Sub-heading: 'What does 'neutral packaging' mean?'",
+        "Bullet points: No logos or references to medical contents on the outside, Outer shell looks like any standard shipping box, Inside you will find your medication carefully packaged, Packaging is designed to avoid insights, Discreet shipping notification",
+        "Sub-heading: 'Why do we do this?'",
+        "Paragraph explaining discretion importance"
+      ],
+      "notes": "Design should visually emphasize discretion. Use muted colors, clean layout, and iconography of packaging and privacy"
     },
     {
       "section": "How It Works - Step by Step Section",
-      "requirements": "Heading: 'How your shipping works with DoktorABC', Numbered steps (5 steps total)",
-      "notes": "Present steps in a horizontal timeline or numbered column layout with icons for each step."
+      "requirements": [
+        "Heading: 'How your shipping works with DoktorABC'",
+        "Numbered steps: 1) Online questionnaire & consultation, 2) Prescription issuance, 3) Choose shipping option, 4) Discreet delivery or pickup, 5) Acceptance & Use"
+      ],
+      "notes": "Present steps in a horizontal timeline or numbered column layout with icons for each step"
     },
     {
       "section": "FAQ Section",
-      "requirements": "Heading: 'Frequently asked questions about shipping', 6 questions with answers",
-      "notes": "FAQs should appear in collapsible accordion format with icons for each question"
+      "requirements": [
+        "Heading: 'Frequently asked questions about shipping'",
+        "6 FAQs covering: 2-hour delivery regions, Free shipping, Tracking, Not home scenarios, Privacy guarantee, Pickup options"
+      ],
+      "notes": "FAQs should appear in collapsible accordion format with icons for each question. Maintain consistent FAQ design as homepage"
     },
     {
       "section": "Final Call to Action Section",
-      "requirements": "Heading: 'Ready for your treatment?', Paragraph, Button: 'Start consultation now', Category navigation buttons below",
-      "notes": "CTA must be strong and visible, styled like homepage buttons."
+      "requirements": [
+        "Heading: 'Ready for your treatment?'",
+        "Paragraph encouraging consultation start",
+        "Button: 'Start consultation now'",
+        "Category navigation buttons (same as on homepage)"
+      ],
+      "notes": "CTA must be strong and visible, styled like homepage buttons"
     },
     {
       "section": "Payment method",
-      "requirements": "Add payment method logo strip",
-      "notes": ""
+      "requirements": [
+        "Add our payment method logo strip"
+      ]
     },
     {
       "section": "Legal & Notes Section",
-      "requirements": "Small print paragraph with disclaimers",
-      "notes": "Must appear at bottom of page before footer. Simple, readable text format."
+      "requirements": [
+        "Small print paragraph: Note about shipping commencement, delivery on weekends/public holidays, availability of 2-hour delivery"
+      ],
+      "notes": "Must appear at bottom of the page before footer. Simple, readable text format"
     }
   ],
-  "figma_link": "",
   "source": "Confluence Page ID 1956053007"
 }

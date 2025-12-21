@@ -2,114 +2,160 @@
   "title": "PRD ReDesign: BMI Calculator For Weight Loss Category",
   "confluence_id": "1955364894",
   "created": "2025-10-17",
-  "background": "The BMI Calculator is designed to serve as an interactive and SEO-friendly element on the Weight Loss category page. It provides users with a fast, private, and informative way to assess whether their weight falls within a healthy range.",
-  "goal": "Both educate and convert: For users, it provides clarity and trust. For DoktorABC, it strengthens engagement and drives conversions toward consultations and paid orders.",
-  "widget_formats": [
-    "Popup message opening from the bottom when user clicks 'Calculate my BMI'",
-    "Static section embedded within the Weight Loss category drilldown"
-  ],
+  "status": "Design Requirements",
+  "background": {
+    "description": "The BMI Calculator is designed to serve as an interactive and SEO-friendly element on the Weight Loss category page.",
+    "purpose": "It provides users with a fast, private, and informative way to assess whether their weight falls within a healthy range, giving them immediate context and helping connect their self-awareness with potential medical treatment options offered by DoktorABC.",
+    "goals": {
+      "for_users": "Provides clarity and trust",
+      "for_doktorabc": "Strengthens engagement and drives conversions toward consultations and paid orders"
+    },
+    "formats": [
+      "As a popup message opening from the bottom of the screen when the user clicks 'Calculate my BMI.'",
+      "As a static section embedded within the Weight Loss category drilldown"
+    ]
+  },
   "persona": {
     "users": {
       "age": "22-65",
       "characteristics": [
         "Often struggling with overweight or obesity, concerned about appearance and health",
         "Unsure if they need medication or whether it's safe for them",
-        "Seek private, quick validation - 'Where do I stand?'",
+        "Seek private, quick validation, 'Where do I stand?'",
         "Motivation: clarity, safety, cost, and eligibility for treatment"
-      ],
-      "mindset": "I'm worried about my weight but not sure what to do next. I want a simple, trustworthy way to check if I need help, without talking to anyone yet."
-    }
+      ]
+    },
+    "mindset": "'I'm worried about my weight but not sure what to do next. I want a simple, trustworthy way to check if I need help, without talking to anyone yet.'"
   },
   "success_metrics": [
-    "Improved SEO performance and ranking in the 'Weight Loss' category",
+    "Improved SEO performance and ranking in the 'Weight Loss' category (through the BMI content section)",
     "Conversion rate from users who used the calculator → paid orders (tracked across full funnel)",
     "Higher engagement (CTR on 'Calculate my BMI' and 'Start Consultation' CTAs)"
   ],
   "competitor_inspiration": [
-    {"name": "Hims", "url": "https://www.hims.com/"},
-    {"name": "Ro – BMI Calculator", "url": "https://ro.co/weight-loss/bmi-calculator/"}
+    {
+      "name": "Hims",
+      "url": "https://www.hims.com/"
+    },
+    {
+      "name": "Ro - BMI Calculator",
+      "url": "https://ro.co/weight-loss/bmi-calculator/"
+    }
+  ],
+  "design_requirements": [
+    {
+      "section": "Location on Page",
+      "requirements": [
+        "Widget appears in the Weight Loss category drilldown section on the homepage"
+      ]
+    },
+    {
+      "section": "Popup Trigger",
+      "requirements": [
+        "Button labeled 'Calculate my BMI' triggers popup from the bottom up"
+      ]
+    },
+    {
+      "section": "Popup Layout (BMI Calculator)",
+      "requirements": [
+        "Title: BMI Calculator",
+        "Subtitle: 'BMI stands for Body Mass Index. It's a simple calculation that uses your height and weight to estimate whether your weight is within a healthy range for your body.'",
+        "Two input fields: Height (cm), Weight (kg)",
+        "Button: 'Calculate'",
+        "Below: secondary button 'Start Consultation'"
+      ]
+    },
+    {
+      "section": "BMI Display (Right Side)",
+      "requirements": [
+        "Circular 'BMI Clock' showing four ranges from low to high",
+        "Center text shows current BMI value (default = 0, updated after calculation)",
+        "Legend below the dial: Underweight: < 18.5, Healthy weight: 18.5-24.9, Overweight: 25-29.9, Obesity: > 30",
+        "After clicking Calculate, the user's BMI range is highlighted visually on the clock and legend"
+      ]
+    },
+    {
+      "section": "Follow-up State (After Calculation)",
+      "requirements": [
+        "If user's BMI is Overweight or Obese, display: Message: 'Find out if our weight loss treatments are right for you.', Images: Ozempic medication + another weight loss product, CTA Button: 'Start Consultation' (below images)"
+      ]
+    },
+    {
+      "section": "Static Section",
+      "requirements": [
+        "Same layout and functionality but displayed inline on the category page",
+        "Below the calculator, include SEO-optimized informational content pulled from BMI Google Doc",
+        "Arrange content visually for readability (subheadings, numbered lists, light background, consistent spacing)"
+      ]
+    }
   ],
   "development_requirements": [
     {
       "id": "R1",
       "requirement": "Location on Page",
-      "description": "Widget appears in the Weight Loss category drilldown section on the homepage"
+      "description": "The BMI Calculator widget appears inside the Weight Loss drilldown section on the homepage. The widget is triggered via a button labeled 'Calculate my BMI'."
     },
     {
       "id": "R2",
       "requirement": "Popup Trigger",
-      "description": "Button labeled 'Calculate my BMI' triggers popup from the bottom up"
+      "description": "When the user clicks 'Calculate my BMI', open the BMI Calculator as a bottom-up popup (bottom sheet). The pop-up must cover most of the screen and include a close X icon."
     },
     {
       "id": "R3",
       "requirement": "Popup Layout – Header",
-      "description": "Title: 'BMI Calculator', Subtitle: 'BMI stands for Body Mass Index. It's a simple calculation that uses your height and weight to estimate whether your weight is within a healthy range for your body.'"
+      "description": "The popup contains: Title: 'BMI Calculator', Subtitle: 'BMI stands for Body Mass Index. It's a simple calculation that uses your height and weight to estimate whether your weight is within a healthy range for your body.'"
     },
     {
       "id": "R4",
       "requirement": "Input Fields",
-      "description": "Two input fields: Height (cm) and Weight (kg). Both required, positive numbers. Error state: red outline and small error text below field.",
-      "validation_rules": [
-        "Both fields required",
-        "Must be positive numbers",
-        "Error state: red outline and small error text below field"
-      ]
+      "description": "Display two input fields, each with a label above them: Height (cm) – numeric input, Weight (kg) – numeric input. Validation rules: Both fields required, Must be positive numbers, Error state: red outline and small error text below field."
     },
     {
       "id": "R5",
       "requirement": "Primary CTA – Calculate Button",
-      "description": "Button labeled 'Calculate' validates inputs, calculates BMI using formula: BMI = weight (kg) / (height (m)²), scrolls popup to show results section"
+      "description": "Button labeled 'Calculate' appears below the inputs. When clicked: Validate the input fields, Calculate BMI using formula: BMI = weight (kg) / (height (m)²), Scroll the popup to show results section."
     },
     {
       "id": "R6",
       "requirement": "Secondary CTA – Start Consultation",
-      "description": "Below Calculate button display 'Start Consultation' button leading to Weight Loss consultation funnel"
+      "description": "Below the Calculate button display a secondary button labeled 'Start Consultation'. Clicking it leads to the Weight Loss consultation funnel."
     },
     {
       "id": "R7",
       "requirement": "BMI Display – Dial (Clock Visualization)",
-      "description": "Circular BMI 'clock' dial with 4 ranges. Center text shows BMI number. Default before calculation: BMI = 0 and all ranges neutral.",
-      "bmi_ranges": [
-        "Underweight: < 18.5",
-        "Healthy weight: 18.5-24.9",
-        "Overweight: 25-29.9",
-        "Obesity: > 30"
-      ]
+      "description": "After calculation, show the BMI result section, which includes: Circular BMI 'clock' dial with 4 ranges: Underweight, Healthy weight, Overweight, Obesity. The dial must visually highlight the user's range (color change). Center text shows the BMI number (e.g., 24.8). Default (before calculation): BMI = 0 and all ranges neutral."
     },
     {
       "id": "R8",
       "requirement": "BMI Legend",
-      "description": "Below the dial display the static legend with all ranges. The legend value corresponding to the user's BMI must be highlighted."
+      "description": "Below the dial display the static legend: Underweight: < 18.5, Healthy weight: 18.5-24.9, Overweight: 25-29.9, Obesity: > 30. The legend value corresponding to the user's BMI must be highlighted."
     },
     {
       "id": "R9",
       "requirement": "Follow-up State (After Calculation)",
-      "description": "If user's BMI falls into Overweight or Obesity, show recommendation card with: Image: Ozempic + Weight Loss product, Message: 'Find out if our weight loss treatments are right for you.', CTA button: 'Start Consultation'"
+      "description": "If user's BMI falls into Overweight or Obesity, show a recommendation card: Image: Ozempic + Weight Loss product, Message: 'Find out if our weight loss treatments are right for you.', CTA button: 'Start Consultation'. This block appears directly below the BMI result section."
     },
     {
       "id": "R10",
       "requirement": "SEO Informational Content (Static Section)",
-      "description": "Under calculator results, display SEO-optimized BMI educational content from Google Doc",
-      "formatting": [
-        "Use subheadings (e.g., 'What is BMI?', 'How to calculate BMI')",
-        "Use bulleted or numbered lists where appropriate",
-        "Light background, soft padding, consistent spacing",
-        "Accordion behavior: each section can expand/collapse"
-      ]
+      "description": "Under the calculator results, display SEO-optimized BMI educational content pulled from the provided BMI Google Doc. Formatting requirements: Use subheadings (e.g., 'What is BMI?', 'How to calculate BMI'), Use bulleted or numbered lists where appropriate, Light background, soft padding, consistent spacing, Accordion behavior: each section can expand/collapse (as shown in Figma)."
     },
     {
       "id": "R11",
       "requirement": "Responsive Behavior",
-      "mobile": "Popup is a full-height bottom sheet with drag-to-close + X button",
-      "tablet_desktop": "Popup displayed as centered modal with rounded corners"
+      "description": "Mobile: Popup is a full-height bottom sheet with drag-to-close + X button. Tablet/Desktop: Popup displayed as centered modal with rounded corners."
     },
     {
       "id": "R12",
       "requirement": "Closing the Popup",
-      "description": "User can close via: X icon in top-right corner, Swipe down (mobile), Click outside the modal (desktop)"
+      "description": "User can close the popup via: X icon in top-right corner, Swipe down (mobile), Click outside the modal (desktop)."
     }
   ],
-  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=3703-50&p=f&t=mQEnvCtpvkt1eu1k-11",
+  "figma_links": [
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=3703-50&p=f&t=mQEnvCtpvkt1eu1k-11",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=8894-51673&t=mQEnvCtpvkt1eu1k-11"
+  ],
   "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=741996041#gid=741996041",
+  "bmi_google_doc": "https://docs.google.com/document/d/1mPWix_1U4jct0AfwCCybJg8w9NN_1XhQnOPkdXIjSIw/edit?usp=sharing",
   "source": "Confluence Page ID 1955364894"
 }

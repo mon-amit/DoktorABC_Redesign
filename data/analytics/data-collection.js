@@ -8,25 +8,71 @@ const eventConfig = require('./event-tracking-config.json');
 
 /**
  * Event Tracking Class
- * Handles event collection and validation
+ * Handles event collection and validation with Mixpanel mapping
  */
 class EventTracker {
   constructor() {
     this.events = [];
     this.config = eventConfig;
+    this.eventMapper = null;
+
+    // Initialize event mapper if available
+    this.initializeEventMapper();
   }
 
   /**
-   * Track a user event
-   * @param {string} eventName - Name of the event
+   * Initialize the event mapper for Mixpanel event mapping
+   */
+  initializeEventMapper() {
+    try {
+      // Try to load event mapper (may not be available in all environments)
+      if (typeof require !== 'undefined') {
+        this.eventMapper = require('./event-mapper.js');
+      } else if (typeof window !== 'undefined' && window.EventMapper) {
+        this.eventMapper = window.EventMapper;
+      }
+
+      if (this.eventMapper && this.config) {
+        this.eventMapper.initialize(this.config);
+        console.log('✅ Event mapper initialized in EventTracker');
+      }
+    } catch (error) {
+      console.warn('⚠️  Event mapper not available:', error.message);
+      this.eventMapper = null;
+    }
+  }
+
+  /**
+   * Track a user event with Mixpanel mapping
+   * @param {string} eventName - Name of the event (CSV format)
    * @param {Object} properties - Event properties
    * @param {string} userId - User identifier
    */
   trackEvent(eventName, properties = {}, userId = null) {
+    // Apply event mapping if available
+    let mappedEventName = eventName;
+    let mappedProperties = { ...properties };
+
+    if (this.eventMapper) {
+      // Get mapped event name
+      const mixpanelEventName = this.eventMapper.getMixpanelEvent(eventName);
+      if (mixpanelEventName) {
+        mappedEventName = mixpanelEventName;
+      } else if (mixpanelEventName === null) {
+        // Event is explicitly unmapped (needs new Mixpanel event)
+        console.warn(`⚠️  Event "${eventName}" requires new Mixpanel event creation`);
+        return null;
+      }
+
+      // Map properties
+      mappedProperties = this.eventMapper.mapProperties(eventName, properties);
+    }
+
     const event = {
-      event: eventName,
+      event: mappedEventName,
+      original_event: eventName, // Keep original for debugging
       properties: {
-        ...properties,
+        ...mappedProperties,
         timestamp: new Date().toISOString(),
         distinct_id: userId || this.generateAnonymousId()
       }
@@ -35,10 +81,14 @@ class EventTracker {
     // Validate event against configuration
     if (this.validateEvent(event)) {
       this.events.push(event);
-      console.log(`✅ Event tracked: ${eventName}`, event.properties);
+
+      const mappingInfo = this.eventMapper ?
+        (this.eventMapper.isEventMapped(eventName) ? ' (mapped)' : ' (unmapped)') : '';
+
+      console.log(`✅ Event tracked: ${mappedEventName}${mappingInfo}`, event.properties);
 
       // Here you would send to Mixpanel MCP server
-      // mixpanel_track_event(event);
+      // this.sendToMixpanel(event);
 
       return event;
     } else {

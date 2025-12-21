@@ -1,0 +1,15 @@
+Event Name,Properties,Short Description of TRIGGER
+web_otc_brand_page_view,"brand_id, brand_name",RCA: Brand page discovery and brand interest tracking. Pre-events: OTC category page, brand carousel click
+web_otc_brand_banner_product_1_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_banner_product_2_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_banner_product_3_click,"brand_id, product_id, position",RCA: Featured product engagement from brand banner. Pre-events: Brand page view
+web_otc_brand_sale_product_click,"brand_id, product_id, position, discount_percent",RCA: Sale product interest and discount effectiveness. Pre-events: Brand page view, scroll to sale section
+web_otc_brand_all_products_load_more_click,"brand_id, current_product_count",RCA: Brand catalog exploration depth. Pre-events: View all products section
+web_otc_brand_product_card_click,"brand_id, product_id, position, section",RCA: Product interest from brand page (sale vs all products). Pre-events: Brand page view
+web_otc_brand_crm_subscribe_click,"brand_id, email",RCA: Brand-specific lead generation and newsletter opt-in. Pre-events: Scroll to CRM section
+web_otc_brand_review_carousel_next_click,"brand_id, review_index",RCA: Trust signal engagement and social proof consumption. Pre-events: View review section
+web_otc_brand_review_carousel_prev_click,"brand_id, review_index",RCA: Trust signal engagement and social proof consumption. Pre-events: View review section
+web_otc_brand_breadcrumb_home_click,"brand_id",RCA: Navigation pattern from brand page to homepage. Pre-events: Brand page view
+web_otc_brand_breadcrumb_category_click,"brand_id, category_id",RCA: Navigation pattern from brand page to category. Pre-events: Brand page view
+web_otc_brand_usps_section_view,"brand_id",RCA: Trust signal visibility (delivery, service, shipping). Pre-events: Brand page view
+web_otc_brand_description_section_view,"brand_id",RCA: Brand information engagement and credibility reading. Pre-events: Brand page view

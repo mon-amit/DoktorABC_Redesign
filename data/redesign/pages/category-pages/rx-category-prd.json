@@ -1,0 +1,269 @@
+{
+  "title": "PRD ReDesign: RX Category Page",
+  "confluence_id": "1945174024",
+  "created": "2025-10-07",
+  "last_modified": "2025-12-15",
+  "status": "Design Requirements",
+  "background": {
+    "description": "The RX Category Page serves as the main gateway for users exploring prescription treatments on DoktorABC. It must communicate trust, professionalism, and simplicity while leading users efficiently toward starting a consultation.",
+    "user_journey": {
+      "entry_points": [
+        "Organic search (Google searches for specific treatments)",
+        "Marketing campaigns"
+      ],
+      "key_needs": [
+        "Understand who we are",
+        "Understand how the process works",
+        "Trust DoktorABC to handle prescription safely and discreetly"
+      ]
+    },
+    "design_tone": "Medical, reliable tone inspired by Hims and Ro, with visual consistency matching homepage and other category pages"
+  },
+  "personas": {
+    "new_visitors": {
+      "type": "majority",
+      "characteristics": [
+        "Arrive via search engines or campaigns",
+        "Looking for a trustworthy online consultation for a prescription treatment",
+        "Need to understand the steps clearly: consultation, approval, and delivery",
+        "Sensitive to legitimacy, price transparency, and doctor credibility"
+      ]
+    },
+    "returning_users": {
+      "characteristics": [
+        "Have purchased before or used another treatment category",
+        "Expect consistency, efficiency, and reliability",
+        "Want reassurance that they'll receive the same service quality and delivery times"
+      ]
+    }
+  },
+  "success_indicators": [
+    "+20% increase in conversion from RX category page → start consultation",
+    "+10% improvement in conversion from RX category page → paid order",
+    "Maintain page bounce rate under 15%"
+  ],
+  "competitor_inspiration": [
+    {
+      "name": "Hims",
+      "url": "https://www.hims.com/",
+      "notes": "Clean, trustworthy layout with strong credibility signals"
+    },
+    {
+      "name": "Ro",
+      "url": "https://ro.co/",
+      "notes": "Clear CTAs guiding users through fast, digital prescription flow"
+    }
+  ],
+  "design_sections": [
+    {
+      "section": "Anchor Bar (Top)",
+      "requirements": [
+        "Displays general USPs identical to the homepage",
+        "Discreet & qualified treatments",
+        "Online consultation & prescription",
+        "1–2 day delivery",
+        "Secure information"
+      ],
+      "notes": "Must match homepage styling"
+    },
+    {
+      "section": "Nav Bar (Sticky)",
+      "requirements": [
+        "Company logo",
+        "Search button",
+        "Hamburger menu"
+      ],
+      "notes": "Consistent across RX pages"
+    },
+    {
+      "section": "Breadcrumb Navigation",
+      "requirements": [
+        "Displays navigation path (Home → RX Category)"
+      ],
+      "notes": "Improves orientation"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": [
+        "Hero image: man and woman hugging, looking at each other",
+        "Title text introducing the RX category",
+        "USP content (trust and simplicity message)",
+        "CTA button: Start a consultation",
+        "Trusted Shops widget below",
+        "3 visual stories guiding users through 3–4 simple steps",
+        "USPs displayed below: Delivered in 1–2 working days, Original and certified, Save time and money, Discreet service"
+      ],
+      "notes": "Must look premium and reliable"
+    },
+    {
+      "section": "Search Bar Section",
+      "requirements": [
+        "Title: Search here by product name",
+        "Prominent search bar for quick product lookup"
+      ],
+      "notes": "Improves navigation"
+    },
+    {
+      "section": "How It Works Section",
+      "requirements": [
+        "Reuse existing 3-step visual component from homepage"
+      ],
+      "notes": "Standardized layout"
+    },
+    {
+      "section": "Category Drilldown Section",
+      "requirements": [
+        "Visual display of subcategories/treatments similar to homepage category grid"
+      ],
+      "notes": "Simplifies discovery"
+    },
+    {
+      "section": "User Reviews Section",
+      "requirements": [
+        "Trusted Shops review carousel"
+      ],
+      "notes": "Build trust"
+    },
+    {
+      "section": "User Videos Section",
+      "requirements": [
+        "Carousel of 3–5 short marketing videos with: Creator name, Age, Short quote/testimonial"
+      ],
+      "notes": "Authentic social proof"
+    },
+    {
+      "section": "Doctor Section",
+      "requirements": [
+        "Doctor photo + specialization",
+        "Content about the doctor (ASO text)",
+        "CTA: Learn more"
+      ],
+      "notes": "Matches other category pages"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": [
+        "5–7 FAQs about RX treatments and the consultation process"
+      ],
+      "notes": "Accordion format"
+    },
+    {
+      "section": "Topic List Section",
+      "requirements": [
+        "Dynamic content pulled from ASO"
+      ],
+      "notes": "SEO-driven educational content"
+    },
+    {
+      "section": "Additional Content Section",
+      "requirements": [
+        "Supplementary text from ASO (educational or informational)"
+      ],
+      "notes": "Positioned below FAQ"
+    },
+    {
+      "section": "CRM Banner (Lead Capture)",
+      "requirements": [
+        "Banner promoting newsletter or special offers",
+        "User can input email or close banner"
+      ],
+      "notes": "Same as homepage"
+    },
+    {
+      "section": "Sources Section",
+      "requirements": [
+        "Dynamic content pulled from ASO"
+      ],
+      "notes": "Must include proper citations"
+    },
+    {
+      "section": "Additional Information Section",
+      "requirements": [
+        "Links to related content or policies (from ASO)"
+      ],
+      "notes": "Closes informational loop"
+    },
+    {
+      "section": "Footer",
+      "requirements": [
+        "Standard site footer with logo, navigation links, certifications, payment methods, address, disclaimer"
+      ],
+      "notes": "Consistent across DoktorABC"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "General Page Structure",
+      "description": "Every RX Category Page must be built in the same consistent structure (order): 1) Global DoktorABC USPS component, 2) Navbar component, 3) CRM coupon component, 4) Hero section, 5) Trusted Shops widget, 6) RX-specific USPs section, 7) Category search section (showing products), 8) \"How It Works\" component, 9) \"Top ratings & best guarantee\" component, 10) FAQ section, 11) Customer Reviews component, 12) Payment methods strip, 13) \"Medically and professionally tested\" section, 14) \"Your Privacy. Our Priority.\" banner, 15) Press section, 16) SEO content widget (for SEO team input), 17) More information section, 18) CRM subscription component, 19) Footer"
+    },
+    {
+      "id": "R2",
+      "requirement": "Hero Section (Category Header)",
+      "description": "The Hero section contains: Category image (pulled from BO, admin can upload/replace), Breadcrumb navigation path - identical behavior to production (\"Home → Category\"), Main title - pulled from BO, Subtitle (category description) - pulled from BO, Call to Action button: \"Go to medical quest\". The button color is controlled by the category's main and secondary colors, which are defined in the BO per category. Sticky behavior: On mobile, the CTA button must be sticky at the bottom of the screen. On desktop, the CTA appears inside the navbar."
+    },
+    {
+      "id": "R3",
+      "requirement": "Medical Evaluation & Prescription Section",
+      "description": "Display the line: \"Medical evaluation and prescription: €18.90 + cannabis-based medication from €3.00\". The numbers (€18.90 and €3.00) are pulled dynamically from the DB, just like in production."
+    },
+    {
+      "id": "R4",
+      "requirement": "Trusted Shops Widget",
+      "description": "Integrate the Trusted Shops widget exactly as in production, same source and behavior."
+    },
+    {
+      "id": "R5",
+      "requirement": "RX Category USPS Section",
+      "description": "Display the following fixed USPs for all RX category pages: 1) Prescription is issued online - No clinic visit needed, 2) Delivered in 1–2 working days - Fast, reliable delivery, 3) Original German medicine - From certified pharmacies, 4) Advice via online questionnaire - Quick medical guidance"
+    },
+    {
+      "id": "R6",
+      "requirement": "Category Search Section",
+      "description": "Display a search component specific to the current RX category. The search results must show only products that belong to this category (as in current production)."
+    },
+    {
+      "id": "R7",
+      "requirement": "\"How It Works\" Component",
+      "description": "Display the standard DoktorABC \"How It Works\" component - static, informative, and visually consistent with other pages."
+    },
+    {
+      "id": "R8",
+      "requirement": "\"Top Ratings & Best Guarantee\" Component",
+      "description": "Add the \"Top Ratings & Best Guarantee\" component (same design and logic as other pages)."
+    },
+    {
+      "id": "R9",
+      "requirement": "FAQ Section",
+      "description": "The FAQ component must display questions and answers pulled from the BO, exactly as in current production. The first question is open by default. Localization per country (FR/DE) is required."
+    },
+    {
+      "id": "R10",
+      "requirement": "Customer Reviews Section",
+      "description": "Display the standard Customer Reviews component used across DoktorABC pages. Pulls reviews dynamically from the DB."
+    },
+    {
+      "id": "R11",
+      "requirement": "Payment Methods Section",
+      "description": "Display a horizontal strip of all payment method logos (credit card, PayPal, Klarna, etc.), same as current production design."
+    },
+    {
+      "id": "R12",
+      "requirement": "\"Medically and Professionally Tested\" Section",
+      "description": "Display the \"Medically and professionally tested\" section with content exactly as implemented in production, using data from the same DB source."
+    },
+    {
+      "id": "R13",
+      "requirement": "\"Your Privacy. Our Priority.\" Banner",
+      "description": "Display the \"Your Privacy. Our Priority.\" banner (same design and logic as other pages)."
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=Vg83C0ZXAteeI0s4-1",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9791-14284&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_links": [
+    "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1029534888#gid=1029534888"
+  ],
+  "source": "Confluence Page ID 1945174024"
+}

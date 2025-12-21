@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoktorABC Event Mapping CSV Browser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .page-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .page-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .page-header {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .page-stats {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .page-stat {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .page-content {
+            padding: 1rem;
+        }
+
+        .event-list {
+            list-style: none;
+        }
+
+        .event-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.9rem;
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-name {
+            font-weight: 500;
+            color: #2563eb;
+            font-size: 0.85rem;
+        }
+
+        .event-properties {
+            color: #64748b;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .filter-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 DoktorABC Event Mapping</h1>
+        <p>179 Events Across 12 Page Types - Ready for PM Review & Implementation</p>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">179</div>
+                <div class="stat-label">Total Events</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24</div>
+                <div class="stat-label">CSV Files</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Page Types</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Coverage Complete</div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h3>📊 Quick Filters</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Pages</button>
+                <button class="filter-btn" data-filter="homepage">Homepage</button>
+                <button class="filter-btn" data-filter="category">Category</button>
+                <button class="filter-btn" data-filter="product">Product</button>
+                <button class="filter-btn" data-filter="search">Search OTC</button>
+                <button class="filter-btn" data-filter="otc-brand">OTC Brand</button>
+                <button class="filter-btn" data-filter="bmi">BMI Calculator</button>
+                <button class="filter-btn" data-filter="information">Information</button>
+                <button class="filter-btn" data-filter="web">Web Only</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Only</button>
+            </div>
+        </div>
+
+        <div class="page-grid" id="pageGrid">
+            <!-- Pages will be loaded dynamically -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Generated:</strong> December 15, 2025 | <strong>Files:</strong> 24 CSV review tables | <strong>Next:</strong> Mixpanel event taxonomy planning session</p>
+        <p><strong>Usage:</strong> Click download buttons to open CSV files in Excel/Google Sheets | Use filters to focus on specific pages/platforms</p>
+    </div>
+
+    <script>
+        // Sample data - in production, this would load from the CSV files
+        const pagesData = [
+            {
+                name: "Homepage",
+                webEvents: 19,
+                mobileEvents: 1,
+                totalEvents: 20,
+                keyEvents: [
+                    { name: "web_homepage_cta_start_click", properties: "treatment_type" },
+                    { name: "web_homepage_button_category_skin_click", properties: "category_id" },
+                    { name: "web_homepage_card_acne_cream_click", properties: "product_id, product_name" },
+                    { name: "web_homepage_button_newsletter_subscribe_click", properties: "email, preferences" }
+                ],
+                webCsv: "review-table-homepage-web.csv",
+                mobileCsv: "review-table-homepage-mobile.csv"
+            },
+            {
+                name: "Category",
+                webEvents: 23,
+                mobileEvents: 0,
+                totalEvents: 23,
+                keyEvents: [
+                    { name: "web_category_button_filter_click", properties: "filter_type, filter_value" },
+                    { name: "web_category_card_product_click", properties: "product_id, position" },
+                    { name: "web_category_button_sort_click", properties: "sort_type" },
+                    { name: "web_category_pagination_click", properties: "page_number" }
+                ],
+                webCsv: "review-table-category-web.csv",
+                mobileCsv: "review-table-category-mobile.csv"
+            },
+            {
+                name: "Product",
+                webEvents: 17,
+                mobileEvents: 1,
+                totalEvents: 18,
+                keyEvents: [
+                    { name: "web_product_button_add_to_cart_click", properties: "product_id, quantity" },
+                    { name: "web_product_quantity_increase_click", properties: "current_quantity" },
+                    { name: "web_product_image_gallery_click", properties: "image_index" },
+                    { name: "web_product_tab_reviews_click", properties: "tab_name" }
+                ],
+                webCsv: "review-table-product-web.csv",
+                mobileCsv: "review-table-product-mobile.csv"
+            },
+            {
+                name: "Checkout",
+                webEvents: 5,
+                mobileEvents: 0,
+                totalEvents: 5,
+                keyEvents: [
+                    { name: "web_checkout_button_continue_click", properties: "step_number" },
+                    { name: "web_checkout_payment_method_select", properties: "payment_type" },
+                    { name: "web_checkout_button_place_order_click", properties: "order_total, items_count" }
+                ],
+                webCsv: "review-table-checkout-web.csv",
+                mobileCsv: "review-table-checkout-mobile.csv"
+            },
+            {
+                name: "Account",
+                webEvents: 9,
+                mobileEvents: 0,
+                totalEvents: 9,
+                keyEvents: [
+                    { name: "web_account_button_login_click", properties: "login_method" },
+                    { name: "web_account_form_register_submit", properties: "registration_type" },
+                    { name: "web_account_button_logout_click", properties: "session_duration" }
+                ],
+                webCsv: "review-table-account-web.csv",
+                mobileCsv: "review-table-account-mobile.csv"
+            },
+            {
+                name: "Search OTC",
+                webEvents: 19,
+                mobileEvents: 2,
+                totalEvents: 21,
+                keyEvents: [
+                    { name: "web_search_input_focus", properties: "search_context" },
+                    { name: "web_search_suggestion_click", properties: "suggestion_text, position" },
+                    { name: "web_search_results_filter_click", properties: "filter_type, filter_value" },
+                    { name: "web_search_button_clear_click", properties: "current_query" }
+                ],
+                webCsv: "review-table-search-otc-web.csv",
+                mobileCsv: "review-table-search-otc-mobile.csv"
+            },
+            {
+                name: "Navigation",
+                webEvents: 6,
+                mobileEvents: 1,
+                totalEvents: 7,
+                keyEvents: [
+                    { name: "web_navigation_menu_category_click", properties: "category_name" },
+                    { name: "web_navigation_footer_link_click", properties: "link_type, link_text" },
+                    { name: "mobile_navigation_hamburger_open", properties: "current_page" }
+                ],
+                webCsv: "review-table-navigation-web.csv",
+                mobileCsv: "review-table-navigation-mobile.csv"
+            },
+            {
+                name: "Popups",
+                webEvents: 12,
+                mobileEvents: 0,
+                totalEvents: 12,
+                keyEvents: [
+                    { name: "web_popup_age_verify_show", properties: "trigger_reason" },
+                    { name: "web_popup_newsletter_show", properties: "display_context" },
+                    { name: "web_popup_cookie_consent_accept", properties: "consent_choices" }
+                ],
+                webCsv: "review-table-popups-web.csv",
+                mobileCsv: "review-table-popups-mobile.csv"
+            },
+            {
+                name: "Treatment",
+                webEvents: 3,
+                mobileEvents: 0,
+                totalEvents: 3,
+                keyEvents: [
+                    { name: "web_treatment_questionnaire_start", properties: "entry_point" },
+                    { name: "web_treatment_button_next_click", properties: "current_step, total_steps" },
+                    { name: "web_treatment_form_submit", properties: "treatment_recommendations" }
+                ],
+                webCsv: "review-table-treatment-web.csv",
+                mobileCsv: "review-table-treatment-mobile.csv"
+            },
+            {
+                name: "OTC Brand Page",
+                webEvents: 14,
+                mobileEvents: 7,
+                totalEvents: 21,
+                keyEvents: [
+                    { name: "web_otc_brand_page_view", properties: "brand_name, entry_source" },
+                    { name: "web_otc_brand_featured_product_click", properties: "product_id, position" },
+                    { name: "web_otc_brand_sale_product_click", properties: "product_id, discount_percentage" },
+                    { name: "web_otc_brand_crm_subscribe_click", properties: "subscription_type" }
+                ],
+                webCsv: "review-table-otc-brand-web.csv",
+                mobileCsv: "review-table-otc-brand-mobile.csv"
+            },
+            {
+                name: "BMI Calculator",
+                webEvents: 10,
+                mobileEvents: 8,
+                totalEvents: 18,
+                keyEvents: [
+                    { name: "web_bmi_calculator_input_change", properties: "input_type, value" },
+                    { name: "web_bmi_calculator_calculate_click", properties: "height, weight, unit_system" },
+                    { name: "web_bmi_calculator_result_display", properties: "bmi_value, category, health_status" },
+                    { name: "web_bmi_calculator_consultation_cta_click", properties: "bmi_category, urgency_level" }
+                ],
+                webCsv: "review-table-bmi-calculator-web.csv",
+                mobileCsv: "review-table-bmi-calculator-mobile.csv"
+            },
+            {
+                name: "Information Pages",
+                webEvents: 13,
+                mobileEvents: 9,
+                totalEvents: 22,
+                keyEvents: [
+                    { name: "web_information_page_view", properties: "page_slug, referrer" },
+                    { name: "web_information_faq_expand_click", properties: "question_id, section" },
+                    { name: "web_information_cta_click", properties: "cta_type, page_context" },
+                    { name: "web_information_error_recovery_click", properties: "error_type, recovery_action" }
+                ],
+                webCsv: "review-table-information-pages-web.csv",
+                mobileCsv: "review-table-information-pages-mobile.csv"
+            }
+        ];
+
+        function createPageCard(page) {
+            return `
+                <div class="page-card" data-page="${page.name.toLowerCase()}">
+                    <div class="page-header">
+                        <div class="page-title">${page.name}</div>
+                        <div class="page-stats">
+                            <span class="page-stat">Web: ${page.webEvents}</span>
+                            <span class="page-stat">Mobile: ${page.mobileEvents}</span>
+                            <span class="page-stat">Total: ${page.totalEvents}</span>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <ul class="event-list">
+                            ${page.keyEvents.map(event => `
+                                <li class="event-item">
+                                    <div class="event-name">${event.name}</div>
+                                    <div class="event-properties">${event.properties}</div>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                            <a href="excel-files/${page.webCsv}" class="download-btn" target="_blank">📊 Web CSV</a>
+                            <a href="excel-files/${page.mobileCsv}" class="download-btn" target="_blank">📱 Mobile CSV</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPages(filter = 'all') {
+            const grid = document.getElementById('pageGrid');
+            let filteredPages = pagesData;
+
+            if (filter === 'web') {
+                filteredPages = pagesData.filter(page => page.webEvents > 0);
+            } else if (filter === 'mobile') {
+                filteredPages = pagesData.filter(page => page.mobileEvents > 0);
+            } else if (filter !== 'all') {
+                filteredPages = pagesData.filter(page => page.name.toLowerCase().includes(filter));
+            }
+
+            grid.innerHTML = filteredPages.map(createPageCard).join('');
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPages(btn.dataset.filter);
+            });
+        });
+
+        // Initial render
+        renderPages();
+    </script>
+</body>
+</html>

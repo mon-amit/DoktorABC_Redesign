@@ -1,0 +1,225 @@
+{
+  "title": "DoktorABC website & funnel review – Improvement ideas",
+  "confluence_id": "1899626551",
+  "created": "2025-08-17",
+  "document_status": "DRAFT",
+  "participants": ["Dean Gabay", "Multiple team members"],
+  "meeting_length": "3 hours (11:00-15:00)",
+  "key_objectives": [
+    "Prioritize funnel optimizations: Consolidate all CRO and funnel improvement tasks into a clear roadmap",
+    "Pricing transparency on the invoice: Confirm whether invoices display full price breakdown (medication, service/consultation fee, shipping)",
+    "Treatment selection page clarity: Find clearer solution to ensure customers understand monthly treatment plan. Issue tied to >15% of cancellations in CS.",
+    "CRM / Coupon Code Logic: Expand coupon functionality so promo codes can be applied to service fees and delivery fees, not only product price"
+  ],
+  "homepage_improvements": [
+    {
+      "page": "Homepage",
+      "requirement": "Add a 'Back to Top' scroll icon for easier navigation on long pages (apply to desktop & mobile)",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Homepage",
+      "requirement": "Doctors' section enhancement: Add field of practice/specialization and years of experience for each doctor to build trust and transparency",
+      "priority": "Low",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "category_page_improvements": [
+    {
+      "page": "Category",
+      "requirement": "Update displayed pricing for ED category: reflect current service fee and minimum medication price, instead of outdated. Include explanatory note that prices include tax and service fees for transparency.",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Category",
+      "requirement": "Add reassurance bullet point: 'You pay nothing if the prescription is not issued' to build trust",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Category",
+      "requirement": "Update the delivery/service bullet text to 'Fast delivery and discreet service' (replacing the old phrasing)",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Category",
+      "requirement": "Implement a floating CTA button (e.g. 'Start Consultation') on category listing pages for mobile users once they scroll, to keep the call-to-action visible",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Category",
+      "requirement": "Add a 'Quick Reorder' CTA for returning customers on category pages (e.g. 'Schnell nachbestellen' button) to shorten the repeat purchase flow",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    }
+  ],
+  "product_page_improvements": [
+    {
+      "page": "Product Page",
+      "requirement": "Remove the 'Free delivery' label/promo on product pages (no longer applicable)",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Product Page",
+      "requirement": "Fix pricing display bug: ensure the product page shows the correct up-to-date price at all times (currently not updating properly)",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Product Page",
+      "requirement": "Fix stock status logic: resolve the bug where products in stock are incorrectly shown as 'not in stock' on the product page",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "start_consultation_improvements": [
+    {
+      "page": "Start Consultation",
+      "requirement": "Update the informational pop-up content (triggered by the 'About our doctors/pharmacies' link) with current and accurate information",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "search_results_improvements": [
+    {
+      "page": "Search (Header)",
+      "requirement": "Implement search suggestions/autocomplete showing top searches or popular categories when a user engages the search bar (to educate and ease navigation)",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Search Results",
+      "requirement": "Improve the search results page layout to show more products above the fold: reduce unnecessary header space and simplify product cards so that more items are immediately visible on desktop and mobile",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Search Results",
+      "requirement": "Handle 'no results' cases by displaying a section of best-selling or popular products (with a 'Most popular' heading) instead of an empty results page",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "treatment_selection_improvements": [
+    {
+      "page": "Choose Treatment Page",
+      "requirement": "Unify design of tablet/package selection across all drugs (Germany vs. non-Germany manufactured). Add clear emphasis if a drug is manufactured outside Germany.",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Choose Treatment Page",
+      "requirement": "Fix pricing bug: ensure drug price and tablet quantity selection show consistent, correct pricing (currently misaligned)",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Choose Treatment Page",
+      "requirement": "Reconsider pricing display: explore options for clearer breakdown (drug + service + shipping). Ensure regulatory compliance.",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Choose Treatment Page",
+      "requirement": "Add clear monthly plan indicator: explicitly show the user that they are choosing a recurring monthly treatment plan and what it includes",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "checkout_improvements": [
+    {
+      "page": "Checkout",
+      "requirement": "Show full price breakdown of OTC product in the order summary: list every OTC product cost",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Checkout",
+      "requirement": "Add a 'risk-free' message near the price/CTA to reassure users (e.g. 'You'll only be charged if the doctor approves your prescription. If not, you won't be charged.')",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Checkout",
+      "requirement": "A/B Test: Change the CTA text on the shipping page from 'Confirm and Pay' to a softer 'Proceed to Checkout', and add subtext '(you won't be charged yet)' below it",
+      "priority": "Medium",
+      "status": "To Do",
+      "ab_test": "Yes"
+    },
+    {
+      "page": "Checkout",
+      "requirement": "Reposition the coupon code field closer to the order total summary section for better visibility",
+      "priority": "Low",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "page": "Checkout",
+      "requirement": "Refine payment step UI: do not auto-expand the credit card input by default, and consider displaying the most relevant payment method first based on product category or country",
+      "priority": "Low",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "my_account_improvements": [
+    {
+      "page": "My Account",
+      "requirement": "Fix the order details view bug where an extra €29.00 service fee line is shown, so that the order total displayed to the user is correct (remove the duplicate fee entry)",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    }
+  ],
+  "marketing_crm_tasks": [
+    {
+      "area": "Ads/Landing Pages",
+      "requirement": "Audit and update all ad copies, landing pages, and on-site pop-ups to remove or correct any 'Free delivery' or outdated fee messaging",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "area": "Email & CRM Campaigns",
+      "requirement": "Update automated email templates and CRM campaigns to reflect the new fee policy – replace 'Free consultation fee' with '50% off consultation fee' in all communications",
+      "priority": "High",
+      "status": "To Do",
+      "ab_test": "No"
+    },
+    {
+      "area": "Trustpilot Pop-up",
+      "requirement": "Refresh the Trustpilot rating image in the customer feedback pop-up (use the updated branding/asset)",
+      "priority": "Low",
+      "status": "In Progress",
+      "ab_test": "No"
+    }
+  ],
+  "total_improvements": 26,
+  "high_priority_items": 9,
+  "ab_test_candidates": 6,
+  "source": "Confluence Page ID 1899626551"
+}

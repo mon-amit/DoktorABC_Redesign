@@ -1,0 +1,10 @@
+Event Name,Properties,Short Description of TRIGGER
+mobile_information_page_view,"page_type, page_id",RCA: Information page discovery and trust-building engagement (mobile). Pre-events: Footer link, navigation menu, external link
+mobile_information_page_cta_click,"page_type, cta_type, page_id",RCA: Conversion from information pages to main funnel (mobile). Pre-events: Information page view
+mobile_information_page_faq_accordion_open,"page_type, faq_id, page_id",RCA: FAQ engagement and information seeking behavior (mobile). Pre-events: Information page view
+mobile_information_page_faq_accordion_close,"page_type, faq_id, page_id",RCA: FAQ content consumption completion (mobile). Pre-events: FAQ accordion open
+mobile_information_page_section_scroll,"page_type, section_name, scroll_depth, page_id",RCA: Content engagement depth and reading behavior (mobile). Pre-events: Information page view
+mobile_information_page_link_click,"page_type, link_destination, page_id",RCA: Cross-page navigation and information architecture usage (mobile). Pre-events: Information page view
+mobile_shipping_page_method_card_click,"shipping_method",RCA: Shipping option interest and delivery preference (mobile). Pre-events: Shipping page view
+mobile_error_page_home_click,"error_type, error_code",RCA: Error recovery and user retention from error pages (mobile). Pre-events: Error page view
+mobile_error_page_help_click,"error_type, error_code",RCA: Support need identification from error pages (mobile). Pre-events: Error page view

@@ -1,0 +1,184 @@
+{
+  "title": "PRD ReDesign: Information Pages",
+  "confluence_id": "1996324916",
+  "created": "2025-11-16",
+  "overview": "This PRD defines the full set of development requirements for all Information Pages included in the DoktorABC platform redesign. These pages are core trust-building assets and serve as high-visibility entry points across marketing, SEO, and customer education.",
+  "implementation_requirement": "Each page must be implemented as a pixel-perfect translation of the Figma design, with clear CMS control for translatable text and structured dynamic content.",
+  "multi_region_support": "All pages must be fully integrated and deployed in France and Switzerland, using language-appropriate translations and ensuring that no UI element breaks the experience in any locale.",
+  "scope_of_pages": [
+    "Shipping & Delivery",
+    "Press / Newsroom",
+    "Editorial Process",
+    "Manufacturers & Suppliers",
+    "Manufacturer Detail Page (Cannabis)",
+    "Medical Treatment Overview Page",
+    "Customer Reviews – Our Customers' Experiences",
+    "About Us",
+    "How DoktorABC Works"
+  ],
+  "general_development_guidelines": {
+    "localization_multi_region": {
+      "requirements": [
+        "Every page must fully support DE and FR translations",
+        "Content must adapt to France and Switzerland without breaking layout or UI",
+        "All static text must be pulled from translation files or CMS fields"
+      ]
+    },
+    "global_components": [
+      "Sticky global Navbar",
+      "Global Footer",
+      "Bottom USP Strip",
+      "CRM subscription components (where applicable)",
+      "Trusted Shops & Trustpilot rating widgets",
+      "Review cards component",
+      "Three-step 'How it Works' component",
+      "Carousel components (doctors, products, press)"
+    ]
+  },
+  "shipping_delivery_page": {
+    "requirements": [
+      {
+        "id": "R1",
+        "requirement": "Navbar",
+        "description": "Display global sticky navbar: logo, search bar, account icon, cart icon, menu"
+      },
+      {
+        "id": "R2",
+        "requirement": "Breadcrumbs",
+        "description": "Show breadcrumbs: Home → About → Shipping & Delivery"
+      },
+      {
+        "id": "R3",
+        "requirement": "Hero Section",
+        "description": "Background image, Title, Description paragraph, CTA: 'Go to medical questions'"
+      },
+      {
+        "id": "R4",
+        "requirement": "Shipping USP Bar",
+        "description": "Horizontal bar with shipping USPs: 2-hour express, Neutral packaging, Delivery depending on urgency, Medical privacy, Secure ordering, 1-2 days delivery, 24/7 service"
+      },
+      {
+        "id": "R5",
+        "requirement": "Shipping Methods Section",
+        "description": "Three cards: 2-hour express courier, DHL Express 24-48h, Pick up on site"
+      },
+      {
+        "id": "R6",
+        "requirement": "Neutral Packaging Section",
+        "description": "Title with two sub-cards explaining what neutral packaging means and why"
+      },
+      {
+        "id": "R7",
+        "requirement": "How Your Shipping Works Section",
+        "description": "4-step visual explanation with icons and labels"
+      },
+      {
+        "id": "R8",
+        "requirement": "FAQ Section",
+        "description": "6 shipping FAQs in accordion format"
+      },
+      {
+        "id": "R9",
+        "requirement": "Call to Action",
+        "description": "'Ready for your treatment?' section with Start Consultation button"
+      },
+      {
+        "id": "R10",
+        "requirement": "Category Navigation Bar",
+        "description": "Horizontal bar with key category icons"
+      },
+      {
+        "id": "R11",
+        "requirement": "Accepted Payment Methods",
+        "description": "Display payment badges using SVG icons"
+      },
+      {
+        "id": "R12",
+        "requirement": "Notes Box",
+        "description": "Yellow highlighted notes block with shipping notes/legal disclaimer"
+      },
+      {
+        "id": "R13",
+        "requirement": "Footer",
+        "description": "Render full global footer with navigation, company info, certifications"
+      }
+    ],
+    "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-84592&p=f&t=F5at0F3hLYIB0bIH-11"
+  },
+  "press_newsroom_page": {
+    "requirements": [
+      {
+        "id": "R1-R2",
+        "requirement": "Navbar & Breadcrumbs",
+        "description": "Standard navigation components"
+      },
+      {
+        "id": "R3",
+        "requirement": "Hero Section",
+        "description": "Large background image, Title: 'DoktorABC Newsroom', Description, CTA, Trusted Shops score badge"
+      },
+      {
+        "id": "R4",
+        "requirement": "Contact CTA Section",
+        "description": "PR contact card with name, position, email, phone number, center image"
+      },
+      {
+        "id": "R5",
+        "requirement": "Media Kit Download Buttons",
+        "description": "Section 'Our Media Kit' with 2 download items: Logo (brand assets), Visuals (images & graphics)"
+      },
+      {
+        "id": "R6",
+        "requirement": "Press Articles Section",
+        "description": "Grid of press articles from DB. Each card: thumbnail, author, date, title, excerpt. Sorted newest → oldest."
+      },
+      {
+        "id": "R7",
+        "requirement": "Load More Press Button",
+        "description": "Loads next batch via pagination. Default: 6 (desktop), 3 (mobile)"
+      },
+      {
+        "id": "R8",
+        "requirement": "Research and Studies Section",
+        "description": "Display research articles and medical studies"
+      }
+    ],
+    "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-84592&p=f&t=F5at0F3hLYIB0bIH-11"
+  },
+  "additional_info_pages": {
+    "editorial_process": {
+      "description": "Explains DoktorABC's content creation and medical review process",
+      "key_sections": ["Editorial standards", "Medical review process", "Source citations", "Update frequency"]
+    },
+    "manufacturers_suppliers": {
+      "description": "Overview of partner pharmacies and suppliers",
+      "key_sections": ["Partner network", "Quality standards", "Certifications", "Location map"]
+    },
+    "manufacturer_detail_cannabis": {
+      "description": "Detailed pages for each cannabis manufacturer",
+      "key_sections": ["Company info", "Product catalog", "Quality certifications", "Lab reports"]
+    },
+    "medical_treatment_overview": {
+      "description": "Comprehensive treatment category overview",
+      "key_sections": ["Available treatments", "Medical process", "Doctor network", "Success rates"]
+    },
+    "customer_reviews_experiences": {
+      "description": "Dedicated review aggregation page",
+      "key_sections": ["Trustpilot integration", "Video testimonials", "Review statistics", "Rating breakdown"]
+    },
+    "how_doktorabc_works": {
+      "description": "Complete service explanation page",
+      "key_sections": ["Step-by-step process", "Doctor credentials", "Pharmacy network", "Delivery options"]
+    }
+  },
+  "technical_requirements": {
+    "cms_control": "All static content editable via CMS",
+    "dynamic_content": "Reviews, ratings, doctor profiles pulled from DB/API",
+    "localization": "Full DE/FR support with fallback handling",
+    "responsive_design": "Mobile-first with desktop optimization",
+    "seo_optimization": "Meta tags, structured data, fast loading",
+    "performance": "Google PageSpeed ≥90, Core Web Vitals compliant"
+  },
+  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-84592&p=f&t=F5at0F3hLYIB0bIH-11",
+  "source": "Confluence Page ID 1996324916"
+}

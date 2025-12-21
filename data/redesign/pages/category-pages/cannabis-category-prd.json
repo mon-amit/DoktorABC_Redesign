@@ -1,0 +1,292 @@
+{
+  "title": "PRD ReDesign: Cannabis Category Page",
+  "confluence_id": "1930068084",
+  "created": "2025-09-20",
+  "status": "Design Requirements",
+  "background": {
+    "monthly_visits": "~350K",
+    "current_performance": {
+      "search_usage": "90K queries/month",
+      "conversion_to_purchase": "16.21%",
+      "abandonment_rate": "~50%",
+      "scroll_depth": {
+        "search_bar": "65%",
+        "how_it_works": "39%",
+        "mid_faq": "21%"
+      }
+    }
+  },
+  "personas": {
+    "recreational_cannabis_users": {
+      "type": "primary volume",
+      "characteristics": [
+        "Arrive mainly via marketing campaigns",
+        "Goals: fast access, clear timelines for approval and delivery, transparency about pricing, cancellation, and doctor approval",
+        "Sensitive to price, THC %, and quality of flower",
+        "Some come looking for specific strains; want stock visibility immediately"
+      ]
+    },
+    "cannabis_patients": {
+      "characteristics": [
+        "Use cannabis for anxiety, depression, chronic pain, or other medical conditions",
+        "Less familiar with strains/products; rely on doctor guidance",
+        "Require reassurance: professional process, secure data handling, privacy",
+        "Need clarity on prescription-only flows and treatment recommendations"
+      ]
+    }
+  },
+  "user_problems": [
+    "Users don't understand clearly how the process works and how long approval takes",
+    "Delivery options are unclear, users need transparent info about 1-2 day delivery, 2h express, and self-pickup",
+    "Users lack trust in quality and availability of cannabis flowers (stock visibility is essential)",
+    "No clear explanation of cancellation and refund policy",
+    "Prescription-only flow is confusing - patients don't understand what happens if a doctor rejects their request",
+    "Stock listing lacks key information (THC %, CBD %, strain type, availability)",
+    "No effective filtering/search tools for quickly finding relevant products"
+  ],
+  "success_indicators": [
+    "+20% increase in conversion to consultation start page",
+    "+10% increase in conversion from category page to paid order"
+  ],
+  "analytics_data": {
+    "unique_users_landing": "350K",
+    "new_users": "277K",
+    "returning_users": "73K",
+    "search_bar_usage": "90K",
+    "conversion_view_to_purchase": "16.21%",
+    "funnel_drop_off": "50% abandonment"
+  },
+  "competitor_inspiration": [
+    {
+      "name": "Canngo Express",
+      "url": "https://canngo.express/"
+    },
+    {
+      "name": "Bloomwell",
+      "url": "https://bloomwell.de/en/"
+    },
+    {
+      "name": "MedCanOneStop",
+      "url": "https://medcanonestop.com/cannabis-rezept/"
+    }
+  ],
+  "design_sections": [
+    {
+      "section": "Header",
+      "requirements": [
+        "Doktorabc logo",
+        "Search bar Icon",
+        "Hamburger menu"
+      ],
+      "notes": "Consistent with homepage"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": [
+        "Trusted Shop widget",
+        "Main green title: 'Therapy with medical cannabis'",
+        "Subtitle: 'Simple. Reliable. Fast.'",
+        "Content: 'Get quick and legal access to individualized therapy from experienced doctors via telemedicine. Self-pickup in 1H or delivery within 1-2 business days.'",
+        "USPs with green V: 1) 4500+ cannabis flowers 2) Register in 5 minutes 3) Express 2h / Self-pickup / 1-2 days delivery",
+        "CTA: 'Find my treatment'",
+        "Below CTA: 'Medical assessment and prescription €18.90 + Cannabis therapeutic from €3.00'",
+        "Image of high-quality cannabis flower (real, green color, not too much AI look)"
+      ],
+      "notes": "Hero must look premium but approachable"
+    },
+    {
+      "section": "Product Search Screen",
+      "requirements": [
+        "Title: 'Search for product'",
+        "Subtitle: 'Use the search bar below to check our prices and medication stock.'",
+        "Search bar",
+        "Filters: Sort by (All, Popular, THC High→Low, THC Low→High, CBD High→Low, CBD Low→High), Strain (All, Indica, Sativa, Hybrid)",
+        "Row: 'Number of products found'",
+        "Product card includes: product image, strain label, THC/CBD amount, product name, strain type, CTA to product page"
+      ],
+      "notes": "Focus on usability, transparency"
+    },
+    {
+      "section": "How it Works",
+      "requirements": [
+        "Title: 'How do I get my medical cannabis treatment?'",
+        "Carousel with 3 steps (visual)"
+      ],
+      "notes": "Same steps as site; reuse pattern across pages"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": [
+        "All 16 FAQs from current cannabis page",
+        "One example open by default"
+      ],
+      "notes": "Accordion style"
+    },
+    {
+      "section": "User Reviews",
+      "requirements": [
+        "Carousel with Trusted Shop reviews",
+        "Includes rating number, reviewer name, score"
+      ],
+      "notes": "Trust driver"
+    },
+    {
+      "section": "Press Section",
+      "requirements": [
+        "Auto-moving carousel of logos (in color or gray) in this order: de.finance.yahoo, Tagesspiegel, nachhaltig leben, nordbayern.de, OK! Magazin, Vital"
+      ],
+      "notes": "Brand credibility"
+    },
+    {
+      "section": "Medical Advisory Board",
+      "requirements": [
+        "Title: 'Our medical advisory board'",
+        "Subtitle: 'Hims was built with real doctors… cutting-edge of:'",
+        "3 doctor cards (photo, name, specialty)",
+        "CTA button: 'Meet our doctors'"
+      ],
+      "notes": "Same structure as homepage"
+    },
+    {
+      "section": "Disclaimer & Legal Disclosure",
+      "requirements": [
+        "Disclaimer + legal text as on current site"
+      ],
+      "notes": "No changes"
+    },
+    {
+      "section": "Hero Section (Repeat)",
+      "requirements": [
+        "Re-display hero section at the bottom"
+      ],
+      "notes": "Reinforces call to action"
+    },
+    {
+      "section": "Weitere Infos",
+      "requirements": [
+        "Section with relevant internal links"
+      ],
+      "notes": "Same styling as site"
+    },
+    {
+      "section": "Footer",
+      "requirements": [
+        "Standard site footer: logo, accordion links, payment methods, flags, address, certifications, copyright, disclaimer"
+      ],
+      "notes": "Consistent across site"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "USPS Component",
+      "description": "Display the global DoktorABC USPS component at the top of the page. It should maintain the same layout, icons, and rotation logic as other pages."
+    },
+    {
+      "id": "R2",
+      "requirement": "Navbar Component",
+      "description": "Display the global Navbar of the site. It includes: company logo, search bar, cart, My Account, and hamburger menu. The Navbar must be sticky while scrolling."
+    },
+    {
+      "id": "R3",
+      "requirement": "Cannabis Category CRM Coupon Component",
+      "description": "Display the CRM coupon strip for the Cannabis category. The coupon text and design are pulled dynamically from CRM. On mobile, the coupon appears above the navbar."
+    },
+    {
+      "id": "R4",
+      "requirement": "Breadcrumb Navigation",
+      "description": "Display the navigation path showing the user's route from Home → Cannabis Category → Product Page."
+    },
+    {
+      "id": "R5",
+      "requirement": "Hero Section",
+      "description": "The Hero Section includes: Category image pulled dynamically from the DB (editable in BO). Category title and secondary title pulled from DB (localized). 'Go to funnel' CTA button that navigates to the start of the cannabis consultation flow. A medical evaluation and prescription bar that displays: '€18.90 + cannabis-based medication from €3.00'. Both values are dynamic and pulled from DB. Trusted Shops widget (same logic as production) displayed below the pricing bar."
+    },
+    {
+      "id": "R6",
+      "requirement": "Cannabis USPS Section",
+      "description": "Display the following cannabis-specific USPs (icons and short descriptions): 1500+ cannabis flowers – Real-time stock: the number is pulled dynamically from DB showing total available cannabis flower SKUs. Delivery options: Express 2h, Self-pickup, 1-2 days delivery. Register in 5 minutes – Just 3 steps. 24/7 customer service – Quick medical guidance. All text and formatting must match the design in Figma and be fully localized for FR/DE."
+    },
+    {
+      "id": "R7",
+      "requirement": "Search Section",
+      "description": "The search section includes: Search bar - identical logic and design as the current cannabis product search (pulls from DB). By default, no products are displayed on the category page until the user clicks on the search bar (same behavior as production). Once clicked, products are displayed, each card showing: Product image, Product name, Strain, % of THC and CBD, Price starting from (dynamic from DB), CTA 'Start consultation' (leads to the cannabis funnel)."
+    },
+    {
+      "id": "R8",
+      "requirement": "How It Works Component",
+      "description": "Display the 'How It Works' component of the site. Use the same layout and step descriptions as other DoktorABC pages."
+    },
+    {
+      "id": "R9",
+      "requirement": "Press Component",
+      "description": "Display the Press Section identical to the homepage version, showing 'DoktorABC in the Press' and a rotating logo carousel. The headline remains static."
+    },
+    {
+      "id": "R10",
+      "requirement": "FAQ Widget",
+      "description": "Display the FAQ widget, pulling all questions and answers dynamically from the DB. The first question should open by default. Content must be localized per country."
+    },
+    {
+      "id": "R11",
+      "requirement": "Cannabis Category Drilldown Component",
+      "description": "Display the Cannabis Category Drilldown component. Each drilldown block contains personalized CTAs and copy related to cannabis use cases, encouraging the user to start the consultation funnel."
+    },
+    {
+      "id": "R12",
+      "requirement": "Your Privacy. Our Priority. Component",
+      "description": "Display the privacy banner component. Text and icons must follow global site design and be localized (FR/DE)."
+    },
+    {
+      "id": "R13",
+      "requirement": "Self Pickup Banner",
+      "description": "Display the Self-Pickup banner with text explaining the pickup option ('Pick up your order within 1-2 days from a partner pharmacy'). Banner design identical to the one used on other pages."
+    },
+    {
+      "id": "R14",
+      "requirement": "Customer Review Component",
+      "description": "Display the Customer Review component (Trusted Shops and site reviews) identical to other pages. Reviews are pulled dynamically from DB or API."
+    },
+    {
+      "id": "R15",
+      "requirement": "Payment Methods Component",
+      "description": "Display all accepted payment methods (credit card, PayPal, Klarna, etc.) in a horizontal strip. Layout and style must match the global design."
+    },
+    {
+      "id": "R16",
+      "requirement": "'Therapie mit medizinischem Cannabis' Banner",
+      "description": "Display the black-and-green banner titled 'Therapie mit medizinischem Cannabis.' Include all written content exactly as shown in the Figma design, including cannabis-specific USPs and a CTA button that links to the start of the consultation funnel."
+    },
+    {
+      "id": "R17",
+      "requirement": "Medically and Professionally Tested Component",
+      "description": "Display the 'Medically and professionally tested' section identical to the other site pages. Content and structure are pulled dynamically from DB."
+    },
+    {
+      "id": "R18",
+      "requirement": "Disclaimer Section",
+      "description": "Display the Disclaimer section containing all required medical/legal text, pulled from DB. The content must be localized (FR/DE)."
+    },
+    {
+      "id": "R19",
+      "requirement": "More Information Section",
+      "description": "Display the More Information section pulled dynamically from DB, same logic and structure as in production."
+    },
+    {
+      "id": "R20",
+      "requirement": "CRM Subscription Section",
+      "description": "Display the CRM component for user subscription. When a user enters an email and subscribes: If the email exists → show an 'already subscribed' message. If new → send the email as a lead to HubSpot, passing the site URL and Cannabis Category Page parameters. Display confirmation message on success."
+    },
+    {
+      "id": "R21",
+      "requirement": "Footer Section",
+      "description": "Display the DoktorABC Footer with localized links, logos, compliance badges, payment icons, and legal information. Identical layout to other pages."
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=a4oYARjYajOu1vkg-1",
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-51315&p=f&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=35352982#gid=35352982",
+  "source": "Confluence Page ID 1930068084"
+}

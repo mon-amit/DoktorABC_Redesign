@@ -1,0 +1,66 @@
+{
+  "title": "Bloomwell Competitor Analysis",
+  "confluence_id": "2042003458",
+  "competitor": "Bloomwell",
+  "competitor_url": "https://bloomwell.de/",
+  "date": "2025-12-14",
+  "analyst": "Dean Gabay",
+  "executive_summary": {
+    "top_insight": "The Kosten & Kostenübernahme page now shows a transparent cost table for recipe requests, video consultations, in-person appointments and follow-up prescriptions. A Friends referral programme offers escalating discounts (10%-100%) for recommending up to five friends.",
+    "immediate_implication": "These changes aim to build trust and drive adoption. Detailed pricing removes a barrier for new patients, and referral rewards encourage viral growth."
+  },
+  "key_features": {
+    "referral_programme": {
+      "name": "Freunde werben Freunde",
+      "description": "A new referral programme incentivises users to invite friends. For every referred friend who requests a prescription or completes a consultation, the user receives escalating discounts.",
+      "discount_tiers": [
+        "10% for one referral",
+        "20% for two referrals",
+        "30% for three referrals",
+        "Free prescription/consultation after five referrals"
+      ],
+      "link": "https://bloomwell.de/empfehlen"
+    },
+    "in_person_appointments": {
+      "description": "Bloomwell offers a physical, in-person consultation at the doctor's office as an alternative to online appointments. This option allows patients to meet the doctor face-to-face for their initial medical cannabis consultation.",
+      "pricing_breakdown": {
+        "free_or_paid_recipe_request": "Free or 25.22€",
+        "video_consultation": "53.54€",
+        "in_office_consultation": "71.08€ (~30 min)",
+        "follow_up_prescription": "28.25€",
+        "video_follow_up": "45.45€"
+      },
+      "link": "https://bloomwell.de/kosten-rechnungen-kostenubernahme"
+    }
+  },
+  "pillar_analysis": {
+    "funnel_and_ux": {
+      "observed_delta": "Full website redesign. Added trust bar with rotating USPs. New trust-focused hero. Product carousel to push fast funnel entry. Users can see available stock BEFORE the medical questionnaire. Funnel order: Sign up → Choose flower → Questionnaire → Payment.",
+      "user_impact": "Lower friction, faster understanding, higher trust",
+      "business_impact": "Higher funnel entry and faster conversion"
+    },
+    "product_and_pricing": {
+      "observed_delta": "Added in-person doctor appointment at clinic (€71.08, ~30 min). Online and physical options shown clearly. Expanded referral program (10%, 20%, 30%, 100% free consult). Prices visible early.",
+      "user_impact": "More choice, clearer pricing, strong referral incentive",
+      "business_impact": "Larger addressable audience, higher retention and organic growth"
+    },
+    "marketing_and_copy": {
+      "observed_delta": "Strong trust-first messaging (legal, medical, safe). New symptom/condition section linking to dedicated pages (mainly educational).",
+      "user_impact": "Reduces anxiety for new users",
+      "business_impact": "Better top-of-funnel credibility"
+    },
+    "technology": {
+      "observed_delta": "Added Shop tab selling Bloomwell-branded cannabis accessories in one place",
+      "user_impact": "One-stop experience for patients",
+      "business_impact": "Additional revenue + brand strengthening"
+    }
+  },
+  "strategic_implications": [
+    "Transparency wins: Detailed pricing up-front builds trust and reduces friction",
+    "Referral incentives: Strong viral growth mechanism with meaningful rewards",
+    "Multi-channel approach: In-person option expands addressable market",
+    "Accessory monetization: Additional revenue stream through branded products",
+    "Educational content: Symptom-based pages improve SEO and trust"
+  ],
+  "source": "Confluence Page ID 2042003458"
+}

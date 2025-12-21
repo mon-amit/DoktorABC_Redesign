@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"],
+      "timeout": 30000,
+      "maxRetries": 3,
+      "retryDelay": 1000
+    },
+    "Notion": {
+      "url": "https://mcp.notion.com/mcp",
+      "timeout": 30000,
+      "maxRetries": 3,
+      "retryDelay": 1000
+    },
+    "Mixpanel": {
+      "command": "/opt/homebrew/bin/npx",
+      "args": ["-y", "mixpanel-mcp-server", "--token", "[CONFIGURED]"],
+      "timeout": 30000,
+      "maxRetries": 3,
+      "retryDelay": 1000
+    },
+    "HubSpot": {
+      "command": "mcp-hubspot",
+      "env": {
+        "HUBSPOT_ACCESS_TOKEN": "[CONFIGURED]"
+      },
+      "timeout": 30000,
+      "maxRetries": 3,
+      "retryDelay": 1000
+    }
+  }
+}

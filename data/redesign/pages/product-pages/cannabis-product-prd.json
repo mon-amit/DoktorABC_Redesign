@@ -1,0 +1,216 @@
+{
+  "title": "PRD ReDesign: Cannabis Product Page",
+  "confluence_id": "1932165125",
+  "created": "2025-09-23",
+  "status": "Draft: Design Requirements",
+  "background": {
+    "description": "The Cannabis Product Page is one of the highest-intent pages in the funnel. Users reach it either from our internal search bar (90K users/month), or organically via Google by typing the flower name directly.",
+    "traffic": {
+      "unique_monthly_visitors": "277K",
+      "average_product_pages_viewed_per_session": "1.4"
+    },
+    "current_performance": {
+      "conversion_to_consultation_1h": "21%",
+      "conversion_to_paid_order_1h": "5.5%"
+    },
+    "goal": "The page must communicate trust, clarity, stock availability, and product details to drive both consultation and purchase."
+  },
+  "personas": {
+    "doktorabc_users": {
+      "characteristics": [
+        "Arrive via search bar or internal navigation",
+        "Already engaged (did not bounce earlier)",
+        "Sensitive to service quality, transparency of flower details, and stock info",
+        "Want reassurance on delivery timelines and consultation process"
+      ]
+    },
+    "organic_users": {
+      "characteristics": [
+        "Land directly on a specific flower/product page",
+        "Know what they want; often experienced smokers",
+        "Highly sensitive to THC/CBD %, strain type, manufacturer, and price",
+        "Expect detailed descriptions and immediate stock visibility"
+      ]
+    }
+  },
+  "problem_statements": [
+    "Users need an easy way to share products with friends",
+    "Users lack clear, consolidated info on flower details (strain, THC, CBD, manufacturer)",
+    "Pricing is unclear; users want to see full price tiers with savings breakdown",
+    "Stock availability is not always clear",
+    "Users don't know how the service works or how fast they will receive cannabis"
+  ],
+  "success_metrics": [
+    "+20% improvement in conversion from product page → start consultation",
+    "2% of users share the flower (new feature)",
+    "+10% improvement in conversion from product page → paid order",
+    "2% of users who visited the product page signed up for the DMCC program through the promo on the product page"
+  ],
+  "competitor_inspiration": [
+    {
+      "name": "DrAnsay",
+      "url": "https://shop.dransay.com/"
+    },
+    {
+      "name": "Canngo Express",
+      "url": "https://canngo.express/"
+    }
+  ],
+  "design_sections": [
+    {
+      "section": "Navigation Bar",
+      "requirements": [
+        "Display company logo",
+        "Search bar icon",
+        "Hamburger menu"
+      ],
+      "notes": "Always visible"
+    },
+    {
+      "section": "Navigation",
+      "requirements": [
+        "Breadcrumb: 'Back to Medical Cannabis category'"
+      ],
+      "notes": "Helps orient users"
+    },
+    {
+      "section": "Product/Flower Card",
+      "requirements": [
+        "Flower images",
+        "Share button (for social/messenger sharing)",
+        "Flower name + strain",
+        "Tags: THC %, CBD %, Indica/Sativa/Hybrid, In Stock / Out of Stock",
+        "'Effects' section: icons + text for flower effects (e.g. relaxation, focus)",
+        "Button: 'Start Consultation'",
+        "Trusted Shop widget"
+      ],
+      "notes": "Must be visually strong"
+    },
+    {
+      "section": "USPs (below flower card)",
+      "requirements": [
+        "3 USPs with green checkmarks: Real-time selection of more than 1500+ cannabis flowers, Just 3 steps - Register in 5 minutes, Express 2h delivery | Self-Pickup | Delivery within1-2 business days"
+      ],
+      "notes": "Same USP style as category cannabis page"
+    },
+    {
+      "section": "Price List Card (Slider)",
+      "requirements": [
+        "Title: 'Price' (bold, directly after flower name)",
+        "2-page horizontal slider: Page 1: 5g – 50g (steps of 5g), Page 2: 55g – 100g (steps of 5g)",
+        "Each row shows: grams, price, savings if bulk"
+      ],
+      "notes": "Transparent pricing"
+    },
+    {
+      "section": "Description",
+      "requirements": [
+        "Flower description as currently on site (detailed text, strain history, effects, etc.)"
+      ],
+      "notes": "Long-form content"
+    },
+    {
+      "section": "How it Works",
+      "requirements": [
+        "Standard 3-step carousel (same design pattern as category/homepage)"
+      ],
+      "notes": "Reuse component"
+    },
+    {
+      "section": "DMCC Program Promotion Tab",
+      "requirements": [
+        "Banner/tab promoting DMCC program"
+      ],
+      "notes": "Must stand out"
+    },
+    {
+      "section": "Footer",
+      "requirements": [
+        "Standard company footer with logo, links, payment methods, certifications, legal disclaimer"
+      ],
+      "notes": "Consistency with site"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "USPS Component",
+      "description": "Display the standard DoktorABC USPS component at the top of the page, identical in structure and design to the rest of the website."
+    },
+    {
+      "id": "R2",
+      "requirement": "Navbar Component",
+      "description": "Display the global Navbar component that includes: company logo, cart, My Account, and hamburger menu. The navbar must be sticky on scroll."
+    },
+    {
+      "id": "R3",
+      "requirement": "CRM Coupon Component (Cannabis Category)",
+      "description": "Display the CRM coupon component dedicated to the Cannabis category. The coupon data and design come from the CRM system"
+    },
+    {
+      "id": "R4",
+      "requirement": "Breadcrumb Navigation",
+      "description": "Show the full navigation path from the homepage to the product page (e.g., Home → Cannabis → Product Name)."
+    },
+    {
+      "id": "R5",
+      "requirement": "Hero Section",
+      "description": "The hero section displays: Product image (from DB), Stock label: 'In stock' or 'Out of stock.', Product name, Price: show 'Starting from [lowest price]' pulled from DB, THC and CBD amounts displayed clearly (values from DB), Manufacturer name (from DB), CTA button: leads to the start of the cannabis consultation funnel, and sticky, Typical effects details - short text block with predefined effects info per product (from DB)."
+    },
+    {
+      "id": "R6",
+      "requirement": "Cannabis USPS Section",
+      "description": "Display the following cannabis-specific USPs (each with an icon): 1500+ cannabis flowers - Real-time stock: the number is fetched dynamically from DB based on total active cannabis products in stock, Delivery options: Express 2h, Self-pickup, 1-2 days delivery, Register in 5 minutes - Just 3 steps, 24/7 customer service - Quick medical guidance."
+    },
+    {
+      "id": "R7",
+      "requirement": "Price Table Section",
+      "description": "Display the price-per-gram table showing: Prices for all standard weight increments: 5g, 10g, 15g, 20g, 25g, … up to 100g. For each row, show: price per gram, total price, and how much the user saves compared to base price. The 'Most popular' label appears automatically on 25 grams for all products. A 'See more' button expands the table to show the remaining rows. All data (pricing, savings, total price per quantity) is pulled dynamically from DB, using the same logic as the current production site."
+    },
+    {
+      "id": "R8",
+      "requirement": "Additional Treatments Section",
+      "description": "Display the 'Additional Treatments' carousel showing similar cannabis flowers, following the same logic as current production: Each card includes: Flower name (clickable → navigates to its product page), Strain, THC and CBD amounts, Flower image, Price starting from, and treatment fee (from DB). Each card also includes a 'Start Consultation' button leading directly to the cannabis funnel. The carousel automatically scrolls and is fully responsive for desktop and mobile."
+    },
+    {
+      "id": "R9",
+      "requirement": "SEO Widget (Short Description)",
+      "description": "Display the short description widget pulled from DB. This text provides key information about the cannabis flower. Underneath it, show a CTA button leading to the funnel, followed by a line of text: 'You pay for your medication + treatment fee €18.90.' The treatment fee value (€18.90) is dynamic from DB."
+    },
+    {
+      "id": "R10",
+      "requirement": "'How It Works' Component",
+      "description": "Display the standard 'How It Works' component of the site, identical in design and content to other DoktorABC pages."
+    },
+    {
+      "id": "R11",
+      "requirement": "Press Component",
+      "description": "Display the Press component, identical in layout to the homepage version, showing 'DoktorABC in the Press' and rotating media logos."
+    },
+    {
+      "id": "R12",
+      "requirement": "SEO Widget (Long Description)",
+      "description": "Display a long description widget pulled from the DB, containing the detailed information about the cannabis product (origin, strain details, effects, manufacturer, etc.). The text must support formatted content."
+    },
+    {
+      "id": "R13",
+      "requirement": "Cannabis Category Drilldown Component",
+      "description": "Display the Cannabis Category Drilldown component, with personalized CTAs and content encouraging the user to begin the consultation flow."
+    },
+    {
+      "id": "R22",
+      "requirement": "DMCC PLAN",
+      "description": "Click open the DMCC CRM popup"
+    },
+    {
+      "id": "R23",
+      "requirement": "Footer",
+      "description": "Display the standard DoktorABC Footer, identical to the rest of the site. Includes logo, navigation menus, payment logos, company info, legal links, and localized compliance text."
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-51315&p=f&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=35352982#gid=35352982",
+  "source": "Confluence Page ID 1932165125"
+}

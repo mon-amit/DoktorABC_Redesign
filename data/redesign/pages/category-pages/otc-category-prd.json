@@ -1,0 +1,165 @@
+{
+  "title": "PRD ReDesign: OTC Category Page",
+  "confluence_id": "1935802370",
+  "created": "2025-09-26",
+  "last_updated": "2025-11-13",
+  "background": "Currently, our OTC subcategory pages are not optimized. All products are displayed in one long list with a 'show more' button. This approach makes navigation inefficient, especially for subcategories with large product counts.",
+  "scope": {
+    "total_otc_subcategories": 10,
+    "product_range": "Some contain 10-20 products; others contain 100-250",
+    "current_issue": "No structured navigation or filtering exists today"
+  },
+  "solution": "A well-structured OTC category page will allow users to quickly find the right product (by name, brand, or filters), compare options, and convert faster.",
+  "persona": {
+    "otc_organic_users": {
+      "arrival": "Enter from the OTC homepage and navigate into subcategories",
+      "seeking": [
+        "A specific product (name/brand), or",
+        "To compare products within a subcategory to solve a problem"
+      ],
+      "sensitivity": "Price, promotions, and quality signals"
+    }
+  },
+  "problem_statements": [
+    "Users can't easily search by product name or brand within subcategories",
+    "With larger subcategories, users struggle to find relevant products (price/quality fit)",
+    "Lack of brand-level navigation reduces trust and makes it harder to shop by brand",
+    "Promotions and discounts are not highlighted clearly enough"
+  ],
+  "success_metrics": [
+    "% Conversion from product add-to-cart on a category page → paid order"
+  ],
+  "competitor_inspiration": ["Shop Apotheke", "iHerb"],
+  "design_sections": [
+    {
+      "section": "Navbar (sticky)",
+      "requirements": "Company logo, Prescription button, My Account button, Shopping Cart button, Search bar + hamburger menu",
+      "notes": "Must remain sticky"
+    },
+    {
+      "section": "Hero Section",
+      "requirements": "Title: 'Online Pharmacy – {Subcategory Name}', Carousel of all subcategories (horizontal scroll), 4 USP icons",
+      "notes": "Align with OTC homepage"
+    },
+    {
+      "section": "Brand Carousel",
+      "requirements": "Carousel of all brands in the subcategory. Clicking logo → brand-specific page",
+      "notes": "Trust + navigation"
+    },
+    {
+      "section": "Product Section",
+      "requirements": "Sorting dropdown with 7 options, Product cards with image, name, brand, price, discount info, package selector, add to cart button + counter. Desktop: 4 per row × 3 rows (12 total), Mobile: 2 per row × 5 rows (10 total), 'See more' button for lazy load",
+      "notes": "Standard e-commerce pattern"
+    },
+    {
+      "section": "Newsletter Banner (CRM requirement)",
+      "requirements": "Banner at bottom with email input + CTA. Option to close (permanently dismiss).",
+      "notes": "Must not interfere UX"
+    },
+    {
+      "section": "You May Also Like",
+      "requirements": "Carousel of discounted products from other categories",
+      "notes": "Cross-sell"
+    },
+    {
+      "section": "User Reviews",
+      "requirements": "Trusted Shop carousel reviews",
+      "notes": "Same component as homepage"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": "5 most common FAQs (accordion, 1 open by default)",
+      "notes": "Same pattern as OTC homepage"
+    },
+    {
+      "section": "Footer",
+      "requirements": "Standard footer with logo, accordion links, payment methods, certifications, company address, © 2025 DoktorABC, disclaimer",
+      "notes": "Consistent across site"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Automatic Page Generation",
+      "description": "OTC sub-category page created automatically whenever a new sub-category is added under OTC category in system (DB/CMS)"
+    },
+    {
+      "id": "R2",
+      "requirement": "OTC Navbar Component",
+      "description": "Same OTC Navbar as OTC homepage: company logo, search bar (OTC products only), E-prescription button, cart icon, My Account icon, hamburger menu. Sticky during scroll."
+    },
+    {
+      "id": "R3",
+      "requirement": "CRM Coupon Section",
+      "description": "Display OTC CRM coupon strip (same as OTC homepage). On mobile, appears above navbar. Link to BO: https://bo.doktorabc.com/upload-files Divided by mobile/Web and FR/DE"
+    },
+    {
+      "id": "R4",
+      "requirement": "Categories Section",
+      "description": "Display all OTC categories of current country from DB. If only a few categories, center them horizontally. Clicking category navigates to that OTC category page."
+    },
+    {
+      "id": "R5",
+      "requirement": "Category Banner",
+      "description": "Each sub-category page has custom banner managed in DB (editable/replaceable). If discount percentage (%) is set for category in DB, discount badge appears on banner. Badge localized: 'Spezial-Angebot X% Rabatt' (DE) or French equivalent."
+    },
+    {
+      "id": "R6",
+      "requirement": "USPs Section",
+      "description": "Display 4 USPs: Delivered 1-2 days, 24/7 customer service, Free shipping over €X (value from DB), Our own brand product. If free shipping value = 0, hide that USP and center other three."
+    },
+    {
+      "id": "R7",
+      "requirement": "Brands Section",
+      "description": "Display all OTC brand logos for current country from DB as carousel strip. Clicking brand logo navigates to brand page."
+    },
+    {
+      "id": "R8",
+      "requirement": "Products Section (Default View)",
+      "description": "Display all products of current sub-category. Default: 12 products. Desktop: 4 per row × 3 rows. Mobile: 2 per row × 6 rows. Products in random order with in-stock first. Sorting dropdown: Most popular, Promoted, Price low to high, Price high to low, A-Z, Z-A."
+    },
+    {
+      "id": "R9",
+      "requirement": "Product Card Design and Behavior",
+      "description": "Each card: Image (with % discount badge if applicable), Product name, Brand name, Price, Previous price (crossed out in red if discounted), Quantity selector, Package selector, Add to cart button (changes to 'Added' on click)"
+    },
+    {
+      "id": "R10",
+      "requirement": "Load More Products Button",
+      "description": "Display 'Load more products' button. Clicking loads 3 additional rows each time. Desktop: 4 products per row (12 new), Mobile: 2 per row (12 new total). Continue until all shown."
+    },
+    {
+      "id": "R11",
+      "requirement": "CRM Subscription Section",
+      "description": "Display CRM subscription banner sending lead data to HubSpot with page URL and category name parameters. User can click X to close banner."
+    },
+    {
+      "id": "R12",
+      "requirement": "'You May Also Like' Section",
+      "description": "Display carousel of product cards (same component as product section). Desktop: 1 row with 4 visible. Mobile: 1 row with 2 visible. Show up to 50 products. By default show promo products from BO, fill rest with random discounted products from other categories."
+    },
+    {
+      "id": "R13",
+      "requirement": "User Reviews Section",
+      "description": "Display global user reviews component (same design and functionality as Homepage)"
+    },
+    {
+      "id": "R14",
+      "requirement": "Payment Methods Section",
+      "description": "Display row of payment method logos matching supported methods for region"
+    },
+    {
+      "id": "R15",
+      "requirement": "FAQ Section",
+      "description": "Display default FAQ section with 5 questions from DB. Localized (DE/FR). First question open by default."
+    },
+    {
+      "id": "R16",
+      "requirement": "Footer Section",
+      "description": "Display global site footer identical to rest of site"
+    }
+  ],
+  "figma_link": "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft?node-id=0-1&t=THgaYXBVeZGgz3d9-1",
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1954933257#gid=1954933257",
+  "source": "Confluence Page ID 1935802370"
+}

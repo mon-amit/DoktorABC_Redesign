@@ -2,8 +2,8 @@
   "project_overview": {
     "name": "DoktorABC Redesign Project",
     "status": "DRAFT",
-    "total_prds": 16,
-    "total_requirements": 45,
+    "total_prds": 15,
+    "last_updated": "2025-12-15",
     "key_pages": [
       "Homepage",
       "RX Category Page",
@@ -12,15 +12,13 @@
       "OTC Product Page",
       "Cannabis Category Page",
       "Cannabis Product Page",
+      "OTC Homepage",
+      "OTC Brand Page",
       "About Us Page",
       "Shipping Page",
       "Error Pages (404/500/502)",
-      "Information Pages",
-      "BMI Calculator",
-      "OTC Brand Page",
-      "Search Results Page",
-      "Registration Page",
-      "My Account Pop-ups"
+      "Information Pages Comprehensive",
+      "BMI Calculator"
     ]
   },
   "prds_collected": [
@@ -28,7 +26,8 @@
       "title": "ReDesign Doktorabc Project",
       "type": "Project Overview",
       "status": "DRAFT",
-      "requirements_count": 2,
+      "confluence_id": "1912864772",
+      "file_path": "project-overview.json",
       "key_deliverables": [
         "CMS Design (Step One)",
         "Funnel Design & Optimization (Step Two)"
@@ -45,6 +44,8 @@
       "title": "PRD ReDesign: Main Homepage",
       "type": "Page Design",
       "status": "Design Requirements",
+      "confluence_id": "1930067988",
+      "file_path": "pages/homepage/homepage-prd.json",
       "requirements_count": 8,
       "key_sections": [
         "Navigation Bar",
@@ -56,17 +57,24 @@
         "Category DrillDown Sections",
         "Footer"
       ],
-      "personas": ["New Visitors", "Returning Visitors"],
+      "personas": ["New Visitors (497K/month)", "Returning Visitors (110K/month)"],
       "analytics_data": {
         "unique_users_landing": "590K",
         "conversion_rate": "7.31%",
         "bounce_rate": "16%"
-      }
+      },
+      "success_metrics": [
+        "Target bounce rate ≤ 12% (currently 16%)",
+        "Google PageSpeed score ≥ 90, LCP < 2.5s",
+        "Improve conversion from 7.31% to ≥ 8.04% (+10%)"
+      ]
     },
     {
       "title": "PRD ReDesign: RX Category Page",
       "type": "Page Design",
       "status": "Design Requirements",
+      "confluence_id": "1945174024",
+      "file_path": "pages/category-pages/rx-category-prd.json",
       "requirements_count": 13,
       "key_sections": [
         "Hero Section",
@@ -79,10 +87,307 @@
         "FAQ Section",
         "CRM Banner"
       ],
+      "personas": ["New Visitors (majority)", "Returning Users"],
       "success_metrics": [
         "+20% increase in conversion from RX category page → start consultation",
         "+10% improvement in conversion from RX category page → paid order",
         "Maintain page bounce rate under 15%"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: Cannabis Category Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1930068084",
+      "file_path": "pages/category-pages/cannabis-category-prd.json",
+      "requirements_count": 21,
+      "key_sections": [
+        "Hero Section",
+        "Search Bar",
+        "Stock Visibility Section",
+        "How It Works",
+        "Category Drilldown",
+        "User Reviews",
+        "FAQ Section"
+      ],
+      "personas": ["Recreational Cannabis Users", "Cannabis Patients"],
+      "analytics_data": {
+        "monthly_visits": "~350K",
+        "search_usage": "90K queries/month",
+        "conversion_to_purchase": "16.21%",
+        "abandonment_rate": "~50%"
+      },
+      "success_metrics": [
+        "+20% increase in conversion to consultation start page",
+        "+10% increase in conversion from category page to paid order"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: OTC Category Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1935802370",
+      "file_path": "pages/category-pages/otc-category-prd.json",
+      "requirements_count": 16,
+      "key_sections": [
+        "Navbar",
+        "Hero Section",
+        "Brand Carousel",
+        "Product Section",
+        "Sorting & Filtering",
+        "Product Cards",
+        "Load More Products",
+        "CRM Subscription",
+        "User Reviews",
+        "FAQ Section"
+      ],
+      "personas": ["OTC Organic Users"],
+      "problem_statements": [
+        "Users can't easily search by product name or brand within subcategories",
+        "Lack of brand-level navigation",
+        "Promotions not highlighted clearly"
+      ],
+      "success_metrics": [
+        "% Conversion from product add-to-cart on a category page → paid order"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: RX Product Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1944682552",
+      "file_path": "pages/product-pages/rx-product-prd.json",
+      "requirements_count": 18,
+      "key_sections": [
+        "Hero Section",
+        "Product Information",
+        "Pricing & Packages",
+        "Trust Signals",
+        "FAQ Section",
+        "Related Products"
+      ],
+      "personas": ["New Visitors", "Returning Users"],
+      "success_metrics": [
+        "+20% increase in conversion from RX product page → start consultation",
+        "+10% increase in completed paid orders",
+        "Maintain bounce rate below 15%"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: OTC Product Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1943011424",
+      "file_path": "pages/product-pages/otc-product-prd.json",
+      "requirements_count": 10,
+      "key_sections": [
+        "Product Hero",
+        "Product Details",
+        "Price & Packages",
+        "Add to Cart",
+        "Usually Bought Together",
+        "Product Reviews",
+        "Trust Signals"
+      ],
+      "analytics_data": {
+        "monthly_revenue": "€63K",
+        "aov": "€19.32",
+        "conversion_google_merchant_to_paid_order": "2.5%"
+      },
+      "success_metrics": [
+        "+20% increase in conversion from product page → paid order",
+        "+10% increase in AOV via 'Usually bought together' carousels"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: Cannabis Product Page",
+      "type": "Page Design",
+      "status": "Draft: Design Requirements",
+      "confluence_id": "1932165125",
+      "file_path": "pages/product-pages/cannabis-product-prd.json",
+      "requirements_count": 15,
+      "key_sections": [
+        "Product Hero",
+        "Strain Details",
+        "THC/CBD Information",
+        "Stock Availability",
+        "Pricing Tiers",
+        "Share Functionality",
+        "Trust Signals"
+      ],
+      "analytics_data": {
+        "unique_monthly_visitors": "277K",
+        "conversion_to_consultation_1h": "21%",
+        "conversion_to_paid_order_1h": "5.5%"
+      },
+      "success_metrics": [
+        "+20% improvement in conversion from product page → start consultation",
+        "2% of users share the flower",
+        "+10% improvement in conversion from product page → paid order"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: OTC Homepage - Online Pharmacy Home",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1930068117",
+      "file_path": "pages/homepage/otc-homepage-prd.json",
+      "requirements_count": 11,
+      "key_sections": [
+        "Sticky NavBar",
+        "Quick Navigation",
+        "Banner Section",
+        "USPs Section",
+        "Sales Section",
+        "Brands Section",
+        "Top Categories",
+        "User Reviews",
+        "FAQ Section"
+      ],
+      "personas": ["Search-driven Users", "Organic Users"],
+      "analytics_data": {
+        "otc_revenue": "€80K",
+        "aov": "€20",
+        "conversion_category_to_order": "2.23%",
+        "page_views_all_categories": "237.6K"
+      },
+      "success_metrics": [
+        "+20% conversion improvement (page view → paid order in 24h)",
+        "+20% increase in OTC AOV in 24h",
+        "-20% cart abandonment in 24h"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: OTC Brand Page",
+      "type": "Page Design",
+      "status": "Design Requirements",
+      "confluence_id": "1960575007",
+      "file_path": "pages/specialized-pages/otc-brand-page-prd.json",
+      "requirements_count": 13,
+      "key_sections": [
+        "Brand Banner",
+        "USP Section",
+        "Brand Description",
+        "Sale Products Section",
+        "All Products Section",
+        "CRM Section",
+        "Customer Reviews",
+        "Payment Methods",
+        "FAQ Section"
+      ],
+      "personas": ["Brand-loyal Customers", "Explorers/Comparison Shoppers", "Price Sensitive Deal Seekers"],
+      "success_metrics": [
+        "5–8% of users who reached OTC category pages also reach the brand page",
+        "% conversion from brand page → paid order",
+        "AOV of users who visited the brand page"
+      ],
+      "brand_list": [
+        "Doppel Herz", "Eucerin", "Orthomol", "La Roche Posay", "Vichy", "Bioderma",
+        "WEPA", "Vagisan", "ratiopharm", "Buscopan", "Grippostad", "Elmex",
+        "Bepanthene", "Storz & Bickel", "HYLO", "Voltaren", "Nurofen", "Avene", "NUPO"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: Shipping Page",
+      "type": "Information Page",
+      "status": "Design Requirements",
+      "confluence_id": "1956053007",
+      "file_path": "pages/information-pages/shipping-page-prd.json",
+      "key_sections": [
+        "Hero Section",
+        "Shipping USP Bar",
+        "Shipping Methods Section",
+        "Neutral Packaging Section",
+        "How Your Shipping Works",
+        "FAQ Section",
+        "Call to Action"
+      ],
+      "analytics_data": {
+        "conversion_rate_24h": "18.15%",
+        "conversion_rate_1h": "13.63%",
+        "unique_users": "5,869",
+        "total_page_views": "8,415"
+      },
+      "success_metrics": [
+        "Increase conversion rate from users who view the shipping page → paid order",
+        "Reduce % of customer service tickets related to pre-order shipping questions"
+      ]
+    },
+    {
+      "title": "PRD ReDesign: Error Pages (404/500/502)",
+      "type": "Information Page",
+      "status": "Design Requirements",
+      "confluence_id": "1960574989",
+      "file_path": "pages/information-pages/error-pages-prd.json",
+      "error_types": [
+        "404 - Page Not Found",
+        "500 / 502 - Server Error"
+      ],
+      "personas": ["New Visitors", "Returning Customers", "High Intent Users", "Support Seekers"],
+      "design_principle": "Calm, professional, and trustworthy, not overly playful or alarming"
+    },
+    {
+      "title": "PRD Redesign: About Us Page (DoktorABC)",
+      "type": "Information Page",
+      "status": "Design Requirements",
+      "confluence_id": "1968046092",
+      "file_path": "pages/information-pages/about-us-prd.json",
+      "key_sections": [
+        "Hero Section - Who We Are",
+        "Mission & Vision",
+        "Medical Team",
+        "Regulatory Framework",
+        "Global Presence",
+        "Press Mentions",
+        "Certifications"
+      ],
+      "personas": ["New Visitors", "Returning Customers", "Press Partners"],
+      "success_indicators": {
+        "time_on_page": "≥ 1 minute",
+        "click_through_rate": "5-8%",
+        "scroll_depth": "≥ 75%"
+      }
+    },
+    {
+      "title": "PRD ReDesign: Information Pages",
+      "type": "Information Pages Comprehensive",
+      "status": "Design Requirements",
+      "confluence_id": "1996324916",
+      "file_path": "pages/information-pages/information-pages-comprehensive-prd.json",
+      "scope_of_pages": [
+        "Shipping & Delivery",
+        "Press / Newsroom",
+        "Editorial Process",
+        "Manufacturers & Suppliers",
+        "Manufacturer Detail Page (Cannabis)",
+        "Medical Treatment Overview Page",
+        "Customer Reviews – Our Customers' Experiences",
+        "About Us",
+        "How DoktorABC Works"
+      ],
+      "implementation_requirement": "Pixel-perfect translation of Figma design with CMS control",
+      "multi_region_support": "France and Switzerland with DE/FR translations"
+    },
+    {
+      "title": "PRD ReDesign: BMI Calculator For Weight Loss Category",
+      "type": "Component",
+      "status": "Design Requirements",
+      "confluence_id": "1955364894",
+      "file_path": "components/bmi-calculator-prd.json",
+      "requirements_count": 12,
+      "purpose": "Interactive and SEO-friendly element on Weight Loss category page",
+      "formats": [
+        "Popup message opening from bottom",
+        "Static section embedded within Weight Loss category drilldown"
+      ],
+      "persona": {
+        "age": "22-65",
+        "characteristics": "Struggling with overweight, seeking private validation"
+      },
+      "success_metrics": [
+        "Improved SEO performance",
+        "Conversion rate from calculator users → paid orders",
+        "Higher engagement (CTR on CTAs)"
       ]
     }
   ],
@@ -90,7 +395,7 @@
     {
       "component": "Navigation Bar",
       "usage": "All pages",
-      "elements": ["Company logo", "Search icon", "Hamburger menu", "My Account icon"],
+      "elements": ["Company logo", "Search icon", "Hamburger menu", "My Account icon", "Cart icon"],
       "behavior": "Sticky during scroll"
     },
     {
@@ -101,9 +406,9 @@
     },
     {
       "component": "Hero Section",
-      "usage": "Homepage, Category pages",
+      "usage": "Homepage, Category pages, Product pages",
       "elements": ["H1 title carousel", "Subtitle", "USPs", "Search bar", "Trusted Shops widget", "CTA button"],
-      "behavior": "CTA becomes sticky"
+      "behavior": "CTA becomes sticky on mobile"
     },
     {
       "component": "Trusted Shops Widget",
@@ -121,24 +426,38 @@
       "component": "FAQ Section",
       "usage": "Most pages",
       "source": "BO (Back Office)",
-      "behavior": "Accordion format, first item open"
+      "behavior": "Accordion format, first item open by default",
+      "localization": "Per country (FR/DE)"
     },
     {
       "component": "Customer Reviews",
-      "usage": "Category pages, Product pages",
-      "source": "Database",
+      "usage": "Category pages, Product pages, Brand pages",
+      "source": "Database / Trusted Shops",
       "format": "Carousel"
     },
     {
       "component": "CRM Subscription Component",
-      "usage": "Footer area",
-      "purpose": "Lead capture"
+      "usage": "Footer area, multiple pages",
+      "purpose": "Lead capture",
+      "integration": "HubSpot"
     },
     {
       "component": "Footer",
       "usage": "All pages",
       "elements": ["Logo", "Navigation links", "Payment methods", "Certifications", "Address", "Disclaimer"],
       "consistency": "Standard across DoktorABC"
+    },
+    {
+      "component": "Product Card",
+      "usage": "Category pages, Product listings, Brand pages",
+      "elements": ["Product image", "Name", "Brand", "Price", "Discount badge", "Add to cart button"],
+      "variants": ["OTC Product Card", "RX Product Card", "Cannabis Product Card"]
+    },
+    {
+      "component": "Breadcrumb Navigation",
+      "usage": "Category pages, Product pages, Information pages",
+      "format": "Home → Category → Subcategory/Product",
+      "purpose": "Orientation and navigation"
     }
   ],
   "technical_requirements": [
@@ -151,26 +470,38 @@
     {
       "category": "Dynamic Content",
       "description": "Content pulled from Back Office (BO)",
-      "elements": ["Category images", "Titles", "Descriptions", "FAQs", "Doctor information"],
+      "elements": ["Category images", "Titles", "Descriptions", "FAQs", "Doctor information", "Brand data", "Product data"],
       "localization": "Per country (DE/FR)"
     },
     {
       "category": "Pricing Integration",
       "description": "Dynamic pricing from database",
-      "elements": ["Consultation fees", "Product prices", "Shipping costs"],
+      "elements": ["Consultation fees", "Product prices", "Shipping costs", "Package options"],
       "updates": "Real-time from DB"
     },
     {
       "category": "Search Functionality",
-      "description": "Category-specific search components",
-      "behavior": "Shows only relevant products",
-      "implementation": "Same as current production"
+      "description": "Category-specific and global search components",
+      "behavior": "Shows only relevant products, filtered by category and country",
+      "implementation": "Same as current production with enhancements"
     },
     {
       "category": "Analytics Integration",
       "description": "Full event mapping for data-driven decisions",
       "tools": ["Mixpanel", "Google Analytics 4"],
       "purpose": "Conversion tracking and optimization"
+    },
+    {
+      "category": "Automatic Page Generation",
+      "description": "System automatically creates pages when new content is added",
+      "examples": ["OTC Brand Pages", "OTC Category Pages", "Product Pages"],
+      "trigger": "New brand/category added in Back Office"
+    },
+    {
+      "category": "Mobile Optimization",
+      "description": "Responsive design with mobile-specific behaviors",
+      "elements": ["Sticky CTAs on mobile", "Mobile-optimized layouts", "Touch-friendly interactions"],
+      "testing": "Cross-device compatibility"
     }
   ],
   "user_stories": [
@@ -185,6 +516,12 @@
       "journey": "Direct visit → Quick product search → Fast checkout → Reliable delivery",
       "expectations": ["Consistent experience", "Account recognition", "Faster process", "Reliable service"],
       "success_criteria": ["Personalization", "Streamlined flow", "Account features", "Trust reinforcement"]
+    },
+    {
+      "persona": "Brand-Loyal Customer",
+      "journey": "Clicks brand logo → Views brand page → Browses products → Adds multiple items → Completes purchase",
+      "expectations": ["Brand recognition", "Complete product catalog", "Easy navigation", "Trust in brand"],
+      "success_criteria": ["Brand page discoverability", "Product variety", "Cross-selling", "Increased AOV"]
     },
     {
       "persona": "Medical Professional",
@@ -206,13 +543,18 @@
     },
     {
       "aspect": "SEO",
-      "requirements": ["Meta tags", "Structured data", "Fast loading", "Mobile-friendly"],
+      "requirements": ["Meta tags", "Structured data", "Fast loading", "Mobile-friendly", "SEO content widgets"],
       "testing": ["Google Search Console", "Page speed tools", "Mobile usability"]
     },
     {
       "aspect": "Security",
       "requirements": ["HTTPS", "Data encryption", "GDPR compliance", "Secure payments"],
       "testing": ["Security audits", "Penetration testing", "Compliance checks"]
+    },
+    {
+      "aspect": "Localization",
+      "requirements": ["DE/FR translations", "Currency display", "Date formats", "Legal compliance"],
+      "testing": ["Translation accuracy", "Layout consistency", "Cultural appropriateness"]
     }
   ],
   "implementation_phases": [
@@ -240,17 +582,17 @@
     {
       "system": "Back Office (BO)",
       "purpose": "Content management",
-      "integrations": ["Category images", "Product data", "FAQ content", "Doctor profiles"]
+      "integrations": ["Category images", "Product data", "FAQ content", "Doctor profiles", "Brand data", "Banner management"]
     },
     {
       "system": "Database",
       "purpose": "Dynamic pricing and product data",
-      "integrations": ["Real-time pricing", "Product availability", "User data"]
+      "integrations": ["Real-time pricing", "Product availability", "User data", "Stock levels"]
     },
     {
       "system": "CRM",
       "purpose": "Customer relationship management",
-      "integrations": ["Lead capture", "Email marketing", "Customer segmentation"]
+      "integrations": ["Lead capture", "Email marketing", "Customer segmentation", "HubSpot integration"]
     },
     {
       "system": "Analytics",
@@ -266,12 +608,17 @@
       "system": "Shipping Systems",
       "purpose": "Order fulfillment and delivery",
       "integrations": ["Pharmacy networks", "Express delivery", "Tracking systems"]
+    },
+    {
+      "system": "Trusted Shops",
+      "purpose": "Trust building and reviews",
+      "integrations": ["Review widgets", "Rating displays", "Trust badges"]
     }
   ],
   "localization_requirements": [
     {
-      "markets": ["Germany (DE)", "France (FR)"],
-      "content_types": ["Product descriptions", "Legal text", "FAQs", "Marketing copy"],
+      "markets": ["Germany (DE)", "France (FR)", "Switzerland"],
+      "content_types": ["Product descriptions", "Legal text", "FAQs", "Marketing copy", "Brand descriptions"],
       "technical": ["Currency display", "Date formats", "Legal compliance"],
       "cultural": ["Medical terminology", "Trust signals", "Payment preferences"]
     }
@@ -285,7 +632,7 @@
     {
       "risk": "SEO impact",
       "impact": "High",
-      "mitigation": ["SEO audits", "URL structure planning", "Meta tag optimization"]
+      "mitigation": ["SEO audits", "URL structure planning", "Meta tag optimization", "SEO content widgets"]
     },
     {
       "risk": "Conversion drop during transition",
@@ -296,6 +643,42 @@
       "risk": "Integration failures",
       "impact": "High",
       "mitigation": ["API testing", "Data validation", "Rollback procedures"]
+    },
+    {
+      "risk": "Localization errors",
+      "impact": "Medium",
+      "mitigation": ["Translation review", "Native speaker validation", "Cultural sensitivity checks"]
     }
-  ]
+  ],
+  "file_structure": {
+    "pages": {
+      "homepage": [
+        "homepage-prd.json",
+        "otc-homepage-prd.json"
+      ],
+      "category-pages": [
+        "cannabis-category-prd.json",
+        "category-page-prd.json",
+        "otc-category-prd.json",
+        "rx-category-prd.json"
+      ],
+      "product-pages": [
+        "cannabis-product-prd.json",
+        "otc-product-prd.json",
+        "rx-product-prd.json"
+      ],
+      "information-pages": [
+        "about-us-prd.json",
+        "error-pages-prd.json",
+        "information-pages-comprehensive-prd.json",
+        "shipping-page-prd.json"
+      ],
+      "specialized-pages": [
+        "otc-brand-page-prd.json"
+      ]
+    },
+    "components": [
+      "bmi-calculator-prd.json"
+    ]
+  }
 }

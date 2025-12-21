@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoktorABC Redesign - Analytics Review</title>
     <style>
+        /* 
+         * shadcn/ui Component Integration Notes:
+         * - Metric Cards: Use shadcn Card component
+         * - Charts: Use shadcn Progress component for bars
+         * - Insights: Use shadcn Alert or Callout component
+         * - Colors: Can be adapted to shadcn theme
+         */
+        
         * {
             margin: 0;
             padding: 0;
@@ -245,6 +253,10 @@
 
         <div class="content">
             <div class="left-panel">
+                <div style="margin-bottom: 20px; text-align: center;">
+                    <img src="../exports/full export/Home Page _ Desktop.png" alt="Homepage Design" style="width: 100%; max-width: 250px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                    <p style="color: #269c6e; margin-top: 8px; font-size: 0.9rem; font-weight: 600;">Source: Figma Homepage Design</p>
+                </div>
                 <div class="metric-card">
                     <h3>Total Events</h3>
                     <div class="value">118</div>
@@ -349,6 +361,7 @@
             <p><span class="highlight">Growth Impact:</span> Complete funnel visibility enables data-driven optimization</p>
             <p><span class="highlight">Performance Tracking:</span> 118 events provide comprehensive user journey analytics</p>
             <p><span class="highlight">Merge Opportunities:</span> Category clicks, product cards, and navigation events ready for consolidation</p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.8;"><strong>Component Library:</strong> shadcn/ui MCP server configured • Use Card, Progress, Alert components for React implementation</p>
         </div>
     </div>
 

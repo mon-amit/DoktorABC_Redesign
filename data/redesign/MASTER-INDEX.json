@@ -1,0 +1,512 @@
+{
+  "project": {
+    "name": "DoktorABC Redesign Project - Complete Local Archive",
+    "version": "1.0",
+    "last_updated": "2025-12-15",
+    "total_documents": 25,
+    "confluence_source": "Dean Gabay's Personal Space (Space ID: 1882685454)",
+    "archive_location": "data/redesign/"
+  },
+  "directory_structure": {
+    "project_overview": {
+      "path": "data/redesign/",
+      "files": [
+        {"file": "project-overview.json", "type": "Strategic Overview", "pages": 1},
+        {"file": "requirements-index.json", "type": "Requirements Catalog", "pages": 1},
+        {"file": "analytics-summary.json", "type": "Performance Metrics", "pages": 1},
+        {"file": "deans-space-content.json", "type": "Content Inventory", "pages": 1}
+      ]
+    },
+    "pages": {
+      "homepage": {
+        "path": "data/redesign/pages/homepage/",
+        "files": [
+          {
+            "file": "otc-homepage-prd.json",
+            "title": "PRD ReDesign: OTC Homepage - Online Pharmacy Home",
+            "confluence_id": "1930068117",
+            "page_type": "Homepage",
+            "status": "DRAFT",
+            "requirements_count": 11,
+            "created": "2025-09-20"
+          }
+        ]
+      },
+      "category_pages": {
+        "path": "data/redesign/pages/category-pages/",
+        "files": [
+          {
+            "file": "category-page-prd.json",
+            "title": "PRD ReDesign: Category Page",
+            "confluence_id": "1997013045",
+            "page_type": "Category Template",
+            "status": "Design Requirements",
+            "requirements_count": 15,
+            "created": "2025-11-16"
+          },
+          {
+            "file": "cannabis-category-prd.json",
+            "title": "PRD ReDesign: Cannabis Category Page",
+            "confluence_id": "1930068084",
+            "page_type": "Cannabis Category",
+            "status": "Design Requirements",
+            "requirements_count": 21,
+            "created": "2025-09-20",
+            "analytics": {
+              "monthly_visits": "350K",
+              "conversion_rate": "16.21%",
+              "search_usage": "90K"
+            }
+          },
+          {
+            "file": "otc-category-prd.json",
+            "title": "PRD ReDesign: OTC Category Page",
+            "confluence_id": "1935802370",
+            "page_type": "OTC Category",
+            "status": "Design Requirements",
+            "requirements_count": 16,
+            "created": "2025-09-26"
+          }
+        ]
+      },
+      "product_pages": {
+        "path": "data/redesign/pages/product-pages/",
+        "files": [
+          {
+            "file": "rx-product-prd.json",
+            "title": "PRD ReDesign: RX Product Page",
+            "confluence_id": "1944682552",
+            "page_type": "RX Product",
+            "status": "Design Requirements",
+            "requirements_count": 18,
+            "created": "2025-10-07"
+          },
+          {
+            "file": "otc-product-prd.json",
+            "title": "PRD ReDesign: OTC Product Page",
+            "confluence_id": "1943011424",
+            "page_type": "OTC Product",
+            "status": "Design Requirements",
+            "requirements_count": 10,
+            "created": "2025-10-05",
+            "analytics": {
+              "monthly_revenue": "€63K",
+              "aov": "€19.32",
+              "conversion_from_merchant": "2.5%"
+            }
+          },
+          {
+            "file": "cannabis-product-prd.json",
+            "title": "PRD ReDesign: Cannabis Product Page",
+            "confluence_id": "1932165125",
+            "page_type": "Cannabis Product",
+            "status": "Draft: Design Requirements",
+            "requirements_count": 15,
+            "created": "2025-09-23",
+            "analytics": {
+              "monthly_visitors": "277K",
+              "conversion_to_consultation": "21%",
+              "conversion_to_order": "5.5%"
+            }
+          }
+        ]
+      },
+      "information_pages": {
+        "path": "data/redesign/pages/information-pages/",
+        "files": [
+          {
+            "file": "about-us-prd.json",
+            "title": "PRD Redesign: About Us Page (DoktorABC)",
+            "confluence_id": "1968046092",
+            "page_type": "Information",
+            "status": "Design Requirements",
+            "created": "2025-10-29"
+          },
+          {
+            "file": "shipping-page-prd.json",
+            "title": "PRD ReDesign: Shipping Page",
+            "confluence_id": "1956053007",
+            "page_type": "Information",
+            "status": "Design Requirements",
+            "created": "2025-10-18",
+            "analytics": {
+              "conversion_rate_24h": "18.15%",
+              "unique_users": "5,869"
+            }
+          },
+          {
+            "file": "error-pages-prd.json",
+            "title": "PRD ReDesign: Error Pages (404 / 500 / 502)",
+            "confluence_id": "1960574989",
+            "page_type": "Error Handling",
+            "status": "Design Requirements",
+            "created": "2025-10-22"
+          },
+          {
+            "file": "information-pages-comprehensive-prd.json",
+            "title": "PRD ReDesign: Information Pages",
+            "confluence_id": "1996324916",
+            "page_type": "Information Pages Bundle",
+            "status": "Design Requirements",
+            "created": "2025-11-16",
+            "scope": "9 information pages including Shipping, Press, Editorial Process, Manufacturers, etc."
+          }
+        ]
+      }
+    },
+    "prds": {
+      "path": "data/redesign/prds/",
+      "files": [
+        {
+          "file": "homepage-prd.json",
+          "title": "PRD ReDesign: Main Homepage",
+          "confluence_id": "1930067988",
+          "requirements_count": 8,
+          "created": "2025-09-19"
+        },
+        {
+          "file": "rx-category-prd.json",
+          "title": "PRD ReDesign: RX Category Page",
+          "confluence_id": "1945174024",
+          "requirements_count": 13,
+          "created": "2025-10-07"
+        }
+      ]
+    },
+    "components": {
+      "path": "data/redesign/components/",
+      "files": [
+        {
+          "file": "bmi-calculator-prd.json",
+          "title": "PRD ReDesign: BMI Calculator For Weight Loss Category",
+          "confluence_id": "1955364894",
+          "component_type": "Interactive Widget",
+          "requirements_count": 12,
+          "created": "2025-10-17"
+        }
+      ]
+    },
+    "analysis": {
+      "path": "data/redesign/analysis/",
+      "files": [
+        {
+          "file": "website-funnel-improvements.json",
+          "title": "DoktorABC website & funnel review – Improvement ideas",
+          "confluence_id": "1899626551",
+          "type": "Requirements Analysis",
+          "total_improvements": 26,
+          "high_priority": 9,
+          "created": "2025-08-17"
+        },
+        {
+          "file": "bloomwell-competitor-analysis.json",
+          "title": "Bloomwell Competitor Analysis",
+          "confluence_id": "2042003458",
+          "type": "Competitive Analysis",
+          "competitor": "Bloomwell",
+          "created": "2025-12-13"
+        }
+      ]
+    },
+    "deans_space_content": {
+      "path": "data/redesign/deans-space-content/",
+      "files": [
+        {"file": "README.md", "type": "Archive Documentation"},
+        {"file": "main-redesign-project.html", "type": "Project Overview HTML"},
+        {"file": "homepage-prd.html", "type": "Homepage PRD HTML"},
+        {"file": "rx-category-prd.html", "type": "RX Category PRD HTML"},
+        {"file": "competitive-landscape.html", "type": "Competitive Analysis HTML"}
+      ]
+    }
+  },
+  "content_by_type": {
+    "redesign_prds": {
+      "total": 16,
+      "homepage": [
+        {"title": "Main Homepage", "id": "1930067988", "file": "prds/homepage-prd.json"},
+        {"title": "OTC Homepage", "id": "1930068117", "file": "pages/homepage/otc-homepage-prd.json"}
+      ],
+      "category_pages": [
+        {"title": "General Category Page Template", "id": "1997013045", "file": "pages/category-pages/category-page-prd.json"},
+        {"title": "RX Category Page", "id": "1945174024", "file": "prds/rx-category-prd.json"},
+        {"title": "Cannabis Category Page", "id": "1930068084", "file": "pages/category-pages/cannabis-category-prd.json"},
+        {"title": "OTC Category Page", "id": "1935802370", "file": "pages/category-pages/otc-category-prd.json"}
+      ],
+      "product_pages": [
+        {"title": "RX Product Page", "id": "1944682552", "file": "pages/product-pages/rx-product-prd.json"},
+        {"title": "OTC Product Page", "id": "1943011424", "file": "pages/product-pages/otc-product-prd.json"},
+        {"title": "Cannabis Product Page", "id": "1932165125", "file": "pages/product-pages/cannabis-product-prd.json"}
+      ],
+      "information_pages": [
+        {"title": "About Us Page", "id": "1968046092", "file": "pages/information-pages/about-us-prd.json"},
+        {"title": "Shipping Page", "id": "1956053007", "file": "pages/information-pages/shipping-page-prd.json"},
+        {"title": "Error Pages (404/500/502)", "id": "1960574989", "file": "pages/information-pages/error-pages-prd.json"},
+        {"title": "Information Pages (Comprehensive)", "id": "1996324916", "file": "pages/information-pages/information-pages-comprehensive-prd.json"}
+      ],
+      "components_and_features": [
+        {"title": "BMI Calculator", "id": "1955364894", "file": "components/bmi-calculator-prd.json"},
+        {"title": "OTC Brand Page", "id": "1960575007", "note": "To be downloaded"}
+      ]
+    },
+    "strategic_analysis": {
+      "total": 3,
+      "files": [
+        {"title": "Competitive Landscape", "id": "1896087554", "file": "deans-space-content/competitive-landscape.html"},
+        {"title": "Website & Funnel Improvements", "id": "1899626551", "file": "analysis/website-funnel-improvements.json"},
+        {"title": "Bloomwell Competitor Analysis", "id": "2042003458", "file": "analysis/bloomwell-competitor-analysis.json"}
+      ]
+    }
+  },
+  "key_metrics_summary": {
+    "homepage": {
+      "unique_users": "590K monthly",
+      "conversion_rate": "7.31%",
+      "bounce_rate": "16%",
+      "scroll_depth_categories": "69%",
+      "scroll_depth_how_it_works": "10%"
+    },
+    "cannabis_category": {
+      "unique_users": "350K monthly",
+      "conversion_rate": "16.21%",
+      "search_usage": "90K queries/month",
+      "funnel_abandonment": "50%"
+    },
+    "otc": {
+      "monthly_revenue": "€63K-€80K",
+      "aov": "€19.32-€20",
+      "conversion_rate": "2.23-2.5%",
+      "page_views": "237.6K"
+    },
+    "rx_products": {
+      "conversion_to_consultation": "+20% target",
+      "conversion_to_order": "+10% target",
+      "bounce_rate_target": "<15%"
+    }
+  },
+  "strategic_goals": [
+    "Build Trust: Consistent professional design, page-specific USPs, trust banners",
+    "Simplify Navigation: Zero-friction user journey to treatments",
+    "Launch OTC E-commerce Engine: Full online store (Homepage, Category, Product)",
+    "Data-Driven Design: Full event mapping (Mixpanel, GA4)"
+  ],
+  "success_metrics_overview": {
+    "primary_kpis": [
+      "+30% Increase in Conversion – Start Consultation",
+      "+20% Increase in Conversion – Paid Order"
+    ],
+    "otc_growth": [
+      "+20% Increase in Average Order Value (AOV)",
+      "-20% Reduction in Cart Abandonment Rate"
+    ],
+    "performance": [
+      "Google PageSpeed Score ≥ 90"
+    ]
+  },
+  "component_library": {
+    "navigation_components": [
+      {"component": "Sticky Navbar", "usage": "All pages", "variants": ["Main site", "OTC specific"]},
+      {"component": "Breadcrumb Navigation", "usage": "All pages", "dynamic": true},
+      {"component": "Anchor Bar (CRM)", "usage": "Homepage, Categories", "behavior": "Sticky"},
+      {"component": "Category Navigation Strip", "usage": "Information pages", "source": "DB"}
+    ],
+    "trust_signals": [
+      {"component": "Trusted Shops Widget", "source": "eTrusted API", "usage": "All major pages"},
+      {"component": "Customer Reviews Carousel", "source": "Database", "usage": "Category and product pages"},
+      {"component": "Medical Advisory Board", "source": "DB", "usage": "Homepage, About Us"},
+      {"component": "Press Component", "source": "Static assets", "usage": "Multiple pages"},
+      {"component": "Certifications Display", "source": "Static", "usage": "Footer, About Us"},
+      {"component": "Privacy Banner", "source": "CMS", "usage": "All pages"}
+    ],
+    "conversion_elements": [
+      {"component": "Hero Section", "variants": ["Carousel", "Static"], "usage": "Homepage, Categories"},
+      {"component": "CTA Buttons", "behavior": ["Sticky mobile", "In navbar desktop"], "usage": "All pages"},
+      {"component": "Search Bar", "variants": ["Global", "OTC-only", "Cannabis-only"], "usage": "All pages"},
+      {"component": "FAQ Accordion", "source": "DB", "usage": "All major pages"},
+      {"component": "Newsletter/CRM Subscription", "integration": "HubSpot", "usage": "Footer areas"}
+    ],
+    "product_components": [
+      {"component": "Product Card", "variants": ["RX", "OTC", "Cannabis"], "source": "DB"},
+      {"component": "Price Display", "dynamic": true, "source": "DB"},
+      {"component": "Usually Bought Together", "logic": "Purchase history analysis", "purpose": "AOV increase"},
+      {"component": "You May Also Like", "logic": "Category-based recommendations", "purpose": "Cross-sell"}
+    ],
+    "content_components": [
+      {"component": "How It Works", "type": "3-step visual", "usage": "All major pages"},
+      {"component": "USPs Block", "variants": ["Global", "RX-specific", "OTC-specific", "Cannabis-specific"]},
+      {"component": "Doctor Profile Cards", "source": "DB", "usage": "Category pages, About Us"},
+      {"component": "Payment Methods Strip", "source": "Static SVG", "usage": "All pages"},
+      {"component": "SEO Content Widget", "source": "DB/BO", "usage": "Product pages"}
+    ]
+  },
+  "technical_architecture": {
+    "smart_personalization": {
+      "description": "System defines user gender and category for personalized content",
+      "triggers": [
+        "Marketing campaign parameters (e.g., utm_category=ED)",
+        "Purchase history for returning users"
+      ],
+      "affected_sections": [
+        "Hero section carousel",
+        "Category drilldown",
+        "CTAs"
+      ]
+    },
+    "dynamic_content_sources": {
+      "back_office": [
+        "Category images and descriptions",
+        "Product data and pricing",
+        "FAQ content",
+        "Doctor profiles",
+        "SEO content",
+        "Banner management"
+      ],
+      "database": [
+        "Real-time pricing",
+        "Stock availability",
+        "Product specifications",
+        "Treatment fees",
+        "Shipping options"
+      ],
+      "crm_hubspot": [
+        "Coupon displays",
+        "Lead capture",
+        "Email subscriptions",
+        "Customer segmentation"
+      ],
+      "third_party_apis": [
+        "Trusted Shops reviews",
+        "Trustpilot ratings",
+        "Payment provider logos"
+      ]
+    },
+    "localization": {
+      "supported_markets": ["Germany (DE)", "France (FR)"],
+      "translation_scope": [
+        "All UI text",
+        "Product descriptions",
+        "Legal disclaimers",
+        "FAQs",
+        "Marketing copy"
+      ],
+      "technical_implementation": "Translation files + CMS fields"
+    },
+    "performance_requirements": {
+      "google_pagespeed": "≥90",
+      "lcp_target": "<2.5s",
+      "core_web_vitals": "All green",
+      "mobile_optimization": "Mobile-first design",
+      "accessibility": "WCAG 2.1 AA compliance"
+    }
+  },
+  "implementation_phases": {
+    "phase_1_cms_design": {
+      "deadline": "2025-09-30",
+      "focus": "Core CMS pages",
+      "pages_count": 30+,
+      "deliverables": [
+        "Homepage variants (Main, OTC)",
+        "Category pages (RX, OTC, Cannabis, General template)",
+        "Product pages (RX, OTC, Cannabis)",
+        "Information pages (About, Shipping, How It Works, Press, etc.)",
+        "Error pages (404, 500, 502)",
+        "Navigation components (Menu, Search, Cart)",
+        "Account management popups"
+      ]
+    },
+    "phase_2_funnel_optimization": {
+      "focus": "Conversion optimization",
+      "approach": "Data-driven iterative improvements",
+      "activities": [
+        "A/B testing of key elements",
+        "Analytics integration and tracking",
+        "User behavior analysis",
+        "Performance optimization"
+      ]
+    }
+  },
+  "cross_reference_index": {
+    "by_component": {
+      "sticky_navbar": ["All pages"],
+      "hero_carousel": ["Main Homepage", "RX Category", "Cannabis Category"],
+      "trusted_shops_widget": ["Homepage", "All category pages", "RX Product pages"],
+      "how_it_works": ["Homepage", "All category pages", "Shipping page"],
+      "faq_accordion": ["All major pages"],
+      "customer_reviews": ["Category pages", "Product pages"],
+      "crm_subscription": ["All pages with lead capture"]
+    },
+    "by_integration": {
+      "back_office": ["All pages with dynamic content"],
+      "database": ["All product pages", "Pricing displays", "Stock management"],
+      "hubspot_crm": ["Lead capture forms", "Email subscriptions", "Coupon displays"],
+      "trusted_shops": ["Review widgets", "Rating badges"],
+      "analytics": ["All pages - Mixpanel/GA4 events"]
+    },
+    "by_user_journey": {
+      "new_visitor_flow": [
+        "Homepage → Category Page → Product Page → Consultation → Checkout"
+      ],
+      "returning_customer_flow": [
+        "Homepage (personalized) → Quick search → Product Page → Fast checkout"
+      ],
+      "organic_search_flow": [
+        "Product Page (direct) → Trust signals → Consultation start"
+      ]
+    }
+  },
+  "figma_design_system": {
+    "main_design_file": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign",
+    "draft_file": "https://www.figma.com/design/Agry3qSdqxAFhRNRWsKtrG/Dean-Draft",
+    "requirements_spreadsheet": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit"
+  },
+  "stakeholders": {
+    "owner": "Dean Gabay",
+    "designers": ["Lauren Levy", "Mariie Mordikova", "Roman Gorelik"],
+    "tech_lead": "Hussein",
+    "approvers": {
+      "product": ["Eran", "David"],
+      "aso_team": ["Olexander"],
+      "marketing": ["Miki"],
+      "dev": ["Hussein"]
+    }
+  },
+  "usage_guide": {
+    "for_developers": {
+      "start_here": "data/redesign/MASTER-INDEX.json (this file)",
+      "find_page_specs": "Navigate to pages/ folder by type (homepage/category-pages/product-pages/information-pages)",
+      "check_components": "components/ folder for reusable elements",
+      "integration_specs": "Look for 'source' field in each JSON (DB, BO, CRM, API)"
+    },
+    "for_product_managers": {
+      "requirements_tracking": "requirements-index.json for complete catalog",
+      "metrics_baseline": "analytics-summary.json for current performance",
+      "improvement_roadmap": "analysis/website-funnel-improvements.json (26 items)"
+    },
+    "for_designers": {
+      "figma_references": "All PRD files include Figma links",
+      "component_library": "Check component_library section in this index",
+      "design_constraints": "Performance requirements and accessibility in technical_architecture"
+    }
+  },
+  "quick_navigation": {
+    "find_by_page_name": {
+      "homepage": "pages/homepage/",
+      "category_pages": "pages/category-pages/",
+      "product_pages": "pages/product-pages/",
+      "about_us": "pages/information-pages/about-us-prd.json",
+      "shipping": "pages/information-pages/shipping-page-prd.json",
+      "error_pages": "pages/information-pages/error-pages-prd.json"
+    },
+    "find_by_component": {
+      "navigation": "Search for 'Navbar', 'Breadcrumb', 'Anchor Bar'",
+      "trust_signals": "Search for 'Trusted Shops', 'Reviews', 'Medical Advisory'",
+      "conversion": "Search for 'Hero', 'CTA', 'Search', 'FAQ'",
+      "products": "Search for 'Product Card', 'Price', 'Cart', 'Usually Bought'"
+    },
+    "find_by_integration": {
+      "back_office": "Search for 'from BO', 'pulled from DB'",
+      "crm": "Search for 'CRM', 'HubSpot', 'lead'",
+      "analytics": "analytics-summary.json",
+      "reviews": "Search for 'Trusted Shops', 'Trustpilot'"
+    }
+  }
+}

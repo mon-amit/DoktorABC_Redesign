@@ -1,0 +1,11 @@
+Event Name,Properties,Short Description of TRIGGER
+web_bmi_calculator_button_click,trigger_location,RCA: BMI calculator engagement trigger. Pre-events: Weight Loss category page view
+web_bmi_calculator_popup_open,trigger_location,RCA: BMI calculator popup display and user interest. Pre-events: BMI calculator button click
+web_bmi_calculator_popup_close,"bmi_calculated, close_method",RCA: BMI calculator abandonment or completion tracking. Pre-events: BMI calculator popup open
+web_bmi_calculator_height_input,height_value,RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open
+web_bmi_calculator_weight_input,weight_value,RCA: User input engagement and form completion progress. Pre-events: BMI calculator popup open
+web_bmi_calculator_calculate_click,"height_value, weight_value",RCA: BMI calculation completion and result generation. Pre-events: Height and weight input
+web_bmi_calculator_result_display,"bmi_value, bmi_category",RCA: BMI result visibility and category classification. Pre-events: Calculate button click
+web_bmi_calculator_cta_start_consultation_click,"bmi_value, bmi_category, trigger_location",RCA: Conversion from BMI calculator to consultation funnel. Pre-events: BMI result display
+web_bmi_calculator_static_section_view,section_name,RCA: SEO content engagement and information consumption. Pre-events: Weight Loss category page view
+web_bmi_calculator_seo_content_scroll,scroll_depth,RCA: SEO content engagement depth and reading behavior. Pre-events: Static section view

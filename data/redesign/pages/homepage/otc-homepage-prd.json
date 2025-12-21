@@ -1,0 +1,176 @@
+{
+  "title": "PRD ReDesign: OTC Homepage - Online Pharmacy Home",
+  "confluence_id": "1930068117",
+  "created": "2025-09-20",
+  "last_updated": "2025-12-03",
+  "background": "OTC (Over-the-Counter) was defined as part of the company's strategic goals to grow the non-prescription category, attract new customers, and later convert them into prescription (RX) and cannabis customers. Today, there is no official OTC homepage that motivates users to purchase.",
+  "current_issues": [
+    "Hard for users to navigate to the right product",
+    "Basket building is not optimized for convenience",
+    "High cart abandonment rate"
+  ],
+  "solution": "The new OTC Homepage will make navigation simple, highlighting offers, and making the basket flow feel like a familiar e-commerce experience.",
+  "analytics_last_30_days": {
+    "otc_revenue": "€80K",
+    "aov": "€20",
+    "conversion_category_to_order": "2.23%",
+    "page_views_all_categories": "237.6K",
+    "category_breakdown": {
+      "vitamin_supplements": 597,
+      "baby_family": 361,
+      "medicines_health": 2382,
+      "sports_fitness": 554,
+      "homeopathy": 616,
+      "beauty_care": 460,
+      "medical_supply_store": 178
+    }
+  },
+  "personas": {
+    "search_driven_users": {
+      "arrival": "Google Merchant, product search ads",
+      "characteristics": [
+        "Arrive directly on product pages",
+        "Already know what they want",
+        "Highly price- and delivery-sensitive"
+      ]
+    },
+    "organic_users": {
+      "arrival": "Browse category pages via menu",
+      "characteristics": [
+        "Arrive without a specific product in mind",
+        "Need help navigating categories, applying filters, and discovering new products",
+        "Expect clear discounts, shipping policies, and trustworthy reviews"
+      ]
+    }
+  },
+  "problem_statements": [
+    "Users can't easily find specific products by name or category",
+    "Lack of quick filters (category, brand, price) slows product discovery",
+    "Discounts and promotions are not clearly displayed",
+    "Shipping times, payment options, cancellation policies are not visible upfront",
+    "Cart abandonment is high, checkout flow doesn't feel rewarding"
+  ],
+  "success_metrics": [
+    "+20% conversion improvement (page view → paid order in 24h)",
+    "+20% increase in OTC AOV in 24h",
+    "-20% cart abandonment in 24h"
+  ],
+  "competitor_inspiration": ["Shop Apotheke", "iHerb"],
+  "design_sections": [
+    {
+      "section": "Header (Sticky, 3 bars)",
+      "requirements": "1) Logo + My Account + E-Prescription button, 2) CRM coupon code bar, 3) Search bar + hamburger menu",
+      "notes": "Must stay sticky on scroll"
+    },
+    {
+      "section": "Quick Navigation",
+      "requirements": "One-line carousel of category circles (image + category name). 10 OTC categories.",
+      "notes": "Each category image must clearly represent its category"
+    },
+    {
+      "section": "Banner Section",
+      "requirements": "Mobile: carousel of 3 banners. Desktop: 2 small static banners + 1 large auto-rotating carousel (3 banners).",
+      "notes": "Must have CTA button or arrow indicating clickability"
+    },
+    {
+      "section": "USPs Section",
+      "requirements": "4 colored, icon-based USPs: Delivered in 1-2 days, Original and certified, Save time and money, Discreet service",
+      "notes": "Needs to be eye-catching"
+    },
+    {
+      "section": "Sales Section",
+      "requirements": "Carousel of promotional products selected by Stock team. Each card includes discount tag, product image, name, price (current + old + %), CTA. Button: 'See all Sale'",
+      "notes": "Consistency with current discount styling"
+    },
+    {
+      "section": "Brands Section",
+      "requirements": "Carousel of OTC product brands with clickable logos. Must use high-quality images/logos.",
+      "notes": "Links to brand-specific pages"
+    },
+    {
+      "section": "Top Categories – Favorites of the Month",
+      "requirements": "Each category block = image + category name. 10 categories listed. Product carousel inside each category with mobile: 2 products visible + peek of 3rd",
+      "notes": "Designed for quick cart building"
+    },
+    {
+      "section": "User Reviews Section",
+      "requirements": "Trusted Shop review carousel",
+      "notes": "Same as homepage"
+    },
+    {
+      "section": "FAQ Section",
+      "requirements": "5 site-wide FAQs in accordion, 1 open by default",
+      "notes": "Same as homepage"
+    },
+    {
+      "section": "Footer",
+      "requirements": "Company footer with: Logo, Accordion navigation links, Payment methods, Country flags, Company address, Certifications, © 2025 DoktorABC",
+      "notes": "Same structure as site"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Sticky NavBar",
+      "description": "Sticky top bar with: Logo, Search field, E-prescription button, Cart icon (with badge), My Account, Main menu. Remains fixed on scroll."
+    },
+    {
+      "id": "R2",
+      "requirement": "E-prescription button",
+      "description": "Clicking E-prescription routes to Homepage (temporary)"
+    },
+    {
+      "id": "R3",
+      "requirement": "Shopping Cart",
+      "description": "Opens existing cart drawer with same data & functions as today. New line: 'Total saving' appears only if cart contains discounted items."
+    },
+    {
+      "id": "R4",
+      "requirement": "Banner Section Logic & Behavior",
+      "description": "Banners fetched from Back Office and displayed as image with CTA label + link. Admin can add/update/delete banners. If no banners exist, section is hidden. Auto-rotate every 3-4 seconds."
+    },
+    {
+      "id": "R5",
+      "requirement": "Search field - typed query",
+      "description": "When user types, autosuggest/results show OTC products only using same search logic as current homepage search, filtered to OTC and by country."
+    },
+    {
+      "id": "R6",
+      "requirement": "Search field - empty click",
+      "description": "If user focuses search with empty input, open search panel with: OTC categories strip, 12 products on sale, Brand strip"
+    },
+    {
+      "id": "R7",
+      "requirement": "CRM coupon strip (OTC)",
+      "description": "Render OTC-specific CRM coupon strip. Content managed by CRM; component is reusable."
+    },
+    {
+      "id": "R8",
+      "requirement": "Categories navigation strip",
+      "description": "Horizontal strip showing all OTC categories from DB with image. Clicking opens that category page."
+    },
+    {
+      "id": "R9",
+      "requirement": "Brand carousel(s)",
+      "description": "Show carousel with all OTC brands from DB. Clicking a brand navigates to Brand page."
+    },
+    {
+      "id": "R10",
+      "requirement": "Rotating banners",
+      "description": "Auto-rotates 4 banners. Pause on hover (desktop); respect prefers-reduced-motion. Banners managed via CMS."
+    },
+    {
+      "id": "R11",
+      "requirement": "USPs block",
+      "description": "Show 4 USPs. 'Free shipping over $X' shown only if DB value X > 0; otherwise hide it and center other three."
+    }
+  ],
+  "search_bar_states": {
+    "empty_click": "Show all categories, 12 recommended promo products, brands bar",
+    "typed_query": "Autosuggest OTC products",
+    "no_results": "Display 'No products found' message, suggest alternative categories and promo products"
+  },
+  "figma_link": "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-28887&p=f&t=F5at0F3hLYIB0bIH-11",
+  "spreadsheet_link": "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1954933257#gid=1954933257",
+  "source": "Confluence Page ID 1930068117"
+}

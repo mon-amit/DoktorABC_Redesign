@@ -1,0 +1,582 @@
+{
+  "designSystem": {
+    "version": "1.0.0",
+    "name": "Learning Platform Design System",
+    "description": "Modern, clean dashboard design system with soft colors, generous spacing, and data-focused UI components",
+    
+    "designPrinciples": {
+      "clarity": "Information hierarchy is paramount. Large numbers draw attention, secondary information provides context without overwhelming",
+      "approachability": "Soft colors, rounded corners, and generous white space create a friendly, non-intimidating interface",
+      "dataFocus": "Design serves the data, not the other way around. Visualizations are clear, uncluttered, and immediately understandable",
+      "consistency": "Systematic use of spacing, colors, and typography creates predictable, learnable patterns",
+      "modernMinimalism": "Clean, contemporary aesthetic with no unnecessary decoration. Every element serves a purpose"
+    },
+
+    "layoutSystem": {
+      "containerMaxWidth": "1440px",
+      "gridSystem": {
+        "columns": 12,
+        "gutter": "24px",
+        "margin": "24px",
+        "breakpoints": {
+          "mobile": "320px",
+          "tablet": "768px",
+          "desktop": "1024px",
+          "wide": "1440px"
+        }
+      },
+      "cardGrid": {
+        "desktop": "2x2 grid",
+        "tablet": "1x4 stacked",
+        "mobile": "1x4 stacked",
+        "gap": "24px"
+      },
+      "contentPadding": {
+        "card": "32px",
+        "cardMobile": "20px",
+        "section": "24px",
+        "sectionMobile": "16px"
+      }
+    },
+
+    "colorSystem": {
+      "foundation": {
+        "background": {
+          "primary": "#F7F9FC",
+          "description": "Very light blue-gray for main app background",
+          "usage": "Body background, creates soft elevated card effect"
+        },
+        "surface": {
+          "primary": "#FFFFFF",
+          "description": "Pure white for card surfaces",
+          "usage": "Cards, modals, dropdowns, elevated surfaces"
+        },
+        "border": {
+          "light": "#E5E7EB",
+          "medium": "#D1D5DB",
+          "description": "Subtle borders for separation",
+          "usage": "Card borders (when needed), dividers, input borders"
+        }
+      },
+      
+      "text": {
+        "primary": "#111827",
+        "secondary": "#6B7280",
+        "tertiary": "#9CA3AF",
+        "inverse": "#FFFFFF",
+        "description": "Text hierarchy from darkest (primary) to lightest (tertiary)",
+        "usage": {
+          "primary": "Headings, key metrics, important text",
+          "secondary": "Body text, labels, descriptions",
+          "tertiary": "Helper text, timestamps, subtle information"
+        }
+      },
+
+      "semantic": {
+        "success": {
+          "base": "#22C55E",
+          "light": "#86EFAC",
+          "background": "#F0FDF4",
+          "usage": "Positive metrics, completed states, success messages"
+        },
+        "warning": {
+          "base": "#F59E0B",
+          "light": "#FCD34D",
+          "background": "#FFFBEB",
+          "usage": "Caution states, moderate alerts"
+        },
+        "error": {
+          "base": "#EF4444",
+          "light": "#FCA5A5",
+          "background": "#FEF2F2",
+          "usage": "Negative metrics, errors, destructive actions"
+        },
+        "info": {
+          "base": "#3B82F6",
+          "light": "#93C5FD",
+          "background": "#EFF6FF",
+          "usage": "Informational messages, neutral callouts"
+        }
+      },
+
+      "accent": {
+        "purple": {
+          "base": "#8B5CF6",
+          "light": "#C4B5FD",
+          "background": "#F5F3FF",
+          "usage": "Category: AI/Beginners courses"
+        },
+        "blue": {
+          "base": "#3B82F6",
+          "light": "#93C5FD",
+          "background": "#DBEAFE",
+          "usage": "Category: Web development courses"
+        },
+        "coral": {
+          "base": "#FB923C",
+          "light": "#FED7AA",
+          "background": "#FFF7ED",
+          "usage": "Category: Design courses"
+        },
+        "gold": {
+          "base": "#D4AF7E",
+          "light": "#E8D5B7",
+          "background": "#FEFCE8",
+          "usage": "Category: Security/specialized courses"
+        }
+      },
+
+      "dataVisualization": {
+        "gradient": {
+          "positive": "linear-gradient(90deg, #FB923C 0%, #FDE68A 50%, #86EFAC 100%)",
+          "description": "Coral to yellow to green for progress visualization"
+        },
+        "heatmap": {
+          "low": "#F3F4F6",
+          "medium": "#86EFAC",
+          "high": "#22C55E",
+          "description": "Activity heatmap colors"
+        },
+        "radarChart": {
+          "green": "rgba(134, 239, 172, 0.6)",
+          "yellow": "rgba(253, 230, 138, 0.6)",
+          "orange": "rgba(251, 146, 60, 0.6)",
+          "pink": "rgba(244, 114, 182, 0.6)",
+          "description": "Overlapping color areas for multi-metric radar charts"
+        }
+      }
+    },
+
+    "typography": {
+      "fontFamily": {
+        "primary": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        "monospace": "'Fira Code', 'Roboto Mono', Consolas, monospace",
+        "description": "Inter for UI, system fonts as fallback, monospace for code/data"
+      },
+
+      "fontSizes": {
+        "display": {
+          "size": "48px",
+          "lineHeight": "56px",
+          "weight": 700,
+          "letterSpacing": "-0.02em",
+          "usage": "Large metrics (125,693), hero numbers"
+        },
+        "h1": {
+          "size": "32px",
+          "lineHeight": "40px",
+          "weight": 700,
+          "letterSpacing": "-0.01em",
+          "usage": "Page titles, main headings"
+        },
+        "h2": {
+          "size": "24px",
+          "lineHeight": "32px",
+          "weight": 600,
+          "letterSpacing": "-0.01em",
+          "usage": "Card titles (Learners On The Platform)"
+        },
+        "h3": {
+          "size": "18px",
+          "lineHeight": "28px",
+          "weight": 600,
+          "letterSpacing": "0",
+          "usage": "Section titles (Top Courses, Active instructors)"
+        },
+        "body": {
+          "size": "15px",
+          "lineHeight": "24px",
+          "weight": 400,
+          "letterSpacing": "0",
+          "usage": "Body text, list items, descriptions"
+        },
+        "bodySmall": {
+          "size": "13px",
+          "lineHeight": "20px",
+          "weight": 400,
+          "letterSpacing": "0",
+          "usage": "Helper text, secondary information"
+        },
+        "caption": {
+          "size": "12px",
+          "lineHeight": "16px",
+          "weight": 400,
+          "letterSpacing": "0.01em",
+          "usage": "Timestamps, labels, metadata"
+        },
+        "label": {
+          "size": "14px",
+          "lineHeight": "20px",
+          "weight": 500,
+          "letterSpacing": "0",
+          "usage": "Input labels, button text, badges"
+        }
+      },
+
+      "fontWeights": {
+        "regular": 400,
+        "medium": 500,
+        "semiBold": 600,
+        "bold": 700
+      }
+    },
+
+    "spacing": {
+      "baseUnit": 4,
+      "scale": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "12px",
+        "lg": "16px",
+        "xl": "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        "4xl": "40px",
+        "5xl": "48px",
+        "6xl": "64px"
+      },
+      "component": {
+        "cardPadding": "32px",
+        "cardGap": "24px",
+        "sectionGap": "24px",
+        "listItemGap": "12px",
+        "inlineGap": "8px",
+        "labelGap": "4px"
+      }
+    },
+
+    "borderRadius": {
+      "none": "0px",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "2xl": "20px",
+      "full": "9999px",
+      "usage": {
+        "card": "16px (xl)",
+        "button": "9999px (full for pills)",
+        "input": "8px (md)",
+        "badge": "9999px (full)",
+        "avatar": "9999px (full)",
+        "categoryIcon": "8px (md)"
+      }
+    },
+
+    "shadows": {
+      "none": "none",
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "usage": {
+        "card": "md - subtle elevation for cards",
+        "cardHover": "lg - slightly elevated on hover",
+        "dropdown": "lg - clear separation from background",
+        "modal": "xl - strong elevation for modal dialogs"
+      }
+    },
+
+    "components": {
+      "card": {
+        "description": "Primary container for grouped information",
+        "structure": {
+          "background": "surface.primary (white)",
+          "borderRadius": "xl (16px)",
+          "shadow": "md",
+          "padding": "3xl (32px)",
+          "gap": "2xl (24px) between internal sections"
+        },
+        "variants": {
+          "default": "White background with shadow",
+          "flat": "White background, no shadow",
+          "outlined": "White background with border, no shadow"
+        }
+      },
+
+      "button": {
+        "description": "Interactive elements for actions",
+        "primary": {
+          "background": "#111827 (dark)",
+          "text": "#FFFFFF",
+          "borderRadius": "full",
+          "padding": "12px 24px",
+          "fontSize": "14px",
+          "fontWeight": 500,
+          "hover": "Slightly lighter background, subtle shadow"
+        },
+        "secondary": {
+          "background": "#F3F4F6",
+          "text": "#111827",
+          "borderRadius": "full",
+          "padding": "12px 24px",
+          "hover": "Slightly darker background"
+        },
+        "ghost": {
+          "background": "transparent",
+          "text": "#6B7280",
+          "hover": "Light gray background (#F9FAFB)"
+        },
+        "sizes": {
+          "sm": "8px 16px, 13px font",
+          "md": "12px 24px, 14px font",
+          "lg": "16px 32px, 15px font"
+        }
+      },
+
+      "input": {
+        "description": "Text input and search fields",
+        "structure": {
+          "background": "#F9FAFB (very light gray)",
+          "border": "1px solid transparent",
+          "borderRadius": "md (8px)",
+          "padding": "10px 16px",
+          "fontSize": "14px",
+          "placeholderColor": "#9CA3AF"
+        },
+        "states": {
+          "default": "Light background, no visible border",
+          "hover": "Slightly darker background",
+          "focus": "White background, blue border (#3B82F6), shadow",
+          "error": "Red border (#EF4444), error text below",
+          "disabled": "Lighter background (#F3F4F6), reduced opacity"
+        }
+      },
+
+      "avatar": {
+        "description": "User profile images",
+        "sizes": {
+          "xs": "24px",
+          "sm": "32px",
+          "md": "40px",
+          "lg": "48px",
+          "xl": "64px"
+        },
+        "borderRadius": "full",
+        "border": "2px solid white (when overlapping)",
+        "fallback": "Initials on colored background"
+      },
+
+      "badge": {
+        "description": "Small status indicators and labels",
+        "structure": {
+          "padding": "4px 12px",
+          "borderRadius": "full",
+          "fontSize": "12px",
+          "fontWeight": 500
+        },
+        "variants": {
+          "success": "Green background (#F0FDF4), green text (#22C55E)",
+          "warning": "Yellow background (#FFFBEB), orange text (#F59E0B)",
+          "error": "Red background (#FEF2F2), red text (#EF4444)",
+          "info": "Blue background (#EFF6FF), blue text (#3B82F6)",
+          "neutral": "Gray background (#F3F4F6), dark text (#6B7280)"
+        }
+      },
+
+      "progressBar": {
+        "description": "Linear progress visualization",
+        "structure": {
+          "height": "8px",
+          "borderRadius": "full",
+          "background": "#F3F4F6 (track)",
+          "fill": "Gradient or solid color"
+        },
+        "variants": {
+          "gradient": "Coral to green gradient for multi-stage progress",
+          "solid": "Single color fill based on status",
+          "indicator": "Dark vertical line for current position"
+        }
+      },
+
+      "circularProgress": {
+        "description": "Circular/ring progress indicator",
+        "structure": {
+          "strokeWidth": "4px",
+          "background": "#F3F4F6 (track)",
+          "fill": "Based on status/category",
+          "centerText": "Percentage value"
+        }
+      },
+
+      "listItem": {
+        "description": "Row in a list with consistent structure",
+        "structure": {
+          "padding": "12px 16px",
+          "gap": "12px between elements",
+          "borderRadius": "md (8px)",
+          "hover": "Light gray background (#F9FAFB)"
+        },
+        "layout": "Avatar | Primary text + secondary text | Metadata | Action/indicator",
+        "variants": {
+          "default": "Transparent background",
+          "hover": "Light background on hover",
+          "selected": "Colored background indicating selection"
+        }
+      },
+
+      "categoryIcon": {
+        "description": "Square icons representing categories",
+        "structure": {
+          "size": "40px x 40px",
+          "borderRadius": "md (8px)",
+          "padding": "8px",
+          "iconSize": "24px"
+        },
+        "colors": "Use accent colors (purple, blue, coral, gold)"
+      },
+
+      "metricDisplay": {
+        "description": "Large number with context",
+        "structure": {
+          "number": "Display size (48px), bold (700)",
+          "label": "Body small (13px), secondary color",
+          "change": "Caption size (12px), success/error color with icon",
+          "gap": "4px vertical between elements"
+        }
+      },
+
+      "dotMatrix": {
+        "description": "Activity visualization with dots",
+        "structure": {
+          "dotSize": "6px",
+          "gap": "4px between dots",
+          "colors": "Use heatmap colors (low/medium/high activity)",
+          "layout": "Grid aligned to time periods"
+        }
+      },
+
+      "radarChart": {
+        "description": "Multi-axis data visualization",
+        "structure": {
+          "gridLines": "Light gray (#E5E7EB)",
+          "fillOpacity": "0.6",
+          "colors": "Use radarChart colors with overlap",
+          "labels": "Body small (13px), positioned outside"
+        }
+      },
+
+      "toggle": {
+        "description": "Segmented control for view switching",
+        "structure": {
+          "background": "#F3F4F6",
+          "borderRadius": "full",
+          "padding": "4px",
+          "selectedBackground": "#FFFFFF",
+          "selectedShadow": "sm"
+        },
+        "button": {
+          "padding": "8px 16px",
+          "fontSize": "14px",
+          "fontWeight": 500
+        }
+      },
+
+      "iconButton": {
+        "description": "Button containing only an icon",
+        "structure": {
+          "size": "32px (icon: 20px)",
+          "borderRadius": "md (8px)",
+          "background": "transparent",
+          "hover": "Light gray background (#F3F4F6)"
+        }
+      },
+
+      "divider": {
+        "description": "Visual separator between content",
+        "horizontal": {
+          "height": "1px",
+          "color": "#E5E7EB",
+          "margin": "16px 0"
+        },
+        "vertical": {
+          "width": "1px",
+          "color": "#E5E7EB",
+          "margin": "0 16px"
+        }
+      }
+    },
+
+    "patterns": {
+      "cardHeader": {
+        "description": "Standard header pattern for cards",
+        "structure": "Title (h2/h3) + Optional action button/icon on right",
+        "alignment": "Space-between horizontal",
+        "marginBottom": "24px"
+      },
+
+      "listWithAvatars": {
+        "description": "Consistent list pattern with user avatars",
+        "structure": "Avatar (40px) | Name (body) + subtitle (bodySmall) | Metadata badges | Status indicator",
+        "gap": "12px vertical between items"
+      },
+
+      "statGrid": {
+        "description": "Grid of metric displays",
+        "layout": "2-3 columns on desktop, 1 column on mobile",
+        "gap": "24px"
+      },
+
+      "searchWithFilter": {
+        "description": "Search input with filter button",
+        "layout": "Search input (flex-grow) + Filter button (fixed)",
+        "gap": "12px"
+      }
+    },
+
+    "animations": {
+      "duration": {
+        "fast": "150ms",
+        "normal": "250ms",
+        "slow": "400ms"
+      },
+      "easing": {
+        "standard": "cubic-bezier(0.4, 0.0, 0.2, 1)",
+        "decelerate": "cubic-bezier(0.0, 0.0, 0.2, 1)",
+        "accelerate": "cubic-bezier(0.4, 0.0, 1, 1)"
+      },
+      "interactions": {
+        "hover": "150ms standard easing for background color changes",
+        "click": "100ms accelerate easing for scale down",
+        "fadeIn": "250ms decelerate easing for opacity",
+        "slideIn": "250ms decelerate easing for transform"
+      }
+    },
+
+    "accessibility": {
+      "colorContrast": {
+        "textOnWhite": "Minimum 4.5:1 for normal text, 3:1 for large text",
+        "textOnColor": "Test each combination for WCAG AA compliance"
+      },
+      "focusStates": {
+        "outline": "2px solid #3B82F6",
+        "offset": "2px",
+        "style": "Visible focus ring on all interactive elements"
+      },
+      "minTargetSize": "44px x 44px for touch targets",
+      "keyboardNavigation": "Full keyboard support for all interactive elements",
+      "screenReaders": "Semantic HTML, ARIA labels where needed"
+    },
+
+    "responsiveStrategy": {
+      "breakpointApproach": "Mobile-first design, progressive enhancement",
+      "layoutChanges": {
+        "desktop": "2x2 grid, side-by-side elements, expanded navigation",
+        "tablet": "1x4 stack or 2 column grid, collapsible sections",
+        "mobile": "Single column, stacked cards, bottom navigation"
+      },
+      "typographyScaling": "Reduce display to 36px, h1 to 24px on mobile",
+      "spacingReduction": "Reduce card padding from 32px to 20px on mobile",
+      "componentAdaptation": "Convert horizontal lists to vertical, collapse filters, simplify data visualizations"
+    },
+
+    "implementationGuidelines": {
+      "componentHierarchy": "Atomic design: Atoms (buttons, inputs) -> Molecules (search with filter) -> Organisms (card with list) -> Templates (dashboard grid)",
+      "cssArchitecture": "Use CSS custom properties for theme values, component-scoped styles, utility classes for spacing",
+      "stateManagement": "Handle loading, empty, error states consistently across all components",
+      "dataVisualization": "Prioritize clarity over decoration, use color meaningfully, provide text alternatives",
+      "performance": "Lazy load charts, virtualize long lists, optimize images, minimize reflows",
+      "consistency": "Use spacing scale strictly, never arbitrary values. Reuse components, avoid one-offs"
+    }
+  }
+}

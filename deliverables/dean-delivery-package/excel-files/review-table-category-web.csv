@@ -1,6 +1,6 @@
 Event Name,Properties,Short Description of TRIGGER
 web_category_button_apply_filters_click,"filter_criteria, category_id",RCA: Filter usage and product discovery efficiency. Pre-events: Category view
-web_category_button_clear_filters_click,"category_id",RCA: Filter reset patterns and user frustration. Pre-events: Filter application
+web_category_button_clear_filters_click,category_id,RCA: Filter reset patterns and user frustration. Pre-events: Filter application
 web_category_button_sort_price_low_click,"sort_type, category_id",RCA: Price sensitivity and shopping intent. Pre-events: Category view
 web_category_button_sort_price_high_click,"sort_type, category_id",RCA: Premium product interest. Pre-events: Category view
 web_category_button_sort_newest_click,"sort_type, category_id",RCA: Trend-following and novelty-seeking behavior. Pre-events: Category view

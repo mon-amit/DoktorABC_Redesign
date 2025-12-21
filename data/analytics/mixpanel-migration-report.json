@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-15T13:25:26.448Z",
+    "total_files_scanned": 1,
+    "search_root": "/Users/Amit Yogev/Downloads/projects /redesign"
+  },
+  "summary": {
+    "files_with_tracking": 0,
+    "direct_mixpanel_calls": 0,
+    "event_tracker_usage": 0,
+    "csv_event_names": 5,
+    "total_suggestions": 5
+  },
+  "files": [
+    {
+      "file": "tests/event-merge-analysis.js",
+      "analysis": {
+        "directMixpanelCalls": [],
+        "eventTrackerUsage": [],
+        "csvEventNames": [
+          {
+            "line": 66,
+            "event": "web_homepage_button_category_ed_click",
+            "code": "// web_homepage_button_category_ed_click -> web_homepage_button_category_click"
+          },
+          {
+            "line": 66,
+            "event": "web_homepage_button_category_click",
+            "code": "// web_homepage_button_category_ed_click -> web_homepage_button_category_click"
+          },
+          {
+            "line": 67,
+            "event": "web_homepage_button_category_hair_loss_click",
+            "code": "// web_homepage_button_category_hair_loss_click -> web_homepage_button_category_click"
+          },
+          {
+            "line": 67,
+            "event": "web_homepage_button_category_click",
+            "code": "// web_homepage_button_category_hair_loss_click -> web_homepage_button_category_click"
+          },
+          {
+            "line": 68,
+            "event": "web_product_button_variant_click",
+            "code": "// web_product_button_variant_50ml_click -> web_product_button_variant_click"
+          }
+        ],
+        "unmappedEvents": [],
+        "imports": []
+      },
+      "suggestions": 5
+    }
+  ],
+  "suggestions": [
+    {
+      "type": "csv_event_name",
+      "file": "tests/event-merge-analysis.js",
+      "line": 66,
+      "issue": "CSV-style event name: web_homepage_button_category_ed_click",
+      "solution": "Ensure this event is mapped through EventTracker",
+      "priority": "medium"
+    },
+    {
+      "type": "csv_event_name",
+      "file": "tests/event-merge-analysis.js",
+      "line": 66,
+      "issue": "CSV-style event name: web_homepage_button_category_click",
+      "solution": "Ensure this event is mapped through EventTracker",
+      "priority": "medium"
+    },
+    {
+      "type": "csv_event_name",
+      "file": "tests/event-merge-analysis.js",
+      "line": 67,
+      "issue": "CSV-style event name: web_homepage_button_category_hair_loss_click",
+      "solution": "Ensure this event is mapped through EventTracker",
+      "priority": "medium"
+    },
+    {
+      "type": "csv_event_name",
+      "file": "tests/event-merge-analysis.js",
+      "line": 67,
+      "issue": "CSV-style event name: web_homepage_button_category_click",
+      "solution": "Ensure this event is mapped through EventTracker",
+      "priority": "medium"
+    },
+    {
+      "type": "csv_event_name",
+      "file": "tests/event-merge-analysis.js",
+      "line": 68,
+      "issue": "CSV-style event name: web_product_button_variant_click",
+      "solution": "Ensure this event is mapped through EventTracker",
+      "priority": "medium"
+    }
+  ],
+  "migration_plan": {
+    "phase1": [],
+    "phase2": [
+      {
+        "type": "csv_event_name",
+        "file": "tests/event-merge-analysis.js",
+        "line": 66,
+        "issue": "CSV-style event name: web_homepage_button_category_ed_click",
+        "solution": "Ensure this event is mapped through EventTracker",
+        "priority": "medium"
+      },
+      {
+        "type": "csv_event_name",
+        "file": "tests/event-merge-analysis.js",
+        "line": 66,
+        "issue": "CSV-style event name: web_homepage_button_category_click",
+        "solution": "Ensure this event is mapped through EventTracker",
+        "priority": "medium"
+      },
+      {
+        "type": "csv_event_name",
+        "file": "tests/event-merge-analysis.js",
+        "line": 67,
+        "issue": "CSV-style event name: web_homepage_button_category_hair_loss_click",
+        "solution": "Ensure this event is mapped through EventTracker",
+        "priority": "medium"
+      },
+      {
+        "type": "csv_event_name",
+        "file": "tests/event-merge-analysis.js",
+        "line": 67,
+        "issue": "CSV-style event name: web_homepage_button_category_click",
+        "solution": "Ensure this event is mapped through EventTracker",
+        "priority": "medium"
+      },
+      {
+        "type": "csv_event_name",
+        "file": "tests/event-merge-analysis.js",
+        "line": 68,
+        "issue": "CSV-style event name: web_product_button_variant_click",
+        "solution": "Ensure this event is mapped through EventTracker",
+        "priority": "medium"
+      }
+    ],
+    "phase3": []
+  }
+}

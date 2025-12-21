@@ -1,20 +1,3 @@
 Event Name,Properties,Short Description of TRIGGER
-web_search_otc_button_submit_click,""search_query, search_type"",RCA: Search initiation and query submission tracking. Pre-events: Search input focus
-web_search_otc_button_voice_click,"search_type",RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus
-web_search_otc_button_clear_click,"previous_query",RCA: Search refinement and query reset patterns. Pre-events: Search submission
-web_search_otc_button_filter_category_click,""otc_categories, search_query"",RCA: Category-based search refinement. Pre-events: Search results view
-web_search_otc_button_filter_brand_click,""otc_brands, search_query"",RCA: Brand preference in OTC search. Pre-events: Search results view
-web_search_otc_button_filter_price_click,""price_range, search_query"",RCA: Price-based OTC product filtering. Pre-events: Search results view
-web_search_otc_button_sort_click,""sort_type, search_query"",RCA: Result organization preferences. Pre-events: Search results view
-web_search_otc_button_load_more_click,""current_page, search_query"",RCA: Search result consumption depth. Pre-events: View current results
-web_search_otc_button_add_to_cart_click,""product_id, search_query, position"",RCA: Search-to-purchase conversion tracking. Pre-events: Search results view
-web_search_otc_input_focus,""search_type, input_method"",RCA: Search intent and interaction method. Pre-events: Page navigation
-web_search_otc_autocomplete_1_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_autocomplete_2_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_autocomplete_3_click,""suggested_term, search_query, position"",RCA: Autocomplete effectiveness and suggestion relevance. Pre-events: Search typing
-web_search_otc_submit,""search_query, result_count, search_time"",RCA: Search performance and result quality metrics. Pre-events: Search input
-web_search_otc_filter_category_applied,""category_filter, search_query"",RCA: Filter application success and usage patterns. Pre-events: Filter selection
-web_search_otc_filter_brand_applied,""brand_filter, search_query"",RCA: Brand filter effectiveness. Pre-events: Filter selection
-web_search_otc_filter_price_applied,""price_filter, search_query"",RCA: Price filter usage patterns. Pre-events: Filter selection
-web_search_otc_result_product_click,""product_id, position, search_query"",RCA: Search result click-through rates and position effectiveness. Pre-events: Search results view
-web_search_otc_no_results_viewed,""search_query, suggestion_count"",RCA: Failed search experience and recovery options. Pre-events: Search submission
+web_search_otc_button_voice_click,search_type,RCA: Voice search adoption and accessibility usage. Pre-events: Search input focus
+web_search_otc_button_clear_click,previous_query,RCA: Search refinement and query reset patterns. Pre-events: Search submission

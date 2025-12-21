@@ -1,0 +1,230 @@
+{
+  "title": "PRD ReDesign: OTC Brand Page",
+  "confluence_id": "1960575007",
+  "created": "2025-10-22",
+  "last_modified": "2025-12-15",
+  "status": "Design Requirements",
+  "background": {
+    "description": "A brand page is a dedicated page that displays all OTC (Over-The-Counter) products under the same brand. Its goal is to help users quickly find and explore multiple products from a brand they already know and trust.",
+    "importance": [
+      "Improving navigation and discoverability, helping users find trusted product lines easily",
+      "Strengthening brand recognition and trust, users are more likely to purchase familiar brands",
+      "Increasing average order value (AOV) by cross-selling related products within the same brand"
+    ]
+  },
+  "personas": {
+    "brand_loyal_customers": {
+      "description": "Users who already know and prefer a specific brand (e.g., Avene, Nivea, or Weleda). They trust the brand and want to buy multiple products from it.",
+      "entry_point": "They click the brand logo carousel on the OTC homepage, which leads them directly to the brand page"
+    },
+    "explorers_comparison_shoppers": {
+      "description": "Users browsing OTC products, comparing similar items, and checking available brands before purchasing",
+      "entry_point": "They discover the page via a subcategory page or through the brand carousel featured on product or homepage banners"
+    },
+    "price_sensitive_deal_seekers": {
+      "description": "Users who are motivated by sales and discounts from specific brands, looking for promotional items or bulk offers",
+      "entry_point": "They reach the page via the \"Sale\" section on the homepage or through CRM promotional campaigns"
+    }
+  },
+  "success_indicators": [
+    "5–8% of users who reached OTC category pages also reach the brand page (Adoption KPI)",
+    "% conversion from brand page → paid order",
+    "AOV (Average Order Value) of users who visited the brand page"
+  ],
+  "competitor_inspiration": [
+    {
+      "name": "Shop Apotheke - Brand Page Example (Avene)",
+      "url": "https://www.shop-apotheke.com/markenshops/avene/"
+    },
+    {
+      "name": "iHerb - Brands of the Week",
+      "url": "https://il.iherb.com/c/brands-of-the-week?bids=SPS"
+    }
+  ],
+  "brand_list": [
+    "Doppel Herz",
+    "Eucerin",
+    "Orthomol",
+    "La Roche Posay",
+    "Vichy",
+    "Bioderma",
+    "WEPA",
+    "Vagisan",
+    "ratiopharm",
+    "Buscopan",
+    "Grippostad",
+    "Elmex",
+    "Bepanthene",
+    "Storz & Bickel",
+    "HYLO",
+    "Voltaren",
+    "Nurofen",
+    "Avene",
+    "NUPO"
+  ],
+  "design_sections": [
+    {
+      "section": "Navbar",
+      "requirements": [
+        "Standard OTC navbar including: Company logo, Search bar, E-prescription button, Cart icon, My Account icon, Hamburger menu"
+      ],
+      "notes": "Must be sticky at the top of the page (same as OTC homepage)"
+    },
+    {
+      "section": "CRM Promo Code Line",
+      "requirements": [
+        "A horizontal CRM bar below the navbar for displaying current coupon codes or promotions"
+      ],
+      "notes": "Use same styling as OTC homepage"
+    },
+    {
+      "section": "Brand Banner Section",
+      "requirements": [
+        "Large brand logo banner at the top",
+        "Brand logo must be large and prominent",
+        "Display 3 featured products from the brand (hero layout)",
+        "The banner should visually represent the brand's color scheme or product style"
+      ],
+      "notes": "The purpose is to immediately establish brand recognition and encourage exploration"
+    },
+    {
+      "section": "3 USP Section",
+      "requirements": [
+        "Reuse the 3 standard OTC homepage USPs: Delivered in 1–2 working days, 24/7 customer service, Free shipping over €30"
+      ],
+      "notes": "Display as horizontal icons under the banner"
+    },
+    {
+      "section": "Brand Description Section",
+      "requirements": [
+        "Title: \"About [Brand Name]\"",
+        "Body: 4–8 sentences describing the brand, its heritage, focus, and product qualities"
+      ],
+      "notes": "Text provided by content team / CRM. Ensure readability and visual balance"
+    },
+    {
+      "section": "Sale Section (Products on Discount)",
+      "requirements": [
+        "Title: \"Sale Products\"",
+        "Display all products from the same brand currently on sale",
+        "Use the same product card design as OTC homepage and category pages",
+        "Include discount tag/sticker and both old/new prices",
+        "Show up to 2–3 rows (4 products per row)"
+      ],
+      "notes": "Maintain consistency in sale styling across all OTC pages"
+    },
+    {
+      "section": "All Products Section (Brand Catalog)",
+      "requirements": [
+        "Title: \"All Products from [Brand Name]\"",
+        "Display all available products from that brand",
+        "Use same design layout as OTC category pages: 4 products per row, Up to 4 rows (16 products shown initially)",
+        "Include a \"Load More Products\" button at the bottom (same behavior as OTC category)"
+      ],
+      "notes": "Prioritize image quality and consistency of brand packaging"
+    },
+    {
+      "section": "CRM Section",
+      "requirements": [
+        "Horizontal banner promoting sign-up for newsletters, personalized offers, or brand-specific promotions"
+      ],
+      "notes": "Same component as OTC homepage CRM section"
+    },
+    {
+      "section": "Customer Review Section",
+      "requirements": [
+        "Title: \"What Our Customers Say\"",
+        "Carousel of Trusted Shop reviews (same design as Homepage & OTC pages)"
+      ],
+      "notes": "Build trust through repetition of site-wide credibility elements"
+    },
+    {
+      "section": "Payment Methods Section",
+      "requirements": [
+        "Visual row of all accepted payment method logos (credit card, PayPal, Klarna, etc.)"
+      ],
+      "notes": "Matches global footer payment layout"
+    },
+    {
+      "section": "Footer",
+      "requirements": [
+        "Standard DoktorABC footer including: Logo, Accordion navigation menus, Payment methods, Company address and certifications, © 2025 DoktorABC.com, Legal disclaimer"
+      ],
+      "notes": "Must be identical to the existing OTC footer"
+    }
+  ],
+  "development_requirements": [
+    {
+      "id": "R1",
+      "requirement": "Automatic Brand Page Creation",
+      "description": "The system must automatically create a new OTC Brand Page whenever a new brand is added in the Back Office (BO). This can use the same infrastructure as the current Manufacturer system. Each brand must include the following fields (editable by the admin in BO): Brand name, Brand description, Two mobile images and two desktop images, Linked products belonging to that brand, Brand by country – admin can select which countries (FR/DE) the brand applies to"
+    },
+    {
+      "id": "R2",
+      "requirement": "OTC Navbar Section",
+      "description": "Display the standard OTC Navbar component. It includes: Company logo, Search bar (for OTC products only), E-prescription button (navigates to the DoktorABC homepage), Cart icon, My Account, and Hamburger menu. The navbar must be sticky during scroll, identical to the OTC homepage."
+    },
+    {
+      "id": "R3",
+      "requirement": "OTC Coupon Code Section",
+      "description": "Display the OTC CRM coupon strip exactly as it appears on the OTC homepage. It shows the active coupon or promotion for OTC products. On mobile, it appears above the navbar."
+    },
+    {
+      "id": "R4",
+      "requirement": "Main Brand Image Section",
+      "description": "Display a main brand image/banner at the top of the page. The image is pulled from the DB based on the selected brand and country."
+    },
+    {
+      "id": "R5",
+      "requirement": "OTC USPS Section",
+      "description": "Display the following standard OTC USPs horizontally under the main image: Delivered in 1–2 working days, 24/7 customer service, Free shipping over €30. The free shipping value (€X) is controlled via the DB. If the value is 0, hide this USP and center the others."
+    },
+    {
+      "id": "R6",
+      "requirement": "Hero Image with Description Text",
+      "description": "Display a Hero section that contains the brand's main image (from DB) and overlay the brand description text directly on the image. The description text must be localized according to the current country and language."
+    },
+    {
+      "id": "R7",
+      "requirement": "Sale Products Section",
+      "description": "Title: \"Sale Products\". Display a carousel of all products from this brand that are currently on sale (from DB). Each product must use the standard OTC product card design (image, name, brand, price, old price crossed in red, discount badge). If there are no sale products, do not show this section at all."
+    },
+    {
+      "id": "R8",
+      "requirement": "All Products Section",
+      "description": "Title: \"All Products\". Display all products from the brand in a random order. The layout follows the standard OTC category grid: 4 products per row, Up to 4 rows (16 products shown initially), Include a \"Load More Products\" button at the bottom that loads additional products in the same layout. Each product uses the same OTC product card component (image, name, brand, price, discount badge if applicable)."
+    },
+    {
+      "id": "R9",
+      "requirement": "CRM Subscription Section",
+      "description": "Display the standard CRM subscription banner that sends leads to HubSpot, including the current page URL and brand name as parameters. The user can close the banner by clicking the X icon, which hides the section and shifts other sections up."
+    },
+    {
+      "id": "R10",
+      "requirement": "Customer Reviews Section",
+      "description": "Display the global reviews component (Trusted Shops carousel) identical to the homepage and other OTC pages. It automatically pulls verified customer reviews from the same source."
+    },
+    {
+      "id": "R11",
+      "requirement": "Payments Section",
+      "description": "Display a horizontal row of payment method logos (credit card, PayPal, Klarna, etc.). The design and layout must match the global OTC footer payment section."
+    },
+    {
+      "id": "R12",
+      "requirement": "FAQ Section",
+      "description": "Display the standard OTC FAQ accordion with default OTC questions and answers from the DB. The first question is open by default. Texts are localized for each country (FR/DE)."
+    },
+    {
+      "id": "R13",
+      "requirement": "Footer Section",
+      "description": "Display the standard DoktorABC footer identical to the existing OTC footer."
+    }
+  ],
+  "figma_links": [
+    "https://www.figma.com/design/IhA4sJGAztWKehQ9hFqRfK/UI-UX-Redesign?node-id=9723-28887&p=f&t=mQEnvCtpvkt1eu1k-11"
+  ],
+  "spreadsheet_links": [
+    "https://docs.google.com/spreadsheets/d/1UeeDy-yEtzmrdropRaNAEPH7ChdnfaeALiIHIGiN6WQ/edit?gid=1954933257#gid=1954933257"
+  ],
+  "source": "Confluence Page ID 1960575007"
+}

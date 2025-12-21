@@ -5,10 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoktorABC_Redesign - Project Status OnePager</title>
     <style>
+        /* 
+         * shadcn/ui Component Integration Notes:
+         * - Cards: Use shadcn Card component (card, card-header, card-title, card-content)
+         * - Badges: Use shadcn Badge component for status indicators
+         * - Progress: Use shadcn Progress component for progress bars
+         * - Buttons: Use shadcn Button component for interactive elements
+         * - Colors: Aligned with shadcn default theme (slate base)
+         */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :root {
+            /* shadcn/ui color tokens (slate theme) */
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --primary: 222.2 47.4% 11.2%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 222.2 47.4% 11.2%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96.1%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 222.2 84% 4.9%;
+            --radius: 0.5rem;
         }
 
         body {
@@ -360,6 +389,33 @@
             </div>
         </section>
 
+        <section class="design-preview">
+            <h2 class="methodology-title">Design Preview (Source of Truth)</h2>
+            <p style="text-align: center; color: #cccccc; margin-bottom: 30px;">These are the actual Figma designs we analyzed to extract events and design tokens</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                <div style="text-align: center;">
+                    <img src="../../exports/full export/Home Page _ Desktop.png" alt="Homepage Desktop" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                    <p style="color: #60a5fa; margin-top: 10px; font-weight: 600;">Homepage (Desktop)</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">20 events mapped</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="../../exports/full export/Home Page _Mobile.png" alt="Homepage Mobile" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                    <p style="color: #60a5fa; margin-top: 10px; font-weight: 600;">Homepage (Mobile)</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">20 events mapped</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="../../exports/full export/Login _ Desktop.png" alt="Login Desktop" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                    <p style="color: #60a5fa; margin-top: 10px; font-weight: 600;">Login/Account</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">9 events mapped</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="../../exports/full export/Registration _ Desktop.png" alt="Registration Desktop" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                    <p style="color: #60a5fa; margin-top: 10px; font-weight: 600;">Registration</p>
+                    <p style="color: #cbd5e1; font-size: 0.9rem;">Part of account flow</p>
+                </div>
+            </div>
+        </section>
+
         <div class="status-grid">
             <!-- Figma Processing -->
             <div class="status-card" onclick="toggleCard(this)">
@@ -671,23 +727,23 @@
                         </div>
                         <div class="detail-item">
                             <div class="detail-label">Navigation Events</div>
-                            <div class="detail-value">8 web + 9 mobile</div>
+                            <div class="detail-value">6 web + 1 mobile</div>
                         </div>
                         <div class="detail-item">
                             <div class="detail-label">Checkout/Cart Events</div>
-                            <div class="detail-value">9 web + 9 mobile</div>
+                            <div class="detail-value">5 web + 0 mobile</div>
                         </div>
                         <div class="detail-item">
                             <div class="detail-label">Account Events</div>
-                            <div class="detail-value">8 web + 8 mobile</div>
+                            <div class="detail-value">9 web + 0 mobile</div>
                         </div>
                         <div class="detail-item">
                             <div class="detail-label">Popup/Modal Events</div>
-                            <div class="detail-value">8 web + 8 mobile</div>
+                            <div class="detail-value">12 web + 0 mobile</div>
                         </div>
                         <div class="detail-item">
                             <div class="detail-label">Treatment Events</div>
-                            <div class="detail-value">3 web + 3 mobile</div>
+                            <div class="detail-value">3 web + 0 mobile</div>
                         </div>
                     </div>
                 </div>
@@ -794,10 +850,37 @@
             </div>
         </section>
 
+        <section class="work-methodology" style="margin-top: 50px;">
+            <h2 class="methodology-title">🎨 Component Library Integration</h2>
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-number">📦</div>
+                    <h3 class="step-title">shadcn/ui Components</h3>
+                    <p class="step-description"><strong>Configured:</strong> MCP server active, components.json ready. Use shadcn components for Cards, Badges, Progress bars, Buttons, and Tables in React/Next.js implementations.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">🎯</div>
+                    <h3 class="step-title">Design System Alignment</h3>
+                    <p class="step-description"><strong>Ready:</strong> 410+ design tokens from Figma align with shadcn/ui patterns. Use shadcn Card, Badge, Progress, and Button components for consistent UI.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">🔧</div>
+                    <h3 class="step-title">Implementation Path</h3>
+                    <p class="step-description"><strong>Next:</strong> Convert these HTML presentations to React components using shadcn/ui Card, Badge, Progress, and Table components for production use.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">📚</div>
+                    <h3 class="step-title">MCP Integration</h3>
+                    <p class="step-description"><strong>Active:</strong> shadcn MCP server configured. Use natural language to browse, search, and install components: "Add button, card, and dialog components".</p>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
             <div class="footer-content">
                 <p><strong>Generated:</strong> December 15, 2025 | <strong>Status:</strong> Complete | <strong>Next:</strong> Mixpanel event taxonomy + implementation planning</p>
-                <p><strong>Artifacts:</strong> 18 CSV review tables • 118 events • 410+ design tokens</p>
+                <p><strong>Delivery Package:</strong> 39KB zip with 18 CSV tables, usage guides, and Excel conversion tools</p>
+                <p><strong>Component Library:</strong> shadcn/ui MCP server configured • Ready for React/Next.js integration</p>
                 <p><strong>Today:</strong> Amit & Dean finalize Mixpanel naming + properties, then prioritize implementation.</p>
             </div>
         </footer>
