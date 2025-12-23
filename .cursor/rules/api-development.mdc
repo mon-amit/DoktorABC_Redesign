@@ -1,0 +1,123 @@
+# API Development Patterns
+
+## HTTP Client Usage
+
+❌ Never use axios directly for standard API requests:
+```tsx
+import axios from 'axios';
+const data = await axios.get('/api/users');
+```
+
+✅ Always use HttpClient for API requests:
+```tsx
+import { HttpClient } from '@/lib/http-client';
+const users = await HttpClient.getUsers();
+```
+
+**Exception:** Direct axios is acceptable for one-off requests or third-party integrations that don't fit our standard patterns. Document the exception in code comments.
+
+## HTTP Status Codes
+
+❌ Never use magic numbers:
+```tsx
+if (error.response?.status === 401) {
+  redirect('/login');
+}
+```
+
+✅ Always use constants:
+```tsx
+import { AUTHENTICATION_ERROR_STATUS_CODE } from '@/constants';
+if (error.response?.status === AUTHENTICATION_ERROR_STATUS_CODE) {
+  redirect('/login');
+}
+```
+
+## Error Handling
+
+❌ Never swallow errors silently:
+```tsx
+try {
+  const data = await fetch('/api/users');
+} catch (error) {
+  // Silent failure
+}
+```
+
+✅ Always handle errors explicitly:
+```tsx
+try {
+  const users = await HttpClient.getUsers();
+  return users;
+} catch (error) {
+  if (error instanceof AuthenticationError) {
+    redirect('/login');
+  } else if (error instanceof NetworkError) {
+    showToast('Network error. Please check your connection.');
+  } else {
+    logError(error, { context: 'fetchUsers' });
+    showToast('An unexpected error occurred.');
+  }
+  throw error;
+}
+```
+
+## Request Configuration
+
+❌ Never hardcode API endpoints:
+```tsx
+const response = await fetch('https://api.example.com/v1/users');
+```
+
+✅ Always use environment variables or config:
+```tsx
+import { API_BASE_URL } from '@/config';
+const response = await fetch(`${API_BASE_URL}/users`);
+```
+
+## Response Handling
+
+❌ Never assume response structure:
+```tsx
+const data = await response.json();
+const user = data.user;
+```
+
+✅ Always validate response structure:
+```tsx
+const response = await HttpClient.getUsers();
+if (!response.ok) {
+  throw new ApiError('Failed to fetch users', response.status);
+}
+const data = await response.json();
+const users = validateUsersResponse(data);
+```
+
+## Authentication
+
+❌ Never store tokens in localStorage without encryption:
+```tsx
+localStorage.setItem('token', token);
+```
+
+✅ Always use secure storage or httpOnly cookies:
+```tsx
+import { secureStorage } from '@/lib/storage';
+secureStorage.setToken(token);
+```
+
+## Rate Limiting
+
+❌ Never ignore rate limit headers:
+```tsx
+const data = await fetch('/api/users');
+```
+
+✅ Always respect rate limits:
+```tsx
+const response = await HttpClient.getUsers();
+if (response.headers.get('X-RateLimit-Remaining') === '0') {
+  const retryAfter = parseInt(response.headers.get('Retry-After') || '60');
+  await delay(retryAfter * 1000);
+}
+```

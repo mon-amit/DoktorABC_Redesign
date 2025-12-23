@@ -1,0 +1,197 @@
+# Testing and Accessibility Standards
+
+## Testing Patterns
+
+❌ Never write tests without clear assertions:
+```tsx
+test('user login', () => {
+  login('user@example.com', 'password');
+});
+```
+
+✅ Always test behavior, not implementation:
+```tsx
+test('user can login with valid credentials', async () => {
+  const { getByLabelText, getByRole } = render(<LoginForm />);
+  
+  await userEvent.type(getByLabelText('Email'), 'user@example.com');
+  await userEvent.type(getByLabelText('Password'), 'password');
+  await userEvent.click(getByRole('button', { name: 'Sign In' }));
+  
+  await waitFor(() => {
+    expect(getByText('Welcome back!')).toBeInTheDocument();
+  });
+});
+```
+
+## Test Coverage
+
+❌ Never skip edge cases:
+```tsx
+test('calculates total', () => {
+  expect(calculateTotal([{ price: 10 }])).toBe(10);
+});
+```
+
+✅ Always test edge cases and error conditions:
+```tsx
+describe('calculateTotal', () => {
+  test('calculates total for single item', () => {
+    expect(calculateTotal([{ price: 10 }])).toBe(10);
+  });
+  
+  test('calculates total for multiple items', () => {
+    expect(calculateTotal([{ price: 10 }, { price: 20 }])).toBe(30);
+  });
+  
+  test('returns 0 for empty array', () => {
+    expect(calculateTotal([])).toBe(0);
+  });
+  
+  test('handles null prices', () => {
+    expect(() => calculateTotal([{ price: null }])).toThrow();
+  });
+});
+```
+
+## Accessibility (WCAG 2.1)
+
+❌ Never create inaccessible forms:
+```tsx
+<input type="text" />
+<button onClick={handleSubmit}>Submit</button>
+```
+
+✅ Always include proper labels and ARIA attributes:
+```tsx
+<label htmlFor="email-input">Email Address</label>
+<input 
+  id="email-input"
+  type="email" 
+  aria-required="true"
+  aria-describedby="email-error"
+/>
+<span id="email-error" role="alert" aria-live="polite">
+  {errors.email}
+</span>
+<button 
+  type="submit"
+  aria-label="Submit contact form"
+>
+  Submit
+</button>
+```
+
+## Keyboard Navigation
+
+❌ Never ignore keyboard users:
+```tsx
+<div onClick={handleClick}>Click me</div>
+```
+
+✅ Always support keyboard navigation:
+```tsx
+<div 
+  onClick={handleClick}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleClick();
+    }
+  }}
+  role="button"
+  tabIndex={0}
+  aria-label="Click to expand details"
+>
+  Click me
+</div>
+```
+
+## Focus Management
+
+❌ Never trap focus without escape:
+```tsx
+<Modal>
+  <input />
+  <button>Close</button>
+</Modal>
+```
+
+✅ Always provide focus management:
+```tsx
+function Modal({ isOpen, onClose, children }) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    if (isOpen && modalRef.current) {
+      const firstFocusable = modalRef.current.querySelector(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      ) as HTMLElement;
+      firstFocusable?.focus();
+    }
+  }, [isOpen]);
+  
+  return (
+    <div 
+      ref={modalRef}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button onClick={onClose} aria-label="Close modal">×</button>
+      {children}
+    </div>
+  );
+}
+```
+
+## Screen Reader Support
+
+❌ Never hide important information visually:
+```tsx
+<span style={{ position: 'absolute', left: '-9999px' }}>
+  Important message
+</span>
+```
+
+✅ Always use proper semantic HTML and ARIA:
+```tsx
+<div role="status" aria-live="polite" aria-atomic="true">
+  {statusMessage}
+</div>
+```
+
+## Color Contrast
+
+❌ Never use low contrast text:
+```tsx
+<div style={{ color: '#ccc', background: '#fff' }}>Text</div>
+```
+
+✅ Always meet WCAG AA contrast requirements (4.5:1 for normal text):
+```tsx
+<div className="text-primary">Text</div>
+// Use design system tokens that meet contrast requirements
+```
+
+## Testing Accessibility
+
+❌ Never skip accessibility testing:
+```tsx
+test('renders button', () => {
+  render(<Button>Click</Button>);
+});
+```
+
+✅ Always test accessibility:
+```tsx
+import { axe, toHaveNoViolations } from 'jest-axe';
+
+expect.extend(toHaveNoViolations);
+
+test('button meets accessibility standards', async () => {
+  const { container } = render(<Button>Click</Button>);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
+});
+```

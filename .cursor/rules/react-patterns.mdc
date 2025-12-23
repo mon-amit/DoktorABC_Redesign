@@ -1,0 +1,161 @@
+# React Component Architecture Patterns
+
+## Component Structure
+
+❌ Never mix logic and presentation:
+```tsx
+function UserProfile({ userId }) {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    fetch(`/api/users/${userId}`).then(r => r.json()).then(setUser);
+  }, [userId]);
+  return <div>{user?.name}</div>;
+}
+```
+
+✅ Separate concerns - extract data fetching:
+```tsx
+function UserProfile({ userId }) {
+  const user = useUser(userId);
+  return <div>{user?.name}</div>;
+}
+
+function useUser(userId: string) {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    HttpClient.getUser(userId).then(setUser);
+  }, [userId]);
+  return user;
+}
+```
+
+## Component Composition
+
+❌ Never create monolithic components:
+```tsx
+function ProductCard({ product }) {
+  return (
+    <div>
+      <img src={product.image} />
+      <h2>{product.name}</h2>
+      <p>{product.description}</p>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <div>{product.reviews.map(r => <Review key={r.id} review={r} />)}</div>
+    </div>
+  );
+}
+```
+
+✅ Compose from smaller components:
+```tsx
+function ProductCard({ product }) {
+  return (
+    <Card>
+      <ProductImage src={product.image} alt={product.name} />
+      <ProductHeader name={product.name} />
+      <ProductDescription text={product.description} />
+      <AddToCartButton product={product} />
+      <ProductReviews reviews={product.reviews} />
+    </Card>
+  );
+}
+```
+
+## Props and Type Safety
+
+❌ Never use `any` or missing prop types:
+```tsx
+function Button({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
+}
+```
+
+✅ Always define explicit prop types:
+```tsx
+interface ButtonProps {
+  onClick: () => void;
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary';
+  disabled?: boolean;
+}
+
+function Button({ onClick, children, variant = 'primary', disabled = false }: ButtonProps) {
+  return (
+    <button 
+      onClick={onClick} 
+      className={`btn btn-${variant}`}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+}
+```
+
+## State Management
+
+❌ Never use useState for complex shared state:
+```tsx
+function App() {
+  const [cart, setCart] = useState([]);
+  return (
+    <>
+      <Header cart={cart} />
+      <ProductList onAddToCart={(p) => setCart([...cart, p])} />
+    </>
+  );
+}
+```
+
+✅ Use context or state management library for shared state:
+```tsx
+const CartContext = createContext<CartContextType | null>(null);
+
+function App() {
+  const cart = useCart();
+  return (
+    <CartProvider>
+      <Header />
+      <ProductList />
+    </CartProvider>
+  );
+}
+```
+
+## Error Boundaries
+
+❌ Never let errors crash entire app:
+```tsx
+function App() {
+  return <UserProfile userId="123" />;
+}
+```
+
+✅ Always wrap components in error boundaries:
+```tsx
+function App() {
+  return (
+    <ErrorBoundary fallback={<ErrorFallback />}>
+      <UserProfile userId="123" />
+    </ErrorBoundary>
+  );
+}
+```
+
+## Accessibility
+
+❌ Never ignore ARIA labels:
+```tsx
+<button onClick={handleClick}>Click me</button>
+```
+
+✅ Always include proper ARIA attributes:
+```tsx
+<button 
+  onClick={handleClick}
+  aria-label="Add product to cart"
+  aria-describedby="cart-description"
+>
+  Add to Cart
+</button>
+```

@@ -1,0 +1,178 @@
+# Code Quality Standards
+
+## Constants and Magic Numbers
+
+❌ Never use magic numbers or strings:
+```tsx
+if (status === 401) {
+  redirect('/login');
+}
+setTimeout(() => {
+  refreshData();
+}, 5000);
+```
+
+✅ Always use named constants:
+```tsx
+import { 
+  AUTHENTICATION_ERROR_STATUS_CODE,
+  DATA_REFRESH_INTERVAL_MS 
+} from '@/constants';
+
+if (status === AUTHENTICATION_ERROR_STATUS_CODE) {
+  redirect('/login');
+}
+setTimeout(() => {
+  refreshData();
+}, DATA_REFRESH_INTERVAL_MS);
+```
+
+## Error Handling
+
+❌ Never use generic Error types:
+```tsx
+try {
+  await fetchData();
+} catch (error) {
+  console.error(error);
+}
+```
+
+✅ Always use specific error types:
+```tsx
+import { 
+  ApiError, 
+  ValidationError, 
+  NetworkError 
+} from '@/lib/errors';
+
+try {
+  await fetchData();
+} catch (error) {
+  if (error instanceof ApiError) {
+    handleApiError(error);
+  } else if (error instanceof ValidationError) {
+    showValidationErrors(error.errors);
+  } else if (error instanceof NetworkError) {
+    showNetworkError();
+  } else {
+    logUnexpectedError(error);
+  }
+}
+```
+
+## Logging
+
+❌ Never use console.log in production code:
+```tsx
+console.log('User data:', user);
+console.error('Error occurred');
+```
+
+✅ Always use structured logging:
+```tsx
+import { logger } from '@/lib/logger';
+
+logger.info('User data fetched', { userId: user.id, timestamp: Date.now() });
+logger.error('Failed to fetch user', { 
+  error: error.message, 
+  context: 'fetchUser',
+  userId 
+});
+```
+
+## Type Safety
+
+❌ Never use `any` type:
+```tsx
+function processData(data: any) {
+  return data.value;
+}
+```
+
+✅ Always define proper types:
+```tsx
+interface DataResponse {
+  value: string;
+  timestamp: number;
+}
+
+function processData(data: DataResponse): string {
+  return data.value;
+}
+```
+
+## Null Safety
+
+❌ Never assume values exist:
+```tsx
+const userName = user.name.toUpperCase();
+```
+
+✅ Always check for null/undefined:
+```tsx
+const userName = user?.name?.toUpperCase() ?? 'Unknown User';
+```
+
+Or use type guards:
+```tsx
+if (!user || !user.name) {
+  throw new ValidationError('User name is required');
+}
+const userName = user.name.toUpperCase();
+```
+
+## Code Organization
+
+❌ Never create files with mixed concerns:
+```tsx
+// utils.ts
+export function formatDate(date: Date) { }
+export function calculateTotal(items: Item[]) { }
+export function validateEmail(email: string) { }
+export function fetchUsers() { }
+```
+
+✅ Always group related functionality:
+```tsx
+// date-utils.ts
+export function formatDate(date: Date) { }
+
+// calculation-utils.ts
+export function calculateTotal(items: Item[]) { }
+
+// validation-utils.ts
+export function validateEmail(email: string) { }
+
+// user-api.ts
+export function fetchUsers() { }
+```
+
+## Comments and Documentation
+
+❌ Never write comments that restate code:
+```tsx
+// Set the user name
+setUserName(name);
+```
+
+✅ Always document why, not what:
+```tsx
+// Override default name to handle legacy users without display names
+setUserName(name || getDefaultName(userId));
+```
+
+## Security
+
+❌ Never expose secrets in code:
+```tsx
+const API_KEY = 'sk-1234567890abcdef';
+```
+
+✅ Always use environment variables:
+```tsx
+const API_KEY = process.env.API_KEY;
+if (!API_KEY) {
+  throw new Error('API_KEY environment variable is required');
+}
+```
